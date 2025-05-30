@@ -42,6 +42,23 @@
   <h1>Quiz Trắc Nghiệm CNPM Vinh</h1>
   <div id="stats" style="margin-bottom:20px; font-weight:bold;"></div>
   <div id="quiz"></div>
+  <button id="bookmarkBtn" title="Lên đầu trang"
+    style="
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+      display: none;
+    ">↑</button>
 
   <script>
     const quizData = [
@@ -639,6 +656,19 @@
     });
 
     updateStats();
+
+    // Hiện nút khi cuộn xuống dưới 200px
+    const bookmarkBtn = document.getElementById('bookmarkBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        bookmarkBtn.style.display = 'block';
+      } else {
+        bookmarkBtn.style.display = 'none';
+      }
+    });
+    bookmarkBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   </script>
 </body>
 </html>
