@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Trắc Nghiệm CNPM</title>
+  <link rel="icon" type="image/png" href="hehe.jpg" 
+  style="width: fit-content; height: fit-content;">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -36,6 +39,7 @@
 </head>
 <body>
   <h1>Quiz Trắc Nghiệm CNPM Vinh</h1>
+  <div id="stats" style="margin-bottom:20px; font-weight:bold;"></div>
   <div id="quiz"></div>
 
   <script>
@@ -588,6 +592,16 @@
     ];
 
     const quizContainer = document.getElementById('quiz');
+    const statsDiv = document.getElementById('stats');
+    // Mảng lưu trạng thái từng câu: null (chưa làm), true (đúng), false (sai)
+    const answersState = Array(quizData.length).fill(null);
+
+    function updateStats() {
+      const correct = answersState.filter(x => x === true).length;
+      const wrong = answersState.filter(x => x === false).length;
+      const notDone = answersState.filter(x => x === null).length;
+      statsDiv.textContent = `Đúng: ${correct} | Sai: ${wrong} | Chưa làm: ${notDone}`;
+    }
 
     quizData.forEach((q, i) => {
       const questionDiv = document.createElement('div');
@@ -608,10 +622,13 @@
           allBtns.forEach(b => b.disabled = true);
           if (index === q.correct) {
             btn.classList.add('correct');
+            answersState[i] = true;
           } else {
             btn.classList.add('wrong');
             allBtns[q.correct].classList.add('correct');
+            answersState[i] = false;
           }
+          updateStats();
         });
         answersDiv.appendChild(btn);
       });
@@ -619,6 +636,8 @@
       questionDiv.appendChild(answersDiv);
       quizContainer.appendChild(questionDiv);
     });
+
+    updateStats();
   </script>
 </body>
 </html>
