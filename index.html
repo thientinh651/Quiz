@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Trắc Nghiệm CNPM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .answers button {
+      display: block;
+      margin: 5px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: white;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .answers button.correct {
+      background-color: #c8f7c5;
+      border-color: #27ae60;
+    }
+    .answers button.wrong {
+      background-color: #fddede;
+      border-color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz Trắc Nghiệm CNPM Vinh</h1>
+  <div id="quiz"></div>
+
+  <script>
+    const quizData = [
+      {
+        question: "Hiện thực phần mềm là gì?",
+        options: [
+          "Quá trình kiểm thử phần mềm",
+          "Quá trình hiện thực bản thiết kế thành chương trình",
+          "Quá trình viết tài liệu hướng dẫn",
+          "Quá trình bảo trì phần mềm"
+        ],
+        correct: 1
+      },
+      {
+        question: "Thiết kế và hiện thực phần mềm là hoạt động như thế nào?",
+        options: [
+          "Tách biệt hoàn toàn",
+          "Đan xen lẫn nhau",
+          "Hoàn toàn độc lập",
+          "Không liên quan đến nhau"
+        ],
+        correct: 1
+      },
+      {
+        question: "Thiết kế hướng đối tượng sử dụng gì để biểu diễn?",
+        options: ["UML", "SQL", "HTML", "XML"],
+        correct: 0
+      },
+      {
+        question: "Thiết kế mẫu là gì?",
+        options: [
+          "Một phương pháp lập trình",
+          "Một phương pháp thiết kế giao diện người dùng",
+          "Một phương pháp để giải quyết các vấn đề thiết kế thường gặp",
+          "Một phương pháp kiểm thử"
+        ],
+        correct: 2
+      },
+      {
+        question: "Phát triển mã nguồn mở liên quan đến gì?",
+        options: [
+          "Sử dụng phần mềm đóng gói",
+          "Sử dụng và phát triển các thành phần mã nguồn mở",
+          "Thiết kế giao diện người dùng",
+          "Quản lý dự án phần mềm"
+        ],
+        correct: 1
+      },
+      {
+        question: "Một trong những nguyên tắc chính trong thiết kế giao diện người dùng là gì?",
+        options: [
+          "Tối ưu hóa cho các thiết bị di động",
+          "Tính đến nhu cầu, kinh nghiệm và khả năng của người dùng hệ thống",
+          "Tăng tốc độ phát triển phần mềm",
+          "Giảm chi phí phát triển"
+        ],
+        correct: 1
+      },
+      {
+        question: "Thiết kế UI cần nhận thực được điều gì?",
+        options: [
+          "Các hạn chế về tài chính của dự án",
+          "Các hạn chế về vật lý và tinh thần của người dùng",
+          "Các công nghệ mới nhất",
+          "Các yêu cầu chức năng của hệ thống"
+        ],
+        correct: 1
+      },
+      {
+        question: "Các mô hình thiết kế hệ thống có vai trò gì trong dự án lớn?",
+        options: [
+          "Giảm thời gian phát triển",
+          "Là cơ chế giao tiếp quan trọng giữa các nhóm thiết kế khác nhau",
+          "Tăng chi phí dự án",
+          "Giảm số lượng lỗi phần mềm"
+        ],
+        correct: 1
+      },
+      {
+        question: "Thiết kế thuật toán là gì?",
+        options: [
+          "Quá trình thiết kế giao diện người dùng",
+          "Quá trình thiết kế các thuật toán để giải quyết các vấn đề cụ thể",
+          "Quá trình viết mã nguồn",
+          "Quá trình kiểm thử phần mềm"
+        ],
+        correct: 1
+      },
+      {
+        question: "Thiết kế cơ sở dữ liệu liên quan đến gì?",
+        options: [
+          "Thiết kế giao diện người dùng",
+          "Thiết kế cấu trúc và tổ chức của cơ sở dữ liệu",
+          "Thiết kế các thuật toán",
+          "Kiểm thử cơ sở dữ liệu"
+        ],
+        correct: 1
+      },
+      {
+        question: "Trong thiết kế giao diện người dùng cần thừa nhận điều gì?",
+        options: [
+          "Người dùng luôn biết cách sử dụng hệ thống",
+          "Ai cũng có thể nhầm lẫn",
+          "Hệ thống không bao giờ gặp lỗi",
+          "Giao diện không cần thân thiện"
+        ],
+        correct: 1
+      },
+      {
+        question: "Mục tiêu chính của thiết kế giao diện người dùng là gì?",
+        options: [
+          "Tăng tốc độ phát triển phần mềm",
+          "Đáp ứng nhu cầu và trải nghiệm người dùng",
+          "Giảm chi phí phát triển",
+          "Tăng tính bảo mật của hệ thống"
+        ],
+        correct: 1
+      },
+      {
+        question: "Quá trình thiết kế phần mềm bao gồm gì?",
+        options: [
+          "Viết mã nguồn",
+          "Định nghĩa các thành phần phần mềm và mối liên kết giữa chúng",
+          "Kiểm thử phần mềm",
+          "Bảo trì phần mềm"
+        ],
+        correct: 1
+      },
+      {
+        question: "Một ví dụ về biểu đồ hoạt động trong thiết kế phần mềm là gì?",
+        options: [
+          "Biểu đồ lớp",
+          "Biểu đồ liên kết",
+          "Biểu đồ hoạt động swimming lane",
+          "Biểu đồ thành phần"
+        ],
+        correct: 2
+      },
+      {
+        question: "Quản lý bản quyền trong thiết kế phần mềm liên quan đến điều gì?",
+        options: [
+          "Sử dụng các thành phần mã nguồn mở mà không cần kiểm tra",
+          "Duy trì thông tin về các thành phần mã nguồn mở đã tải về và sử dụng",
+          "Thiết kế giao diện người dùng",
+          "Bảo trì phần mềm"
+        ],
+        correct: 1
+      },
+      {
+        question: "Một trong những nguyên tắc quan trọng trong thiết kế phần mềm là gì?",
+        options: [
+          "Giảm thiểu số lượng mã nguồn",
+          "Đảm bảo phần mềm dễ dàng bảo trì và mở rộng",
+          "Tăng số lượng thành phần phần mềm",
+          "Giảm thiểu tài liệu hướng dẫn"
+        ],
+        correct: 1
+      },
+      {
+        question: "Thiết kế cơ sở dữ liệu bao gồm việc gì?",
+        options: [
+          "Xác định cấu trúc dữ liệu và cách tổ chức dữ liệu trong cơ sở dữ liệu",
+          "Viết mã nguồn",
+          "Thiết kế giao diện người dùng",
+          "Kiểm thử cơ sở dữ liệu"
+        ],
+        correct: 0
+      },
+      {
+        question: "Thiết kế thuật toán có vai trò gì trong phần mềm?",
+        options: [
+          "Định nghĩa các giao diện người dùng",
+          "Giải quyết các vấn đề cụ thể bằng các xác định các bước xử lý",
+          "Tăng tốc độ phát triển phần mềm",
+          "Bảo trì phần mềm"
+        ],
+        correct: 1
+      },
+      {
+        question: "Mục đích của việc hiện thực phần mềm là gì?",
+        options: [
+          "Đáp ứng các yêu cầu thiết kế chi tiết",
+          "Thỏa mãn người dùng cuối",
+          "Tăng tính phức tạp của mã nguồn",
+          "Giảm chi phí phát triển"
+        ],
+        correct: 1
+      },
+      {
+        question: "Unit Implementation được hiểu là gì?",
+        options: [
+          "Lập trình các đơn vị phần mềm nhỏ nhất",
+          "Thiết kế giao diện người dùng",
+          "Tạo lập các tài liệu hướng dẫn sử dụng",
+          "Kiểm tra và bảo trì phần mềm"
+        ],
+        correct: 0
+      },
+      {
+        question: "Một quy tắc vàng trong hiện thực phần mềm là gì?",
+        options: [
+          "Kiểm tra các yêu cầu và thiết kế lại một lần nữa",
+          "Không cần kiểm tra lại thiết kế sau khi mã hóa",
+          "Tập trung vào việc lập trình nhanh chóng",
+          "Đơn giản hóa tất cả các quy trình"
+        ],
+        correct: 0
+      },
+      {
+        question: "Tại sao cần xác nhận các thiết kế chi tiết trước khi hiện thực?",
+        options: [
+          "Để đảm bảo các thiết kế đáp ứng yêu cầu của người dùng",
+          "Để giảm chi phí phát triển",
+          "Để tiết kiệm thời gian kiểm tra",
+          "Để tăng tốc độ mã hóa"
+        ],
+        correct: 0
+      },
+      {
+        question: "Mục đích của việc ghi lại lỗi khi sử dụng form là gì?",
+        options: [
+          "Để theo dõi và sửa chữa lỗi một cách hệ thống",
+          "Để lưu trữ dữ liệu người dùng",
+          "Để tăng tốc độ phát triển phần mềm",
+          "Để phân tích thị trường"
+        ],
+        correct: 0
+      },
+      {
+        question: "Tiêu chuẩn yêu cầu đối với việc mã hóa bao gồm gì?",
+        options: [
+          "Tính đúng đắn và rõ ràng",
+          "Tính linh hoạt và tiết kiệm",
+          "Tính đơn giản và nhanh chóng",
+          "Tính bảo mật và khả năng mở rộng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Ước lượng kích thước và thời gian dựa trên gì?",
+        options: [
+          "Dữ liệu đã có",
+          "Kinh nghiệm cá nhân",
+          "Yêu cầu khách hàng",
+          "Ngân sách dự án"
+        ],
+        correct: 0
+      },
+      {
+        question: "Hiện thực mã chương trình bao gồm bước nào sau đây?",
+        options: [
+          "Lập kế hoạch cấu trúc và thiết kế mã",
+          "Thiết kế giao diện người dùng",
+          "Viết tài liệu hướng dẫn",
+          "Tạo lập báo cáo phân tích"
+        ],
+        correct: 0
+      },
+      {
+        question: "Tại sao cần tự kiểm tra lại thiết kế cấu trúc trước khi mã hóa?",
+        options: [
+          "Để đảm bảo tính đúng đắn và hiệu quả của mã nguồn",
+          "Để tăng tốc độ mã hóa",
+          "Để giảm chi phí phát triển",
+          "Để làm hài lòng khách hàng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Quy tắc đặt tên trong hiện thực mã chương trình cần tuân thủ những điều gì?",
+        options: [
+          "Phù hợp và rõ ràng",
+          "Ngắn gọn và xúc tích",
+          "Phức tạp và chi tiết",
+          "Bất kỳ tên nào cũng được"
+        ],
+        correct: 0
+      },
+      {
+        question: "Kiểm tra Class cần xem xét điều gì?",
+        options: [
+          "Tên Class có thích hợp không",
+          "Class có được trừu tượng không",
+          "Header của Class có mô tả mục đích của hàm hay không",
+          "Tất cả các ý trên"
+        ],
+        correct: 3
+      },
+      {
+        question: "Kiểm tra thuộc tính cần xác định điều gì?",
+        options: [
+          "Thuộc tính có cần thiết không",
+          "Thuộc tính có thể là static không",
+          "Thuộc tính có nên là final không",
+          "Tất cả các ý trên"
+        ],
+        correct: 3
+      },
+      {
+        question: "Phương pháp kiểm tra phương thức khởi dựng cần xác định điều gì?",
+        options: [
+          "Phương thức cần thiết không",
+          "Phương thức có leverage các constructor hiện có không",
+          "Phương thức có initialize tất cả các thuộc tính không",
+          "Tất cả các ý trên"
+        ],
+        correct: 3
+      },
+      {
+        question: "Làm thế nào để lập trình 1000LoC/ngày?",
+        options: [
+          "Lập kế hoạch cấu trúc và thiết kế mã chương trình",
+          "Tăng tốc độ đánh máy",
+          "Tập trung vào các yêu cầu của khách hàng",
+          "Giảm thời gian kiểm tra mã"
+        ],
+        correct: 0
+      },
+      {
+        question: "Kiểm tra thuộc tính có cần xác định điều gì?",
+        options: [
+          "Sự cần thiết của thuộc tính",
+          "Thuộc tính có thể là static hay không",
+          "Thuộc tính có nên là final hay không",
+          "Tất cả các ý trên"
+        ],
+        correct: 3
+      },
+      {
+        question: "Tại sao cần ghi chú các mốc thời gian trong quá trình hiện thực mã chương trình?",
+        options: [
+          "Để theo dõi tiến độ và quản lý thời gian hiệu quả",
+          "Để lưu trữ dữ liệu người dùng",
+          "Để phân tích thị trường",
+          "Để giảm chi phí phát triển"
+        ],
+        correct: 0
+      },
+      {
+        question: "Việc chuẩn bị để hiện thực bao gồm gì?",
+        options: [
+          "Xác nhận các thiết kế chi tiết phải thực hiện",
+          "Mã hóa từ một thiết kế được mô tả bằng văn bản",
+          "Đo thời gian phân loại theo các bước",
+          "Tất cả các ý trên"
+        ],
+        correct: 3
+      },
+      {
+        question: "Mục đích của việc biên dịch mã lệnh là gì?",
+        options: [
+          "Kiểm tra và sửa chữa các lỗi cú pháp",
+          "Thiết kế giao diện người dùng",
+          "Viết tài liệu hướng dẫn",
+          "Tạo lập báo cáo phân tích"
+        ],
+        correct: 0
+      },
+      {
+        question: "Mục tiêu của kiểm thử phần mềm là gì?",
+        options: [
+          "Để chỉ ra rằng chương trình thực hiện đúng như mong đợi và tìm ra lỗi",
+          "Để giảm chi phí phát triển",
+          "Để tăng tốc độ lập trình",
+          "Để làm hài lòng khách hàng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Kiểm thử đơn vị (unit testing) tập trung vào điều gì?",
+        options: [
+          "Kiểm thử chức năng của các đối tượng hay các phương thức",
+          "Kiểm thử giao diện người dùng",
+          "Kiểm thử hiệu suất hệ thống",
+          "Kiểm thử tính bảo mật"
+        ],
+        correct: 0
+      },
+      {
+        question: "Kiểm thử component (component testing) tập trung vào điều gì?",
+        options: [
+          "Kiểm thử giao diện component",
+          "Kiểm thử chức năng của các phương thức",
+          "Kiểm thử tính bảo mật",
+          "Kiểm thử giao diện người dùng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Kiểm thử hệ thống (system testing) tập trung vào điều gì?",
+        options: [
+          "Kiểm thử tương tác giữa các component",
+          "Kiểm thử giao diện người dùng",
+          "Kiểm thử tính bảo mật",
+          "Kiểm thử hiệu suất hệ thống"
+        ],
+        correct: 3
+      },
+      {
+        question: "Kiểm thử tự động nên sử dụng gì để hỗ trợ kiểm thử đơn vị?",
+        options: [
+          "Framework kiểm thử tự động (như JUnit)",
+          "Các công cụ kiểm thử tự động",
+          "Phần mềm thiết kế giao diện",
+          "Các chương trình bảo mật"
+        ],
+        correct: 0
+      },
+      {
+        question: "Mục tiêu của kiểm thử giao diện là gì?",
+        options: [
+          "Tìm ra lỗi gây ra bởi các lỗi giao diện hoặc giả định sai về các giao diện",
+          "Kiểm thử chức năng của các phương thức",
+          "Kiểm thử hiệu suất hệ thống",
+          "Kiểm thử tính bảo mật"
+        ],
+        correct: 0
+      },
+      {
+        question: "Một loại giao diện trong kiểm thử giao diện là gì?",
+        options: [
+          "Giao diện có tham số",
+          "Giao diện người dùng",
+          "Giao diện hệ thống",
+          "Giao diện bảo mật"
+        ],
+        correct: 0
+      },
+      {
+        question: "Kiểm thử phát triển là trách nhiệm của ai?",
+        options: [
+          "Đội ngũ phát triển phần mềm",
+          "Người dùng cuối",
+          "Nhóm marketing",
+          "Nhóm hỗ trợ khách hàng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Kiểm thử phát hành là gì?",
+        options: [
+          "Kiểm thử hệ thống trước khi phát hành cho khách hàng",
+          "Kiểm thử hệ thống sau khi phát hành cho khách hàng",
+          "Kiểm thử hệ thống trong giai đoạn phát triển",
+          "Kiểm thử hệ thống trong giai đoạn bảo trì"
+        ],
+        correct: 0
+      },
+      {
+        question: "Phương pháp kiểm thử hộp đen tập trung vào điều gì?",
+        options: [
+          "Kiểm thử chức năng của hệ thống mà không cần biết cấu trúc bên trong",
+          "Kiểm thử hiệu suất hệ thống",
+          "Kiểm thử tính bảo mật",
+          "Kiểm thử giao diện người dùng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Phương pháp kiểm thử hộp trắng tập trung vào điều gì?",
+        options: [
+          "Kiểm thử cấu trúc bên trong của hệ thống",
+          "Kiểm thử hiệu suất hệ thống",
+          "Kiểm thử tính bảo mật",
+          "Kiểm thử giao diện người dùng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Phương pháp kiểm thử hộp xám là gì?",
+        options: [
+          "Kết hợp giữa kiểm thử hộp đen và kiểm thử hộp trắng",
+          "Kiểm thử hiệu suất hệ thống",
+          "Kiểm thử tính bảo mật",
+          "Kiểm thử giao diện người dùng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Mục tiêu của kiểm thử validation là gì?",
+        options: [
+          "Để chỉ ra rằng phần mềm thỏa mãn các yêu cầu đưa ra",
+          "Để tìm ra các lỗi của phần mềm",
+          "Để giảm chi phí phát triển",
+          "Để tăng tốc độ lập trình"
+        ],
+        correct: 0
+      },
+      {
+        question: "Mục tiêu của kiểm thử defect là gì?",
+        options: [
+          "Để tìm ra các tình huống mà phần mềm không hoạt động đúng như mong đợi",
+          "Để chỉ ra rằng phần mềm thỏa mãn yêu cầu đưa ra",
+          "Để giảm chi phí phát triển",
+          "Để làm hài lòng khách hàng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Tại sao cần kiểm tra kết quả của việc kiểm thử?",
+        options: [
+          "Để tìm ra lỗi và các bất thường",
+          "Để lưu trữ dữ liệu người dùng",
+          "Để phân tích thị trường",
+          "Để tăng tốc độ phát triển phần mềm"
+        ],
+        correct: 0
+      },
+      {
+        question: "Kiểm thử người dùng tập trung vào điều gì?",
+        options: [
+          "Kiểm thử phần mềm bởi người dùng cuối",
+          "Kiểm thử tính bảo mật",
+          "Kiểm thử hiệu suất hệ thống",
+          "Kiểm thử giao diện người dùng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Cải tiến quy trình phần mềm bao gồm gì?",
+        options: [
+          "Cải tiến các phương pháp phát triển và kiểm thử phần mềm",
+          "Tăng tốc độ lập trình",
+          "Giảm chi phí phát triển",
+          "Tập trung vào giao diện người dùng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Bảo trì phần mềm bao gồm gì?",
+        options: [
+          "Sửa lỗi và nâng cấp phần mềm sau khi phát hành",
+          "Thiết kế giao diện người dùng",
+          "Viết tài liệu hướng dẫn",
+          "Tạo lập báo cáo phân tích"
+        ],
+        correct: 0
+      },
+      {
+        question: "Mục đích của việc kiểm thử bản release là gì?",
+        options: [
+          "Để đảm bảo phần mềm hoạt động đúng như mong đợi trước khi phát hành",
+          "Để giảm chi phí phát triển",
+          "Để tăng tốc độ lập trình",
+          "Để làm hài lòng khách hàng"
+        ],
+        correct: 0
+      }
+    ];
+
+    const quizContainer = document.getElementById('quiz');
+
+    quizData.forEach((q, i) => {
+      const questionDiv = document.createElement('div');
+      questionDiv.className = 'question';
+
+      const questionTitle = document.createElement('h3');
+      questionTitle.textContent = `Câu ${i + 1}: ${q.question}`;
+      questionDiv.appendChild(questionTitle);
+
+      const answersDiv = document.createElement('div');
+      answersDiv.className = 'answers';
+
+      q.options.forEach((opt, index) => {
+        const btn = document.createElement('button');
+        btn.textContent = opt;
+        btn.addEventListener('click', () => {
+          const allBtns = answersDiv.querySelectorAll('button');
+          allBtns.forEach(b => b.disabled = true);
+          if (index === q.correct) {
+            btn.classList.add('correct');
+          } else {
+            btn.classList.add('wrong');
+            allBtns[q.correct].classList.add('correct');
+          }
+        });
+        answersDiv.appendChild(btn);
+      });
+
+      questionDiv.appendChild(answersDiv);
+      quizContainer.appendChild(questionDiv);
+    });
+  </script>
+</body>
+</html>
