@@ -66,42 +66,8 @@
     #stats {
       text-align: center;
       font-weight: bold;
-      margin: 60px 0 20px 0;
+      margin: 20px 0;
       color: #34495e;
-    }
-
-    #progressBar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 8px;
-      background: #eee;
-      z-index: 999;
-    }
-
-    #progress {
-      height: 100%;
-      width: 0%;
-      background: #27ae60;
-      transition: width 0.3s ease;
-    }
-
-    .progress-marks {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      pointer-events: none;
-    }
-
-    .progress-marks span {
-      width: 2px;
-      background: #ccc;
-      height: 100%;
     }
 
     #bookmarkBtn {
@@ -145,38 +111,23 @@
       text-align: center;
       margin-top: 20px;
     }
-
-    @media (max-width: 600px) {
-      .question {
-        padding: 15px;
-      }
-
-      .answers button {
-        font-size: 14px;
-        padding: 10px;
-      }
-    }
   </style>
 </head>
 
 <body>
-  <div id="progressBar">
-    <div id="progress"></div>
-    <div class="progress-marks" id="progressMarks"></div>
-  </div>
-  <h1>Quiz Trắc Nghiệm Kiểm thử PM</h1>
+  <h1>Quiz Trắc Nghiệm Kiểm Thử Phần Mềm</h1>
   <div id="stats"></div>
   <div id="quiz"></div>
 
   <div class="actions">
     <button id="resetQuiz">🔄 Làm lại Quiz</button>
-    <a href="index.html" class="nav-button">Chuyển sang Quiz CNPM</a>
+    <a href="index.html" class="nav-button">Chuyển sang Quiz công nghệ phần mềm</a>
   </div>
 
   <button id="bookmarkBtn" title="Lên đầu trang">↑</button>
 
   <script>
-    const quizData =[
+    const quizData = [
 
       {
         question: "Lệnh nào sau đây dùng để thiết lập giá trị trả về của một đối tượng giả lập?",
@@ -644,27 +595,12 @@
       const score = ((correct / total) * 10).toFixed(2);
 
       statsDiv.innerHTML = `
-        <span style="color: #27ae60;">Đúng: ${correct}</span> |
-        <span style="color: #e74c3c;">Sai: ${wrong}</span> |
-        <span style="color: #7f8c8d;">Chưa làm: ${notDone}</span> |
-        <span style="color: #2980b9;">Đã làm: ${done}</span> |
-        <span style="color: #8e44ad;">Điểm: ${score}/10</span>
-      `;
-
-      document.getElementById('progress').style.width = `${(done / total) * 100}%`;
-
-      if (notDone === 0) {
-        statsDiv.innerHTML += `<br><span style="color: green; font-weight: bold;">🎉 Bạn đã hoàn thành bài quiz!</span>`;
-      }
-    }
-
-    function renderProgressMarks() {
-      const marksContainer = document.getElementById("progressMarks");
-      marksContainer.innerHTML = "";
-      for (let i = 0; i < quizData.length; i++) {
-        const mark = document.createElement("span");
-        marksContainer.appendChild(mark);
-      }
+    <span style="color: #27ae60;">Đúng: ${correct}</span> |
+    <span style="color: #e74c3c;">Sai: ${wrong}</span> |
+    <span style="color: #7f8c8d;">Chưa làm: ${notDone}</span> |
+    <span style="color: #2980b9;">Đã làm: ${done}</span> |
+    <span style="color: #8e44ad;">Điểm: ${score}/10</span>
+  `;
     }
 
     function renderQuiz() {
@@ -680,27 +616,18 @@
         const answersDiv = document.createElement('div');
         answersDiv.className = 'answers';
 
-        const feedback = document.createElement('div');
-        feedback.style.marginTop = '10px';
-        feedback.style.fontWeight = 'bold';
-
         q.options.forEach((opt, index) => {
           const btn = document.createElement('button');
           btn.textContent = opt;
           btn.addEventListener('click', () => {
             const allBtns = answersDiv.querySelectorAll('button');
             allBtns.forEach(b => b.disabled = true);
-
             if (index === q.correct) {
               btn.classList.add('correct');
-              feedback.textContent = "✅ Chính xác!";
-              feedback.style.color = "#27ae60";
               answersState[i] = true;
             } else {
               btn.classList.add('wrong');
               allBtns[q.correct].classList.add('correct');
-              feedback.textContent = `❌ Sai rồi! Đáp án đúng là: \"${q.options[q.correct]}\"`;
-              feedback.style.color = "#e74c3c";
               answersState[i] = false;
             }
             updateStats();
@@ -708,15 +635,14 @@
           answersDiv.appendChild(btn);
         });
 
-        answersDiv.appendChild(feedback);
         questionDiv.appendChild(answersDiv);
         quizContainer.appendChild(questionDiv);
       });
 
       updateStats();
-      renderProgressMarks();
     }
 
+    // Scroll-to-top button
     const bookmarkBtn = document.getElementById('bookmarkBtn');
     window.addEventListener('scroll', () => {
       bookmarkBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
@@ -725,6 +651,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    // Reset Quiz
     document.getElementById("resetQuiz").addEventListener("click", () => {
       answersState.fill(null);
       renderQuiz();
