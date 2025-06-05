@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quiz Trắc Nghiệm CNPM</title>
   <link rel="icon" type="image/png" href="hehe.jpg" />
 
@@ -24,7 +25,7 @@
       padding: 20px;
       border-radius: 12px;
       margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
@@ -80,12 +81,13 @@
       height: 44px;
       font-size: 22px;
       cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       z-index: 1000;
       display: none;
     }
 
-    .nav-button, #resetQuiz {
+    .nav-button,
+    #resetQuiz {
       display: inline-block;
       margin: 10px auto;
       padding: 10px 20px;
@@ -99,7 +101,8 @@
       font-size: 16px;
     }
 
-    .nav-button:hover, #resetQuiz:hover {
+    .nav-button:hover,
+    #resetQuiz:hover {
       background-color: #2980b9;
     }
 
@@ -109,6 +112,7 @@
     }
   </style>
 </head>
+
 <body>
   <h1>Quiz Trắc Nghiệm CNPM</h1>
   <div id="stats"></div>
@@ -691,7 +695,14 @@
       const total = answersState.length;
       const done = correct + wrong;
       const score = ((correct / total) * 10).toFixed(2);
-      statsDiv.textContent = `Đúng: ${correct} | Sai: ${wrong} | Chưa làm: ${notDone} | Đã làm: ${done} | Điểm: ${score}/10`;
+
+      statsDiv.innerHTML = `
+    <span style="color: #27ae60;">Đúng: ${correct}</span> |
+    <span style="color: #e74c3c;">Sai: ${wrong}</span> |
+    <span style="color: #7f8c8d;">Chưa làm: ${notDone}</span> |
+    <span style="color: #2980b9;">Đã làm: ${done}</span> |
+    <span style="color: #8e44ad;">Điểm: ${score}/10</span>
+  `;
     }
 
     function renderQuiz() {
@@ -751,4 +762,5 @@
     renderQuiz();
   </script>
 </body>
+
 </html>
