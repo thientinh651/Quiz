@@ -1,51 +1,38 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Trắc Nghiệm CNPM</title>
-  <link rel="icon" type="image/png" href="hehe.jpg" />
+  <link rel="icon" type="image/png" href="hehe.jpg" style="width: fit-content; height: fit-content;">
 
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
-      background: #f4f6f8;
-      margin: 0;
-    }
-
-    h1 {
-      text-align: center;
-      color: #2c3e50;
+      background: #f9f9f9;
     }
 
     .question {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
       margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .answers button {
       display: block;
-      margin: 8px 0;
-      padding: 12px;
-      width: 100%;
+      margin: 5px 0;
+      padding: 10px;
       border: 1px solid #ccc;
       background: white;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: 0.3s;
+      width: 100%;
       text-align: left;
-      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 8px;
     }
 
     .answers button:hover {
-      background-color: #eee;
+      background-color: #dcd6d6;
       transform: scale(1.02);
     }
 
@@ -60,15 +47,14 @@
       background-color: #fddede;
       border-color: #e74c3c;
     }
+  </style>
+</head>
 
-    #stats {
-      text-align: center;
-      font-weight: bold;
-      margin: 20px 0;
-      color: #34495e;
-    }
-
-    #bookmarkBtn {
+<body>
+  <h1>Quiz Trắc Nghiệm CNPM Vinh</h1>
+  <div id="stats" style="margin-bottom:20px; font-weight:bold;"></div>
+  <div id="quiz"></div>
+  <button id="bookmarkBtn" title="Lên đầu trang" style="
       position: fixed;
       bottom: 30px;
       right: 30px;
@@ -83,43 +69,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       z-index: 1000;
       display: none;
-    }
-
-    .nav-button, #resetQuiz {
-      display: inline-block;
-      margin: 10px auto;
-      padding: 10px 20px;
-      background-color: #3498db;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s;
-      font-size: 16px;
-    }
-
-    .nav-button:hover, #resetQuiz:hover {
-      background-color: #2980b9;
-    }
-
-    .actions {
-      text-align: center;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Quiz Trắc Nghiệm CNPM</h1>
-  <div id="stats"></div>
-  <div id="quiz"></div>
-
-  <div class="actions">
-    <button id="resetQuiz">🔄 Làm lại Quiz</button>
-    <a href="ktpm.html" class="nav-button">Chuyển sang Quiz Kiểm Thử</a>
-  </div>
-
-  <button id="bookmarkBtn" title="Lên đầu trang">↑</button>
+    ">↑</button>
 
   <script>
     const quizData = [
@@ -682,6 +632,7 @@
 
     const quizContainer = document.getElementById('quiz');
     const statsDiv = document.getElementById('stats');
+    // Mảng lưu trạng thái từng câu: null (chưa làm), true (đúng), false (sai)
     const answersState = Array(quizData.length).fill(null);
 
     function updateStats() {
@@ -691,64 +642,62 @@
       const total = answersState.length;
       const done = correct + wrong;
       const score = ((correct / total) * 10).toFixed(2);
+
       statsDiv.textContent = `Đúng: ${correct} | Sai: ${wrong} | Chưa làm: ${notDone} | Đã làm: ${done} | Điểm: ${score}/10`;
     }
 
-    function renderQuiz() {
-      quizContainer.innerHTML = '';
-      quizData.forEach((q, i) => {
-        const questionDiv = document.createElement('div');
-        questionDiv.className = 'question';
+    quizData.forEach((q, i) => {
+      const questionDiv = document.createElement('div');
+      questionDiv.className = 'question';
 
-        const questionTitle = document.createElement('h3');
-        questionTitle.textContent = `Câu ${i + 1}: ${q.question}`;
-        questionDiv.appendChild(questionTitle);
+      const questionTitle = document.createElement('h3');
+      questionTitle.textContent = `Câu ${i + 1}: ${q.question}`;
+      questionDiv.appendChild(questionTitle);
 
-        const answersDiv = document.createElement('div');
-        answersDiv.className = 'answers';
+      const answersDiv = document.createElement('div');
+      answersDiv.className = 'answers';
 
-        q.options.forEach((opt, index) => {
-          const btn = document.createElement('button');
-          btn.textContent = opt;
-          btn.addEventListener('click', () => {
-            const allBtns = answersDiv.querySelectorAll('button');
-            allBtns.forEach(b => b.disabled = true);
-            if (index === q.correct) {
-              btn.classList.add('correct');
-              answersState[i] = true;
-            } else {
-              btn.classList.add('wrong');
-              allBtns[q.correct].classList.add('correct');
-              answersState[i] = false;
-            }
-            updateStats();
-          });
-          answersDiv.appendChild(btn);
+      q.options.forEach((opt, index) => {
+        const btn = document.createElement('button');
+        btn.textContent = opt;
+        btn.addEventListener('click', () => {
+          const allBtns = answersDiv.querySelectorAll('button');
+          allBtns.forEach(b => b.disabled = true);
+          if (index === q.correct) {
+            btn.classList.add('correct');
+            answersState[i] = true;
+          } else {
+            btn.classList.add('wrong');
+            allBtns[q.correct].classList.add('correct');
+            answersState[i] = false;
+          }
+          updateStats();
         });
-
-        questionDiv.appendChild(answersDiv);
-        quizContainer.appendChild(questionDiv);
+        answersDiv.appendChild(btn);
       });
 
-      updateStats();
-    }
+      questionDiv.appendChild(answersDiv);
+      quizContainer.appendChild(questionDiv);
+    });
 
-    // Scroll-to-top button
+    updateStats();
+
+    // Hiện nút khi cuộn xuống dưới 200px
     const bookmarkBtn = document.getElementById('bookmarkBtn');
     window.addEventListener('scroll', () => {
-      bookmarkBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+      if (window.scrollY > 200) {
+        bookmarkBtn.style.display = 'block';
+      } else {
+        bookmarkBtn.style.display = 'none';
+      }
     });
     bookmarkBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-
-    // Reset Quiz
-    document.getElementById("resetQuiz").addEventListener("click", () => {
-      answersState.fill(null);
-      renderQuiz();
-    });
-
-    renderQuiz();
   </script>
+  <button>
+    <a href="ktpm.html" style="text-decoration: none;color: black;">Quiz kiểm thử phần mềm</a>
+  </button>
 </body>
+
 </html>
