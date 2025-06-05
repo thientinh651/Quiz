@@ -135,8 +135,9 @@
       transition: 0.3s;
       font-size: 16px;
     }
+
     .nav-button2 {
- display: inline-block;
+      display: inline-block;
       margin: 10px auto;
       padding: 10px 20px;
       background-color: #2bb177;
@@ -148,10 +149,12 @@
       transition: 0.3s;
       font-size: 16px;
     }
+
     .nav-button:hover,
     #resetQuiz:hover {
       background-color: #2980b9;
     }
+
     .nav-button2:hover {
       background-color: #0fa39c;
     }
@@ -185,13 +188,18 @@
 
   <div class="actions">
     <button id="resetQuiz">🔄 Làm lại Quiz</button>
-    <a href="ktpm.html" class="nav-button">Chuyển sang Quiz Kiểm Thử</a> 
+    <a href="ktpm.html" class="nav-button">Chuyển sang Quiz Kiểm Thử</a>
     <br>
-    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-introduction/" target="_blank">Unified Modeling Language (UML) Diagrams</a>
-    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-class-diagrams/" target="_blank">Class Diagram </a>
-    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-activity-diagrams/" target="_blank">Activity Diagram </a>
-    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-sequence-diagrams/" target="_blank">Sequence Diagram </a>
-    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-state-diagrams/" target="_blank">State Diagram </a>
+    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-introduction/"
+      target="_blank">Unified Modeling Language (UML) Diagrams</a>
+    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-class-diagrams/"
+      target="_blank">Class Diagram </a>
+    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-activity-diagrams/"
+      target="_blank">Activity Diagram </a>
+    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-sequence-diagrams/"
+      target="_blank">Sequence Diagram </a>
+    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-state-diagrams/"
+      target="_blank">State Diagram </a>
     <a class="nav-button2" href="https://www.geeksforgeeks.org/use-case-diagram/" target="_blank">Use-Case Diagram </a>
   </div>
 
@@ -753,9 +761,48 @@
           "Để làm hài lòng khách hàng"
         ],
         correct: 0
+      }, {
+        question: "Thiết kế hướng đối tượng bao gồm những giai đoạn nào?",
+        options: [
+          "Phân tích, thiết kế, kiểm thử",
+          "Thiết kế, hiện thực, bảo trì",
+          "Phát triển, triển khai, bảo trì",
+          "Xác định yêu cầu, thiết kế, hiện thực"
+        ],
+        correct: 3
+      },
+      {
+        question: "Chuẩn bị đo thời gian phân loại theo các bước nào?",
+        options: [
+          "Thiết kế chi tiết, mã hóa, kiểm duyệt mã, biên soạn, kiểm tra và sửa chữa lỗi",
+          "Thiết kế chi tiết, lập tài liệu, mã hóa, kiểm duyệt mã, bảo trì phần mềm",
+          "Mã hóa, kiểm tra, triển khai, bảo trì, nâng cấp phần mềm",
+          "Kiểm tra, mã hóa, triển khai, kiểm duyệt mã, bảo trì"
+        ],
+        correct: 0
+      },
+      {
+        question: "Làm việc với các đoạn mã có kích thước bao nhiêu là hợp lý?",
+        options: [
+          "+-100 LOC",
+          "+-200 LOC",
+          "+-300 LOC",
+          "+-400 LOC"
+        ],
+        correct: 0
+      },
+      {
+        question: "Cải tiến lập trình động bao gồm gì?",
+        options: [
+          "Tăng tính linh hoạt và khả năng thích ứng của phần mềm",
+          "Tăng tốc độ lập trình",
+          "Giảm chi phí phát triển",
+          "Tập trung vào giao diện người dùng"
+        ],
+        correct: 0
       }
     ];
-      // Hàm xáo trộn câu hỏi
+    // Hàm xáo trộn câu hỏi
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -862,8 +909,8 @@
       renderQuiz();
     });
 
-  
-     shuffleArray(quizData);// gọi hàm để xáo trộn câu hỏi mỗi lần tải trang
+
+    shuffleArray(quizData);// gọi hàm để xáo trộn câu hỏi mỗi lần tải trang
     renderQuiz();
   </script>
 </body>
