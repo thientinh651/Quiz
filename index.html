@@ -803,11 +803,26 @@
       }
     ];
     // Hàm xáo trộn câu hỏi
+    // function shuffleArray(array) {
+    //   for (let i = array.length - 1; i > 0; i--) {
+    //     const j = Math.floor(Math.random() * (i + 1));
+    //     [array[i], array[j]] = [array[j], array[i]];
+    //   }
+    // }
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
       }
+    }
+
+    // ✅ Hàm xáo trộn đáp án từng câu và cập nhật lại chỉ số đúng
+    function shuffleAnswers(quizData) {
+      quizData.forEach(q => {
+        const originalCorrectAnswer = q.options[q.correct];
+        shuffleArray(q.options); // xáo trộn options
+        q.correct = q.options.indexOf(originalCorrectAnswer); // cập nhật lại chỉ số correct
+      });
     }
 
     const quizContainer = document.getElementById('quiz');
@@ -906,11 +921,14 @@
 
     document.getElementById("resetQuiz").addEventListener("click", () => {
       answersState.fill(null);
+      shuffleArray(quizData);
+      shuffleAnswers(quizData);
       renderQuiz();
     });
 
 
-    shuffleArray(quizData);// gọi hàm để xáo trộn câu hỏi mỗi lần tải trang
+    shuffleArray(quizData);       // Xáo trộn thứ tự câu hỏi
+    shuffleAnswers(quizData);     // Xáo trộn thứ tự đáp án trong từng câu
     renderQuiz();
   </script>
 </body>
