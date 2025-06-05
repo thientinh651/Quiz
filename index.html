@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Trắc Nghiệm CNPM</title>
-  <link rel="icon" type="image/png" href="hehe.jpg" 
-  style="width: fit-content; height: fit-content;">
+  <link rel="icon" type="image/png" href="hehe.jpg" style="width: fit-content; height: fit-content;">
 
   <style>
     body {
@@ -13,9 +13,11 @@
       padding: 20px;
       background: #f9f9f9;
     }
+
     .question {
       margin-bottom: 20px;
     }
+
     .answers button {
       display: block;
       margin: 5px 0;
@@ -28,22 +30,31 @@
       transition: 0.3s;
       border-radius: 8px;
     }
+
+    .answers button:hover {
+      background-color: #dcd6d6;
+      transform: scale(1.02);
+    }
+
     .answers button.correct {
       background-color: #c8f7c5;
       border-color: #27ae60;
+      font-weight: bold;
+      color: black;
     }
+
     .answers button.wrong {
       background-color: #fddede;
       border-color: #e74c3c;
     }
   </style>
 </head>
+
 <body>
   <h1>Quiz Trắc Nghiệm CNPM Vinh</h1>
   <div id="stats" style="margin-bottom:20px; font-weight:bold;"></div>
   <div id="quiz"></div>
-  <button id="bookmarkBtn" title="Lên đầu trang"
-    style="
+  <button id="bookmarkBtn" title="Lên đầu trang" style="
       position: fixed;
       bottom: 30px;
       right: 30px;
@@ -62,7 +73,7 @@
 
   <script>
     const quizData = [
-        {
+      {
         question: "Thiết kế phần mềm là gì?",
         options: [
           "Quá trình viết mã nguồn",
@@ -628,7 +639,11 @@
       const correct = answersState.filter(x => x === true).length;
       const wrong = answersState.filter(x => x === false).length;
       const notDone = answersState.filter(x => x === null).length;
-      statsDiv.textContent = `Đúng: ${correct} | Sai: ${wrong} | Chưa làm: ${notDone}`;
+      const total = answersState.length;
+      const done = correct + wrong;
+      const score = ((correct / total) * 10).toFixed(2);
+
+      statsDiv.textContent = `Đúng: ${correct} | Sai: ${wrong} | Chưa làm: ${notDone} | Đã làm: ${done} | Điểm: ${score}/10`;
     }
 
     quizData.forEach((q, i) => {
@@ -684,4 +699,5 @@
     <a href="ktpm.html" style="text-decoration: none;color: black;">Quiz kiểm thử phần mềm</a>
   </button>
 </body>
+
 </html>
