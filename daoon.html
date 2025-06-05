@@ -122,7 +122,8 @@
     }
 
     .nav-button,
-    #resetQuiz {
+    #resetQuiz,
+    #shuffleQuestions {
       display: inline-block;
       margin: 10px auto;
       padding: 10px 20px;
@@ -137,7 +138,8 @@
     }
 
     .nav-button:hover,
-    #resetQuiz:hover {
+    #resetQuiz:hover,
+    #shuffleQuestions:hover {
       background-color: #2980b9;
     }
 
@@ -170,13 +172,14 @@
 
   <div class="actions">
     <button id="resetQuiz">🔄 Làm lại Quiz</button>
+    <button id="shuffleQuestions">🔀 Đảo câu hỏi</button>
     <a href="ktpm.html" class="nav-button">Chuyển sang Quiz Kiểm Thử</a>
   </div>
 
   <button id="bookmarkBtn" title="Lên đầu trang">↑</button>
 
-    <script>
-    const quizData = [
+  <script>
+    const originalQuizData = [
       {
         question: "Thiết kế phần mềm là gì?",
         options: [
@@ -186,25 +189,6 @@
           "Quá trình bảo trì phần mềm"
         ],
         correct: 1
-      },{
-        question: "Tại sao cần tự kiểm tra lại thiết kế cấu trúc trước khi mã hóa?",
-        options: [
-          "Để đảm bảo tính đúng đắn và hiệu quả của mã nguồn",
-          "Để tăng tốc độ mã hóa",
-          "Để giảm chi phí phát triển",
-          "Để làm hài lòng khách hàng"
-        ],
-        correct: 0
-      },
-      {
-        question: "Quy tắc đặt tên trong hiện thực mã chương trình cần tuân thủ những điều gì?",
-        options: [
-          "Phù hợp và rõ ràng",
-          "Ngắn gọn và xúc tích",
-          "Phức tạp và chi tiết",
-          "Bất kỳ tên nào cũng được"
-        ],
-        correct: 0
       },
       {
         question: "Mục đích của việc kiểm thử bản release là gì?",
@@ -218,17 +202,20 @@
       }
     ];
 
-    // ✅ Thêm hàm xáo trộn câu hỏi
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    }
-
+    let quizData = [...originalQuizData];
     const quizContainer = document.getElementById('quiz');
     const statsDiv = document.getElementById('stats');
-    const answersState = Array(quizData.length).fill(null);
+    let answersState = Array(quizData.length).fill(null);
+
+    // Hàm xáo trộn mảng
+    function shuffleArray(array) {
+      const newArray = [...array];
+      for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+      }
+      return newArray;
+    }
 
     function updateStats() {
       const correct = answersState.filter(x => x === true).length;
@@ -321,15 +308,31 @@
     });
 
     document.getElementById("resetQuiz").addEventListener("click", () => {
-      answersState.fill(null);
+      quizData = [...originalQuizData];
+      answersState = Array(quizData.length).fill(null);
       renderQuiz();
     });
 
-    // ✅ Xáo trộn trước khi render
-    shuffleArray(quizData);
+    document.getElementById("shuffleQuestions").addEventListener("click", () => {
+      // Lưu trạng thái câu trả lời theo nội dung câu hỏi
+      const newAnswersState = Array(quizData.length).fill(null);
+      const shuffledData = shuffleArray([...quizData]);
+      
+      // Cập nhật lại trạng thái câu trả lời sau khi xáo trộn
+      shuffledData.forEach((q, newIndex) => {
+        const oldIndex = quizData.findIndex(item => item.question === q.question);
+        if (oldIndex !== -1 && answersState[oldIndex] !== null) {
+          newAnswersState[newIndex] = answersState[oldIndex];
+        }
+      });
+      
+      quizData = shuffledData;
+      answersState = newAnswersState;
+      renderQuiz();
+    });
+
     renderQuiz();
   </script>
-
 </body>
 
 </html>

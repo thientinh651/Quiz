@@ -755,7 +755,13 @@
         correct: 0
       }
     ];
-
+      // Hàm xáo trộn câu hỏi
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
 
     const quizContainer = document.getElementById('quiz');
     const statsDiv = document.getElementById('stats');
@@ -856,6 +862,8 @@
       renderQuiz();
     });
 
+  
+     shuffleArray(quizData);// gọi hàm để xáo trộn câu hỏi mỗi lần tải trang
     renderQuiz();
   </script>
 </body>
