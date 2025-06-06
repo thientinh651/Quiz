@@ -136,9 +136,27 @@
       font-size: 16px;
     }
 
+    .nav-button2 {
+      display: inline-block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      background-color: #2bb177;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+
     .nav-button:hover,
     #resetQuiz:hover {
       background-color: #2980b9;
+    }
+
+    .nav-button2:hover {
+      background-color: #0fa39c;
     }
 
     .actions {
@@ -171,11 +189,24 @@
   <div class="actions">
     <button id="resetQuiz">🔄 Làm lại Quiz</button>
     <a href="ktpm.html" class="nav-button">Chuyển sang Quiz Kiểm Thử</a>
+    <br>
+    
+    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-introduction/"
+      target="_blank">Unified Modeling Language (UML) Diagrams</a>
+    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-class-diagrams/"
+      target="_blank">Class Diagram </a>
+    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-activity-diagrams/"
+      target="_blank">Activity Diagram </a>
+    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-sequence-diagrams/"
+      target="_blank">Sequence Diagram </a>
+    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-state-diagrams/"
+      target="_blank">State Diagram </a>
+    <a class="nav-button2" href="https://www.geeksforgeeks.org/use-case-diagram/" target="_blank">Use-Case Diagram </a>
   </div>
 
   <button id="bookmarkBtn" title="Lên đầu trang">↑</button>
 
-    <script>
+  <script>
     const quizData = [
       {
         question: "Thiết kế phần mềm là gì?",
@@ -186,44 +217,78 @@
           "Quá trình bảo trì phần mềm"
         ],
         correct: 1
-      },{
-        question: "Tại sao cần tự kiểm tra lại thiết kế cấu trúc trước khi mã hóa?",
+      },
+      {
+        question: "Hiện thực phần mềm là gì?",
         options: [
-          "Để đảm bảo tính đúng đắn và hiệu quả của mã nguồn",
-          "Để tăng tốc độ mã hóa",
-          "Để giảm chi phí phát triển",
-          "Để làm hài lòng khách hàng"
+          "Quá trình kiểm thử phần mềm",
+          "Quá trình hiện thực bản thiết kế thành chương trình",
+          "Quá trình viết tài liệu hướng dẫn",
+          "Quá trình bảo trì phần mềm"
         ],
+        correct: 1
+      },
+      {
+        question: "Thiết kế và hiện thực phần mềm là hoạt động như thế nào?",
+        options: [
+          "Tách biệt hoàn toàn",
+          "Đan xen lẫn nhau",
+          "Hoàn toàn độc lập",
+          "Không liên quan đến nhau"
+        ],
+        correct: 1
+      },
+      {
+        question: "Thiết kế hướng đối tượng sử dụng gì để biểu diễn?",
+        options: ["UML", "SQL", "HTML", "XML"],
         correct: 0
       },
       {
-        question: "Quy tắc đặt tên trong hiện thực mã chương trình cần tuân thủ những điều gì?",
+        question: "Thiết kế mẫu là gì?",
         options: [
-          "Phù hợp và rõ ràng",
-          "Ngắn gọn và xúc tích",
-          "Phức tạp và chi tiết",
-          "Bất kỳ tên nào cũng được"
+          "Một phương pháp lập trình",
+          "Một phương pháp thiết kế giao diện người dùng",
+          "Một phương pháp để giải quyết các vấn đề thiết kế thường gặp",
+          "Một phương pháp kiểm thử"
         ],
-        correct: 0
+        correct: 2
       },
       {
-        question: "Mục đích của việc kiểm thử bản release là gì?",
+        question: "Phát triển mã nguồn mở liên quan đến gì?",
         options: [
-          "Để đảm bảo phần mềm hoạt động đúng như mong đợi trước khi phát hành",
-          "Để giảm chi phí phát triển",
-          "Để tăng tốc độ lập trình",
-          "Để làm hài lòng khách hàng"
+          "Sử dụng phần mềm đóng gói",
+          "Sử dụng và phát triển các thành phần mã nguồn mở",
+          "Thiết kế giao diện người dùng",
+          "Quản lý dự án phần mềm"
         ],
-        correct: 0
+        correct: 1
+      },
+      {
+        question: "Một trong những nguyên tắc chính trong thiết kế giao diện người dùng là gì?",
+        options: [
+          "Tối ưu hóa cho các thiết bị di động",
+          "Tính đến nhu cầu, kinh nghiệm và khả năng của người dùng hệ thống",
+          "Tăng tốc độ phát triển phần mềm",
+          "Giảm chi phí phát triển"
+        ],
+        correct: 1
       }
     ];
 
-    // ✅ Thêm hàm xáo trộn câu hỏi
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
       }
+    }
+
+    // ✅ Hàm xáo trộn đáp án từng câu và cập nhật lại chỉ số đúng
+    function shuffleAnswers(quizData) {
+      quizData.forEach(q => {
+        const originalCorrectAnswer = q.options[q.correct];
+        shuffleArray(q.options); // xáo trộn options
+        q.correct = q.options.indexOf(originalCorrectAnswer); // cập nhật lại chỉ số correct
+      });
     }
 
     const quizContainer = document.getElementById('quiz');
@@ -322,14 +387,16 @@
 
     document.getElementById("resetQuiz").addEventListener("click", () => {
       answersState.fill(null);
+      shuffleArray(quizData);
+      shuffleAnswers(quizData);
       renderQuiz();
     });
 
-    // ✅ Xáo trộn trước khi render
-    shuffleArray(quizData);
+
+    shuffleArray(quizData);       // Xáo trộn thứ tự câu hỏi
+    shuffleAnswers(quizData);     // Xáo trộn thứ tự đáp án trong từng câu
     renderQuiz();
   </script>
-
 </body>
 
 </html>
