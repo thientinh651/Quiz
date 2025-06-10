@@ -47,7 +47,7 @@
 
     .answers button:hover {
       background-color: #eee;
-      transform: scale(1.02);
+      /* transform: scale(1.02); */
     }
 
     .answers button.correct {
@@ -182,26 +182,32 @@
     <div id="progress"></div>
     <div class="progress-marks" id="progressMarks"></div>
   </div>
-  <h1>Quiz Trắc Nghiệm CNPM</h1>
+  <h1>Quiz Trắc Nghiệm KTPM</h1>
   <div id="stats"></div>
   <div id="quiz"></div>
 
   <div class="actions">
-    <button id="resetQuiz">🔄 Làm lại Quiz</button>
-    <a href="ktpm.html" class="nav-button">Chuyển sang Quiz Kiểm Thử</a>
+    <button id="resetQuiz">🔄 Làm lại Quiz</button><br>
+    <!-- <a href="ktpm.html" class="nav-button">Chuyển sang Quiz Kiểm Thử</a> -->
     <br>
-    
-    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-introduction/"
-      target="_blank">Unified Modeling Language (UML) Diagrams</a>
-    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-class-diagrams/"
-      target="_blank">Class Diagram </a>
-    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-activity-diagrams/"
-      target="_blank">Activity Diagram </a>
-    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-sequence-diagrams/"
-      target="_blank">Sequence Diagram </a>
-    <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-state-diagrams/"
-      target="_blank">State Diagram </a>
-    <a class="nav-button2" href="https://www.geeksforgeeks.org/use-case-diagram/" target="_blank">Use-Case Diagram </a>
+
+    <!-- <div style="text-align: center; margin-top: 40px;">
+      <h2>📽️ Video Hướng Dẫn Diagrams</h2>
+      <a class="nav-button2" href="https://www.geeksforgeeks.org/unified-modeling-language-uml-introduction/"
+        target="_blank">Unified Modeling Language (UML) Diagrams</a>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
+        <div style="max-width: 400px;">
+          <iframe width="300" height="180" src="https://www.youtube.com/embed/kcf_B2JRcYs?si=80UANTtTkp1amAzQ"
+            frameborder="0" allowfullscreen></iframe>
+          <a class="nav-button2" href="https://www.geeksforgeeks.org/use-case-diagram/" target="_blank">Use Case
+            Diagram</a>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+  </div>
   </div>
 
   <button id="bookmarkBtn" title="Lên đầu trang">↑</button>
@@ -209,72 +215,463 @@
   <script>
     const quizData = [
       {
-        question: "Thiết kế phần mềm là gì?",
+        question: "Lệnh nào sau đây dùng để thiết lập giá trị trả về của một đối tượng giả lập?",
         options: [
-          "Quá trình viết mã nguồn",
-          "Xác định các thành phần phần mềm và mối liên kết giữa chúng dựa trên yêu cầu của khách hàng",
-          "Quá trình kiểm thử phần mềm",
-          "Quá trình bảo trì phần mềm"
+          "oninvokeReturn()",
+          "returnValue()",
+          "returnWhenCalled()",
+          "when().thenReturn()"
         ],
-        correct: 1
+        correct: 3
       },
       {
-        question: "Hiện thực phần mềm là gì?",
+        question: "JUnit chủ yếu được sử dụng để làm gì?",
         options: [
-          "Quá trình kiểm thử phần mềm",
-          "Quá trình hiện thực bản thiết kế thành chương trình",
-          "Quá trình viết tài liệu hướng dẫn",
-          "Quá trình bảo trì phần mềm"
+          "Unit Test",
+          "Debug",
+          "Tích hợp liên tục",
+          "Thiết kế test case"
         ],
-        correct: 1
-      },
-      {
-        question: "Thiết kế và hiện thực phần mềm là hoạt động như thế nào?",
-        options: [
-          "Tách biệt hoàn toàn",
-          "Đan xen lẫn nhau",
-          "Hoàn toàn độc lập",
-          "Không liên quan đến nhau"
-        ],
-        correct: 1
-      },
-      {
-        question: "Thiết kế hướng đối tượng sử dụng gì để biểu diễn?",
-        options: ["UML", "SQL", "HTML", "XML"],
         correct: 0
       },
       {
-        question: "Thiết kế mẫu là gì?",
+        question: "Làm thế nào có thể mong đợi một ngoại lệ cụ thể được đưa ra trong 1 test case JUnit?",
         options: [
-          "Một phương pháp lập trình",
-          "Một phương pháp thiết kế giao diện người dùng",
-          "Một phương pháp để giải quyết các vấn đề thiết kế thường gặp",
-          "Một phương pháp kiểm thử"
+          "Sử dụng annotation @ExpectException",
+          "Sử dụng try-catch",
+          "Sử dụng phương thức ExpectException trên đối tượng test",
+          "Sử dụng phương thức assertThrows()"
+        ],
+        correct: 3
+      },
+      {
+        question: "Annotation nào được sử dụng để chỉ ra một phương thức là phương thức test trong JUnit?",
+        options: [
+          "@Testing",
+          "@Testify",
+          "@TestCase",
+          "@Test"
+        ],
+        correct: 3
+      },
+      {
+        question: "Hàm so khớp Hamcrest nào giống toán tử &&?",
+        options: [
+          "all",
+          "and",
+          "anyOf",
+          "allOf"
+        ],
+        correct: 1
+      },
+      {
+        question: "Việc thực hiện các test case chức năng là một phần của",
+        options: [
+          "Quá trình xác minh (verification)",
+          "Quá trình báo cáo kết quả test",
+          "Quá trình thiết kế cấp cao",
+          "Quá trình xác nhận (validation)"
+        ],
+        correct: 3
+      },
+      {
+        question: "Test case Selenium IDE có ba cột: command, target và value. Cột Target lưu trữ dữ liệu gì?",
+        options: [
+          "Phần tử hoặc vị trí nơi lệnh được thực thi",
+          "Bước tiếp theo",
+          "Kết quả thực hiện của 1 bước test",
+          "Mục đích của 1 bước test"
+        ],
+        correct: 0
+      },
+      {
+        question: "Hàm verify() của Mockito dùng để làm gì?",
+        options: [
+          "So sánh kết quả thực tế với kết quả mong đợi",
+          "Tạo đối tượng giả lập bán phần",
+          "Tạo đối tượng giả lập toàn phần",
+          "Xác minh ở phương thức có được gọi hay không"
+        ],
+        correct: 3
+      },
+      {
+        question: "Giả sử đối tượng giả lập objA có 1 phương thức f(). Lệnh nào sau đây dùng để xác định phương thức f() không được gọi?",
+        options: [
+          "assert(objA,never()).f()",
+          "verifyNoInteractions(objA)",
+          "verifyNever(objA)",
+          "assertNever(objA).f()"
+        ],
+        correct: 1
+      },
+      {
+        question: "Phát biểu nào phù hợp nhất cho kết quả mong đợi (expected result)?",
+        options: [
+          "Chỉ được sử dụng trong test component",
+          "Tốt nhất là giá trị khi thực thi chương trình",
+          "Hữu ích nhất khi được xác định trước",
+          "Chỉ quan trọng trong test hệ thống"
         ],
         correct: 2
       },
       {
-        question: "Phát triển mã nguồn mở liên quan đến gì?",
+        question: "Phát biểu nào sau đây đúng với Unit test?",
         options: [
-          "Sử dụng phần mềm đóng gói",
-          "Sử dụng và phát triển các thành phần mã nguồn mở",
-          "Thiết kế giao diện người dùng",
-          "Quản lý dự án phần mềm"
+          "Đó là việc xác nhận các thành phần đơn vị, được thực hiện bởi developer trong môi trường test",
+          "Đó là việc xác nhận các thành phần đơn vị, được thực hiện bởi tester trong môi trường test",
+          "Đó là việc xác nhận các thành phần đơn vị, được thực hiện bởi developer trong môi trường phát triển",
+          "Đó là xác nhận giao diện (interface) giữa các thành phần đơn vị"
+        ],
+        correct: 2
+      },
+      {
+        question: "Phát biểu nào sau đây sai về test tĩnh?",
+        options: [
+          "Test tĩnh có thể đưa ra các phép đo như độ phức tạp chu trình",
+          "Test tĩnh yêu cầu phải chạy code",
+          "Là quá trình review một tài liệu như test plan",
+          "Là quá trình review source code"
         ],
         correct: 1
       },
       {
-        question: "Một trong những nguyên tắc chính trong thiết kế giao diện người dùng là gì?",
+        question: "Sự khác biệt giữa lệnh assert và lệnh verify của Selenium IDE là gì?",
         options: [
-          "Tối ưu hóa cho các thiết bị di động",
-          "Tính đến nhu cầu, kinh nghiệm và khả năng của người dùng hệ thống",
-          "Tăng tốc độ phát triển phần mềm",
-          "Giảm chi phí phát triển"
+          "Lệnh assert không thành công sẽ dừng kiểm tra nhưng lệnh verify không thành công thì vẫn tiếp tục",
+          "Lệnh verify không thành công sẽ dừng kiểm tra nhưng lệnh assert không thành công thì vẫn tiếp tục",
+          "Lệnh verify ít phổ biến hơn các lệnh assert",
+          "Lệnh assert ít phổ biến hơn các lệnh verify"
+        ],
+        correct: 0
+      },
+      {
+        question: "Kiểm tra thời gian chờ là",
+        options: [
+          "Phụ thuộc vào phần mềm và phần cứng",
+          "Phụ thuộc vào phần mềm",
+          "Phụ thuộc vào phần cứng",
+          "Độc lập với phần mềm và phần cứng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Phát biểu nào sau đây đúng về phương thức thenReturn() trong Mockito?",
+        options: [
+          "Nó được sử dụng để xác minh rằng một phương thức đã được gọi trên một đối tượng giả",
+          "Nó được sử dụng để chỉ định giá trị trả về của một lệnh gọi phương thức trên một đối tượng giả",
+          "Nó được sử dụng để tạo một đối tượng giả",
+          "Nó không phải là một phương thức hợp lệ trong Mockito"
         ],
         correct: 1
+      },
+      {
+        question: "Trong test double, đối tượng stub khác với đối tượng mock như thế nào?",
+        options: [
+          "Mock mô phỏng kết quả xử lý của một hành động còn stub được sử dụng để xác nhận một hành động có được thực hiện không",
+          "Mock là đối tượng giả còn stub là đối tượng thật",
+          "Stub mô phỏng kết quả xử lý của một hành động còn mock được sử dụng để xác nhận một hành động có được thực hiện không",
+          "Stub là đối tượng giả còn mock là đối tượng thật"
+        ],
+        correct: 2
+      },
+      {
+        question: "Phát biểu nào sau đây đúng về phương thức when() trong Mockito?",
+        options: [
+          "Nó được sử dụng để xác minh rằng một phương thức đã được gọi trên một đối tượng giả",
+          "Nó được sử dụng để ném một ngoại lệ khi một phương thức được gọi trên một đối tượng giả",
+          "Nó được sử dụng để chỉ định hành vi của một lệnh gọi phương thức trên một đối tượng giả",
+          "Nó được sử dụng để tạo một đối tượng giả"
+        ],
+        correct: 2
+      },
+      {
+        question: "Phát biểu nào sau đây phù hợp cho khái niệm độ bao phủ?",
+        options: [
+          "Chỉ áp dụng cho unit test, không áp dụng cho system test",
+          "Là thước đo một phần của tính kỹ lưỡng của bài kiểm tra",
+          "Độ bao phủ nhánh là bắt buộc đối với tất cả các phần mềm",
+          "Khi nào đạt được độ bao phủ 100% thì việc kiểm thử hoàn thành"
+        ],
+        correct: 1
+      },
+      {
+        question: "Phát biểu nào sau đây đúng về phương thức never() của Mockito?",
+        options: [
+          "Nó được sử dụng để xác minh rằng một phương thức đã được gọi trên một đối tượng giả",
+          "Nó được sử dụng để tạo một đối tượng giả",
+          "Nó được sử dụng để xác minh rằng một phương thức không được gọi trên một đối tượng giả",
+          "Nó được sử dụng để chỉ định hành vi của một lệnh gọi phương thức trên một đối tượng giả"
+        ],
+        correct: 2
+      },
+      {
+        question: "assertThat(1.03, is(closeTo(1.0,0.03))) có kết quả là gì?",
+        options: [
+          "false",
+          "true",
+          "mor",
+          "mail"
+        ],
+        correct: 1
+      },
+      {
+        question: "Hàm nào sau đây được sử dụng để tạo một phần mock với Mockito?",
+        options: [
+          "spy()",
+          "partialMock()",
+          "halfMock()",
+          "mockPartial()"
+        ],
+        correct: 0
+      },
+      {
+        question: "Cách nào sau đây dùng để tạo mới 1 đối tượng giả lập bằng Mockito?",
+        options: [
+          "mock()",
+          "createMock()",
+          "new Mock()",
+          "newMock()"
+        ],
+        correct: 0
+      },
+      {
+        question: "Chọn phát biểu đúng cho Smoke testing",
+        options: [
+          "Nó được thực hiện sau khi quá trình test hệ thống kết thúc",
+          "Nó là sự thay thế cho test hồi quy",
+          "Nó là sự thay thế cho test chấp nhận",
+          "Nó được thực hiện để đảm bảo hệ thống đã sẵn sàng trải qua quá trình kiểm tra chuyên sâu và nghiêm ngặt hơn"
+        ],
+        correct: 3
+      },
+      {
+        question: "Điều quan trọng nhất về thiết kế kiểm thử sớm là",
+        options: [
+          "Không cần kiểm duyệt",
+          "Sẽ tìm thấy tất cả các lỗi",
+          "Làm cho việc chuẩn bị kiểm thử dễ dàng hơn",
+          "Có thể ngăn chặn lỗi gia tăng"
+        ],
+        correct: 3
+      },
+      {
+        question: "Mục đích của annotation @DisplayName trong JUnit là gì?",
+        options: [
+          "Để chỉ định tên của test suite",
+          "Đổi tên phương pháp thử trong thời gian chạy",
+          "Đặt tên hiển thị tùy chỉnh cho phương pháp thử nghiệm",
+          "Hiển thị tên người chạy thử"
+        ],
+        correct: 2
+      },
+      {
+        question: "Cú pháp để truy cập giá trị của biến x trong Selenium IDE là gì?",
+        options: [
+          "{x}",
+          "x",
+          "5x",
+          "${x}"
+        ],
+        correct: 3
+      },
+      {
+        question: "Phương thức nào được sử dụng trong JUnit để kiểm tra xem hai đối tượng có phải là cùng một thể hiện (instance) hay không?",
+        options: [
+          "assertSameInstance()",
+          "assertInstance()",
+          "assertThat()",
+          "sameInstance()"
+        ],
+        correct: 0
+      },
+      {
+        question: "Loại test nào được thực hiện để kiểm tra xem giao diện người dùng có dễ sử dụng không?",
+        options: [
+          "White Box Testing",
+          "Usability Testing",
+          "Security Testing",
+          "Unit Testing"
+        ],
+        correct: 1
+      },
+      {
+        question: "Nguồn nào sau đây là nguồn tốt nhất về 'Kết quả mong đợi' cho các testcase 'Kiểm thử chấp nhận' của người dùng?",
+        options: [
+          "Đặc tả chương trình",
+          "Đặc tả hệ thống",
+          "Yêu cầu của người dùng",
+          "Kết quả thực tế"
+        ],
+        correct: 2
+      },
+      {
+        question: "Hàm assertTrue('message', A) làm gì?",
+        options: [
+          "Khẳng định rằng điều kiện A là đúng",
+          "Khẳng định rằng A chứa 'message'",
+          "Khẳng định rằng điều kiện A là sai",
+          "Khẳng định rằng 'message' = A"
+        ],
+        correct: 0
+      },
+      {
+        question: "Phát biểu nào sau đây đúng về annotation @Spy trong Mockito?",
+        options: [
+          "Nó được sử dụng để tạo một đối tượng giả (mock)",
+          "Nó được sử dụng để tạo một đối tượng giả một phần",
+          "Nó được sử dụng để đưa các phần phụ thuộc vào một lớp kiểm tra",
+          "Nó được sử dụng để xác minh rằng một phương thức đã được gọi trên một đối tượng giả"
+        ],
+        correct: 1
+      },
+      {
+        question: "Phát biểu nào sau đây phù hợp nhất về kiểm thử?",
+        options: [
+          "Mục tiêu mục đích của kiểm thử là để chứng minh rằng chương trình hoạt động",
+          "Mục đích của kiểm thử là để chứng minh rằng chương trình không có lỗi",
+          "Mục đích của kiểm thử là để chứng minh rằng chương trình được thực hiện đúng phương pháp",
+          "Kiểm thử là thực thi phần mềm nhằm mục đích tìm ra những khuyết điểm của phần mềm"
+        ],
+        correct: 3
+      },
+      {
+        question: "Phủ lệnh và phủ nhánh có nghĩa là",
+        options: [
+          "Mỗi dòng lệnh đều được test",
+          "Mọi câu lệnh và mọi nhánh đều được kiểm tra",
+          "Tất cả các câu lệnh if đều được kiểm tra",
+          "Đã kiểm tra mọi tổ hợp giá trị của câu lệnh IF trong chương trình"
+        ],
+        correct: 1
+      },
+      {
+        question: "Làm cách nào để đánh giá thời gian chạy của một phương thức trong JUnit?",
+        options: [
+          "Sử dụng phương thức assertTimeout",
+          "Sử dụng annotation @Speed",
+          "Sử dụng phương thức assertSpeed",
+          "Sử dụng phương thức Timeout"
+        ],
+        correct: 0
+      },
+      {
+        question: "Cái nào sau đây là một CSS locator tương đương với Xpath //div[@id='example']",
+        options: [
+          "css=div.example",
+          "css=div#example",
+          "css=div@example",
+          "css=div example"
+        ],
+        correct: 1
+      },
+      {
+        question: "Trường hợp nào sẽ là trường hợp kiểm thử chức năng cho hệ thống đặt chỗ trực tuyến?",
+        options: [
+          "Kiểm tra cách hệ thống hoạt động khi số lượng lớn người dùng đang truy cập trang web",
+          "Kiểm tra xem người dùng có thể đặt vé từ Mumbai đến Goa không",
+          "Do thời gian đáp ứng của hệ thống",
+          "Đảm bảo người già cũng có thể sử dụng dễ dàng"
+        ],
+        correct: 1
+      },
+      {
+        question: "Phát biểu nào sau đây đúng về các hoạt động 'verification' trong kiểm thử?",
+        options: [
+          "Kiểm tra xem chúng ta đang xây dựng hệ thống có đúng không",
+          "Kiểm tra xem chúng ta có đang xây dựng đúng hệ thống không",
+          "Được thực hiện bởi một nhóm kiểm thử độc lập",
+          "Đảm bảo rằng đó là điều người dùng thực sự muốn"
+        ],
+        correct: 1
+      },
+      {
+        question: "Một kỹ thuật kiểm thử phổ biến trong quá trình Unit test là",
+        options: [
+          "Kiểm tra độ phủ lệnh và phủ nhánh",
+          "Đánh giá năng suất",
+          "Kiểm tra tính khả dụng",
+          "Kiểm tra tính bảo mật"
+        ],
+        correct: 0
+      },
+      {
+        question: "Annotation nào xác định 1 phương thức test có tham số?",
+        options: [
+          "@ParameterizedTest",
+          "@DataDrivenTest",
+          "@Parameters",
+          "@TestWithParams"
+        ],
+        correct: 0
+      },
+      {
+        question: "Phát biểu nào sau đây đúng về quá trình xây dựng phần mềm theo hướng tiếp cận TDD?",
+        options: [
+          "Trải qua 3 giai đoạn: test, code, retest",
+          "Trải qua 2 giai đoạn: test trước, code sau",
+          "Trải qua 3 giai đoạn: red, green, refactor",
+          "Phải thực hiện việc test 2 lần để có ít bug"
+        ],
+        correct: 2
+      },
+      {
+        question: "Phát biểu nào sau đây không phải là một trong những nguyên tắc của kiểm thử?",
+        options: [
+          "Lỗi thường phân bố tập trung",
+          "Kiểm thử càng sớm càng tốt",
+          "Kiểm thử phải đạt được 100% độ bao phủ",
+          "Nghịch lý thuốc trừ sâu"
+        ],
+        correct: 2
+      },
+      {
+        question: "Trong test double, đối tượng dummy khác với đối tượng fake như thế nào?",
+        options: [
+          "Dummy là đối tượng giả lập, fake là một đối tượng thật nhưng giả đối tượng khác",
+          "Hai đối tượng này không khác nhau",
+          "Fake là đối tượng giả lập, dummy là một đối tượng thật nhưng giả đối tượng khác",
+          "Fake là giả hành vi, dummy là giả kết quả"
+        ],
+        correct: 3
+      },
+      {
+        question: "Trình tự đúng của các giai đoạn kiểm thử phần mềm là:",
+        options: [
+          "Đơn vị - Tích hợp -> Hệ thống -> Chấp nhận",
+          "Hệ thống - Đơn vị - Tích hợp -> Chấp nhận",
+          "Tích hợp - Chấp nhận -> Đơn vị -> Hệ thống",
+          "Đơn vị - Tích hợp - Chấp nhận - Hệ thống"
+        ],
+        correct: 0
+      },
+      {
+        question: "Kiểm thử được thực hiện đầy đủ khi",
+        options: [
+          "Đạt độ tin cậy cần thiết được thiết lập trong test plan",
+          "Người dùng hài lòng",
+          "Hết thời gian",
+          "Không tìm thấy lỗi nào nữa"
+        ],
+        correct: 0
+      },
+      {
+        question: "Làm thế nào để chỉ định một phương thức kiểm thử cụ thể sẽ bị bỏ qua trong quá trình thực thi?",
+        options: [
+          "@Skip",
+          "@IgnoreTest",
+          "@Disabled",
+          "@Avoid"
+        ],
+        correct: 2
       }
     ];
-
+    // Hàm xáo trộn câu hỏi
+    // function shuffleArray(array) {
+    //   for (let i = array.length - 1; i > 0; i--) {
+    //     const j = Math.floor(Math.random() * (i + 1));
+    //     [array[i], array[j]] = [array[j], array[i]];
+    //   }
+    // }
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
