@@ -730,16 +730,6 @@
         correct: 1
       },
       {
-        question: "Phát biểu nào sau đây đúng về các hoạt động 'verification' trong kiểm thử?",
-        options: [
-          "Kiểm tra xem chúng ta đang xây dựng hệ thống có đúng không",
-          "Kiểm tra xem chúng ta có đang xây dựng đúng hệ thống không",
-          "Được thực hiện bởi một nhóm kiểm thử độc lập",
-          "Đảm bảo rằng đó là điều người dùng thực sự muốn"
-        ],
-        correct: 1
-      },
-      {
         question: "Một kỹ thuật kiểm thử phổ biến trong quá trình Unit test là",
         options: [
           "Kiểm tra độ phủ lệnh và phủ nhánh",
@@ -970,7 +960,7 @@
     "correct": 2
   },
   {
-    "question": "Kỹ thuật đoán lỗi được sử dụng tốt nhất khi nào?",
+    "question": "Kỹ thuật đoán lỗi được sử dụng tốt nhất KHI NÀO?",
     "options": [
       "Chỉ nên áp dụng 1 lần",
       "Khi tiếp cận đầu tiên để tạo ra các test case",
@@ -978,6 +968,16 @@
       "Trước khi các kỹ thuật chính thức được áp dụng"
     ],
     "correct": 2
+  },
+  {
+    "question": "Kỹ thuật đoán lỗi được sử dụng tốt nhất:",
+    "options": [
+      "Khi tiếp cận đầu tiên để tạo ra các test case",
+      "Sau khi các kỹ thuật chính thức được áp dụng",
+      "Bởi những người thử nghiệm thiếu kinh nghiệm",
+      "Sau khi hệ thống hoạt động"
+    ],
+    "correct": 1
   },
   {
     "question": "Phát biểu nào đúng về mối quan hệ giữa bao phủ dòng lệnh và bao phủ quyết định?",
@@ -1036,16 +1036,6 @@
       "Phát triển test case",
       "Lập kế hoạch",
       "Thiết lập môi trường"
-    ],
-    "correct": 1
-  },
-  {
-    "question": "Trong một hệ thống tính thuế, nhóm nào trong số các nhóm sau rơi vào cùng một lớp tương đương?",
-    "options": [
-      "£5800; £28000; £32000",
-      "£28001; £32000; £35000",
-      "£5200; £5500; £28000",
-      "£4800; £14000; £28000"
     ],
     "correct": 1
   },
@@ -1430,16 +1420,6 @@
     "correct": 2
   },
   {
-    "question": "Kỹ thuật đoán lỗi được sử dụng tốt nhất:",
-    "options": [
-      "Khi tiếp cận đầu tiên để tạo ra các test case",
-      "Sau khi các kỹ thuật chính thức được áp dụng",
-      "Bởi những người thử nghiệm thiếu kinh nghiệm",
-      "Sau khi hệ thống hoạt động"
-    ],
-    "correct": 1
-  },
-  {
     "question": "Cho đoạn mã, phát biểu nào sau đây là đúng:\nIF A > B\nTHEN C =A -B \nRead D \nIF C =D \nThen Print 'Error' \nENDIF \nENDIF",
     "options": [
       "1 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
@@ -1571,7 +1551,7 @@
     "correct": 0
   },
   {
-    "question": "Bạn đang test một hệ thống xác định mức phí vận chuyển cho một nhà phân phối phụ tùng ô tô dựa trên web trong khu vực. Trọng lượng mà nhỏ hơn hoặc bằng 0 được xem là không hợp lệ. Xác định có bao nhiêu lớp tương đương cần thiết để test theo bảng giá sau\nTrọng lượng \t1 – 25 kg \t26 – 50 kg \tTrên 50 kg\nTiền ship \t$8.00 \t$12.00 \t$17.00",
+    "question": "Bạn đang test một hệ thống xác định mức phí vận chuyển cho một nhà phân phối phụ tùng ô tô dựa trên web trong khu vực. Trọng lượng mà nhỏ hơn hoặc bằng 0 được xem là không hợp lệ. Xác định có bao nhiêu lớp tương đương cần thiết để test theo bảng giá sau\nTrọng lượng 1 –> 25 kg | 26 –> 50 kg | Trên 50 kg\nTiền ship | $8.00 | $12.00 | $17.00",
     "options": [
       "2",
       "4",
@@ -1794,9 +1774,9 @@
     "question": "Phát biểu nào sau đây đúng về các hoạt động \"verification\" trong kiểm thử",
     "options": [
       "Đảm bảo rằng đó là điều người dùng thật sự muốn",
-      "Kiểm tra xem chúng ta có đang xây dựng đúng hệ thống không",
+      "Kiểm tra xem có đang xây dựng đúng hệ thống không",
       "Được thực hiện bởi một nhóm kiểm thử độc lập",
-      "Kiểm tra xem chúng tôi đang xây dựng hệ thống có đúng không"
+      "Kiểm tra xem có đang xây dựng hệ thống có đúng không"
     ],
     "correct": 3
   },
@@ -1943,7 +1923,7 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
         "🎯 Đúng rồi! Để đa đì thưởng cho!",
         "🔥 Học giỏi nhể!",
         "👏 Đúng luôn! Húp đc 10đ ko đây",
-        "💡 Tuyệt vời, bạn nắm vững kiến thức!",
+        "💡 Tuyệt vời, nắm vững kiến thức đếy!",
         "🧠 Bộ não vàng đây rồi!",
         "🌟 Không thể tin nổi, bạn đúng tiếp!"
     ];
