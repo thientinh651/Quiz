@@ -1031,10 +1031,10 @@
   {
     "question": "Lý do chính để kiểm thử phần mềm trước khi phát hành là gì?",
     "options": [
-      "để tìm càng nhiều lỗi càng tốt trước khi phát hành",
-      "để quyết định khi nào phần mềm có đủ chất lượng để phát hành",
-      "để cung cấp thông tin cho một quyết định dựa trên",
-      "để cho thấy hệ thống sẽ hoạt động sau khi phát hành"
+      "Để tìm càng nhiều lỗi càng tốt trước khi phát hành",
+      "Để quyết định khi nào phần mềm có đủ chất lượng để phát hành",
+      "Để cung cấp thông tin cho một quyết định dựa trên",
+      "Để cho thấy hệ thống sẽ hoạt động sau khi phát hành"
     ],
     "correct": 1
   },
@@ -1799,14 +1799,14 @@
     "correct": 1
   },
   {
-    "question": "Những hoạt động nào tạo thành một phần của test plan?\ni. Phát triển các test case\nii. Xác định các phương hướng test (test approach)\niii. Phân công tài nguyên\niv. Xây dựng môi trường test",
+    "question": "Những hoạt động nào tạo thành một phần của test plan?\n1. Phát triển các test case\n2. Xác định các phương hướng test (test approach)\n3. Phân công tài nguyên\n4. Xây dựng môi trường test",
     "options": [
-      "iv là đúng, i, ii & iii là sai",
-      "i, ii & iv là đúng, iii là sai",
-      "ii & iii là đúng, i & iv là sai",
-      "i, ii & iii là đúng, iv là sai"
+      "4 là đúng, 1, 2 & 3 là sai",
+      "1, 2 & 4 là đúng, 3 là sai",
+      "2 & 3 là đúng, 1 & 4 là sai",
+      "1, 2 & 3 là đúng, 4 là sai"
     ],
-    "correct": 2
+    "correct": 3
   },
   {
     "question": "Cho đoạn mã giả sau, số test case tối thiểu cần có để phủ tất cả các nhánh?\nint kiemTraNguyenTo(int k){\nif(k<2)\nreturn -1;\nfor(int i=2; i<k; i++)\nif(k%i==0)\nreturn -1;\nreturn 1;\n}",
@@ -1943,9 +1943,80 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
       }
     }
 
-    function renderQuiz() {
-      quizContainer.innerHTML = '';
-      quizData.forEach((q, i) => {
+    // function renderQuiz() {
+    //   quizContainer.innerHTML = '';
+    //   quizData.forEach((q, i) => {
+    //     const questionDiv = document.createElement('div');
+    //     questionDiv.className = 'question';
+
+    //     const questionTitle = document.createElement('h3');
+    //     questionTitle.textContent = `Câu ${i + 1}: ${q.question}`;
+    //     questionDiv.appendChild(questionTitle);
+
+    //     const answersDiv = document.createElement('div');
+    //     answersDiv.className = 'answers';
+
+    //     const feedback = document.createElement('div');
+    //     feedback.style.marginTop = '10px';
+    //     feedback.style.fontWeight = 'bold';
+
+    //     q.options.forEach((opt, index) => {
+    //       const btn = document.createElement('button');
+    //       btn.textContent = opt;
+    //       btn.addEventListener('click', () => {
+    //         const allBtns = answersDiv.querySelectorAll('button');
+    //         allBtns.forEach(b => b.disabled = true);
+
+    //         if (index === q.correct) {
+    //           btn.classList.add('correct');
+    //           feedback.textContent = "✅ Chính xác!";
+    //           feedback.style.color = "#27ae60";
+    //           answersState[i] = true;
+    //         } else {
+    //           btn.classList.add('wrong');
+    //           allBtns[q.correct].classList.add('correct');
+    //           feedback.textContent = `❌ Sai rồi! Đáp án đúng là: \"${q.options[q.correct]}\"`;
+    //           feedback.style.color = "#e74c3c";
+    //           answersState[i] = false;
+    //         }
+    //         updateStats();
+    //       });
+    //       answersDiv.appendChild(btn);
+    //     });
+
+    //     answersDiv.appendChild(feedback);
+    //     questionDiv.appendChild(answersDiv);
+    //     quizContainer.appendChild(questionDiv);
+    //   });
+
+    //   updateStats();
+    //   renderProgressMarks();
+    // }
+
+       function renderQuiz() {
+    // Danh sách feedback chất chơi
+    const correctFeedbacks = [
+        "✅ Chính xác! Bé iu giỏi quá!",
+        "🎯 Đúng rồi! Để đa đì thưởng cho!",
+        "🔥 Học giỏi nhể!",
+        "👏 Đúng luôn! Húp đc 10đ ko đây",
+        "💡 Tuyệt vời, bạn nắm vững kiến thức!",
+        "🧠 Bộ não vàng đây rồi!",
+        "🌟 Không thể tin nổi, rùa thế!"
+    ];
+
+    const wrongFeedbacks = [
+        "❌ ANH NHẮC EMMMMMM!!!!. Đáp án đúng là:",
+        "🚫 Không giòn rồi! Cook lại đi! Đáp án đúng là:",
+        "😓 Chưa chính xác. Đáp án đúng là:",
+        "💥 Não cá vàng. Đáp án đúng là:",
+        "😬 Không đúng rồi! Đáp án phải là:",
+        "📛 Rớt phong độ rồi nha! Đáp án đúng là:",
+        "🙈 Sai nhẹ một chút, cẩn thận hơn nhé. Đáp án đúng là:"
+    ];
+
+    quizContainer.innerHTML = '';
+    quizData.forEach((q, i) => {
         const questionDiv = document.createElement('div');
         questionDiv.className = 'question';
 
@@ -1961,36 +2032,39 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
         feedback.style.fontWeight = 'bold';
 
         q.options.forEach((opt, index) => {
-          const btn = document.createElement('button');
-          btn.textContent = opt;
-          btn.addEventListener('click', () => {
+        const btn = document.createElement('button');
+        btn.textContent = opt;
+        btn.addEventListener('click', () => {
             const allBtns = answersDiv.querySelectorAll('button');
             allBtns.forEach(b => b.disabled = true);
 
             if (index === q.correct) {
-              btn.classList.add('correct');
-              feedback.textContent = "✅ Chính xác!";
-              feedback.style.color = "#27ae60";
-              answersState[i] = true;
+            btn.classList.add('correct');
+            const msg = correctFeedbacks[Math.floor(Math.random() * correctFeedbacks.length)];
+            feedback.textContent = msg;
+            feedback.style.color = "#27ae60";
+            answersState[i] = true;
             } else {
-              btn.classList.add('wrong');
-              allBtns[q.correct].classList.add('correct');
-              feedback.textContent = `❌ Sai rồi! Đáp án đúng là: \"${q.options[q.correct]}\"`;
-              feedback.style.color = "#e74c3c";
-              answersState[i] = false;
+            btn.classList.add('wrong');
+            allBtns[q.correct].classList.add('correct');
+            const msg = wrongFeedbacks[Math.floor(Math.random() * wrongFeedbacks.length)];
+            feedback.textContent = `${msg} "${q.options[q.correct]}"`;
+            feedback.style.color = "#e74c3c";
+            answersState[i] = false;
             }
+
             updateStats();
-          });
-          answersDiv.appendChild(btn);
+        });
+        answersDiv.appendChild(btn);
         });
 
         answersDiv.appendChild(feedback);
         questionDiv.appendChild(answersDiv);
         quizContainer.appendChild(questionDiv);
-      });
+    });
 
-      updateStats();
-      renderProgressMarks();
+    updateStats();
+    renderProgressMarks();
     }
 
     const bookmarkBtn = document.getElementById('bookmarkBtn');
