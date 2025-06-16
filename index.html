@@ -340,6 +340,17 @@
 </div>
 
   <h1>Quiz Trắc Nghiệm KTPM</h1>
+  <!-- <audio id="bg-music" src="NhacNen.mp3" autoplay loop></audio>
+
+<button onclick="togglePlay()" id="play-btn"
+  style="position: fixed; top: 20px; right: 90px; padding: 10px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 1000;">
+  Pause
+</button>
+
+<button onclick="toggleMute()" id="mute-btn"
+  style="position: fixed; top: 20px; right: 20px; padding: 10px 15px; background-color: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 1000;">
+  Mute
+</button> -->
   <div style="text-align: center; margin-top: 10px;">
   <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
   </div>
@@ -348,7 +359,19 @@
   <div style="text-align: center; margin-top: 10px;">
   <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
   </div>
+<audio id="bg-music" src="NhacNen.mp3" autoplay loop></audio>
 
+<div style="position: fixed; top: 20px; right: 10px; display: flex; flex-direction: column; gap: 10px; z-index: 1000;">
+  <button onclick="togglePlay()" id="play-btn"
+    style="padding: 6px 5px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+    Pause
+  </button>
+
+  <button onclick="toggleMute()" id="mute-btn"
+    style="padding: 6px 5px; background-color: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+    Mute
+  </button>
+</div>
 
   <div class="actions">
     <button id="resetQuiz">🔄 Làm lại Quiz</button><br>
@@ -1854,58 +1877,6 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
         marksContainer.appendChild(mark);
       }
     }
-
-    // function renderQuiz() {
-    //   quizContainer.innerHTML = '';
-    //   quizData.forEach((q, i) => {
-    //     const questionDiv = document.createElement('div');
-    //     questionDiv.className = 'question';
-
-    //     const questionTitle = document.createElement('h3');
-    //     questionTitle.textContent = `Câu ${i + 1}: ${q.question}`;
-    //     questionDiv.appendChild(questionTitle);
-
-    //     const answersDiv = document.createElement('div');
-    //     answersDiv.className = 'answers';
-
-    //     const feedback = document.createElement('div');
-    //     feedback.style.marginTop = '10px';
-    //     feedback.style.fontWeight = 'bold';
-
-    //     q.options.forEach((opt, index) => {
-    //       const btn = document.createElement('button');
-    //       btn.textContent = opt;
-    //       btn.addEventListener('click', () => {
-    //         const allBtns = answersDiv.querySelectorAll('button');
-    //         allBtns.forEach(b => b.disabled = true);
-
-    //         if (index === q.correct) {
-    //           btn.classList.add('correct');
-    //           feedback.textContent = "✅ Chính xác!";
-    //           feedback.style.color = "#27ae60";
-    //           answersState[i] = true;
-    //         } else {
-    //           btn.classList.add('wrong');
-    //           allBtns[q.correct].classList.add('correct');
-    //           feedback.textContent = `❌ Sai rồi! Đáp án đúng là: \"${q.options[q.correct]}\"`;
-    //           feedback.style.color = "#e74c3c";
-    //           answersState[i] = false;
-    //         }
-    //         updateStats();
-    //       });
-    //       answersDiv.appendChild(btn);
-    //     });
-
-    //     answersDiv.appendChild(feedback);
-    //     questionDiv.appendChild(answersDiv);
-    //     quizContainer.appendChild(questionDiv);
-    //   });
-
-    //   updateStats();
-    //   renderProgressMarks();
-    // }
-
-
         function renderQuiz() {
     // Danh sách feedback chất chơi
     const correctFeedbacks = [
@@ -2051,7 +2022,31 @@ function retryWrongQuestions() {
   statsDiv.innerHTML = `<span style="color:#2c3e50;">📝 Đang làm lại các câu sai (${retryData.length} câu)</span>`;
 }
 
+// nhạc nền
+const music = document.getElementById('bg-music');
+    const playBtn = document.getElementById('play-btn');
+    const muteBtn = document.getElementById('mute-btn');
 
+    function togglePlay() {
+      if (music.paused) {
+        music.play();
+        playBtn.innerText = "Pause";
+      } else {
+        music.pause();
+        playBtn.innerText = "Play";
+      }
+    }
+
+    function toggleMute() {
+      music.muted = !music.muted;
+      muteBtn.innerText = music.muted ? "Unmute" : "Mute";
+    }
+
+    // Gợi ý: đảm bảo người dùng tương tác trước để auto-play hoạt động
+    document.addEventListener('click', function initAudio() {
+      music.play().catch(() => { });
+      document.removeEventListener('click', initAudio);
+    });
   </script>
 </body>
 

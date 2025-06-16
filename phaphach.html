@@ -184,169 +184,180 @@
     <div class="progress-marks" id="progressMarks"></div>
   </div>
   <div style="text-align: center; margin-bottom: 20px;">
-  <button onclick="toggleReview()" class="nav-button2">Mở trang ôn tập lý thuyết</button>
-</div>
+    <button onclick="toggleReview()" class="nav-button2">Mở trang ôn tập lý thuyết</button>
+  </div>
 
-<div id="reviewContent" style="display:none; background: #fff; padding: 20px; border-radius: 12px; max-width: 900px; margin: 0 auto 30px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: left;">
-  <h2 style="color:#2c3e50;">Tổng hợp từ khóa ôn tập môn Kiểm thử phần mềm</h2>
-  <ul style="line-height: 1.6;">
-    <!-- Phần 1: Tổng quan -->
-    <li><strong>Khái niệm kiểm thử:</strong> 
-      <ul>
-        <li>Thực thi chương trình để tìm lỗi (Glen Myers)</li>
-        <li>So sánh giữa điều kiện hiện có và điều kiện bắt buộc (ANSI/IEEE 1059)</li>
-        <li>Phát hiện lỗi, không chứng minh phần mềm không có lỗi (Dijkstra)</li>
-      </ul>
-    </li>
-    <li><strong>Lý do kiểm thử:</strong> 
-      <ul>
-        <li>Trung bình 1-3 lỗi / 100 dòng code</li>
-        <li>Chiếm 50% công việc phát triển phần mềm</li>
-      </ul>
-    </li>
-    <li><strong>Bug nghiêm trọng:</strong> 
-      <ul>
-        <li>Ngân hàng Mỹ mất 920 triệu USD (2012)</li>
-        <li>Tên lửa Ariane 5 nổ (370 triệu USD)</li>
-      </ul>
-    </li>
-    
-    <!-- Phần 2: Nguyên tắc & Khái niệm -->
-    <li><strong>7 nguyên tắc kiểm thử:</strong>
-      <ol>
-        <li>Không kiểm thử toàn bộ (Exhaustive impossible)</li>
-        <li>Kiểm thử sớm</li>
-        <li>Tập trung lỗi (Defect clustering)</li>
-        <li>Nghịch lý thuốc trừ sâu (Pesticide paradox)</li>
-        <li>Phụ thuộc ngữ cảnh</li>
-        <li>Ngụy biện không có lỗi</li>
-        <li>Kiểm thử là tương đối</li>
-      </ol>
-    </li>
-    <li><strong>Error → Fault → Failure:</strong> Chuỗi nguyên nhân-kết quả</li>
-    <li><strong>Verification vs Validation:</strong>
-      <ul>
-        <li>Verification: "Are we building the product right?" (Đúng thiết kế)</li>
-        <li>Validation: "Are we building the right product?" (Đúng yêu cầu KH)</li>
-      </ul>
-    </li>
-    
-    <!-- Phần 3: Các cấp độ kiểm thử -->
-    <li><strong>4 cấp độ kiểm thử:</strong>
-      <ol>
-        <li><strong>Unit Test:</strong> Kiểm tra từng hàm/module (Developer)</li>
-        <li><strong>Integration Test:</strong>
-          <ul>
-            <li>Bottom-up</li>
-            <li>Top-down</li>
-            <li>Sandwich</li>
-          </ul>
-        </li>
-        <li><strong>System Test:</strong> Kiểm thử toàn hệ thống</li>
-        <li><strong>Acceptance Test:</strong> Kiểm thử chấp nhận (UAT)</li>
-      </ol>
-    </li>
-    
-    <!-- Phần 4: Kỹ thuật -->
-    <li><strong>Kỹ thuật hộp đen:</strong>
-      <ul>
-        <li><strong>Phân vùng tương đương (EC):</strong>
-          <ul>
-            <li>Weak Normal EC</li>
-            <li>Strong Normal EC</li>
-            <li>Weak Robust EC</li>
-            <li>Strong Robust EC</li>
-          </ul>
-        </li>
-        <li><strong>Phân tích giá trị biên (BV):</strong>
-          <ul>
-            <li>Normal BV</li>
-            <li>Robustness BV</li>
-            <li>Worst-Case BV</li>
-          </ul>
-        </li>
-        <li><strong>Bảng quyết định:</strong> Điều kiện → Hành động</li>
-      </ul>
-    </li>
-    
-    <li><strong>Kỹ thuật hộp trắng:</strong>
-      <ul>
-        <li><strong>Cyclomatic complexity:</strong> V(G) = E - N + 2</li>
-        <li><strong>Độ phủ (coverage):</strong>
-          <ol>
-            <li>Cấp 0: Không phủ</li>
-            <li>Cấp 1: Phủ lệnh</li>
-            <li>Cấp 2: Phủ nhánh</li>
-            <li>Cấp 3: Phủ điều kiện</li>
-            <li>Cấp 4: Phủ đường thi hành</li>
-          </ol>
-        </li>
-      </ul>
-    </li>
-    
-    <!-- Phần 5: Công cụ -->
-    <li><strong>Công cụ kiểm thử:</strong>
-      <ul>
-        <li><strong>Unit Test:</strong> PHPUnit, JUnit, NUnit</li>
-        <li><strong>Web UI Test:</strong> Selenium IDE</li>
-        <li><strong>Quản lý bug:</strong> Bugzilla, JIRA</li>
-      </ul>
-    </li>
-    
-    <!-- Phần 6: Mẹo ghi nhớ -->
-    <li><strong>Mẹo ghi nhớ:</strong>
-      <ul>
-        <li>Nhớ các cặp khái niệm:
-          <ul>
-            <li>Test ≠ Debug</li>
-            <li>Verification ↔ Validation</li>
-            <li>Error → Fault → Failure</li>
-            <li>Unit ↔ Integration ↔ System ↔ Acceptance</li>
-          </ul>
-        </li>
-        <li>Công thức cyclomatic: V(G) = E - N + 2</li>
-        <li>Quy tắc 1-3 lỗi/100 dòng code</li>
-      </ul>
-    </li>
-    
-    <!-- Phần mới bổ sung -->
-    <li><strong>Test Doubles trong PHPUnit:</strong>
-      <ul>
-        <li>Dummy: Đối tượng giả không dùng</li>
-        <li>Stub: Trả về giá trị cố định</li>
-        <li>Spy: Ghi lại thông tin gọi hàm</li>
-        <li>Mock: Xác minh hành vi</li>
-      </ul>
-    </li>
-    
-    <li><strong>Annotations PHPUnit:</strong>
-      <ul>
-        <li>@before / @after</li>
-        <li>@dataProvider</li>
-        <li>@depends</li>
-        <li>@expectedException</li>
-      </ul>
-    </li>
-    
-    <li><strong>Chiến lược kiểm thử:</strong>
-      <ul>
-        <li>Risk-based testing</li>
-        <li>Regression testing</li>
-        <li>Exploratory testing</li>
-      </ul>
-    </li>
-  </ul>
-  <button onclick="toggleReview()" class="nav-button2" style="display: block; align-items: center;">Đóng trang ôn tập lý thuyết</button>
-</div>
+  <div id="reviewContent"
+    style="display:none; background: #fff; padding: 20px; border-radius: 12px; max-width: 900px; margin: 0 auto 30px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: left;">
+    <h2 style="color:#2c3e50;">Tổng hợp từ khóa ôn tập môn Kiểm thử phần mềm</h2>
+    <ul style="line-height: 1.6;">
+      <!-- Phần 1: Tổng quan -->
+      <li><strong>Khái niệm kiểm thử:</strong>
+        <ul>
+          <li>Thực thi chương trình để tìm lỗi (Glen Myers)</li>
+          <li>So sánh giữa điều kiện hiện có và điều kiện bắt buộc (ANSI/IEEE 1059)</li>
+          <li>Phát hiện lỗi, không chứng minh phần mềm không có lỗi (Dijkstra)</li>
+        </ul>
+      </li>
+      <li><strong>Lý do kiểm thử:</strong>
+        <ul>
+          <li>Trung bình 1-3 lỗi / 100 dòng code</li>
+          <li>Chiếm 50% công việc phát triển phần mềm</li>
+        </ul>
+      </li>
+      <li><strong>Bug nghiêm trọng:</strong>
+        <ul>
+          <li>Ngân hàng Mỹ mất 920 triệu USD (2012)</li>
+          <li>Tên lửa Ariane 5 nổ (370 triệu USD)</li>
+        </ul>
+      </li>
+
+      <!-- Phần 2: Nguyên tắc & Khái niệm -->
+      <li><strong>7 nguyên tắc kiểm thử:</strong>
+        <ol>
+          <li>Không kiểm thử toàn bộ (Exhaustive impossible)</li>
+          <li>Kiểm thử sớm</li>
+          <li>Tập trung lỗi (Defect clustering)</li>
+          <li>Nghịch lý thuốc trừ sâu (Pesticide paradox)</li>
+          <li>Phụ thuộc ngữ cảnh</li>
+          <li>Ngụy biện không có lỗi</li>
+          <li>Kiểm thử là tương đối</li>
+        </ol>
+      </li>
+      <li><strong>Error → Fault → Failure:</strong> Chuỗi nguyên nhân-kết quả</li>
+      <li><strong>Verification vs Validation:</strong>
+        <ul>
+          <li>Verification: "Are we building the product right?" (Đúng thiết kế)</li>
+          <li>Validation: "Are we building the right product?" (Đúng yêu cầu KH)</li>
+        </ul>
+      </li>
+
+      <!-- Phần 3: Các cấp độ kiểm thử -->
+      <li><strong>4 cấp độ kiểm thử:</strong>
+        <ol>
+          <li><strong>Unit Test:</strong> Kiểm tra từng hàm/module (Developer)</li>
+          <li><strong>Integration Test:</strong>
+            <ul>
+              <li>Bottom-up</li>
+              <li>Top-down</li>
+              <li>Sandwich</li>
+            </ul>
+          </li>
+          <li><strong>System Test:</strong> Kiểm thử toàn hệ thống</li>
+          <li><strong>Acceptance Test:</strong> Kiểm thử chấp nhận (UAT)</li>
+        </ol>
+      </li>
+
+      <!-- Phần 4: Kỹ thuật -->
+      <li><strong>Kỹ thuật hộp đen:</strong>
+        <ul>
+          <li><strong>Phân vùng tương đương (EC):</strong>
+            <ul>
+              <li>Weak Normal EC</li>
+              <li>Strong Normal EC</li>
+              <li>Weak Robust EC</li>
+              <li>Strong Robust EC</li>
+            </ul>
+          </li>
+          <li><strong>Phân tích giá trị biên (BV):</strong>
+            <ul>
+              <li>Normal BV</li>
+              <li>Robustness BV</li>
+              <li>Worst-Case BV</li>
+            </ul>
+          </li>
+          <li><strong>Bảng quyết định:</strong> Điều kiện → Hành động</li>
+        </ul>
+      </li>
+
+      <li><strong>Kỹ thuật hộp trắng:</strong>
+        <ul>
+          <li><strong>Cyclomatic complexity:</strong> V(G) = E - N + 2</li>
+          <li><strong>Độ phủ (coverage):</strong>
+            <ol>
+              <li>Cấp 0: Không phủ</li>
+              <li>Cấp 1: Phủ lệnh</li>
+              <li>Cấp 2: Phủ nhánh</li>
+              <li>Cấp 3: Phủ điều kiện</li>
+              <li>Cấp 4: Phủ đường thi hành</li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Phần 5: Công cụ -->
+      <li><strong>Công cụ kiểm thử:</strong>
+        <ul>
+          <li><strong>Unit Test:</strong> PHPUnit, JUnit, NUnit</li>
+          <li><strong>Web UI Test:</strong> Selenium IDE</li>
+          <li><strong>Quản lý bug:</strong> Bugzilla, JIRA</li>
+        </ul>
+      </li>
+
+      <!-- Phần 6: Mẹo ghi nhớ -->
+      <li><strong>Mẹo ghi nhớ:</strong>
+        <ul>
+          <li>Nhớ các cặp khái niệm:
+            <ul>
+              <li>Test ≠ Debug</li>
+              <li>Verification ↔ Validation</li>
+              <li>Error → Fault → Failure</li>
+              <li>Unit ↔ Integration ↔ System ↔ Acceptance</li>
+            </ul>
+          </li>
+          <li>Công thức cyclomatic: V(G) = E - N + 2</li>
+          <li>Quy tắc 1-3 lỗi/100 dòng code</li>
+        </ul>
+      </li>
+
+      <!-- Phần mới bổ sung -->
+      <li><strong>Test Doubles trong PHPUnit:</strong>
+        <ul>
+          <li>Dummy: Đối tượng giả không dùng</li>
+          <li>Stub: Trả về giá trị cố định</li>
+          <li>Spy: Ghi lại thông tin gọi hàm</li>
+          <li>Mock: Xác minh hành vi</li>
+        </ul>
+      </li>
+
+      <li><strong>Annotations PHPUnit:</strong>
+        <ul>
+          <li>@before / @after</li>
+          <li>@dataProvider</li>
+          <li>@depends</li>
+          <li>@expectedException</li>
+        </ul>
+      </li>
+
+      <li><strong>Chiến lược kiểm thử:</strong>
+        <ul>
+          <li>Risk-based testing</li>
+          <li>Regression testing</li>
+          <li>Exploratory testing</li>
+        </ul>
+      </li>
+    </ul>
+    <button onclick="toggleReview()" class="nav-button2" style="display: block; align-items: center;">Đóng trang ôn tập
+      lý thuyết</button>
+  </div>
 
   <h1>Quiz Trắc Nghiệm KTPM</h1>
+
+  <div style="display: flex; justify-content: center; align-items: center;  flex-direction: column;">
+    <audio id="bg-music" src="NhacNen.mp3" autoplay loop></audio>
+    <h4>Nhạc nền</h4>
+    <button onclick="togglePlay()" id="play-btn">Pause</button>
+    <button onclick="toggleMute()" id="mute-btn">Mute</button>
+  </div>
+
+
   <div style="text-align: center; margin-top: 10px;">
-  <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
+    <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
   </div>
   <div id="stats"></div>
   <div id="quiz"></div>
   <div style="text-align: center; margin-top: 10px;">
-  <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
+    <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
   </div>
 
 
@@ -379,15 +390,15 @@
   <script>
     const quizData = [
       {
-    "question": "Cho đoạn mã giả sau, số test case tối thiểu cần có để phủ tất cả các nhánh?\n int kiemTraNguyenTo(int k){\nif(k<2)\nreturn -1;\nfor(int i=2; i<k; i++)\nif(k%i==0)\nreturn -1;\nreturn 1;\n}",
-    "options": [
-      "2",
-      "1",
-      "3",
-      "4"
-    ],
-    "correct": 2
-  }
+        "question": "Cho đoạn mã giả sau, số test case tối thiểu cần có để phủ tất cả các nhánh?\n int kiemTraNguyenTo(int k){\nif(k<2)\nreturn -1;\nfor(int i=2; i<k; i++)\nif(k%i==0)\nreturn -1;\nreturn 1;\n}",
+        "options": [
+          "2",
+          "1",
+          "3",
+          "4"
+        ],
+        "correct": 2
+      }
     ];
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -416,7 +427,7 @@
       const total = answersState.length;
       const done = correct + wrong;
       const totalScore = ((correct / total) * 10).toFixed(2);
-const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
+      const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
       statsDiv.innerHTML = `
   <span style="color: #2980b9;">Đã làm: ${done}</span> |
   <span style="color: #27ae60;">Đúng: ${correct}</span> |
@@ -494,9 +505,9 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
     // }
 
 
-        function renderQuiz() {
-    // Danh sách feedback chất chơi
-    const correctFeedbacks = [
+    function renderQuiz() {
+      // Danh sách feedback chất chơi
+      const correctFeedbacks = [
         "✅ Chính xác! Bé iu giỏi quá!",
         "🎯 Đúng rồi! Để đa đì thưởng cho!",
         "🔥 Học giỏi nhể!",
@@ -504,9 +515,9 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
         "💡 Tuyệt vời, bạn nắm vững kiến thức!",
         "🧠 Bộ não vàng đây rồi!",
         "🌟 Không thể tin nổi, bạn đúng tiếp!"
-    ];
+      ];
 
-    const wrongFeedbacks = [
+      const wrongFeedbacks = [
         "❌ ANH NHẮC EMMMMMM!!!!. Đáp án đúng là:",
         "🚫 Không giòn rồi! Cook lại đi! Đáp án đúng là:",
         "😓 Chưa chính xác. Đáp án đúng là:",
@@ -514,10 +525,10 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
         "😬 Không đúng rồi! Đáp án phải là:",
         "📛 Rớt phong độ rồi nha! Đáp án đúng là:",
         "🙈 Sai nhẹ một chút, cẩn thận hơn nhé. Đáp án đúng là:"
-    ];
+      ];
 
-    quizContainer.innerHTML = '';
-    quizData.forEach((q, i) => {
+      quizContainer.innerHTML = '';
+      quizData.forEach((q, i) => {
         const questionDiv = document.createElement('div');
         questionDiv.className = 'question';
 
@@ -533,39 +544,39 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
         feedback.style.fontWeight = 'bold';
 
         q.options.forEach((opt, index) => {
-        const btn = document.createElement('button');
-        btn.textContent = opt;
-        btn.addEventListener('click', () => {
+          const btn = document.createElement('button');
+          btn.textContent = opt;
+          btn.addEventListener('click', () => {
             const allBtns = answersDiv.querySelectorAll('button');
             allBtns.forEach(b => b.disabled = true);
 
             if (index === q.correct) {
-            btn.classList.add('correct');
-            const msg = correctFeedbacks[Math.floor(Math.random() * correctFeedbacks.length)];
-            feedback.textContent = msg;
-            feedback.style.color = "#27ae60";
-            answersState[i] = true;
+              btn.classList.add('correct');
+              const msg = correctFeedbacks[Math.floor(Math.random() * correctFeedbacks.length)];
+              feedback.textContent = msg;
+              feedback.style.color = "#27ae60";
+              answersState[i] = true;
             } else {
-            btn.classList.add('wrong');
-            allBtns[q.correct].classList.add('correct');
-            const msg = wrongFeedbacks[Math.floor(Math.random() * wrongFeedbacks.length)];
-            feedback.textContent = `${msg} "${q.options[q.correct]}"`;
-            feedback.style.color = "#e74c3c";
-            answersState[i] = false;
+              btn.classList.add('wrong');
+              allBtns[q.correct].classList.add('correct');
+              const msg = wrongFeedbacks[Math.floor(Math.random() * wrongFeedbacks.length)];
+              feedback.textContent = `${msg} "${q.options[q.correct]}"`;
+              feedback.style.color = "#e74c3c";
+              answersState[i] = false;
             }
 
             updateStats();
-        });
-        answersDiv.appendChild(btn);
+          });
+          answersDiv.appendChild(btn);
         });
 
         answersDiv.appendChild(feedback);
         questionDiv.appendChild(answersDiv);
         quizContainer.appendChild(questionDiv);
-    });
+      });
 
-    updateStats();
-    renderProgressMarks();
+      updateStats();
+      renderProgressMarks();
     }
     const bookmarkBtn = document.getElementById('bookmarkBtn');
     window.addEventListener('scroll', () => {
@@ -587,57 +598,83 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
     shuffleAnswers(quizData);     // Xáo trộn thứ tự đáp án trong từng câu
     renderQuiz();
     function toggleReview() {
-  const content = document.getElementById("reviewContent");
-  content.style.display = content.style.display === "none" ? "block" : "none";
-}
-function retryWrongQuestions() {
-  const wrongIndexes = answersState
-    .map((val, idx) => val === false ? idx : null)
-    .filter(val => val !== null);
+      const content = document.getElementById("reviewContent");
+      content.style.display = content.style.display === "none" ? "block" : "none";
+    }
+    function retryWrongQuestions() {
+      const wrongIndexes = answersState
+        .map((val, idx) => val === false ? idx : null)
+        .filter(val => val !== null);
 
-  if (wrongIndexes.length === 0) {
-    alert("Không có câu nào sai để làm lại.");
-    return;
-  }
+      if (wrongIndexes.length === 0) {
+        alert("Không có câu nào sai để làm lại.");
+        return;
+      }
 
-  const retryData = wrongIndexes.map(idx => ({
-    ...quizData[idx],
-    index: idx
-  }));
+      const retryData = wrongIndexes.map(idx => ({
+        ...quizData[idx],
+        index: idx
+      }));
 
-  shuffleAnswers(retryData);
-  quizContainer.innerHTML = '';
+      shuffleAnswers(retryData);
+      quizContainer.innerHTML = '';
 
-  retryData.forEach((q, i) => {
-    const questionDiv = document.createElement('div');
-    questionDiv.className = 'question';
+      retryData.forEach((q, i) => {
+        const questionDiv = document.createElement('div');
+        questionDiv.className = 'question';
 
-    const questionTitle = document.createElement('h3');
-    questionTitle.textContent = `Làm lại - Câu ${q.index + 1}: ${q.question}`;
-    questionDiv.appendChild(questionTitle);
+        const questionTitle = document.createElement('h3');
+        questionTitle.textContent = `Làm lại - Câu ${q.index + 1}: ${q.question}`;
+        questionDiv.appendChild(questionTitle);
 
-    const answersDiv = document.createElement('div');
-    answersDiv.className = 'answers';
+        const answersDiv = document.createElement('div');
+        answersDiv.className = 'answers';
 
-    q.options.forEach((opt, index) => {
-      const btn = document.createElement('button');
-      btn.textContent = opt;
-      btn.addEventListener('click', () => {
-        btn.classList.add(index === q.correct ? 'correct' : 'wrong');
-        answersDiv.querySelectorAll('button').forEach((b, idx) => {
-          if (idx === q.correct) b.classList.add('correct');
-          b.disabled = true;
+        q.options.forEach((opt, index) => {
+          const btn = document.createElement('button');
+          btn.textContent = opt;
+          btn.addEventListener('click', () => {
+            btn.classList.add(index === q.correct ? 'correct' : 'wrong');
+            answersDiv.querySelectorAll('button').forEach((b, idx) => {
+              if (idx === q.correct) b.classList.add('correct');
+              b.disabled = true;
+            });
+          });
+          answersDiv.appendChild(btn);
         });
+
+        questionDiv.appendChild(answersDiv);
+        quizContainer.appendChild(questionDiv);
       });
-      answersDiv.appendChild(btn);
+
+      statsDiv.innerHTML = `<span style="color:#2c3e50;">📝 Đang làm lại các câu sai (${retryData.length} câu)</span>`;
+    }
+    // cho nhạc chạy
+    const music = document.getElementById('bg-music');
+    const playBtn = document.getElementById('play-btn');
+    const muteBtn = document.getElementById('mute-btn');
+
+    function togglePlay() {
+      if (music.paused) {
+        music.play();
+        playBtn.innerText = "Pause";
+      } else {
+        music.pause();
+        playBtn.innerText = "Play";
+      }
+    }
+
+    function toggleMute() {
+      music.muted = !music.muted;
+      muteBtn.innerText = music.muted ? "Unmute" : "Mute";
+    }
+
+    // Gợi ý: đảm bảo người dùng tương tác trước để auto-play hoạt động
+    document.addEventListener('click', function initAudio() {
+      music.play().catch(() => { });
+      document.removeEventListener('click', initAudio);
     });
 
-    questionDiv.appendChild(answersDiv);
-    quizContainer.appendChild(questionDiv);
-  });
-
-  statsDiv.innerHTML = `<span style="color:#2c3e50;">📝 Đang làm lại các câu sai (${retryData.length} câu)</span>`;
-}
 
 
   </script>
