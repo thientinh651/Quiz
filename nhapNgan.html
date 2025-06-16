@@ -281,7 +281,7 @@
             <li>Cấp 3: Phủ điều kiện</li>
             <li>Cấp 4: Phủ đường thi hành</li> -->
               <li><strong>Độ phủ (coverage):</strong>
-                
+
                 <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; margin-top: 10px;">
                   <thead>
                     <tr style="background-color: #f2f2f2;">
@@ -467,22 +467,35 @@
         correct: 1
       }
     ];
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    }
+   // Hàm xáo trộn mảng
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
 
-    // Hàm xáo trộn đáp án từng câu và cập nhật lại chỉ số đúng
-    function shuffleAnswers(quizData) {
-      quizData.forEach(q => {
-        const originalCorrectAnswer = q.options[q.correct];
-        shuffleArray(q.options); // xáo trộn options
-        q.correct = q.options.indexOf(originalCorrectAnswer); // cập nhật lại chỉ số correct
-      });
+// Hàm xáo trộn đáp án từng câu và cập nhật lại chỉ số đúng
+function shuffleAnswers(quizData) {
+  quizData.forEach(q => {
+    // Lưu đáp án đúng trước khi xáo trộn
+    const correctAnswer = q.options[q.correct];
+    
+    // Xáo trộn options
+    shuffleArray(q.options);
+    
+    // Cập nhật lại chỉ số correct dựa trên đáp án đúng đã lưu
+    q.correct = q.options.indexOf(correctAnswer);
+    
+    // Đảm bảo đáp án đúng luôn tồn tại trong options
+    if (q.correct === -1) {
+      console.error("Không tìm thấy đáp án đúng sau khi xáo trộn:", correctAnswer);
+      q.correct = 0; // Mặc định chọn đáp án đầu tiên nếu có lỗi
     }
+  });
+}
 
+// Phần còn lại của mã JavaScript giữ nguyên...
     const quizContainer = document.getElementById('quiz');
     const statsDiv = document.getElementById('stats');
     const answersState = Array(quizData.length).fill(null);
