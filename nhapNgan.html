@@ -322,15 +322,17 @@
       const notDone = answersState.filter(x => x === null).length;
       const total = answersState.length;
       const done = correct + wrong;
-      const score = ((correct / total) * 10).toFixed(2);
-
+      const totalScore = ((correct / total) * 10).toFixed(2);
+const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
       statsDiv.innerHTML = `
-      <span style="color: #2980b9;">Đã làm: ${done}</span> |
-        <span style="color: #27ae60;">Đúng: ${correct}</span> |
-        <span style="color:rgb(225, 61, 43);">Sai: ${wrong}</span> |
-        <span style="color: #7f8c8d;">Chưa làm: ${notDone}</span> |
-        <span style="color: #8e44ad;">Điểm: ${score}/10</span>
-      `;
+  <span style="color: #2980b9;">Đã làm: ${done}</span> |
+  <span style="color: #27ae60;">Đúng: ${correct}</span> |
+  <span style="color:rgb(225, 61, 43);">Sai: ${wrong}</span> |
+  <span style="color: #7f8c8d;">Chưa làm: ${notDone}</span> |
+  <span style="color: #8e44ad;">Điểm: ${totalScore}/10</span> |
+  <span style="color: #d35400;">Điểm theo ${done} câu đã làm: ${doneScore}/10</span>
+`;
+
 
       document.getElementById('progress').style.width = `${(done / total) * 100}%`;
 
