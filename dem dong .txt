@@ -1,0 +1,342 @@
+[
+  {
+    "question": "Cho đoạn mã, phát biểu nào sau đây là đúng:\nIF A > B\nTHEN C =A -B \nRead D \nIF C =D \nThen Print 'Error' \nENDIF \nENDIF",
+    "options": [
+      "1 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
+      "2 test case để phủ các dòng lệnh, 2 test case để phủ nhánh",
+      "2 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
+      "3 test case để phủ các dòng lệnh, 3 test case để phủ nhánh"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Đầu vào nào sau đây thuộc cùng 1 lớp tương đương trong khoảng [1000 - 99999]?",
+    "options": [
+      "10000 - 50000 - 999999",
+      "1000 - 5000 - 10000",
+      "10000 - 999999",
+      "9999 - 50000 - 100000"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không có trong tài liệu test plan?",
+    "options": [
+      "Những gì không được kiểm tra",
+      "Môi trường thử nghiệm",
+      "Kế hoạch để đánh giá chất lượng",
+      "Lịch trình và thời hạn"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Khi nào nên sử dụng kiểm thử thủ công?",
+    "options": [
+      "Khi có thời gian hạn chế để thực hiện kiểm thử",
+      "Khi cần kiểm tra hiệu suất của hệ thống",
+      "Khi có nhiều test case lặp lại thường xuyên",
+      "Khi cần kiểm tra trải nghiệm của người dùng"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Kiểm thử phân vùng tương đương (equivalence partitioning) là kỹ thuật gì?",
+    "options": [
+      "Chia đầu vào thành các nhóm tương đương để giảm test case",
+      "Kiểm tra các giá trị biên của đầu vào",
+      "Kiểm tra tất cả các giá trị đầu vào có thể",
+      "Kiểm tra ngẫu nhiên các giá trị đầu vào"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 6)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 7)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 8)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Kiểm thử phi chức năng (non-functional testing) bao gồm những gì?",
+    "options": [
+      "Kiểm tra giao diện người dùng của ứng dụng",
+      "Kiểm tra tương tác giữa các module của hệ thống",
+      "Kiểm tra các yêu cầu chức năng của phần mềm",
+      "Kiểm tra hiệu suất, bảo mật, khả năng sử dụng"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 10)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 11)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 12)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Vai trò của developer trong kiểm thử phần mềm là gì?",
+    "options": [
+      "Thực hiện kiểm thử đơn vị và hỗ trợ các loại kiểm thử khác",
+      "Chỉ thực hiện kiểm thử chấp nhận của phần mềm",
+      "Chỉ viết mã nguồn cho ứng dụng",
+      "Không tham gia vào quá trình kiểm thử"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Kiểm thử tương thích (compatibility testing) là gì?",
+    "options": [
+      "Kiểm tra bảo mật của hệ thống phần mềm",
+      "Kiểm tra phần mềm trên các nền tảng và thiết bị khác nhau",
+      "Kiểm tra hiệu suất của ứng dụng phần mềm",
+      "Kiểm tra tương tác giữa các module của hệ thống"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 15)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 16)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 17)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 18)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Loại kiểm thử nào sau đây không phải là một phần của kiểm thử hệ thống:",
+    "options": [
+      "Kiểm thử khả năng phục hồi",
+      "Kiểm thử khả năng dễ sử dụng",
+      "Kiểm thử beta",
+      "Kiểm thử nghiệm hiệu suất, tải"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Trọng tâm chính của kiểm thử chấp nhận là:",
+    "options": [
+      "Để đảm bảo rằng hệ thống được tất cả người dùng chấp nhận",
+      "Kiểm bởi một nhóm thử nghiệm độc lập",
+      "Kiểm theo quan điểm kinh doanh",
+      "Tìm lỗi trong hệ thống"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 21)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Đối tượng nhỏ nhất được test trong Unit test là",
+    "options": [
+      "Gói (package)",
+      "Hằng số và biến",
+      "Phương thức",
+      "Lớp"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 23)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 24)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Phát biểu nào sau đây không đúng về kiểm thử hệ thống?",
+    "options": [
+      "Người dùng cuối nên tham gia vào test hệ thống.",
+      "Các bài test hệ thống thường được thực hiện bởi các nhóm độc lập.",
+      "Các lỗi được tìm thấy trong quá trình test hệ thống có thể rất tốn kém để sửa chữa.",
+      "Kiểm thử chức năng được sử dụng nhiều hơn kiểm thử cấu trúc."
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Ai thực hiện Unit Test",
+    "options": [
+      "Designer",
+      "Developer",
+      "User",
+      "Tester"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Kỹ thuật nào sau đây không phải là một hình thức của kiểm thử hộp trắng:",
+    "options": [
+      "Kiểm thử dòng dữ liệu",
+      "Kiểm thử giá trị biên",
+      "Kiểm thử dòng điều khiển",
+      "Kiểm thử bao phủ dòng lệnh"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Sự khác biệt chính giữa kiểm thử tĩnh và kiểm thử động là gì?",
+    "options": [
+      "Kiểm thử tĩnh phải được thực hiện trước khi kiểm thử động",
+      "Các test case thủ công được sử dụng để kiểm thử động; kiểm thử tự động được sử dụng để kiểm thử tĩnh",
+      "Kiểm thử động yêu cầu thực thi phần mềm; phần mềm không được thực thi trong quá trình kiểm thử tĩnh",
+      "Kiểm thử tĩnh được thực hiện bởi các nhà phát triển; kiểm thử động được thực hiện bởi tester"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 30)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Kỹ thuật nào sau đây là một hình thức kiểm thử tĩnh?",
+    "options": [
+      "Đoán lỗi",
+      "Review code",
+      "Cung cấp đầu vào và kiểm tra kết quả đầu ra",
+      "Kiểm thử hồi quy tự động"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Phát biểu nào sau đây là đúng?",
+    "options": [
+      "Độ độ bao phủ không ảnh hưởng đến độ tin cậy của bộ kiểm thử",
+      "Độ độ bao phủ càng nhỏ thì độ tin cậy của bộ kiểm thử càng cao",
+      "Độ độ bao phủ càng lớn thì độ tin cậy của bộ kiểm thử càng thấp",
+      "Độ độ bao phủ càng lớn thì độ tin cậy của bộ kiểm thử càng cao"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 33)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Câu chưa có nội dung (Câu 34)",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Độ bao phủ code được sử dụng như một thước để đo gì?",
+    "options": [
+      "Khuyết điểm của phần mềm",
+      "Việc test có hiệu quả không",
+      "Phân tích xu hướng",
+      "Thời gian test"
+    ],
+    "correct": 1
+  }
+]
