@@ -100,7 +100,7 @@
     }
 
     .progress-marks span {
-      width: 2px;
+      width: 1.5px;
       background: #ccc;
       height: 100%;
     }
@@ -165,6 +165,36 @@
       margin-top: 20px;
     }
 
+    .playBtn {
+
+      min-width: 20px;
+      max-width: 60px;
+      position: fixed;
+      top: 20px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    #backToPositionBtn {
+      position: fixed;
+      bottom: 80px;
+      right: 30px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      display: none;
+    }
+
     @media (max-width: 600px) {
       .question {
         padding: 15px;
@@ -173,6 +203,18 @@
       .answers button {
         font-size: 14px;
         padding: 10px;
+      }
+
+      .progress-marks span {
+        display: none;
+      }
+
+      .playBtn {
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        /* flex-direction: row;  */
+        gap: 5px;
       }
     }
   </style>
@@ -205,13 +247,6 @@
           <li>Chiếm 50% công việc phát triển phần mềm</li>
         </ul>
       </li>
-      <li><strong>Bug nghiêm trọng:</strong>
-        <ul>
-          <li>Ngân hàng Mỹ mất 920 triệu USD (2012)</li>
-          <li>Tên lửa Ariane 5 nổ (370 triệu USD)</li>
-        </ul>
-      </li>
-
       <!-- Phần 2: Nguyên tắc & Khái niệm -->
       <li><strong>7 nguyên tắc kiểm thử:</strong>
         <ol>
@@ -275,47 +310,11 @@
           <li><strong>Cyclomatic complexity:</strong> V(G) = E - N + 2</li>
           <li><strong>Độ phủ (coverage):</strong>
             <ol>
-              <!-- <li>Cấp 0: Không phủ</li>
-            <li>Cấp 1: Phủ lệnh</li>
-            <li>Cấp 2: Phủ nhánh</li>
-            <li>Cấp 3: Phủ điều kiện</li>
-            <li>Cấp 4: Phủ đường thi hành</li> -->
-              <li><strong>Độ phủ (coverage):</strong>
-
-                <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; margin-top: 10px;">
-                  <thead>
-                    <tr style="background-color: #f2f2f2;">
-                      <th>Cấp độ</th>
-                      <th>Tên gọi</th>
-                      <th>Ý nghĩa / Phạm vi kiểm thử</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Cấp 1: Phủ lệnh</td>
-                      <td>Statement coverage</td>
-                      <td>Kiểm thử đi qua tất cả các lệnh (dòng lệnh) trong chương trình ít nhất một lần.</td>
-                    </tr>
-                    <tr>
-                      <td>Cấp 2: Phủ nhánh</td>
-                      <td>Branch coverage</td>
-                      <td>Kiểm thử đi qua tất cả các nhánh điều kiện (true và false) trong chương trình.</td>
-                    </tr>
-                    <tr>
-                      <td>Cấp 3: Phủ điều kiện</td>
-                      <td>Condition coverage</td>
-                      <td>Kiểm thử đi qua tất cả các điều kiện thành phần trong biểu thức logic.</td>
-                    </tr>
-                    <tr>
-                      <td>Cấp 4: Phủ đường thi hành</td>
-                      <td>Multiple condition coverage</td>
-                      <td>Kiểm thử tất cả tổ hợp giá trị đúng/sai của các điều kiện thành phần trong biểu thức logic.
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </li>
-
+              <li>Cấp 0: Không phủ</li>
+              <li>Cấp 1: Phủ lệnh</li>
+              <li>Cấp 2: Phủ nhánh</li>
+              <li>Cấp 3: Phủ điều kiện</li>
+              <li>Cấp 4: Phủ đường thi hành</li>
             </ol>
           </li>
         </ul>
@@ -386,7 +385,19 @@
   <div style="text-align: center; margin-top: 10px;">
     <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
   </div>
+  <audio id="bg-music" src="NhacNen.mp3" autoplay loop></audio>
 
+  <div class="playBtn">
+    <button onclick="togglePlay()" id="play-btn"
+      style="padding: 6px 5px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+      Play music
+    </button>
+
+    <button onclick="toggleMute()" id="mute-btn"
+      style="padding: 6px 5px; background-color: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+      Mute
+    </button>
+  </div>
 
   <div class="actions">
     <button id="resetQuiz">🔄 Làm lại Quiz</button><br>
@@ -413,6 +424,7 @@
   </div>
 
   <button id="bookmarkBtn" title="Lên đầu trang">↑</button>
+  <button id="backToPositionBtn" title="Xuống vị trí trước đó" style="display: none;">↓</button>
 
   <script>
     const quizData = [
@@ -465,37 +477,1564 @@
           "allOf"
         ],
         correct: 1
-      }
-    ];
-   // Hàm xáo trộn mảng
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+      },
+      {
+        question: "Việc thực hiện các test case chức năng là một phần của",
+        options: [
+          "Quá trình xác minh (verification)",
+          "Quá trình báo cáo kết quả test",
+          "Quá trình thiết kế cấp cao",
+          "Quá trình xác nhận (validation)"
+        ],
+        correct: 3
+      },
+      {
+        question: "Test case Selenium IDE có ba cột: command, target và value. Cột Target lưu trữ dữ liệu gì?",
+        options: [
+          "Phần tử hoặc vị trí nơi lệnh được thực thi",
+          "Bước tiếp theo",
+          "Kết quả thực hiện của 1 bước test",
+          "Mục đích của 1 bước test"
+        ],
+        correct: 0
+      },
+      {
+        question: "Hàm verify() của Mockito dùng để làm gì?",
+        options: [
+          "So sánh kết quả thực tế với kết quả mong đợi",
+          "Tạo đối tượng giả lập bán phần",
+          "Tạo đối tượng giả lập toàn phần",
+          "Xác minh ở phương thức có được gọi hay không"
+        ],
+        correct: 3
+      },
+      {
+        question: "Giả sử đối tượng giả lập objA có 1 phương thức f(). Lệnh nào sau đây dùng để xác định phương thức f() không được gọi?",
+        options: [
+          "assert(objA,never()).f()",
+          "verifyNoInteractions(objA)",
+          "verifyNever(objA)",
+          "assertNever(objA).f()"
+        ],
+        correct: 1
+      },
+      {
+        question: "Phát biểu nào phù hợp nhất cho kết quả mong đợi (expected result)?",
+        options: [
+          "Chỉ được sử dụng trong test component",
+          "Tốt nhất là giá trị khi thực thi chương trình",
+          "Hữu ích nhất khi được xác định trước",
+          "Chỉ quan trọng trong test hệ thống"
+        ],
+        correct: 2
+      },
+      {
+        question: "Phát biểu nào sau đây đúng với Unit test?",
+        options: [
+          "Đó là việc xác nhận các thành phần đơn vị, được thực hiện bởi developer trong môi trường test",
+          "Đó là việc xác nhận các thành phần đơn vị, được thực hiện bởi tester trong môi trường test",
+          "Đó là việc xác nhận các thành phần đơn vị, được thực hiện bởi developer trong môi trường phát triển",
+          "Đó là xác nhận giao diện (interface) giữa các thành phần đơn vị"
+        ],
+        correct: 2
+      },
+      {
+        question: "Phát biểu nào sau đây sai về test tĩnh?",
+        options: [
+          "Test tĩnh có thể đưa ra các phép đo như độ phức tạp chu trình",
+          "Test tĩnh yêu cầu phải chạy code",
+          "Là quá trình review một tài liệu như test plan",
+          "Là quá trình review source code"
+        ],
+        correct: 1
+      },
+      {
+        question: "Sự khác biệt giữa lệnh assert và lệnh verify của Selenium IDE là gì?",
+        options: [
+          "Lệnh assert không thành công sẽ dừng kiểm tra nhưng lệnh verify không thành công thì vẫn tiếp tục",
+          "Lệnh verify không thành công sẽ dừng kiểm tra nhưng lệnh assert không thành công thì vẫn tiếp tục",
+          "Lệnh verify ít phổ biến hơn các lệnh assert",
+          "Lệnh assert ít phổ biến hơn các lệnh verify"
+        ],
+        correct: 0
+      },
+      {
+        question: "Kiểm tra thời gian chờ là",
+        options: [
+          "Phụ thuộc vào phần mềm và phần cứng",
+          "Phụ thuộc vào phần mềm",
+          "Phụ thuộc vào phần cứng",
+          "Độc lập với phần mềm và phần cứng"
+        ],
+        correct: 0
+      },
+      {
+        question: "Phát biểu nào sau đây đúng về phương thức thenReturn() trong Mockito?",
+        options: [
+          "Nó được sử dụng để xác minh rằng một phương thức đã được gọi trên một đối tượng giả",
+          "Nó được sử dụng để chỉ định giá trị trả về của một lệnh gọi phương thức trên một đối tượng giả",
+          "Nó được sử dụng để tạo một đối tượng giả",
+          "Nó không phải là một phương thức hợp lệ trong Mockito"
+        ],
+        correct: 1
+      },
+      {
+        question: "Trong test double, đối tượng stub khác với đối tượng mock như thế nào?",
+        options: [
+          "Mock mô phỏng kết quả xử lý của một hành động còn stub được sử dụng để xác nhận một hành động có được thực hiện không",
+          "Mock là đối tượng giả còn stub là đối tượng thật",
+          "Stub mô phỏng kết quả xử lý của một hành động còn mock được sử dụng để xác nhận một hành động có được thực hiện không",
+          "Stub là đối tượng giả còn mock là đối tượng thật"
+        ],
+        correct: 2
+      },
+      {
+        question: "Phát biểu nào sau đây đúng về phương thức when() trong Mockito?",
+        options: [
+          "Nó được sử dụng để xác minh rằng một phương thức đã được gọi trên một đối tượng giả",
+          "Nó được sử dụng để ném một ngoại lệ khi một phương thức được gọi trên một đối tượng giả",
+          "Nó được sử dụng để chỉ định hành vi của một lệnh gọi phương thức trên một đối tượng giả",
+          "Nó được sử dụng để tạo một đối tượng giả"
+        ],
+        correct: 2
+      },
+      {
+        question: "Phát biểu nào sau đây phù hợp cho khái niệm độ bao phủ?",
+        options: [
+          "Chỉ áp dụng cho unit test, không áp dụng cho system test",
+          "Là thước đo một phần của tính kỹ lưỡng của bài kiểm tra",
+          "Độ bao phủ nhánh là bắt buộc đối với tất cả các phần mềm",
+          "Khi nào đạt được độ bao phủ 100% thì việc kiểm thử hoàn thành"
+        ],
+        correct: 1
+      },
+      {
+        question: "Phát biểu nào sau đây đúng về phương thức never() của Mockito?",
+        options: [
+          "Nó được sử dụng để xác minh rằng một phương thức đã được gọi trên một đối tượng giả",
+          "Nó được sử dụng để tạo một đối tượng giả",
+          "Nó được sử dụng để xác minh rằng một phương thức không được gọi trên một đối tượng giả",
+          "Nó được sử dụng để chỉ định hành vi của một lệnh gọi phương thức trên một đối tượng giả"
+        ],
+        correct: 2
+      },
+      {
+        question: "assertThat(1.03, is(closeTo(1.0,0.03))) có kết quả là gì?",
+        options: [
+          "false",
+          "true",
+          "mor",
+          "mail"
+        ],
+        correct: 1
+      },
+      {
+        question: "Hàm nào sau đây được sử dụng để tạo một phần mock với Mockito?",
+        options: [
+          "spy()",
+          "partialMock()",
+          "halfMock()",
+          "mockPartial()"
+        ],
+        correct: 0
+      },
+      {
+        question: "Cách nào sau đây dùng để tạo mới 1 đối tượng giả lập bằng Mockito?",
+        options: [
+          "mock()",
+          "createMock()",
+          "new Mock()",
+          "newMock()"
+        ],
+        correct: 0
+      },
+      {
+        question: "Chọn phát biểu đúng cho Smoke testing",
+        options: [
+          "Nó được thực hiện sau khi quá trình test hệ thống kết thúc",
+          "Nó là sự thay thế cho test hồi quy",
+          "Nó là sự thay thế cho test chấp nhận",
+          "Nó được thực hiện để đảm bảo hệ thống đã sẵn sàng trải qua quá trình kiểm tra chuyên sâu và nghiêm ngặt hơn"
+        ],
+        correct: 3
+      },
+      {
+        question: "Điều quan trọng nhất về thiết kế kiểm thử sớm là",
+        options: [
+          "Không cần kiểm duyệt",
+          "Sẽ tìm thấy tất cả các lỗi",
+          "Làm cho việc chuẩn bị kiểm thử dễ dàng hơn",
+          "Có thể ngăn chặn lỗi gia tăng"
+        ],
+        correct: 3
+      },
+      {
+        question: "Mục đích của annotation @DisplayName trong JUnit là gì?",
+        options: [
+          "Để chỉ định tên của test suite",
+          "Đổi tên phương pháp thử trong thời gian chạy",
+          "Đặt tên hiển thị tùy chỉnh cho phương pháp thử nghiệm",
+          "Hiển thị tên người chạy thử"
+        ],
+        correct: 2
+      },
+      {
+        question: "Cú pháp để truy cập giá trị của biến x trong Selenium IDE là gì?",
+        options: [
+          "{x}",
+          "x",
+          "5x",
+          "${x}"
+        ],
+        correct: 3
+      },
+      {
+        question: "Phương thức nào được sử dụng trong JUnit để kiểm tra xem hai đối tượng có phải là cùng một thể hiện (instance) hay không?",
+        options: [
+          "assertSameInstance()",
+          "assertInstance()",
+          "assertThat()",
+          "sameInstance()"
+        ],
+        correct: 0
+      },
+      {
+        question: "Loại test nào được thực hiện để kiểm tra xem giao diện người dùng có dễ sử dụng không?",
+        options: [
+          "White Box Testing",
+          "Usability Testing",
+          "Security Testing",
+          "Unit Testing"
+        ],
+        correct: 1
+      },
+      {
+        question: "Nguồn nào sau đây là nguồn tốt nhất về 'Kết quả mong đợi' cho các testcase 'Kiểm thử chấp nhận' của người dùng?",
+        options: [
+          "Đặc tả chương trình",
+          "Đặc tả hệ thống",
+          "Yêu cầu của người dùng",
+          "Kết quả thực tế"
+        ],
+        correct: 2
+      },
+      {
+        question: "Hàm assertTrue('message', A) làm gì?",
+        options: [
+          "Khẳng định rằng điều kiện A là đúng",
+          "Khẳng định rằng A chứa 'message'",
+          "Khẳng định rằng điều kiện A là sai",
+          "Khẳng định rằng 'message' = A"
+        ],
+        correct: 0
+      },
+      
+      {
+        question: "Phát biểu nào sau đây phù hợp nhất về kiểm thử?",
+        options: [
+          "Mục tiêu mục đích của kiểm thử là để chứng minh rằng chương trình hoạt động",
+          "Mục đích của kiểm thử là để chứng minh rằng chương trình không có lỗi",
+          "Mục đích của kiểm thử là để chứng minh rằng chương trình được thực hiện đúng phương pháp",
+          "Kiểm thử là thực thi phần mềm nhằm mục đích tìm ra những khuyết điểm của phần mềm"
+        ],
+        correct: 3
+      },
+      {
+        question: "Phủ lệnh và phủ nhánh có nghĩa là",
+        options: [
+          "Mỗi dòng lệnh đều được test",
+          "Mọi câu lệnh và mọi nhánh đều được kiểm tra",
+          "Tất cả các câu lệnh if đều được kiểm tra",
+          "Đã kiểm tra mọi tổ hợp giá trị của câu lệnh IF trong chương trình"
+        ],
+        correct: 1
+      },
+      {
+        question: "Làm cách nào để đánh giá thời gian chạy của một phương thức trong JUnit?",
+        options: [
+          "Sử dụng phương thức assertTimeout",
+          "Sử dụng annotation @Speed",
+          "Sử dụng phương thức assertSpeed",
+          "Sử dụng phương thức Timeout"
+        ],
+        correct: 0
+      },
+      {
+        question: "Cái nào sau đây là một CSS locator tương đương với Xpath //div[@id='example']",
+        options: [
+          "css=div.example",
+          "css=div#example",
+          "css=div@example",
+          "css=div example"
+        ],
+        correct: 1
+      },
+      {
+        question: "Trường hợp nào sẽ là trường hợp kiểm thử chức năng cho hệ thống đặt chỗ trực tuyến?",
+        options: [
+          "Kiểm tra cách hệ thống hoạt động khi số lượng lớn người dùng đang truy cập trang web",
+          "Kiểm tra xem người dùng có thể đặt vé từ Mumbai đến Goa không",
+          "Do thời gian đáp ứng của hệ thống",
+          "Đảm bảo người già cũng có thể sử dụng dễ dàng"
+        ],
+        correct: 1
+      },
+      {
+        question: "Một kỹ thuật kiểm thử phổ biến trong quá trình Unit test là",
+        options: [
+          "Kiểm tra độ phủ lệnh và phủ nhánh",
+          "Đánh giá năng suất",
+          "Kiểm tra tính khả dụng",
+          "Kiểm tra tính bảo mật"
+        ],
+        correct: 0
+      },
+      {
+        question: "Annotation nào xác định 1 phương thức test có tham số?",
+        options: [
+          "@ParameterizedTest",
+          "@DataDrivenTest",
+          "@Parameters",
+          "@TestWithParams"
+        ],
+        correct: 0
+      },
+      {
+        question: "Phát biểu nào sau đây KHÔNG PHẢI là một trong những nguyên tắc của kiểm thử?",
+        options: [
+          "Lỗi thường phân bố tập trung",
+          "Kiểm thử càng sớm càng tốt",
+          "Kiểm thử phải đạt được 100% độ bao phủ",
+          "Nghịch lý thuốc trừ sâu"
+        ],
+        correct: 2
+      },
+      {
+        question: "Trong test double, đối tượng dummy khác với đối tượng fake như thế nào?",
+        options: [
+          "Dummy là đối tượng giả lập, fake là một đối tượng thật nhưng giả đối tượng khác",
+          "Hai đối tượng này không khác nhau",
+          "Fake là đối tượng giả lập, dummy là một đối tượng thật nhưng giả đối tượng khác",
+          "Fake là giả hành vi, dummy là giả kết quả"
+        ],
+        correct: 2
+      },
+      {
+        question: "Trình tự đúng của các giai đoạn kiểm thử phần mềm là:",
+        options: [
+          "Đơn vị - Tích hợp -> Hệ thống -> Chấp nhận",
+          "Hệ thống - Đơn vị - Tích hợp -> Chấp nhận",
+          "Tích hợp - Chấp nhận -> Đơn vị -> Hệ thống",
+          "Đơn vị - Tích hợp - Chấp nhận - Hệ thống"
+        ],
+        correct: 0
+      },
+      {
+        question: "Kiểm thử được thực hiện đầy đủ khi",
+        options: [
+          "Đạt độ tin cậy cần thiết được thiết lập trong test plan",
+          "Người dùng hài lòng",
+          "Hết thời gian",
+          "Không tìm thấy lỗi nào nữa"
+        ],
+        correct: 0
+      },
+      {
+        question: "Làm thế nào để chỉ định một phương thức kiểm thử cụ thể sẽ bị bỏ qua trong quá trình thực thi?",
+        options: [
+          "@Skip",
+          "@IgnoreTest",
+          "@Disabled",
+          "@Avoid"
+        ],
+        correct: 2
+      },
+  {
+    "question": "Kiểm thử chức năng được thực hiện khi nào?",
+    "options": [
+      "Chỉ được thực hiện ở mức kiểm thử đơn vị",
+      "Được thực hiện ở tất cả các mức kiểm thử",
+      "Chỉ được thực hiện ở mức kiểm thử chấp nhận",
+      "Chỉ được thực hiện ở mức kiểm thử hệ thống và kiểm thử chấp nhận"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mục đích của điều kiện dừng trong kế hoạch kiểm thử là gì?",
+    "options": [
+      "để biết khi nào việc lập kế hoạch kiểm thử hoàn tất",
+      "để cho biết cần phải kiểm thử bao nhiêu",
+      "lập kế hoạch khi nào dừng chương trình",
+      "để biết khí nào một bài kiểm thử cụ thể đã kết thúc quá trình thực hiện"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Kiểm thử tĩnh được thực hiện trong giai đoạn nào?",
+    "options": [
+      "Lập trình",
+      "Thiết kế",
+      "Tất cả các giai đoạn trên",
+      "Đặc tả yêu cầu"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Kiểm thử hệ thống (System Testing) được thực hiện khi nào?",
+    "options": [
+      "Trước khi kiểm thử tích hợp",
+      "Trước khi kiểm thử Alpha",
+      "Ngay sau kiểm thử module",
+      "Ngay sau kiểm thử đơn vị"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Cho đoạn mã sau và phát biểu nào sau đây đúng:\nIF A > B THEN C=A-B\nELSE C=B-A\nIF C = D Then Print \"Error\" ENDIF ENDIF",
+    "options": [
+      "3 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
+      "1 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
+      "2 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
+      "2 test case để phủ các dòng lệnh, 2 test case để phủ nhánh"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Kiểm thử alpha là:",
+    "options": [
+      "kiểm thử sau khi phát hành được thực hiện bởi người dùng cuối",
+      "Kiểm thử đầu tiên được thực hiện",
+      "Kiểm thử cuối cùng trước khi phát hành",
+      "Kiểm thử trước khi phát hành được thực hiện bởi nhóm đại diện người dùng"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Mục tiêu nào sau đây là mục tiêu của kiểm thử phần mềm?",
+    "options": [
+      "Xác định năng suất của lập trình viên",
+      "Loại bỏ nhu cầu bảo trì chương trình trong tương lai",
+      "Phát hiện lỗi có trong phần mềm",
+      "Loại bỏ mọi lỗi trước khi phát hành"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Mục tiêu chính khi review một giao phẩm phần mềm là gì?",
+    "options": [
+      "Để xác định code viết không theo chuẩn",
+      "Để xác định các lỗi tiềm ẩn bằng cách sử dụng đặc tả kiểm thử",
+      "Để xác định các lỗi chính tả trong một đặc tả yêu cầu",
+      "Để xác định các khiếm khuyết trong bất kỳ sản phẩm của 1 công việc nào"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Mục đích của kiểm thử chấp nhận để làm gì?",
+    "options": [
+      "Kiểm tra hệ thống có an toàn không",
+      "Chứng minh tính bảo mật của hệ thống",
+      "Kiểm tra xem hệ thống xử lý đúng nghiệp vụ không",
+      "Chứng minh hệ thống không còn lỗi"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Kiểm thử hộp trắng được áp dụng chủ yếu vào giai đoạn nào của kiểm thử phần mềm?",
+    "options": [
+      "Kiểm thử tích hợp",
+      "Kiểm thử đơn vị",
+      "Kiểm thử chấp nhận",
+      "Kiểm thử hệ thống"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Đâu KHÔNG PHẢI là mục tiêu của kiểm thử?",
+    "options": [
+      "Tăng sự tự tin về chất lượng của chương trình",
+      "Ngăn chặn lỗi",
+      "Tìm lỗi",
+      "Tìm nguyên nhân lỗi"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Mục tiêu quan trọng nhất của việc xác định test case là gì?",
+    "options": [
+      "Cái nào dễ thì test trước",
+      "Tìm càng nhiều lỗi càng tốt",
+      "Đạt được độ bao phủ cao",
+      "Test các khu vực rủi ro cao"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Kiểm thử hệ thống nên:",
+    "options": [
+      "Kiểm cả yêu cầu phi chức năng và yêu cầu chức năng",
+      "Chỉ kiểm các yêu cầu phi chức năng không cần kiểm các yêu cầu chức năng",
+      "Chỉ kiểm các yêu cầu chức năng không cần kiểm các yêu cầu phi chức năng",
+      "Kiểm yêu cầu phi chức năng hoặc yêu cầu chức năng"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Cái nào sau đây KHÔNG PHẢI là một phần của kiểm thử hệ thống:",
+    "options": [
+      "Kiểm tra sức chịu tải",
+      "Kiểm thử tốc độ",
+      "Kiểm tra tiêu chuẩn code",
+      "Kiểm thử hiệu suất"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Kỹ thuật đoán lỗi được sử dụng tốt nhất KHI NÀO?",
+    "options": [
+      "Chỉ nên áp dụng 1 lần",
+      "Khi tiếp cận đầu tiên để tạo ra các test case",
+      "Bởi những người có nhiều kinh nghiệm",
+      "Trước khi các kỹ thuật chính thức được áp dụng"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Kỹ thuật đoán lỗi được sử dụng tốt nhất:",
+    "options": [
+      "Khi tiếp cận đầu tiên để tạo ra các test case",
+      "Sau khi các kỹ thuật chính thức được áp dụng",
+      "Bởi những người thử nghiệm thiếu kinh nghiệm",
+      "Sau khi hệ thống hoạt động"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Phát biểu nào đúng về mối quan hệ giữa bao phủ dòng lệnh và bao phủ quyết định?",
+    "options": [
+      "Bao phủ quyết định đạt 100% sẽ đảm bảo bao phủ lệnh 100%",
+      "Bao phủ quyết định đạt 50% sẽ đảm bảo bao phủ lệnh 100%",
+      "Bao phủ lệnh đạt 50% sẽ đảm bảo bao phủ quyết định 100%",
+      "Bao phủ lệnh đạt 100% sẽ đảm bảo bao phủ quyết định 100%"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Định nghĩa nào là phù hợp nhất về test case?",
+    "options": [
+      "Là một tập giá trị đầu vào và đầu ra mong đợi",
+      "Là một cơ chế xác minh tính chính xác của kết quả đầu ra",
+      "Là một trạng thái của hệ thống",
+      "Là một cơ sở nguyên tắc về đo lường và thống kê"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Lý do chính để kiểm thử phần mềm trước khi phát hành là gì?",
+    "options": [
+      "Để tìm càng nhiều lỗi càng tốt trước khi phát hành",
+      "Để quyết định khi nào phần mềm có đủ chất lượng để phát hành",
+      "Để cung cấp thông tin cho một quyết định dựa trên",
+      "Để cho thấy hệ thống sẽ hoạt động sau khi phát hành"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Trong kiểm thử tích hợp, ngoài cách tích hợp tăng dần (từ trên xuống, từ dưới lên) thì còn cách nào khác?",
+    "options": [
+      "Tích hợp trong kế hoạch lớn (big plan)",
+      "Tích hợp theo chiều rộng (width)",
+      "Tích hợp sandwich",
+      "Tích hợp theo chiều sâu (deep)"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Ưu điểm chính của phương pháp kiểm thử tích hợp dưới lên (Bottom-up) là gì?",
+    "options": [
+      "Không cần phải tạo stub",
+      "Kiểm thử nhanh theo từng đơn vị",
+      "Thiết kế ca kiểm thử dễ và không cần driver",
+      "Kiểm thử ngay chức năng điều khiển hệ thống"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Test suite được tạo ra trong giai đoạn nào?",
+    "options": [
+      "Phân tích yêu cầu",
+      "Phát triển test case",
+      "Lập kế hoạch",
+      "Thiết lập môi trường"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Bạn đã thiết kế các test case để đạt 100% phủ lệnh và 100% phủ quyết định cho đoạn mã. Sau khi thêm các lệnh print, cần thêm bao nhiêu test case nữa?",
+    "options": [
+      "Thêm 2 test case nữa",
+      "Thêm 1 test case nữa để đạt phủ cấp 2",
+      "Thêm 1 test case nữa để đạt phủ cấp 1",
+      "Không cần thêm test case nào nữa"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Kiểm thử được thực hiện đủ khi nào?",
+    "options": [
+      "người dùng sẽ không tìm thấy bất kỳ lỗi nghiêm trọng nào",
+      "Độ tin cậy cần thiết đã đạt",
+      "Hết thời gian",
+      "không tìm thấy lỗi nào nữa"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Lỗi nào trong các lỗi sau tốn chi phí khắc phục nhất?",
+    "options": [
+      "Lỗi trong yêu cầu",
+      "Lỗi trong đặc tả chương trình",
+      "Lỗi trong thiết kế",
+      "Lỗi trong code"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Phát biểu nào sau đây KHÔNG ĐÚNG về kiểm thử hồi quy?",
+    "options": [
+      "Để đảm bảo phần mềm sau khi sửa chữa không gặp thêm lỗi mới có liên quan",
+      "Để tiết kiệm công sức phải kiểm thử lại toàn bộ hệ thống",
+      "Để đảm bảo các test case mới không trùng với test case cũ",
+      "Để đảm bảo phiên bản mới nhất của phần mềm không làm ảnh hưởng đến các chức năng đang hoạt động tốt"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Cho đoạn mã giả sau, số test case tối thiểu để phủ 100% nhánh là bao nhiêu?\nif(x>y) x=x+1; else y=y+1; while(x>y) y=x*y; x=x+1;",
+    "options": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Phát biểu nào đúng về độ bao phủ?",
+    "options": [
+      "Chỉ có thể được áp dụng trong kiểm thử đơn vị, không áp dụng trong kiểm thử hệ thống",
+      "Là một thước đo về tính kỹ lưỡng của kiểm thử",
+      "Không liên quan gì đến thử nghiệm",
+      "Độ phủ nhánh phải là bắt buộc đối với tất cả phần mềm cho test case"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Điều nào sau đây mô tả lợi ích chính của việc xác minh (verification) sớm trong vòng đời?",
+    "options": [
+      "Nó cho phép người kiểm thử sớm tham gia vào dự án",
+      "Nó làm giảm sự gia tăng của lỗi",
+      "Nó cho phép xác định các thay đổi trong yêu cầu của người dùng",
+      "Nó tạo điều kiện cho việc thiết lập môi trường kiểm thử kịp thời"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Thứ tự nào sau đây phù hợp với vòng đời bug?",
+    "options": [
+      "Open, Assigned, Fixed, Closed",
+      "Assigned, Open, Closed, Fixed",
+      "Assigned, Open, Fixed, Closed",
+      "Open, Fixed, Assigned, Closed"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Điều nào sau đây không được mô tả trong tiêu chuẩn kiểm thử đơn vị?",
+    "options": [
+      "Kiểm thử bảo mật",
+      "Tiêu chuẩn code",
+      "Kiểm tra lỗi chính tả",
+      "Kiểm tra cú pháp"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Để kiểm thử hàm tính thưởng theo phương pháp phân hoạch tương đương, cần tối thiểu bao nhiêu test case? Công ty có hàm tính thưởng theo số năm làm việc: ≤ 2 năm: 1 triệu.  2 năm và < 5 năm: 2 triệu.  ≥ 5 năm và < 10 năm: 3 triệu.  ≥ 10 năm: 4 triệu",
+    "options": [
+      "4",
+      "5",
+      "2",
+      "3"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Mục tiêu quan trọng nhất của việc xác định độ ưu tiên kiểm thử là gì?",
+    "options": [
+      "Tìm càng nhiều lỗi càng tốt",
+      "Đạt được độ bao phủ cao",
+      "Test các khu vực rủi ro cao",
+      "Cái nào dễ thì test trước"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Xác định (verification) là:",
+    "options": [
+      "Kiểm thử xem chúng ta có đang xây dựng hệ thống đúng cách không",
+      "Kiểm tra xem chúng ta có đang xây dựng hệ thống có phù hợp không",
+      "Được thực hiện bởi một nhóm kiểm thử độc lập",
+      "Đảm bảo rằng đó là những gì người dùng thực sự muốn"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Khi kiểm thử hệ thống tính điểm tester xác định rằng tất cả các điểm từ 90–100 sẽ mang lại kết quả A, nhưng dưới 90 sẽ không được điểm.",
+    "options": [
+      "Phân tích lại",
+      "Phân tích giá trị ranh giới",
+      "Bảng quyết định",
+      "Phân vùng tương đương"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Chúng ta có thể tìm thấy điều kiện dừng kiểm thử trong tài liệu nào?",
+    "options": [
+      "Báo cáo kết quả kiểm thử",
+      "Test suite",
+      "Test case",
+      "Test plan"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Phát biểu nào sau đây đúng với kiểm thử beta?",
+    "options": [
+      "Được thực hiện bởi các chuyên gia",
+      "Được thực hiện bởi coder",
+      "Được thực hiện bởi người dùng cuối",
+      "Được thực hiện bởi tester"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Kiểm thử được thực hiện đủ khi:",
+    "options": [
+      "Độ tin cậy cần thiết đã đạt",
+      "Hết thời gian",
+      "Không tìm thấy lỗi nào nữa",
+      "Người dùng sẽ không tìm thấy bất kỳ lỗi nghiêm trọng nào"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Các test case được thiết kế khi nào?",
+    "options": [
+      "Khi có đặc tả hệ thống cần test",
+      "Trong quá trình test",
+      "Khi lập kế hoạch kiểm thử",
+      "Khi cấu hình kiểm thử"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Điều nào sau đây mô tả lợi ích chính của việc xác minh (verification) sớm trong vòng đời?",
+    "options": [
+      "Nó cho phép xác định các thay đổi trong yêu cầu của người dùng",
+      "Nó làm giảm sự gia tăng của lỗi",
+      "Nó cho phép người kiểm thử sớm tham gia vào dự án",
+      "Nó tạo điều kiện cho việc thiết lập môi trường kiểm thử kịp thời"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Điều quan trọng nhất về thiết kế kiểm thử sớm là:",
+    "options": [
+      "Làm cho việc chuẩn bị kiểm thử dễ dàng hơn",
+      "Giúp tìm ra tất cả các lỗi",
+      "Giúp việc kiểm thử nhanh hơn",
+      "Có thể ngăn chặn sự nhân lên của lỗi"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Nếu kết quả mong đợi (trong test case) không được xác định thì:",
+    "options": [
+      "Có thể khó lặp lại bài kiểm thử",
+      "Có thể khó xác định test case là đạt hay không đạt",
+      "Chúng ta không thể chạy kiểm thử",
+      "Chúng ta không thể nhập tự động đầu vào của người dùng"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Phát biểu nào sau đây là phát biểu đúng về review?",
+    "options": [
+      "Review không thể thực hiện dựa trên thông số kỹ thuật yêu cầu người dùng",
+      "Review là cách kiểm tra mã kém hiệu quả nhất",
+      "Review không có khả năng tìm ra lỗi trong kế hoạch kiểm thử",
+      "Review được thực hiện dựa theo thông số kỹ thuật code và kế hoạch kiểm thử"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Trong một hệ thống được thiết kế để tính thuế phải trả, nhóm nào trong số các nhóm sẽ rơi vào cùng một lớp tương đương? Một nhân viên có $4000 tiền lương miễn thuế. $1500 tiếp theo bị đánh thuế 10%. $2800 tiếp theo bị đánh thuế 22%. Bất kỳ số tiền còn lại sẽ bị đánh thuế ở mức 40% nhóm nào trong số các nhóm sẽ rơi vào cùng một lớp tương đương??",
+    "options": [
+      "$4800 - $14000 - $28000",
+      "$5800 - $28000 - $32000",
+      "$5200 - $5500 - $28000",
+      "$28001 - $32000 - $35000"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Phát biểu nào sau đây đúng về kết quả mong đợi:",
+    "options": [
+      "Hữu ích nhất khi được xác định trước",
+      "Chỉ được sử dụng trong kiểm thử đơn vị",
+      "Không bao giờ được xác định trước",
+      "Chỉ quan trọng trong kiểm thử hệ thống"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Kiểm thử hộp trắng được áp dụng chủ yếu vào giai đoạn nào của kiểm thử phần mềm?",
+    "options": [
+      "Kiểm thử tích hợp",
+      "Kiểm thử đơn vị",
+      "Kiểm thử hệ thống",
+      "Kiểm thử chấp nhận"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Trong kiểm thử tích hợp, ngoài các tích hợp tăng dần thì còn cách nào khác?",
+    "options": [
+      "Tích hợp theo chiều rộng",
+      "Tích hợp kế hoạch",
+      "Tích hợp sandwich",
+      "Tích hợp theo chiều sâu"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Mục đích của điều kiện dừng trong kế hoạch kiểm thử là gì?",
+    "options": [
+      "Để biết khi nào một bài kiểm thử cụ thể đã kết thúc quá trình thực hiện",
+      "Để đảm bảo rằng đã kiểm thử đầy đủ theo yêu cầu",
+      "Để biết khi nào lập kế hoạch kiểm thử hoàn tất",
+      "Lập kế hoạch khi nào dừng chương trình"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Việc review hoặc inspection có thể được coi là một phần của kiểm thử không:",
+    "options": [
+      "Không, vì chúng thường được áp dụng trước khi thử nghiệm",
+      "Không, vì chúng áp dụng cho tài liệu phát triển",
+      "Không, vì chúng không áp dụng cho tài liệu kiểm thử",
+      "Có, vì cả hai đều giúp phát hiện lỗi và cải thiện chất lượng"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Các trường hợp kiểm thử chấp nhận được dựa trên những gì?",
+    "options": [
+      "Bảng quyết định",
+      "Thiết kế",
+      "Mã",
+      "Yêu cầu"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Cho đoạn mã giả sau, số test case tối thiểu để phủ 100% điều kiện là bao nhiêu?\nIf(x!=0 && x>y) \nx=x-y;\nElse Y=0; \nIf(x==0 || y==0 ) \ncout << 'khong';",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "4"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Một input field nhận giá trị năm sinh trong [1000;2000], các giá trị biên để kiểm thử là:",
+    "options": [
+      "1000, 1001, 1500, 1999, 2000",
+      "999, 1000, 1001, 1999, 2000",
+      "0, 1900, 1990, 2000",
+      "1000, 2000"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Cho đoạn mã giả sau, số test case tối thiểu để phủ 100% nhánh là bao nhiêu?\nIf(x>y)\nx=x+1;\ny=y+1; \nWhile(x>y)\n  Y=x*y;\n x=x+1;",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Kỹ thuật nào sau đây KHÔNG PHẢI là một hình thức của kiểm thử hộp trắng?",
+    "options": [
+      "Kiểm thử bao phủ dòng lệnh",
+      "Kiểm thử đường dẫn cơ sở",
+      "Kiểm thử dòng dữ liệu",
+      "Bảng quyết định"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Một hàm 'main' điều khiển việc đưa dữ liệu vào và nhận kết quả ra của module. Đối tượng giả lập của module A được gọi là gì?",
+    "options": [
+      "Input",
+      "Driver",
+      "Stub",
+      "Output"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mục đích của kiểm thử chấp nhận là gì?",
+    "options": [
+      "Chứng minh thỏa mãn tất cả yêu cầu của khách hàng và khách hàng chấp nhận sản phẩm",
+      "Chứng minh hệ thống không lỗi",
+      "Chứng minh tính bảo mật của hệ thống",
+      "Chứng minh tính tích hợp của hệ thống"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Cho đoạn mã, phát biểu nào sau đây là đúng?\nSwitch pc on \nStart 'outlook' \nIf outlook appears \nthen Send an email \nElse Shutdown pc",
+    "options": [
+      "1 test case đủ phủ dòng lệnh, 1 test case phủ nhánh",
+      "1 test case đủ phủ dòng lệnh, 2 test case phủ nhánh",
+      "2 test case đủ phủ dòng lệnh, 2 test case phủ nhánh",
+      "1 test case đủ phủ dòng lệnh, 3 test case phủ nhánh"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Kiểm thử thiết kế và toàn bộ hệ thống (sau khi tích hợp) có thỏa mãn yêu cầu đặt ra hay không được gọi là gì?",
+    "options": [
+      "Kiểm thử hệ thống",
+      "Kiểm thử chấp nhận",
+      "Kiểm thử đơn vị",
+      "Kiểm thử tích hợp"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Kiểm thử hệ thống phi chức năng bao gồm:",
+    "options": [
+      "Kiểm thử để xem hệ thống có thực hiện đúng luồng xử lý không",
+      "Kiểm thử khả năng phục hồi của hệ thống",
+      "Kiểm thử một tính năng để đáp ứng cho một hành động",
+      "Kiểm thử các chức năng không nên tồn tại"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Kiểm thử hệ thống (System Testing) được thực hiện trước khi:",
+    "options": [
+      "Kiểm thử đơn vị",
+      "Kiểm thử module",
+      "Kiểm thử chấp nhận",
+      "Kiểm thử tích hợp"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Cho đoạn mã, phát biểu nào sau đây là đúng:\nIF A > B\nTHEN C =A -B \nRead D \nIF C =D \nThen Print 'Error' \nENDIF \nENDIF",
+    "options": [
+      "1 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
+      "2 test case để phủ các dòng lệnh, 2 test case để phủ nhánh",
+      "2 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
+      "3 test case để phủ các dòng lệnh, 3 test case để phủ nhánh"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Đầu vào nào sau đây thuộc cùng 1 lớp tương đương trong khoảng [1000 - 99999]?",
+    "options": [
+      "10000 - 50000 - 999999",
+      "1000 - 5000 - 10000",
+      "10000 - 999999",
+      "9999 - 50000 - 100000"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không có trong tài liệu test plan?",
+    "options": [
+      "Những gì không được kiểm tra",
+      "Môi trường thử nghiệm",
+      "Kế hoạch để đánh giá chất lượng",
+      "Lịch trình và thời hạn"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Điều nào sau đây KHÔNG ĐÚNG với điều kiện phủ của kiểm thử?",
+    "options": [
+      "Các điều kiện phủ thường được sử dụng khi chỉ định các tiêu chí hoàn thành kiểm thử",
+      "Thước đo điều kiện phủ là tỷ lệ phần trăm yêu cầu của người dùng được phủ",
+      "Thước đo điều kiện phủ kiểm thử là tỷ lệ phần trăm lệnh được thực thi",
+      "Cho biết số lỗi còn lại trong hệ thống"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Cho đoạn mã, số lượng test case tối thiểu cần thiết cho toàn bộ báo cáo và phạm vi nhánh là:\nRead P\nRead Q\nIF P+Q > 100 \nTHEN Print 'large' \nELSE IF P>50 \nTHEN Print 'P large'\nENDIF \nENDIF",
+    "options": [
+      "1 test case để phủ các dòng lệnh, 1 test case để phủ nhánh",
+      "1 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
+      "2 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
+      "1 test case để phủ các dòng lệnh, 2 test case để phủ nhánh"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Phát biểu nào sau đây là đúng về phương thức times() trong Mockito?",
+    "options": [
+      "Nó được sử dụng để xác minh rằng một phương thức đã được gọi hay chưa trên một đối tượng giả",
+      "Nó được sử dụng để chỉ định hành vi của một lệnh gọi phương thức trên một đối tượng giả",
+      "Nó được sử dụng để đối tượng giả thực hiện 1 hành vi nào đó nhiều lần",
+      "Nó được sử dụng để đưa ra một ngoại lệ khi một phương thức được gọi trên một đối tượng giả"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Phát biểu nào sau đây là đúng về Test-driven development (TDD)",
+    "options": [
+      "Tester tham gia code",
+      "TDD không yêu cầu unit test",
+      "Code trước test sau",
+      "Test case được viết trước khi code"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Điều nào sau đây là đúng về @Spy trong Mockito?",
+    "options": [
+      "Nó được sử dụng để tạo đối tượng giả một phần",
+      "Nó được sử dụng để xác minh rằng một phương thức đã được gọi trên một đối tượng giả",
+      "Nó được sử dụng để đưa các phụ thuộc vào một lớp kiểm tra",
+      "Nó được sử dụng để tạo một đối tượng giả"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Trong JUnit 5, Annotation nào sau đây làm cho 1 phương thức được chạy trước mỗi phương thức test?",
+    "options": [
+      "@BeforeEach",
+      "@BeforeClass",
+      "@BeforeAll",
+      "@Before"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Tính chất nào sau đây thuộc về chức năng",
+    "options": [
+      "Khả năng bảo trì (Maintainability)",
+      "Tính tương thích (Portability)",
+      "Tính khả dụng (Usability)",
+      "Tính chính xác (Accuracy)"
+    ],
+    "correct": 2
+  },
+  
+  {
+    "question": "Điều nào sau đây là đúng về phương thức doThrow() trong Mockito?",
+    "options": [
+      "Nó được sử dụng để xác minh rằng một phương thức đã được gọi trên một đối tượng giả",
+      "Nó được sử dụng để đưa ra một ngoại lệ khi một phương thức được gọi trên một đối tượng giả",
+      "Nó được sử dụng để xác minh rằng phương thức được gọi có ném ra 1 ngoại lệ không",
+      "Nó được sử dụng để chỉ định hành vi của một lệnh gọi phương thức trên một đối tượng giả"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Cái nào sau đây KHÔNG PHẢI là ưu điểm của Mockito framework",
+    "options": [
+      "Giúp tạo ra các đối tượng giả lập",
+      "Giúp test độc lập",
+      "Giúp test trong trường hợp thành phần mà nó phụ thuộc vào chưa hoạt động",
+      "Giúp test nhanh hơn"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "JUnit được sử dụng trong loại test nào?",
+    "options": [
+      "Unit Testing",
+      "Blackbox Testing",
+      "Integration Testing",
+      "System Testing"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Bạn đang test một hệ thống xác định mức phí vận chuyển cho một nhà phân phối phụ tùng ô tô dựa trên web trong khu vực. Trọng lượng mà nhỏ hơn hoặc bằng 0 được xem là không hợp lệ. Xác định có bao nhiêu lớp tương đương cần thiết để test theo bảng giá sau\nTrọng lượng 1 –> 25 kg | 26 –> 50 kg | Trên 50 kg\nTiền ship | $8.00 | $12.00 | $17.00",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "5"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Trong JUnit 5, phương thức nào sau đây dùng để kiểm tra đối tượng là null",
+    "options": [
+      "void assertChecks(Object object, boolean toCheckAsNull)",
+      "void assertCheck(Object object, boolean toCheckAsNull)",
+      "void checkNull(Object object)",
+      "void assertNull(Object object)"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Phân vùng tương đương (còn gọi là lớp tương đương) là gì?",
+    "options": [
+      "Tập hợp các test case để test các lớp đối tượng",
+      "Một dải (range) đầu vào hoặc đầu ra của các giá trị sao cho mỗi giá trị trong dải trở thành một test case",
+      "Một dải (range) giá trị đầu vào hoặc đầu ra sao cho mọi giá trị thứ mười trong dải đều trở thành test case",
+      "Một dải (range) giá trị đầu vào hoặc đầu ra sao cho chỉ một giá trị trong dải đó trở thành một test case"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Điều nào sau đây là kiểm thử phi chức năng cho một trang web thương mại điện tử? ( cả hai đều đúng )",
+    "options": [
+      "Người dùng có thể trả lại hàng hóa bị lỗi",
+      "1000 người có thể đăng nhập cùng lúc vào hệ thống",
+      "Người dùng có thể mua hàng hóa",
+      "Bảo mật hệ thống trong quá trình giao dịch"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Các bước cơ bản của quá trình kiểm thử dòng điều khiển là",
+    "options": [
+      "Tính độ phức tạp của chu trình để xác định loại đồ thị dòng điều khiển, xác định đường thi hành, sinh test case dựa vào đường thi hành",
+      "Sinh đồ thị dòng điều khiển CFG với tiêu chí độ đo cần kiểm thử, sinh các đường thi hành, sinh các test case, thực hiện các test case",
+      "Sinh đồ thị các test case từ code với độ đo cần kiểm thử, thực hiện các test case",
+      "Sinh đồ thị dòng điều khiển CFG với tiêu chí độ đo cần kiểm thử, sinh các test case, thực hiện các test case"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Kỹ thuật nào sau đây KHÔNG PHẢI là một kỹ thuật kiểm thử hộp trắng",
+    "options": [
+      "Statement Testing",
+      "Decision Testing",
+      "Condition Coverage",
+      "Boundary Testing"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Phát biểu nào sau đây là sai về test tĩnh",
+    "options": [
+      "Là quá trình review source code",
+      "Test tĩnh yêu cầu phải chạy code",
+      "Test tĩnh có thể đưa ra các phép đo như độ phức tạp chu trình",
+      "Là quá trình review một tài liệu như test plan"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Phát biểu nào sau đây là đúng về phương thức timeout() trong Mockito?",
+    "options": [
+      "Nó được sử dụng để xác minh rằng một phương thức đã được gọi trên một đối tượng giả",
+      "Nó được sử dụng để chỉ định thời gian tối đa nên dành để chờ một lệnh gọi phương thức trên một đối tượng giả",
+      "Nó được sử dụng để chỉ định hành vi của một lệnh gọi phương thức trên một đối tượng gỉả",
+      "Nó được sử dụng để thiết lập thời gian để bắt đầu một lệnh gọi phương thức trên một đối tượng giả"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Sự khác biệt giữa đối tượng mock và đối tượng dummy trong Mockito là gì?",
+    "options": [
+      "Một đối tượng mock được sử dụng để xác minh rằng một phương thức đã được gọi, trong khi một đối tượng dummy thì không",
+      "Một đối tượng giả được tạo bằng cách sử dụng @Mock, trong khi một đối tượng giả được tạo bằng cách sử dụng @Dummy",
+      "Đối tượng mock mô phỏng hành vi của đối tượng thực, trong khi đối tượng dummy thì không",
+      "Không có sự khác biệt giữa đối tượng mock và đối tượng dummy trong Mockito"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Trong JUnit 5, phương thức nào sau đây dùng để kiểm tra 2 đối tượng có giống nhau không",
+    "options": [
+      "assertCheck",
+      "assertObject",
+      "assertEqual",
+      "assertSame"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Đặc điểm nào sau đây là đặc điểm của kiểm thử hồi quy?\ni) Kiểm thử hồi quy chỉ được chạy một lần\nii) Kiểm thử hồi quy được sử dụng sau khi các bản sửa lỗi đã được thực hiện\niii) Kiểm thử hồi quy thường được tự động\niv) Kiểm thử hồi quy không cần được bảo trì",
+    "options": [
+      "i, iii, iv",
+      "ii, iii",
+      "iii",
+      "ii, iv"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mục đích của phương thức verify() trong Mockito là gì?",
+    "options": [
+      "Đưa các phụ thuộc vào một lớp kiểm tra",
+      "Để khẳng định rằng một giá trị bằng một giá trị nhất định",
+      "Để tạo một đối tượng giả",
+      "Để xác minh rằng một phương thức đã được gọi trên một đối tượng giả"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Phương pháp nào sau đây KHÔNG PHẢI là 1 phương pháp test gia tăng (incremental testing)?",
+    "options": [
+      "Bottom up",
+      "Big-bang",
+      "Sandwich",
+      "Top down"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Phát biểu nào sau đây là phù hợp nhất cho hoạt động \"review\"?",
+    "options": [
+      "Review là cách test code kém hiệu quả nhất",
+      "Review không có khả năng tìm thấy lỗi trong test plan",
+      "Review nên được thực hiện dựa vào đặc tả, code và test plan",
+      "Review không thể được thực hiện dựa vào các đặc tả yêu cầu của người dùng"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Phát biểu nào sau đây là phù hợp nhất về kiểm thử",
+    "options": [
+      "Mục tiêu/mục đích của kiểm thử là để chứng minh rằng chương trình hoạt động",
+      "Kiểm thử là thực thi phần mềm nhằm mục đích tìm ra những khuyết điểm của phần mềm",
+      "Mục đích của kiểm thử là để chứng minh rằng chương trình không có lỗi",
+      "Mục đích của kiểm thử là để chứng minh rằng chương trình được thực hiện đúng phương pháp"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Độ phức tap chu trình của đoạn mã giả sau là bao nhiêu?\nIF X<Y THEN\nStatement 1;\nENDIF\nIF Y>=Z THEN\nStatement 2;\nENDIF",
+    "options": [
+      "4",
+      "2",
+      "5",
+      "3"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Trong JUnit 5, Annotation nào được sử dụng để tự động đưa các field giả lập vào đối tượng test kiểm tra?",
+    "options": [
+      "@Mock",
+      "@InjectMocks",
+      "@Inject",
+      "@InjectMockObject"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Những hoạt động nào tạo thành một phần của test plan?\n1. Phát triển các test case\n2. Xác định các phương hướng test (test approach)\n3. Phân công tài nguyên\n4. Xây dựng môi trường test",
+    "options": [
+      "4 là đúng, 1, 2 & 3 là sai",
+      "1, 2 & 4 là đúng, 3 là sai",
+      "2 & 3 là đúng, 1 & 4 là sai",
+      "1, 2 & 3 là đúng, 4 là sai"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Cho đoạn mã giả sau, số test case tối thiểu cần có để phủ tất cả các nhánh?\nint kiemTraNguyenTo(int k){\nif(k<2)\nreturn -1;\nfor(int i=2; i<k; i++)\nif(k%i==0)\nreturn -1;\nreturn 1;\n}",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Cho đoạn mã giả sau, số test case tối thiểu cần có để phủ tất cả các lệnh?\nint kiemTraNguyenTo(int k){\nif(k<2)\nreturn -1;\nfor(int i=2; i<k; i++)\nif(k%i==0)\nreturn -1;\nreturn 1;\n}",
+    "options": [
+      "3",
+      "4",
+      "1",
+      "2"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Cho đoạn mã giả sau, số test case tối thiểu cần có để đạt được phủ cấp 3?\nint kiemTraNguyenTo(int k){\nif(k<2)\nreturn -1;\nfor(int i=2; i<k; i++)\nif(k%i==0)\nreturn -1;\nreturn 1;\n}",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "4"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Cho đoạn mã giả sau, số test case tối thiểu cần có để đạt được phủ cấp 4?\nint kiemTraNguyenTo(int k){\nif(k<2)\nreturn -1;\nfor(int i=2; i<k; i++)\nif(k%i==0)\nreturn -1;\nreturn 1;\n}",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "4"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Phát biểu nào sau đây đúng về các hoạt động \"verification\" trong kiểm thử",
+    "options": [
+      "Đảm bảo rằng đó là điều người dùng thật sự muốn",
+      "Kiểm tra xem có đang xây dựng đúng hệ thống không",
+      "Được thực hiện bởi một nhóm kiểm thử độc lập",
+      "Kiểm tra xem có đang xây dựng hệ thống có đúng không"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Trong JUnit 5, Annotation nào sau đây làm cho 1 phương thức được chạy trước tất cả các phương thức test trong?",
+    "options": [
+      "@BeforeAll",
+      "@BeforeEach",
+      "@BeforeClass",
+      "@Before"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Trong Mockito, để giả lập hàm check() của đối tượng mock có tên là sut có giá trị trả về là true thì cú pháp dòng lệnh nào sau đây là đúng?",
+    "options": [
+      "when(sut.check()).thenReturn(true);",
+      "when(sut.check()) then return(true);",
+      "when(sut).check().thenReturn(true);",
+      "when(sut.check()) thenReturn(true);"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Phát biểu nào sau đây đúng về quá trình xây dựng phần mềm theo hướng tiếp cận TDD",
+    "options": [
+      "Trải qua 3 giai đoạn: test, code, retest",
+      "Trải qua 2 giai đoạn: test trước, code sau",
+      "Trải qua 3 giai đoạn: red, green, refactor",
+      "Phải thực hiện việc test 2 lần để có ít bug hơn"
+    ],
+    "correct": 2
+  },  {
+    "question": "Cho đoạn mã, phát biểu nào sau đây là đúng:\nIF A > B\nTHEN C =A -B \nRead D \nIF C =D \nThen Print 'Error' \nENDIF \nENDIF",
+    "options": [
+      "1 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
+      "2 test case để phủ các dòng lệnh, 2 test case để phủ nhánh",
+      "2 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
+      "3 test case để phủ các dòng lệnh, 3 test case để phủ nhánh"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Đầu vào nào sau đây thuộc cùng 1 lớp tương đương trong khoảng [1000 - 99999]?",
+    "options": [
+      "10000 - 50000 - 999999",
+      "1000 - 5000 - 10000",
+      "10000 - 999999",
+      "9999 - 50000 - 100000"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không có trong tài liệu test plan?",
+    "options": [
+      "Những gì không được kiểm tra",
+      "Môi trường thử nghiệm",
+      "Kế hoạch để đánh giá chất lượng",
+      "Lịch trình và thời hạn"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Khi nào nên sử dụng kiểm thử thủ công?",
+    "options": [
+      "Khi có thời gian hạn chế để thực hiện kiểm thử",
+      "Khi cần kiểm tra hiệu suất của hệ thống",
+      "Khi có nhiều test case lặp lại thường xuyên",
+      "Khi cần kiểm tra trải nghiệm của người dùng"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Kiểm thử phân vùng tương đương (equivalence partitioning) là kỹ thuật gì?",
+    "options": [
+      "Chia đầu vào thành các nhóm tương đương để giảm test case",
+      "Kiểm tra các giá trị biên của đầu vào",
+      "Kiểm tra tất cả các giá trị đầu vào có thể",
+      "Kiểm tra ngẫu nhiên các giá trị đầu vào"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Kiểm thử phi chức năng (non-functional testing) bao gồm những gì?",
+    "options": [
+      "Kiểm tra giao diện người dùng của ứng dụng",
+      "Kiểm tra tương tác giữa các module của hệ thống",
+      "Kiểm tra các yêu cầu chức năng của phần mềm",
+      "Kiểm tra hiệu suất, bảo mật, khả năng sử dụng"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Vai trò của developer trong kiểm thử phần mềm là gì?",
+    "options": [
+      "Thực hiện kiểm thử đơn vị và hỗ trợ các loại kiểm thử khác",
+      "Chỉ thực hiện kiểm thử chấp nhận của phần mềm",
+      "Chỉ viết mã nguồn cho ứng dụng",
+      "Không tham gia vào quá trình kiểm thử"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Kiểm thử tương thích (compatibility testing) là gì?",
+    "options": [
+      "Kiểm tra bảo mật của hệ thống phần mềm",
+      "Kiểm tra phần mềm trên các nền tảng và thiết bị khác nhau",
+      "Kiểm tra hiệu suất của ứng dụng phần mềm",
+      "Kiểm tra tương tác giữa các module của hệ thống"
+    ],
+    "correct": 1
+  },  {
+    "question": "Loại kiểm thử nào sau đây không phải là một phần của kiểm thử hệ thống:",
+    "options": [
+      "Kiểm thử khả năng phục hồi",
+      "Kiểm thử khả năng dễ sử dụng",
+      "Kiểm thử beta",
+      "Kiểm thử nghiệm hiệu suất, tải"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Trọng tâm chính của kiểm thử chấp nhận là:",
+    "options": [
+      "Để đảm bảo rằng hệ thống được tất cả người dùng chấp nhận",
+      "Kiểm bởi một nhóm thử nghiệm độc lập",
+      "Kiểm theo quan điểm kinh doanh",
+      "Tìm lỗi trong hệ thống"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Đối tượng nhỏ nhất được test trong Unit test là",
+    "options": [
+      "Gói (package)",
+      "Hằng số và biến",
+      "Phương thức",
+      "Lớp"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Phát biểu nào sau đây không đúng về kiểm thử hệ thống?",
+    "options": [
+      "Người dùng cuối nên tham gia vào test hệ thống.",
+      "Các bài test hệ thống thường được thực hiện bởi các nhóm độc lập.",
+      "Các lỗi được tìm thấy trong quá trình test hệ thống có thể rất tốn kém để sửa chữa.",
+      "Kiểm thử chức năng được sử dụng nhiều hơn kiểm thử cấu trúc."
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Ai thực hiện Unit Test",
+    "options": [
+      "Designer",
+      "Developer",
+      "User",
+      "Tester"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Kỹ thuật nào sau đây không phải là một hình thức của kiểm thử hộp trắng:",
+    "options": [
+      "Kiểm thử dòng dữ liệu",
+      "Kiểm thử giá trị biên",
+      "Kiểm thử dòng điều khiển",
+      "Kiểm thử bao phủ dòng lệnh"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Sự khác biệt chính giữa kiểm thử tĩnh và kiểm thử động là gì?",
+    "options": [
+      "Kiểm thử tĩnh phải được thực hiện trước khi kiểm thử động",
+      "Các test case thủ công được sử dụng để kiểm thử động; kiểm thử tự động được sử dụng để kiểm thử tĩnh",
+      "Kiểm thử động yêu cầu thực thi phần mềm; phần mềm không được thực thi trong quá trình kiểm thử tĩnh",
+      "Kiểm thử tĩnh được thực hiện bởi các nhà phát triển; kiểm thử động được thực hiện bởi tester"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Kỹ thuật nào sau đây là một hình thức kiểm thử tĩnh?",
+    "options": [
+      "Đoán lỗi",
+      "Review code",
+      "Cung cấp đầu vào và kiểm tra kết quả đầu ra",
+      "Kiểm thử hồi quy tự động"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Phát biểu nào sau đây là đúng?",
+    "options": [
+      "Độ độ bao phủ không ảnh hưởng đến độ tin cậy của bộ kiểm thử",
+      "Độ độ bao phủ càng nhỏ thì độ tin cậy của bộ kiểm thử càng cao",
+      "Độ độ bao phủ càng lớn thì độ tin cậy của bộ kiểm thử càng thấp",
+      "Độ độ bao phủ càng lớn thì độ tin cậy của bộ kiểm thử càng cao"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Độ bao phủ code được sử dụng như một thước để đo gì?",
+    "options": [
+      "Khuyết điểm của phần mềm",
+      "Việc test có hiệu quả không",
+      "Phân tích xu hướng",
+      "Thời gian test"
+    ],
+    "correct": 1
   }
-}
-
-// Hàm xáo trộn đáp án từng câu và cập nhật lại chỉ số đúng
-function shuffleAnswers(quizData) {
-  quizData.forEach(q => {
-    // Lưu đáp án đúng trước khi xáo trộn
-    const correctAnswer = q.options[q.correct];
-    
-    // Xáo trộn options
-    shuffleArray(q.options);
-    
-    // Cập nhật lại chỉ số correct dựa trên đáp án đúng đã lưu
-    q.correct = q.options.indexOf(correctAnswer);
-    
-    // Đảm bảo đáp án đúng luôn tồn tại trong options
-    if (q.correct === -1) {
-      console.error("Không tìm thấy đáp án đúng sau khi xáo trộn:", correctAnswer);
-      q.correct = 0; // Mặc định chọn đáp án đầu tiên nếu có lỗi
+    ];
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
     }
-  });
-}
 
-// Phần còn lại của mã JavaScript giữ nguyên...
+    // Hàm xáo trộn đáp án từng câu và cập nhật lại chỉ số đúng
+    function shuffleAnswers(quizData) {
+      quizData.forEach(q => {
+        const originalCorrectAnswer = q.options[q.correct];
+        shuffleArray(q.options); // xáo trộn options
+        q.correct = q.options.indexOf(originalCorrectAnswer); // cập nhật lại chỉ số correct
+      });
+    }
+
     const quizContainer = document.getElementById('quiz');
     const statsDiv = document.getElementById('stats');
     const answersState = Array(quizData.length).fill(null);
@@ -533,8 +2072,33 @@ function shuffleAnswers(quizData) {
         marksContainer.appendChild(mark);
       }
     }
-
     function renderQuiz() {
+      // Danh sách feedback chất chơi
+      const correctFeedbacks = [
+        "✅ Chính xác! Bé iu giỏi quá!",
+        "🎯 Đúng rồi! Để đa đì thưởng cho!",
+        "🔥 Học giỏi nhể!",
+        "👏 Đúng luôn! Húp đc 10đ ko đây!",
+        "👏 Ai mà giỏi dữ ta!",
+        "👏 Đúng luôn! Con nhà người ta à!",
+        "👏 Thầy phải gọi bằng mồm",
+        "👏 Vỗ tay",
+        "👏 Ờ mây zing gút chóp em!",
+        "💡 Tuyệt vời, nắm vững kiến thức đếy!",
+        "🧠 Bộ não vàng đây rồi!",
+        "🌟 Không thể tin nổi, bạn đúng tiếp!"
+      ];
+
+      const wrongFeedbacks = [
+        "❌ ANH NHẮC EMMMMMM!!!!. Đáp án đúng là:",
+        "🚫 Không giòn rồi! Cook lại đi! Đáp án đúng là:",
+        "😓 Chưa chính xác. Đáp án đúng là:",
+        "💥 Não cá vàng. Đáp án đúng là:",
+        "😬 Không đúng rồi! Đáp án phải là:",
+        "📛 Rớt phong độ rồi nha! Đáp án đúng là:",
+        "🙈 Sai nhẹ một chút, cẩn thận hơn nhé. Đáp án đúng là:"
+      ];
+
       quizContainer.innerHTML = '';
       quizData.forEach((q, i) => {
         const questionDiv = document.createElement('div');
@@ -560,16 +2124,19 @@ function shuffleAnswers(quizData) {
 
             if (index === q.correct) {
               btn.classList.add('correct');
-              feedback.textContent = "✅ Chính xác!";
+              const msg = correctFeedbacks[Math.floor(Math.random() * correctFeedbacks.length)];
+              feedback.textContent = msg;
               feedback.style.color = "#27ae60";
               answersState[i] = true;
             } else {
               btn.classList.add('wrong');
               allBtns[q.correct].classList.add('correct');
-              feedback.textContent = `❌ Sai rồi! Đáp án đúng là: \"${q.options[q.correct]}\"`;
+              const msg = wrongFeedbacks[Math.floor(Math.random() * wrongFeedbacks.length)];
+              // feedback.textContent = `${msg} "${q.options[q.correct]}"`;
               feedback.style.color = "#e74c3c";
               answersState[i] = false;
             }
+
             updateStats();
           });
           answersDiv.appendChild(btn);
@@ -583,7 +2150,6 @@ function shuffleAnswers(quizData) {
       updateStats();
       renderProgressMarks();
     }
-
     const bookmarkBtn = document.getElementById('bookmarkBtn');
     window.addEventListener('scroll', () => {
       bookmarkBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
@@ -656,7 +2222,62 @@ function shuffleAnswers(quizData) {
       statsDiv.innerHTML = `<span style="color:#2c3e50;">📝 Đang làm lại các câu sai (${retryData.length} câu)</span>`;
     }
 
+    // nhạc nền
+    const music = document.getElementById('bg-music');
+    const playBtn = document.getElementById('play-btn');
+    const muteBtn = document.getElementById('mute-btn');
 
+    function togglePlay() {
+      if (music.paused) {
+        music.play();
+        playBtn.innerText = "Pause";
+      } else {
+        music.pause();
+        playBtn.innerText = "Play";
+      }
+    }
+
+    function toggleMute() {
+      music.muted = !music.muted;
+      muteBtn.innerText = music.muted ? "Unmute" : "Mute";
+    }
+
+    // Gợi ý: đảm bảo người dùng tương tác trước để auto-play hoạt động
+    document.addEventListener('click', function initAudio() {
+      music.play().catch(() => { });
+      document.removeEventListener('click', initAudio);
+    });
+
+    let lastScrollPosition = 0;
+
+// Cập nhật sự kiện scroll
+window.addEventListener('scroll', () => {
+  const bookmarkBtn = document.getElementById('bookmarkBtn');
+  const backToPosBtn = document.getElementById('backToPositionBtn');
+  
+  bookmarkBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+  backToPosBtn.style.display = lastScrollPosition > 0 && window.scrollY === 0 ? 'block' : 'none';
+});
+
+// Sự kiện click nút lên đầu trang
+document.getElementById('bookmarkBtn').addEventListener('click', () => {
+  lastScrollPosition = window.scrollY || document.documentElement.scrollTop;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+  // Hiển thị nút "xuống vị trí trước đó" sau khi cuộn lên
+  setTimeout(() => {
+    if (lastScrollPosition > 0) {
+      document.getElementById('backToPositionBtn').style.display = 'block';
+    }
+  }, 500);
+});
+
+// Sự kiện click nút xuống vị trí trước đó
+document.getElementById('backToPositionBtn').addEventListener('click', () => {
+  window.scrollTo({ top: lastScrollPosition, behavior: 'smooth' });
+  lastScrollPosition = 0;
+  document.getElementById('backToPositionBtn').style.display = 'none';
+});
   </script>
 </body>
 
