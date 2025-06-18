@@ -1000,7 +1000,7 @@
     "correct": 2
   },
   {
-    "question": "Kỹ thuật đoán lỗi được sử dụng tốt nhất:",
+    "question": "Kỹ thuật đoán lỗi (Error Guessing) được sử dụng tốt nhất:",
     "options": [
       "Khi tiếp cận đầu tiên để tạo ra các test case",
       "Sau khi các kỹ thuật chính thức được áp dụng",
@@ -2174,53 +2174,79 @@
       content.style.display = content.style.display === "none" ? "block" : "none";
     }
     function retryWrongQuestions() {
-      const wrongIndexes = answersState
-        .map((val, idx) => val === false ? idx : null)
-        .filter(val => val !== null);
+  // Lọc ra các câu hỏi sai từ mảng quizData gốc (không phải từ kết quả làm lại trước đó)
+  const wrongIndexes = answersState
+    .map((val, idx) => val === false ? idx : null)
+    .filter(val => val !== null);
 
-      if (wrongIndexes.length === 0) {
-        alert("Không có câu nào sai để làm lại.");
-        return;
-      }
+  if (wrongIndexes.length === 0) {
+    alert("Không có câu nào sai để làm lại.");
+    return;
+  }
 
-      const retryData = wrongIndexes.map(idx => ({
-        ...quizData[idx],
-        index: idx
-      }));
+  // Tạo bản sao của các câu hỏi sai từ quizData gốc
+  const retryData = wrongIndexes.map(idx => ({
+    ...JSON.parse(JSON.stringify(quizData[idx])), // Deep copy để không ảnh hưởng đến quizData gốc
+    originalIndex: idx // Lưu lại vị trí gốc
+  }));
 
-      shuffleAnswers(retryData);
-      quizContainer.innerHTML = '';
+  // Xáo trộn câu hỏi và đáp án
+  shuffleArray(retryData);
+  retryData.forEach(q => {
+    const originalCorrect = q.options[q.correct];
+    shuffleArray(q.options);
+    q.correct = q.options.indexOf(originalCorrect);
+  });
 
-      retryData.forEach((q, i) => {
-        const questionDiv = document.createElement('div');
-        questionDiv.className = 'question';
+  quizContainer.innerHTML = '';
 
-        const questionTitle = document.createElement('h3');
-        questionTitle.textContent = `Làm lại - Câu ${q.index + 1}: ${q.question}`;
-        questionDiv.appendChild(questionTitle);
+  retryData.forEach((q, i) => {
+    const questionDiv = document.createElement('div');
+    questionDiv.className = 'question';
 
-        const answersDiv = document.createElement('div');
-        answersDiv.className = 'answers';
+    const questionTitle = document.createElement('h3');
+    questionTitle.textContent = `Làm lại - Câu ${q.originalIndex + 1}: ${q.question}`;
+    questionDiv.appendChild(questionTitle);
 
-        q.options.forEach((opt, index) => {
-          const btn = document.createElement('button');
-          btn.textContent = opt;
-          btn.addEventListener('click', () => {
-            btn.classList.add(index === q.correct ? 'correct' : 'wrong');
-            answersDiv.querySelectorAll('button').forEach((b, idx) => {
-              if (idx === q.correct) b.classList.add('correct');
-              b.disabled = true;
-            });
-          });
-          answersDiv.appendChild(btn);
-        });
+    const answersDiv = document.createElement('div');
+    answersDiv.className = 'answers';
 
-        questionDiv.appendChild(answersDiv);
-        quizContainer.appendChild(questionDiv);
+    const feedback = document.createElement('div');
+    feedback.style.marginTop = '10px';
+    feedback.style.fontWeight = 'bold';
+
+    q.options.forEach((opt, index) => {
+      const btn = document.createElement('button');
+      btn.textContent = opt;
+      btn.addEventListener('click', () => {
+        const allBtns = answersDiv.querySelectorAll('button');
+        allBtns.forEach(b => b.disabled = true);
+
+        if (index === q.correct) {
+          btn.classList.add('correct');
+          feedback.textContent = "✅ Lần này đúng rồi!";
+          feedback.style.color = "#27ae60";
+          answersState[q.originalIndex] = true; // Cập nhật vào vị trí gốc
+        } else {
+          btn.classList.add('wrong');
+          allBtns[q.correct].classList.add('correct');
+          feedback.textContent = `❌ Vẫn chưa đúng. Đáp án đúng là: "${q.options[q.correct]}"`;
+          feedback.style.color = "#e74c3c";
+          answersState[q.originalIndex] = false; // Cập nhật vào vị trí gốc
+        }
+
+        updateStats();
       });
+      answersDiv.appendChild(btn);
+    });
 
-      statsDiv.innerHTML = `<span style="color:#2c3e50;">📝 Đang làm lại các câu sai (${retryData.length} câu)</span>`;
-    }
+    answersDiv.appendChild(feedback);
+    questionDiv.appendChild(answersDiv);
+    quizContainer.appendChild(questionDiv);
+  });
+
+  statsDiv.innerHTML = `<span style="color:#2c3e50;">📝 Đang làm lại các câu sai (${retryData.length} câu)</span>`;
+}
 
     // nhạc nền
     const music = document.getElementById('bg-music');
