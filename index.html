@@ -276,7 +276,7 @@
         "correct": 1
       },
       {
-        "question": "Cú pháp CSS nào được sử dụng để chuyển tất cả các thẻ <p> thành bold?",
+        "question": "Cú pháp CSS nào được sử dụng để chuyển tất cả các thẻ <p> thành in đậm (bold)?",
         "options": [
           "p {text-size:bold}",
           "style:bold",
@@ -296,22 +296,12 @@
         "correct": 3
       },
       {
-        "question": "Thuộc tính nào của CSS không cho hình nền lập lại?",
-        "options": [
-          "background-repeat: no-repeat",
-          "image-repeat",
-          "background-norepeat",
-          "bgimage-repeat"
-        ],
-        "correct": 0
-      },
-      {
         "question": "Thẻ div nào sau đây có chiều rộng là 100px?",
         "options": [
           "<div style=\"width=100px\"></div>",
           "<div width:\"100px\"></div>",
           "<div width=\"100px\"></div>",
-          "<div style=\"width:100px\"></div>"
+          "<div style=\"width:100px;\"></div>"
         ],
         "correct": 3
       },
@@ -346,16 +336,6 @@
         "correct": 0
       },
       {
-        "question": "Thuộc tính CSS nào định dạng liên kết không có gạch chân?",
-        "options": [
-          "text-align : none",
-          "text-decoration : none",
-          "text-decoration : underline",
-          "text-underline : none"
-        ],
-        "correct": 1
-      },
-      {
         "question": "Nếu có đoạn mã HTML và CSS như sau:\n<div>\n     <a href=\"#\">A</a>\n     <b><a href=\"#\">B</a></b>\n</div>\n<a href=\"#\">C</a>\n\ndiv > a{color:red}\nHỏi nội dung nào có màu đỏ?",
         "options": [
           "A",
@@ -364,16 +344,6 @@
           "Tất cả đều đúng"
         ],
         "correct": 0
-      },
-      {
-        "question": "Nếu viết padding: 20px 50px 10px 30px thì padding-left là bao nhiêu?",
-        "options": [
-          "10px",
-          "50px",
-          "20px",
-          "30px"
-        ],
-        "correct": 3
       },
       {
         "question": "Thuộc tính nào trong CSS dùng để định dạng chữ nghiêng?",
@@ -414,16 +384,6 @@
           "Default"
         ],
         "correct": 2
-      },
-      {
-        "question": "Chọn khai báo quan hệ Child selector giữa div và p?",
-        "options": [
-          "div ~ p",
-          "div > p",
-          "div + p",
-          "div * p"
-        ],
-        "correct": 1
       },
       {
         "question": "Phương thức nào của jQuery ngăn ngừa code chạy trước khi trang web load xong?",
@@ -482,16 +442,6 @@
           "Những thẻ input mà thuộc tính id có giá trị kết thúc là abc",
           "Những thẻ input mà thuộc tính id có giá trị chứa abc",
           "Tất cả đều sai"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Trong CSS, thuộc tính nào dùng để định dạng màu chữ?",
-        "options": [
-          "color",
-          "Font-color",
-          "text-color",
-          "font color"
         ],
         "correct": 0
       },
@@ -556,26 +506,6 @@
         "correct": 2
       },
       {
-        "question": "Thuộc tính CSS nào định dạng đường biên (border) table nét đơn?",
-        "options": [
-          "border-collapse : separate",
-          "border-collapse : 1px",
-          "border-line : collapse",
-          "border-collapse : collapse"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Chọn thứ tự định dạng các góc?",
-        "options": [
-          "top-left, bottom-right, top-right, bottom-left",
-          "top-left, top-right, bottom-right, bottom-left",
-          "top-right, bottom-right, bottom-left, top-left",
-          "top-left, top-right, bottom-left, bottom-right"
-        ],
-        "correct": 1
-      },
-      {
         "question": "Để thay đổi màu chữ trong thẻ div có id=id1, câu lệnh javascript nào đúng?",
         "options": [
           "document.getElementById('id1').style.color='red';",
@@ -596,16 +526,6 @@
         "correct": 0
       },
       {
-        "question": "Để bỏ biểu tượng đánh dấu các phần tử trong một danh sách không thứ tự (<ul>) dùng thuộc tính CSS nào sau đây?",
-        "options": [
-          "list-style-type",
-          "list-style",
-          "style-image",
-          "list-symbol"
-        ],
-        "correct": 0
-      },
-      {
         "question": "Thuộc tính CSS nào định dạng đối tượng nằm một hàng riêng biệt?",
         "options": [
           "display: none",
@@ -614,16 +534,6 @@
           "display: inline-block"
         ],
         "correct": 1
-      },
-      {
-        "question": "Thêm gì vào <input type=\"text\" /> để có được gợi ý \"Nhập số\" như sau:",
-        "options": [
-          "value=\"Nhập số\"",
-          "comment=\"Nhập số\"",
-          "hint=\"Nhập số\"",
-          "placeholder=\"Nhập số\""
-        ],
-        "correct": 3
       },
       {
         "question": "Để xóa nội dung của thẻ div có id=id1, đoạn lệnh nào sau đúng?",
@@ -662,7 +572,7 @@
           "<a rel=\"stylesheet\" href=\"...\"></a>",
           "<file rel=\"stylesheet\" href=\"...\"></file>",
           "<div style=\"width:100px\"></div>",
-          "Chả cái nào đúng hết đâu!"
+          "<link rel=\"stylesheet\" href=\"duongdan/style.css\">"
         ],
         "correct": 4
       },
@@ -727,17 +637,7 @@
         "correct": 3
       },
       {
-        "question": "Thuộc tính CSS nào dùng để ngăn không cho 1 đối tượng bị ảnh hưởng bởi các đối tượng được float trước đó?",
-        "options": [
-          "clear",
-          "anchor",
-          "fixed",
-          "static"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Thuộc tính và giá trị CSS nào dùng để chuyển tất cả các ký tự đầu thành chứ viết hoa?",
+        "question": "Thuộc tính và giá trị CSS nào dùng để chuyển tất cả các ký tự đầu thành chữ viết hoa?",
         "options": [
           "text-transform:uppercase",
           "text-transform:capitaliza",
@@ -757,36 +657,6 @@
         "correct": 0
       },
       {
-        "question": "Chọn thứ tự định dạng liên kết đúng?",
-        "options": [
-          "link > hover > visited > active",
-          "link > acitve > visisted > hover",
-          "link > visited > hover > active",
-          "Tất cả đều sai"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Thuộc tính nào canh chỉnh nội dung các ô theo chiều dọc trong <table>?",
-        "options": [
-          "align",
-          "valign",
-          "halign",
-          "text-align"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Trong CSS, để canh vị trí hình nền nằm giữa, ta sử dụng thuộc tính nào?",
-        "options": [
-          "background-align",
-          "background-center",
-          "background-attachment",
-          "background-position"
-        ],
-        "correct": 3
-      },
-      {
         "question": "Trong danh sách không thứ tự <ul> muốn sử dụng 1 hình ảnh khác làm biểu tượng thì phải làm sao?",
         "options": [
           "Thay đổi thuộc tính type",
@@ -795,16 +665,6 @@
           "Không thay đổi được"
         ],
         "correct": 2
-      },
-      {
-        "question": "Thêm gì vào <input type=\"text\" /> để có được gợi ý \"Nhập số\" như sau:",
-        "options": [
-          "value=\"Nhập số\"",
-          "comment=\"Nhập số\"",
-          "hint=\"Nhập số\"",
-          "placeholder=\"Nhập số\""
-        ],
-        "correct": 3
       },
       {
         "question": "Đoạn mã ab<c>d</c> xuất ra trên trình duyệt là gì?",
@@ -825,26 +685,6 @@
           "Tất cả đều sai"
         ],
         "correct": 1
-      },
-      {
-        "question": "Đoạn mã nào sau đây canh đều 2 bên?",
-        "options": [
-          "<p align=\"justify\">…</p>",
-          "<p><justify>…</justify></p>",
-          "<p style=\"align:justify\">…</p>",
-          "Tất cả đều đúng"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Đoạn mã This is a <span>sentence</span> xuất ra trình duyệt là gì?",
-        "options": [
-          "This is a sentence",
-          "This is a sentence",
-          "This is a sentence",
-          "This is a sentence"
-        ],
-        "correct": 3
       },
       {
         "question": "Nếu viết padding: 20px 40px 30px thì padding-left và padding-right là bao nhiêu?",
@@ -900,7 +740,7 @@
         "question": "Ô nhập liệu nào sau đây có chiều rộng là 100px?",
         "options": [
           "<input type=\"text\" width=\"100px\" />",
-          "<input type=\"text\" style=\"width:100px\" />",
+          "<input type=\"text\" style=\"width:100px;\" />",
           "Tất cả đều đúng",
           "Tất cả đều sai"
         ],
@@ -915,16 +755,6 @@
           "change-value=\"no\""
         ],
         "correct": 2
-      },
-      {
-        "question": "Thuộc tính nào xác định tốc độ chuyển động của thẻ <marquee>?",
-        "options": [
-          "scrollamount",
-          "behavior",
-          "direction",
-          "loop"
-        ],
-        "correct": 0
       },
       {
         "question": "Đoạn mã This is a <br />sentence xuất ra trình duyệt là gì?",
@@ -953,16 +783,6 @@
           "Canh phải",
           "Canh giữa ô",
           "Tất cả đều sai"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Định dạng font chữ là Times New Roman bằng CSS thì lựa chọn nào sau đây đúng nhất?",
-        "options": [
-          "font-face: \"Times New Roman\"",
-          "font-face: Times New Roman",
-          "font-family: \"Times New Roman\"",
-          "font-family: Times New Roman"
         ],
         "correct": 2
       },
@@ -997,16 +817,6 @@
         "correct": 1
       },
       {
-        "question": "Thuộc tính nào trong CSS dùng để định dạng chữ nghiêng?",
-        "options": [
-          "text-decoration",
-          "text-transform",
-          "italic",
-          "font-style"
-        ],
-        "correct": 3
-      },
-      {
         "question": "Đâu là tag tạo ra chữ in nghiêng?",
         "options": [
           "<em>",
@@ -1027,16 +837,6 @@
         "correct": 2
       },
       {
-        "question": "Chọn thứ tự định dạng các góc?",
-        "options": [
-          "top-left, bottom-right, top-right, bottom-left",
-          "top-left, top-right, bottom-right, bottom-left",
-          "top-right, bottom-right, bottom-left, top-left",
-          "top-left, top-right, bottom-left, bottom-right"
-        ],
-        "correct": 1
-      },
-      {
         "question": "Đoạn mã <pre> 1    -    10 </pre> xuất ra trình duyệt là gì?",
         "options": [
           "1-10",
@@ -1047,44 +847,24 @@
         "correct": 1
       },
       {
-        "question": "Chọn khai báo quan hệ Child selector giữa div và p?",
-        "options": [
-          "div ~ p",
-          "div > p",
-          "div + p",
-          "div * p"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Để đánh dấu bookmark (liên kết trong) ta sử dụng cách nào sau đây?(chọn 2 đáp án)",
+        "question": "Để đánh dấu bookmark (liên kết trong) ta sử dụng cách nào sau đây ?",
         "options": [
           "<a name=\"tên_bookmark\">…</a>",
-          "<p id=\" # tên_bookmark\">…</p>",
-          "<a name=\" # tên_bookmark\">…</a>",
+          "<p id=\"#tên_bookmark\">…</p>",
+          "<a name=\"#tên_bookmark\">…</a>",
+          "Không có cách nào",
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Để đánh dấu bookmark (liên kết trong) ta sử dụng cách nào sau đây ?",
+        "options": [
+          "Không có cách nào",
+          "<p id=\"#tên_bookmark\">…</p>",
+          "<a name=\"#tên_bookmark\">…</a>",
           "<p id=\"tên_bookmark\">…</p>"
         ],
         "correct": 3
-      },
-      {
-        "question": "Đoạn mã X<sup>2</sup> xuất ra trình duyệt là gì?",
-        "options": [
-          "X2",
-          "X2",
-          "X2",
-          "X<sup>2</sup>"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Thuộc tính CSS nào định dạng đối tường nằm một hàng riêng biệt?",
-        "options": [
-          "display: none",
-          "display: block",
-          "display: inline",
-          "display: inline-block"
-        ],
-        "correct": 1
       },
       {
         "question": "Tag nào dùng để tạo tiêu đề kích lớn nhất?",
@@ -1093,16 +873,6 @@
           "<header>",
           "<h1>",
           "<h6>"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Để thêm vào form một đối tượng có thể lưu giữ giá trị và gửi lên server nhưng người dùng không thể thấy được, ta sử dụng?",
-        "options": [
-          "<input type=\"text\" hidden=\"yes\" />",
-          "<input type=\"text\" visible=\"no\" />",
-          "<input type=\"hidden\" />",
-          "<hidden type=\"text\">"
         ],
         "correct": 2
       },
@@ -1137,26 +907,6 @@
         "correct": 2
       },
       {
-        "question": "Thuộc tính nào để làm mờ đối tượng?",
-        "options": [
-          "opacity",
-          "blur",
-          "transparent",
-          "Tất cả đều sai"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Để bỏ biểu tượng đánh dấu các phần tử trong một danh sách không thứ tự (<ul>) dùng thuộc tính CSS nào?",
-        "options": [
-          "list-style-type: none;",
-          "list-type: none;",
-          "style-image: none;",
-          "list-symbol: none;"
-        ],
-        "correct": 0
-      },
-      {
         "question": "Cellpadding là khoảng cách?",
         "options": [
           "Giữa các ô",
@@ -1167,26 +917,6 @@
         "correct": 2
       },
       {
-        "question": "Thuộc tính CSS nào định dạng bo góc một đối tượng với màu nền chỉ định?",
-        "options": [
-          "border-conner",
-          "border-radius",
-          "border-radian",
-          "border –rounded"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Thuộc tính CSS nào định dạng liên kết không có gạch chân?",
-        "options": [
-          "text-align : none",
-          "text-decoration : none",
-          "text-decoration : underline",
-          "text-underline : none"
-        ],
-        "correct": 1
-      },
-      {
         "question": "Tag nào tạo ra 1 drop-down list?",
         "options": [
           "<select>",
@@ -1195,16 +925,6 @@
           "<input type=\"list\">"
         ],
         "correct": 0
-      },
-      {
-        "question": "Nếu có đoạn mã HTML và CSS như sau:\n<div>\n     <a href=\"#\">A</a>\n     <a href=\"#\"><b>B</b></a>\n     <b><a href=\"#\">C</a></b>\n</div>\ndiv, a{color:yellow}\nHỏi nội dung nào có màu vàng?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "Tất cả đều đúng"
-        ],
-        "correct": 3
       },
       {
         "question": "Thuộc tính CSS nào dùng để ngăn không cho 1 đối tượng bị ảnh hưởng bởi các đối tượng được float trước đó?",
@@ -1223,26 +943,6 @@
           "font:bold",
           "style:bold",
           "font-weight:bold"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Thuộc tính và giá trị CSS nào dùng để chuyển tất cả các ký tự đầu thành chứ viết hoa?",
-        "options": [
-          "text-transform:uppercase",
-          "text-transform:capitaliza",
-          "text-transform:proper",
-          "Không thể làm được với CSS"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Thuộc tính CSS nào định dạng đường biên (border) table nét đơn?",
-        "options": [
-          "border-collapse : separate",
-          "border-collapse : 1px",
-          "border-line : collapse",
-          "border-collapse : collapse"
         ],
         "correct": 3
       },
@@ -1277,26 +977,6 @@
         "correct": 2
       },
       {
-        "question": "Đâu là tag tạo ra 1 danh sách đứng đầu bởi dấu chấm • ?",
-        "options": [
-          "<ul>",
-          "<list>",
-          "<ol>",
-          "<dl>"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Nếu viết padding: 20px 40px 30px thì padding-left và padding-right là bao nhiêu?",
-        "options": [
-          "40px – 30px",
-          "40px – 40px",
-          "20px – 40px",
-          "20px – 30px"
-        ],
-        "correct": 1
-      },
-      {
         "question": "Đoạn mã X<sup>2</sup> xuất ra trình duyệt là gì?",
         "options": [
           "X2",
@@ -1315,36 +995,6 @@
           "background-position"
         ],
         "correct": 3
-      },
-      {
-        "question": "Thuộc tính CSS nào định dạng đối tường nằm một hàng riêng biệt?",
-        "options": [
-          "display: none",
-          "display: block",
-          "display: inline",
-          "display: inline-block"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Trong CSS, thuộc tính nào dùng để định dạng màu chữ?",
-        "options": [
-          "color",
-          "Font-color",
-          "text-color",
-          "font color"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Thuộc tính nào của CSS không cho hình nền lập lại?",
-        "options": [
-          "background-repeat: no-repeat",
-          "image-repeat",
-          "background-norepeat",
-          "bgimage-repeat"
-        ],
-        "correct": 0
       },
       {
         "question": "Chọn thứ tự định dạng các góc?",
@@ -1367,16 +1017,6 @@
         "correct": 1
       },
       {
-        "question": "Thuộc tính nào trong CSS dùng để định dạng chữ nghiêng?",
-        "options": [
-          "text-decoration",
-          "text-transform",
-          "italic",
-          "font-style"
-        ],
-        "correct": 3
-      },
-      {
         "question": "Chọn khai báo quan hệ Child selector giữa div và p?",
         "options": [
           "div ~ p",
@@ -1387,15 +1027,25 @@
         "correct": 1
       },
       {
-        "question": "Cellpadding là khoảng cách?",
-        "options": [
-          "Giữa các ô",
-          "Nội dung với lề trái",
-          "Từ biên đến nội dung ô",
-          "Nội dung với lề phải"
-        ],
-        "correct": 2
-      },
+      "question": "div > p là loại selector nào trong CSS?",
+      "options": [
+        "Universal selector (toàn cục)",
+        "Child selector (cha con)",
+        "Class selector (theo lớp)",
+        "Descendant selector (ông cha con)"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "div p là loại selector nào trong CSS?",
+      "options": [
+        "Universal selector (toàn cục)",
+        "Child selector (cha con)",
+        "Class selector (theo lớp)",
+        "Descendant selector (ông cha con)"
+      ],
+      "correct": 3
+    },
       {
         "question": "Đoạn mã nào sau đây canh đều 2 bên?",
         "options": [
@@ -1417,16 +1067,6 @@
         "correct": 2
       },
       {
-        "question": "Thẻ <dl>…</dl> là danh sách gì?",
-        "options": [
-          "Không có thứ tự",
-          "Mô tả/Định nghĩa",
-          "Có thứ tự",
-          "Tất cả đều sai"
-        ],
-        "correct": 1
-      },
-      {
         "question": "Thuộc tính CSS nào định dạng đường biên (border) table nét đơn?",
         "options": [
           "border-collapse : separate",
@@ -1435,16 +1075,6 @@
           "border-collapse : collapse"
         ],
         "correct": 3
-      },
-      {
-        "question": "Chọn thứ tự định dạng liên kết đúng?",
-        "options": [
-          "link > hover > visited > active",
-          "link > acitve > visisted > hover",
-          "link > visited > hover > active",
-          "Tất cả đều sai"
-        ],
-        "correct": 2
       },
       {
         "question": "Để bỏ biểu tượng đánh dấu các phần tử trong một danh sách không thứ tự (<ul>) dùng thuộc tính CSS nào?",
@@ -1457,26 +1087,6 @@
         "correct": 0
       },
       {
-        "question": "Nếu viết padding: 20px 50px 10px 30px thì padding-left là bao nhiêu?",
-        "options": [
-          "10px",
-          "50px",
-          "20px",
-          "30px"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Ô nhập liệu nào sau đây có chiều rộng là 100px?",
-        "options": [
-          "<input type=\"text\" width=\"100px\" />",
-          "<input type=\"text\" style=\"width:100px\" />",
-          "Tất cả đều đúng",
-          "Tất cả đều sai"
-        ],
-        "correct": 1
-      },
-      {
         "question": "Để thêm vào form một đối tượng có thể lưu giữ giá trị và gửi lên server nhưng người dùng không thể thấy được, ta sử dụng?",
         "options": [
           "<input type=\"text\" hidden=\"yes\" />",
@@ -1485,16 +1095,6 @@
           "<hidden type=\"text\">"
         ],
         "correct": 2
-      },
-      {
-        "question": "Thuộc tính nào để làm mờ đối tượng?",
-        "options": [
-          "opacity",
-          "blur",
-          "transparent",
-          "Tất cả đều sai"
-        ],
-        "correct": 0
       },
       {
         "question": "Đoạn mã ab<c>d</c> xuất ra trên trình duyệt là gì?",
@@ -1523,16 +1123,6 @@
           "valign",
           "halign",
           "text-align"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Đoạn mã This is a <br />sentence xuất ra trình duyệt là gì?",
-        "options": [
-          "This is a sentence",
-          "This is a\nsentence",
-          "This is a sentence",
-          "This is a <br />sentence"
         ],
         "correct": 1
       },
@@ -1597,16 +1187,6 @@
         "correct": 2
       },
       {
-        "question": "Thuộc tính CSS nào định dạng liên kết không có gạch chân?",
-        "options": [
-          "text-align : none",
-          "text-decoration : none",
-          "text-decoration : underline",
-          "text-underline : none"
-        ],
-        "correct": 1
-      },
-      {
         "question": "Thuộc tính màu nền trong <table> là?",
         "options": [
           "background",
@@ -1625,16 +1205,6 @@
           "placeholder=\"Nhập số\""
         ],
         "correct": 3
-      },
-      {
-        "question": "Thuộc tính CSS nào định dạng bo góc một đối tượng với màu nền chỉ định?",
-        "options": [
-          "border-conner",
-          "border-radius",
-          "border-radian",
-          "border -rounded"
-        ],
-        "correct": 1
       },
       {
         "question": "Để nối (trộn) các ô theo chiều ngang dùng thuộc tính?",
