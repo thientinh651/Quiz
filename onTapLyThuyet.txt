@@ -1,0 +1,150 @@
+
+
+
+
+  <div id="reviewContent"
+    style="display:none; background: #fff; padding: 20px; border-radius: 12px; max-width: 900px; margin: 0 auto 30px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: left;">
+    <h2 style="color:#2c3e50;">Tổng hợp từ khóa ôn tập môn Kiểm thử phần mềm</h2>
+    <ul style="line-height: 1.6;">
+      <!-- Phần 1: Tổng quan -->
+      <li><strong>Khái niệm kiểm thử:</strong>
+        <ul>
+          <li>Thực thi chương trình để tìm lỗi (Glen Myers)</li>
+          <li>So sánh giữa điều kiện hiện có và điều kiện bắt buộc (ANSI/IEEE 1059)</li>
+          <li>Phát hiện lỗi, không chứng minh phần mềm không có lỗi (Dijkstra)</li>
+        </ul>
+      </li>
+      <li><strong>Lý do kiểm thử:</strong>
+        <ul>
+          <li>Trung bình 1-3 lỗi / 100 dòng code</li>
+          <li>Chiếm 50% công việc phát triển phần mềm</li>
+        </ul>
+      </li>
+      <!-- Phần 2: Nguyên tắc & Khái niệm -->
+      <li><strong>7 nguyên tắc kiểm thử:</strong>
+        <ol>
+          <li>Không kiểm thử toàn bộ (Exhaustive impossible)</li>
+          <li>Kiểm thử sớm</li>
+          <li>Tập trung lỗi (Defect clustering)</li>
+          <li>Nghịch lý thuốc trừ sâu (Pesticide paradox)</li>
+          <li>Phụ thuộc ngữ cảnh</li>
+          <li>Ngụy biện không có lỗi</li>
+          <li>Kiểm thử là tương đối</li>
+        </ol>
+      </li>
+      <li><strong>Error → Fault → Failure:</strong> Chuỗi nguyên nhân-kết quả</li>
+      <li><strong>Verification vs Validation:</strong>
+        <ul>
+          <li>Verification: "Are we building the product right?" (Đúng thiết kế)</li>
+          <li>Validation: "Are we building the right product?" (Đúng yêu cầu KH)</li>
+        </ul>
+      </li>
+
+      <!-- Phần 3: Các cấp độ kiểm thử -->
+      <li><strong>4 cấp độ kiểm thử:</strong>
+        <ol>
+          <li><strong>Unit Test:</strong> Kiểm tra từng hàm/module (Developer)</li>
+          <li><strong>Integration Test:</strong>
+            <ul>
+              <li>Bottom-up</li>
+              <li>Top-down</li>
+              <li>Sandwich</li>
+            </ul>
+          </li>
+          <li><strong>System Test:</strong> Kiểm thử toàn hệ thống</li>
+          <li><strong>Acceptance Test:</strong> Kiểm thử chấp nhận (UAT)</li>
+        </ol>
+      </li>
+
+      <!-- Phần 4: Kỹ thuật -->
+      <li><strong>Kỹ thuật hộp đen:</strong>
+        <ul>
+          <li><strong>Phân vùng tương đương (EC):</strong>
+            <ul>
+              <li>Weak Normal EC</li>
+              <li>Strong Normal EC</li>
+              <li>Weak Robust EC</li>
+              <li>Strong Robust EC</li>
+            </ul>
+          </li>
+          <li><strong>Phân tích giá trị biên (BV):</strong>
+            <ul>
+              <li>Normal BV</li>
+              <li>Robustness BV</li>
+              <li>Worst-Case BV</li>
+            </ul>
+          </li>
+          <li><strong>Bảng quyết định:</strong> Điều kiện → Hành động</li>
+        </ul>
+      </li>
+
+      <li><strong>Kỹ thuật hộp trắng:</strong>
+        <ul>
+          <li><strong>Cyclomatic complexity:</strong> V(G) = E - N + 2</li>
+          <li><strong>Độ phủ (coverage):</strong>
+            <ol>
+              <li>Cấp 0: Không phủ</li>
+              <li>Cấp 1: Phủ lệnh</li>
+              <li>Cấp 2: Phủ nhánh</li>
+              <li>Cấp 3: Phủ điều kiện</li>
+              <li>Cấp 4: Phủ đường thi hành</li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Phần 5: Công cụ -->
+      <li><strong>Công cụ kiểm thử:</strong>
+        <ul>
+          <li><strong>Unit Test:</strong> PHPUnit, JUnit, NUnit</li>
+          <li><strong>Web UI Test:</strong> Selenium IDE</li>
+          <li><strong>Quản lý bug:</strong> Bugzilla, JIRA</li>
+        </ul>
+      </li>
+
+      <!-- Phần 6: Mẹo ghi nhớ -->
+      <li><strong>Mẹo ghi nhớ:</strong>
+        <ul>
+          <li>Nhớ các cặp khái niệm:
+            <ul>
+              <li>Test ≠ Debug</li>
+              <li>Verification ↔ Validation</li>
+              <li>Error → Fault → Failure</li>
+              <li>Unit ↔ Integration ↔ System ↔ Acceptance</li>
+            </ul>
+          </li>
+          <li>Công thức cyclomatic: V(G) = E - N + 2</li>
+          <li>Quy tắc 1-3 lỗi/100 dòng code</li>
+        </ul>
+      </li>
+
+      <!-- Phần mới bổ sung -->
+      <li><strong>Test Doubles trong PHPUnit:</strong>
+        <ul>
+          <li>Dummy: Đối tượng giả không dùng</li>
+          <li>Stub: Trả về giá trị cố định</li>
+          <li>Spy: Ghi lại thông tin gọi hàm</li>
+          <li>Mock: Xác minh hành vi</li>
+        </ul>
+      </li>
+
+      <li><strong>Annotations PHPUnit:</strong>
+        <ul>
+          <li>@before / @after</li>
+          <li>@dataProvider</li>
+          <li>@depends</li>
+          <li>@expectedException</li>
+        </ul>
+      </li>
+
+      <li><strong>Chiến lược kiểm thử:</strong>
+        <ul>
+          <li>Risk-based testing</li>
+          <li>Regression testing</li>
+          <li>Exploratory testing</li>
+        </ul>
+      </li>
+    </ul>
+    <button onclick="toggleReview()" class="nav-button2" style="display: block; align-items: center;">Đóng trang ôn tập
+      lý thuyết</button>
+  </div>

@@ -100,7 +100,7 @@
     }
 
     .progress-marks span {
-      width: 2px;
+      width: 1.5px;
       background: #ccc;
       height: 100%;
     }
@@ -165,6 +165,36 @@
       margin-top: 20px;
     }
 
+    .playBtn {
+
+      min-width: 20px;
+      max-width: 60px;
+      position: fixed;
+      top: 20px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    #backToPositionBtn {
+      position: fixed;
+      bottom: 80px;
+      right: 30px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      display: none;
+    }
+
     @media (max-width: 600px) {
       .question {
         padding: 15px;
@@ -173,6 +203,18 @@
       .answers button {
         font-size: 14px;
         padding: 10px;
+      }
+
+      .progress-marks span {
+        display: none;
+      }
+
+      .playBtn {
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        /* flex-direction: row;  */
+        gap: 5px;
       }
     }
   </style>
@@ -184,171 +226,178 @@
     <div class="progress-marks" id="progressMarks"></div>
   </div>
   <div style="text-align: center; margin-bottom: 20px;">
-  <button onclick="toggleReview()" class="nav-button2">Mở trang ôn tập lý thuyết</button>
-</div>
+    <button onclick="toggleReview()" class="nav-button2">Mở trang ôn tập lý thuyết</button>
+  </div>
 
-<div id="reviewContent" style="display:none; background: #fff; padding: 20px; border-radius: 12px; max-width: 900px; margin: 0 auto 30px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: left;">
-  <h2 style="color:#2c3e50;">Tổng hợp từ khóa ôn tập môn Kiểm thử phần mềm</h2>
-  <ul style="line-height: 1.6;">
-    <!-- Phần 1: Tổng quan -->
-    <li><strong>Khái niệm kiểm thử:</strong> 
-      <ul>
-        <li>Thực thi chương trình để tìm lỗi (Glen Myers)</li>
-        <li>So sánh giữa điều kiện hiện có và điều kiện bắt buộc (ANSI/IEEE 1059)</li>
-        <li>Phát hiện lỗi, không chứng minh phần mềm không có lỗi (Dijkstra)</li>
-      </ul>
-    </li>
-    <li><strong>Lý do kiểm thử:</strong> 
-      <ul>
-        <li>Trung bình 1-3 lỗi / 100 dòng code</li>
-        <li>Chiếm 50% công việc phát triển phần mềm</li>
-      </ul>
-    </li>
-    <li><strong>Bug nghiêm trọng:</strong> 
-      <ul>
-        <li>Ngân hàng Mỹ mất 920 triệu USD (2012)</li>
-        <li>Tên lửa Ariane 5 nổ (370 triệu USD)</li>
-      </ul>
-    </li>
-    
-    <!-- Phần 2: Nguyên tắc & Khái niệm -->
-    <li><strong>7 nguyên tắc kiểm thử:</strong>
-      <ol>
-        <li>Không kiểm thử toàn bộ (Exhaustive impossible)</li>
-        <li>Kiểm thử sớm</li>
-        <li>Tập trung lỗi (Defect clustering)</li>
-        <li>Nghịch lý thuốc trừ sâu (Pesticide paradox)</li>
-        <li>Phụ thuộc ngữ cảnh</li>
-        <li>Ngụy biện không có lỗi</li>
-        <li>Kiểm thử là tương đối</li>
-      </ol>
-    </li>
-    <li><strong>Error → Fault → Failure:</strong> Chuỗi nguyên nhân-kết quả</li>
-    <li><strong>Verification vs Validation:</strong>
-      <ul>
-        <li>Verification: "Are we building the product right?" (Đúng thiết kế)</li>
-        <li>Validation: "Are we building the right product?" (Đúng yêu cầu KH)</li>
-      </ul>
-    </li>
-    
-    <!-- Phần 3: Các cấp độ kiểm thử -->
-    <li><strong>4 cấp độ kiểm thử:</strong>
-      <ol>
-        <li><strong>Unit Test:</strong> Kiểm tra từng hàm/module (Developer)</li>
-        <li><strong>Integration Test:</strong>
-          <ul>
-            <li>Bottom-up</li>
-            <li>Top-down</li>
-            <li>Sandwich</li>
-          </ul>
-        </li>
-        <li><strong>System Test:</strong> Kiểm thử toàn hệ thống</li>
-        <li><strong>Acceptance Test:</strong> Kiểm thử chấp nhận (UAT)</li>
-      </ol>
-    </li>
-    
-    <!-- Phần 4: Kỹ thuật -->
-    <li><strong>Kỹ thuật hộp đen:</strong>
-      <ul>
-        <li><strong>Phân vùng tương đương (EC):</strong>
-          <ul>
-            <li>Weak Normal EC</li>
-            <li>Strong Normal EC</li>
-            <li>Weak Robust EC</li>
-            <li>Strong Robust EC</li>
-          </ul>
-        </li>
-        <li><strong>Phân tích giá trị biên (BV):</strong>
-          <ul>
-            <li>Normal BV</li>
-            <li>Robustness BV</li>
-            <li>Worst-Case BV</li>
-          </ul>
-        </li>
-        <li><strong>Bảng quyết định:</strong> Điều kiện → Hành động</li>
-      </ul>
-    </li>
-    
-    <li><strong>Kỹ thuật hộp trắng:</strong>
-      <ul>
-        <li><strong>Cyclomatic complexity:</strong> V(G) = E - N + 2</li>
-        <li><strong>Độ phủ (coverage):</strong>
-          <ol>
-            <li>Cấp 0: Không phủ</li>
-            <li>Cấp 1: Phủ lệnh</li>
-            <li>Cấp 2: Phủ nhánh</li>
-            <li>Cấp 3: Phủ điều kiện</li>
-            <li>Cấp 4: Phủ đường thi hành</li>
-          </ol>
-        </li>
-      </ul>
-    </li>
-    
-    <!-- Phần 5: Công cụ -->
-    <li><strong>Công cụ kiểm thử:</strong>
-      <ul>
-        <li><strong>Unit Test:</strong> PHPUnit, JUnit, NUnit</li>
-        <li><strong>Web UI Test:</strong> Selenium IDE</li>
-        <li><strong>Quản lý bug:</strong> Bugzilla, JIRA</li>
-      </ul>
-    </li>
-    
-    <!-- Phần 6: Mẹo ghi nhớ -->
-    <li><strong>Mẹo ghi nhớ:</strong>
-      <ul>
-        <li>Nhớ các cặp khái niệm:
-          <ul>
-            <li>Test ≠ Debug</li>
-            <li>Verification ↔ Validation</li>
-            <li>Error → Fault → Failure</li>
-            <li>Unit ↔ Integration ↔ System ↔ Acceptance</li>
-          </ul>
-        </li>
-        <li>Công thức cyclomatic: V(G) = E - N + 2</li>
-        <li>Quy tắc 1-3 lỗi/100 dòng code</li>
-      </ul>
-    </li>
-    
-    <!-- Phần mới bổ sung -->
-    <li><strong>Test Doubles trong PHPUnit:</strong>
-      <ul>
-        <li>Dummy: Đối tượng giả không dùng</li>
-        <li>Stub: Trả về giá trị cố định</li>
-        <li>Spy: Ghi lại thông tin gọi hàm</li>
-        <li>Mock: Xác minh hành vi</li>
-      </ul>
-    </li>
-    
-    <li><strong>Annotations PHPUnit:</strong>
-      <ul>
-        <li>@before / @after</li>
-        <li>@dataProvider</li>
-        <li>@depends</li>
-        <li>@expectedException</li>
-      </ul>
-    </li>
-    
-    <li><strong>Chiến lược kiểm thử:</strong>
-      <ul>
-        <li>Risk-based testing</li>
-        <li>Regression testing</li>
-        <li>Exploratory testing</li>
-      </ul>
-    </li>
-  </ul>
-  <button onclick="toggleReview()" class="nav-button2" style="display: block; align-items: center;">Đóng trang ôn tập lý thuyết</button>
-</div>
+  <div id="reviewContent"
+    style="display:none; background: #fff; padding: 20px; border-radius: 12px; max-width: 900px; margin: 0 auto 30px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: left;">
+    <h2 style="color:#2c3e50;">Tổng hợp từ khóa ôn tập môn Kiểm thử phần mềm</h2>
+    <ul style="line-height: 1.6;">
+      <!-- Phần 1: Tổng quan -->
+      <li><strong>Khái niệm kiểm thử:</strong>
+        <ul>
+          <li>Thực thi chương trình để tìm lỗi (Glen Myers)</li>
+          <li>So sánh giữa điều kiện hiện có và điều kiện bắt buộc (ANSI/IEEE 1059)</li>
+          <li>Phát hiện lỗi, không chứng minh phần mềm không có lỗi (Dijkstra)</li>
+        </ul>
+      </li>
+      <li><strong>Lý do kiểm thử:</strong>
+        <ul>
+          <li>Trung bình 1-3 lỗi / 100 dòng code</li>
+          <li>Chiếm 50% công việc phát triển phần mềm</li>
+        </ul>
+      </li>
+      <!-- Phần 2: Nguyên tắc & Khái niệm -->
+      <li><strong>7 nguyên tắc kiểm thử:</strong>
+        <ol>
+          <li>Không kiểm thử toàn bộ (Exhaustive impossible)</li>
+          <li>Kiểm thử sớm</li>
+          <li>Tập trung lỗi (Defect clustering)</li>
+          <li>Nghịch lý thuốc trừ sâu (Pesticide paradox)</li>
+          <li>Phụ thuộc ngữ cảnh</li>
+          <li>Ngụy biện không có lỗi</li>
+          <li>Kiểm thử là tương đối</li>
+        </ol>
+      </li>
+      <li><strong>Error → Fault → Failure:</strong> Chuỗi nguyên nhân-kết quả</li>
+      <li><strong>Verification vs Validation:</strong>
+        <ul>
+          <li>Verification: "Are we building the product right?" (Đúng thiết kế)</li>
+          <li>Validation: "Are we building the right product?" (Đúng yêu cầu KH)</li>
+        </ul>
+      </li>
+
+      <!-- Phần 3: Các cấp độ kiểm thử -->
+      <li><strong>4 cấp độ kiểm thử:</strong>
+        <ol>
+          <li><strong>Unit Test:</strong> Kiểm tra từng hàm/module (Developer)</li>
+          <li><strong>Integration Test:</strong>
+            <ul>
+              <li>Bottom-up</li>
+              <li>Top-down</li>
+              <li>Sandwich</li>
+            </ul>
+          </li>
+          <li><strong>System Test:</strong> Kiểm thử toàn hệ thống</li>
+          <li><strong>Acceptance Test:</strong> Kiểm thử chấp nhận (UAT)</li>
+        </ol>
+      </li>
+
+      <!-- Phần 4: Kỹ thuật -->
+      <li><strong>Kỹ thuật hộp đen:</strong>
+        <ul>
+          <li><strong>Phân vùng tương đương (EC):</strong>
+            <ul>
+              <li>Weak Normal EC</li>
+              <li>Strong Normal EC</li>
+              <li>Weak Robust EC</li>
+              <li>Strong Robust EC</li>
+            </ul>
+          </li>
+          <li><strong>Phân tích giá trị biên (BV):</strong>
+            <ul>
+              <li>Normal BV</li>
+              <li>Robustness BV</li>
+              <li>Worst-Case BV</li>
+            </ul>
+          </li>
+          <li><strong>Bảng quyết định:</strong> Điều kiện → Hành động</li>
+        </ul>
+      </li>
+
+      <li><strong>Kỹ thuật hộp trắng:</strong>
+        <ul>
+          <li><strong>Cyclomatic complexity:</strong> V(G) = E - N + 2</li>
+          <li><strong>Độ phủ (coverage):</strong>
+            <ol>
+              <li>Cấp 0: Không phủ</li>
+              <li>Cấp 1: Phủ lệnh</li>
+              <li>Cấp 2: Phủ nhánh</li>
+              <li>Cấp 3: Phủ điều kiện</li>
+              <li>Cấp 4: Phủ đường thi hành</li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Phần 5: Công cụ -->
+      <li><strong>Công cụ kiểm thử:</strong>
+        <ul>
+          <li><strong>Unit Test:</strong> PHPUnit, JUnit, NUnit</li>
+          <li><strong>Web UI Test:</strong> Selenium IDE</li>
+          <li><strong>Quản lý bug:</strong> Bugzilla, JIRA</li>
+        </ul>
+      </li>
+
+      <!-- Phần 6: Mẹo ghi nhớ -->
+      <li><strong>Mẹo ghi nhớ:</strong>
+        <ul>
+          <li>Nhớ các cặp khái niệm:
+            <ul>
+              <li>Test ≠ Debug</li>
+              <li>Verification ↔ Validation</li>
+              <li>Error → Fault → Failure</li>
+              <li>Unit ↔ Integration ↔ System ↔ Acceptance</li>
+            </ul>
+          </li>
+          <li>Công thức cyclomatic: V(G) = E - N + 2</li>
+          <li>Quy tắc 1-3 lỗi/100 dòng code</li>
+        </ul>
+      </li>
+
+      <!-- Phần mới bổ sung -->
+      <li><strong>Test Doubles trong PHPUnit:</strong>
+        <ul>
+          <li>Dummy: Đối tượng giả không dùng</li>
+          <li>Stub: Trả về giá trị cố định</li>
+          <li>Spy: Ghi lại thông tin gọi hàm</li>
+          <li>Mock: Xác minh hành vi</li>
+        </ul>
+      </li>
+
+      <li><strong>Annotations PHPUnit:</strong>
+        <ul>
+          <li>@before / @after</li>
+          <li>@dataProvider</li>
+          <li>@depends</li>
+          <li>@expectedException</li>
+        </ul>
+      </li>
+
+      <li><strong>Chiến lược kiểm thử:</strong>
+        <ul>
+          <li>Risk-based testing</li>
+          <li>Regression testing</li>
+          <li>Exploratory testing</li>
+        </ul>
+      </li>
+    </ul>
+    <button onclick="toggleReview()" class="nav-button2" style="display: block; align-items: center;">Đóng trang ôn tập
+      lý thuyết</button>
+  </div>
 
   <h1>Quiz Trắc Nghiệm KTPM</h1>
   <div style="text-align: center; margin-top: 10px;">
-  <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
+    <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
   </div>
   <div id="stats"></div>
   <div id="quiz"></div>
   <div style="text-align: center; margin-top: 10px;">
-  <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
+    <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
   </div>
+  <audio id="bg-music" src="NhacNen.mp3" autoplay loop></audio>
 
+  <div class="playBtn">
+    <button onclick="togglePlay()" id="play-btn"
+      style="padding: 6px 5px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+      Play music
+    </button>
+
+    <button onclick="toggleMute()" id="mute-btn"
+      style="padding: 6px 5px; background-color: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+      Mute
+    </button>
+  </div>
 
   <div class="actions">
     <button id="resetQuiz">🔄 Làm lại Quiz</button><br>
@@ -375,6 +424,7 @@
   </div>
 
   <button id="bookmarkBtn" title="Lên đầu trang">↑</button>
+  <button id="backToPositionBtn" title="Xuống vị trí trước đó" style="display: none;">↓</button>
 
   <script>
     const quizData = [
@@ -426,7 +476,7 @@
           "anyOf",
           "allOf"
         ],
-        correct: 1
+        correct: 3
       },
       {
         question: "Việc thực hiện các test case chức năng là một phần của",
@@ -678,16 +728,7 @@
         ],
         correct: 0
       },
-      {
-        question: "Phát biểu nào sau đây đúng về annotation @Spy trong Mockito?",
-        options: [
-          "Nó được sử dụng để tạo một đối tượng giả (mock)",
-          "Nó được sử dụng để tạo một đối tượng giả một phần",
-          "Nó được sử dụng để đưa các phần phụ thuộc vào một lớp kiểm tra",
-          "Nó được sử dụng để xác minh rằng một phương thức đã được gọi trên một đối tượng giả"
-        ],
-        correct: 1
-      },
+      
       {
         question: "Phát biểu nào sau đây phù hợp nhất về kiểm thử?",
         options: [
@@ -739,16 +780,6 @@
         correct: 1
       },
       {
-        question: "Phát biểu nào sau đây đúng về các hoạt động 'verification' trong kiểm thử?",
-        options: [
-          "Kiểm tra xem chúng ta đang xây dựng hệ thống có đúng không",
-          "Kiểm tra xem chúng ta có đang xây dựng đúng hệ thống không",
-          "Được thực hiện bởi một nhóm kiểm thử độc lập",
-          "Đảm bảo rằng đó là điều người dùng thực sự muốn"
-        ],
-        correct: 1
-      },
-      {
         question: "Một kỹ thuật kiểm thử phổ biến trong quá trình Unit test là",
         options: [
           "Kiểm tra độ phủ lệnh và phủ nhánh",
@@ -769,17 +800,7 @@
         correct: 0
       },
       {
-        question: "Phát biểu nào sau đây đúng về quá trình xây dựng phần mềm theo hướng tiếp cận TDD?",
-        options: [
-          "Trải qua 3 giai đoạn: test, code, retest",
-          "Trải qua 2 giai đoạn: test trước, code sau",
-          "Trải qua 3 giai đoạn: red, green, refactor",
-          "Phải thực hiện việc test 2 lần để có ít bug"
-        ],
-        correct: 2
-      },
-      {
-        question: "Phát biểu nào sau đây không phải là một trong những nguyên tắc của kiểm thử?",
+        question: "Phát biểu nào sau đây KHÔNG PHẢI là một trong những nguyên tắc của kiểm thử?",
         options: [
           "Lỗi thường phân bố tập trung",
           "Kiểm thử càng sớm càng tốt",
@@ -796,7 +817,7 @@
           "Fake là đối tượng giả lập, dummy là một đối tượng thật nhưng giả đối tượng khác",
           "Fake là giả hành vi, dummy là giả kết quả"
         ],
-        correct: 3
+        correct: 0
       },
       {
         question: "Trình tự đúng của các giai đoạn kiểm thử phần mềm là:",
@@ -847,36 +868,6 @@
       "để biết khí nào một bài kiểm thử cụ thể đã kết thúc quá trình thực hiện"
     ],
     "correct": 1
-  },
-  {
-    "question": "Độ phức tạp chu trình của đoạn mã giả sau là bao nhiêu?\nIF XY THEN Statement 1;\nELSE IF Y Z THEN Statement 2; ENDIF\nENDIF",
-    "options": [
-      "5",
-      "4",
-      "2",
-      "3"
-    ],
-    "correct": 3
-  },
-  {
-    "question": "Chúng ta có thể tìm thấy điều kiện dừng kiểm thử trong tài liệu nào?",
-    "options": [
-      "Báo cáo kết quả kiểm thử",
-      "Test suite",
-      "Test case",
-      "Test plan"
-    ],
-    "correct": 3
-  },
-  {
-    "question": "Các bước cơ bản của quá trình kiểm thử dòng điều khiển",
-    "options": [
-      "Tính độ phức tạp chu trình để xác định loại đồ thị dòng điều khiển, xác định đường thi hành, sinh test case dựa vào đường thì hành",
-      "Sinh đồ thị các test case từ code với độ đo cần kiểm thử, thực hiện các test case",
-      "Sinh đồ thị dòng điều khiển CFG với tiêu chí độ đo cần kiểm thử, sinh các test case, thực hiện các test case",
-      "Sinh đồ thị dòng điều khiển CFG với tiêu chí độ đo cần kiểm thử, sinh các đường thì hành, sinh các test case, thực hiện các test case"
-    ],
-    "correct": 3
   },
   {
     "question": "Kiểm thử tĩnh được thực hiện trong giai đoạn nào?",
@@ -959,7 +950,7 @@
     "correct": 1
   },
   {
-    "question": "Đâu không phải là mục tiêu của kiểm thử?",
+    "question": "Đâu KHÔNG PHẢI là mục tiêu của kiểm thử?",
     "options": [
       "Tăng sự tự tin về chất lượng của chương trình",
       "Ngăn chặn lỗi",
@@ -976,7 +967,7 @@
       "Đạt được độ bao phủ cao",
       "Test các khu vực rủi ro cao"
     ],
-    "correct": 3
+    "correct": 1
   },
   {
     "question": "Kiểm thử hệ thống nên:",
@@ -989,7 +980,7 @@
     "correct": 0
   },
   {
-    "question": "Cái nào sau đây không phải là một phần của kiểm thử hệ thống:",
+    "question": "Cái nào sau đây KHÔNG PHẢI là một phần của kiểm thử hệ thống:",
     "options": [
       "Kiểm tra sức chịu tải",
       "Kiểm thử tốc độ",
@@ -999,7 +990,7 @@
     "correct": 2
   },
   {
-    "question": "Kỹ thuật đoán lỗi được sử dụng tốt nhất khi nào?",
+    "question": "Kỹ thuật đoán lỗi được sử dụng tốt nhất KHI NÀO?",
     "options": [
       "Chỉ nên áp dụng 1 lần",
       "Khi tiếp cận đầu tiên để tạo ra các test case",
@@ -1007,6 +998,16 @@
       "Trước khi các kỹ thuật chính thức được áp dụng"
     ],
     "correct": 2
+  },
+  {
+    "question": "Kỹ thuật đoán lỗi (Error Guessing) được sử dụng tốt nhất:",
+    "options": [
+      "Khi tiếp cận đầu tiên để tạo ra các test case",
+      "Sau khi các kỹ thuật chính thức được áp dụng",
+      "Bởi những người thử nghiệm thiếu kinh nghiệm",
+      "Sau khi hệ thống hoạt động"
+    ],
+    "correct": 1
   },
   {
     "question": "Phát biểu nào đúng về mối quan hệ giữa bao phủ dòng lệnh và bao phủ quyết định?",
@@ -1018,23 +1019,23 @@
     ],
     "correct": 0
   },
-//   {
-//     "question": "Định nghĩa nào là phù hợp nhất về test case?",
-//     "options": [
-//       "Là một tập giá trị đầu vào và đầu ra mong đợi",
-//       "Là một cơ chế xác minh tính chính xác của kết quả đầu ra",
-//       "Là một trạng thái của hệ thống",
-//       "Là một cơ sở nguyên tắc về đo lường và thống kê"
-//     ],
-//     "correct": 0
-//   },
+  {
+    "question": "Định nghĩa nào là phù hợp nhất về test case?",
+    "options": [
+      "Là một tập giá trị đầu vào và đầu ra mong đợi",
+      "Là một cơ chế xác minh tính chính xác của kết quả đầu ra",
+      "Là một trạng thái của hệ thống",
+      "Là một cơ sở nguyên tắc về đo lường và thống kê"
+    ],
+    "correct": 0
+  },
   {
     "question": "Lý do chính để kiểm thử phần mềm trước khi phát hành là gì?",
     "options": [
-      "để tìm càng nhiều lỗi càng tốt trước khi phát hành",
-      "để quyết định khi nào phần mềm có đủ chất lượng để phát hành",
-      "để cung cấp thông tin cho một quyết định dựa trên",
-      "để cho thấy hệ thống sẽ hoạt động sau khi phát hành"
+      "Để tìm càng nhiều lỗi càng tốt trước khi phát hành",
+      "Để quyết định khi nào phần mềm có đủ chất lượng để phát hành",
+      "Để cung cấp thông tin cho một quyết định dựa trên",
+      "Để cho thấy hệ thống sẽ hoạt động sau khi phát hành"
     ],
     "correct": 1
   },
@@ -1069,16 +1070,6 @@
     "correct": 1
   },
   {
-    "question": "Trong một hệ thống tính thuế, nhóm nào trong số các nhóm sau rơi vào cùng một lớp tương đương?",
-    "options": [
-      "£5800; £28000; £32000",
-      "£28001; £32000; £35000",
-      "£5200; £5500; £28000",
-      "£4800; £14000; £28000"
-    ],
-    "correct": 1
-  },
-  {
     "question": "Bạn đã thiết kế các test case để đạt 100% phủ lệnh và 100% phủ quyết định cho đoạn mã. Sau khi thêm các lệnh print, cần thêm bao nhiêu test case nữa?",
     "options": [
       "Thêm 2 test case nữa",
@@ -1091,10 +1082,10 @@
   {
     "question": "Kiểm thử được thực hiện đủ khi nào?",
     "options": [
-      "người dùng sẽ không tìm thấy bất kỳ lỗi nghiêm trọng nào",
+      "Người dùng sẽ không tìm thấy bất kỳ lỗi nghiêm trọng nào",
       "Độ tin cậy cần thiết đã đạt",
       "Hết thời gian",
-      "không tìm thấy lỗi nào nữa"
+      "Không tìm thấy lỗi nào nữa"
     ],
     "correct": 1
   },
@@ -1109,7 +1100,7 @@
     "correct": 0
   },
   {
-    "question": "Phát biểu nào sau đây không đúng về kiểm thử hồi quy?",
+    "question": "Phát biểu nào sau đây KHÔNG ĐÚNG về kiểm thử hồi quy?",
     "options": [
       "Để đảm bảo phần mềm sau khi sửa chữa không gặp thêm lỗi mới có liên quan",
       "Để tiết kiệm công sức phải kiểm thử lại toàn bộ hệ thống",
@@ -1169,7 +1160,7 @@
     "correct": 0
   },
   {
-    "question": "Để kiểm thử hàm tính thưởng theo phương pháp phân hoạch tương đương, cần tối thiểu bao nhiêu test case?",
+    "question": "Để kiểm thử hàm tính thưởng theo phương pháp phân hoạch tương đương, cần tối thiểu bao nhiêu test case? Công ty có hàm tính thưởng theo số năm làm việc: ≤ 2 năm: 1 triệu.  2 năm và < 5 năm: 2 triệu.  ≥ 5 năm và < 10 năm: 3 triệu.  ≥ 10 năm: 4 triệu",
     "options": [
       "4",
       "5",
@@ -1202,7 +1193,7 @@
     "question": "Khi kiểm thử hệ thống tính điểm tester xác định rằng tất cả các điểm từ 90–100 sẽ mang lại kết quả A, nhưng dưới 90 sẽ không được điểm.",
     "options": [
       "Phân tích lại",
-      "Phân tích giá trị ranh giới",
+      "Phân tích giá trị biên",
       "Bảng quyết định",
       "Phân vùng tương đương"
     ],
@@ -1229,16 +1220,6 @@
     "correct": 2
   },
   {
-    "question": "Kiểm thử alpha là:",
-    "options": [
-      "Kiểm thử sau khi phát hành được thực hiện bởi người dùng cuối",
-      "Kiểm thử trước khi phát hành được thực hiện bởi nhóm đại diện người dùng",
-      "Kiểm thử đầu tiên được thực hiện",
-      "Kiểm thử cuối cùng trước khi phát hành"
-    ],
-    "correct": 1
-  },
-  {
     "question": "Kiểm thử được thực hiện đủ khi:",
     "options": [
       "Độ tin cậy cần thiết đã đạt",
@@ -1246,7 +1227,7 @@
       "Không tìm thấy lỗi nào nữa",
       "Người dùng sẽ không tìm thấy bất kỳ lỗi nghiêm trọng nào"
     ],
-    "correct": 3
+    "correct": 0
   },
   {
     "question": "Các test case được thiết kế khi nào?",
@@ -1258,16 +1239,7 @@
     ],
     "correct": 0
   },
-  {
-    "question": "Điều nào sau đây mô tả lợi ích chính của việc xác minh (verification) sớm trong vòng đời?",
-    "options": [
-      "Nó cho phép xác định các thay đổi trong yêu cầu của người dùng",
-      "Nó làm giảm sự gia tăng của lỗi",
-      "Nó cho phép người kiểm thử sớm tham gia vào dự án",
-      "Nó tạo điều kiện cho việc thiết lập môi trường kiểm thử kịp thời"
-    ],
-    "correct": 1
-  },
+  
   {
     "question": "Điều quan trọng nhất về thiết kế kiểm thử sớm là:",
     "options": [
@@ -1299,7 +1271,7 @@
     "correct": 3
   },
   {
-    "question": "Trong một hệ thống được thiết kế để tính thuế phải trả, nhóm nào trong số các nhóm sẽ rơi vào cùng một lớp tương đương?",
+    "question": "Trong một hệ thống được thiết kế để tính thuế phải trả, nhóm nào trong số các nhóm sẽ rơi vào cùng một lớp tương đương? Một nhân viên có $4000 tiền lương miễn thuế. $1500 tiếp theo bị đánh thuế 10%. $2800 tiếp theo bị đánh thuế 22%. Bất kỳ số tiền còn lại sẽ bị đánh thuế ở mức 40% nhóm nào trong số các nhóm sẽ rơi vào cùng một lớp tương đương??",
     "options": [
       "$4800 - $14000 - $28000",
       "$5800 - $28000 - $32000",
@@ -1399,7 +1371,7 @@
     "correct": 0
   },
   {
-    "question": "Kỹ thuật nào sau đây không phải là một hình thức của kiểm thử hộp trắng?",
+    "question": "Kỹ thuật nào sau đây KHÔNG PHẢI là một hình thức của kiểm thử hộp trắng?",
     "options": [
       "Kiểm thử bao phủ dòng lệnh",
       "Kiểm thử đường dẫn cơ sở",
@@ -1416,7 +1388,7 @@
       "Stub",
       "Output"
     ],
-    "correct": 2
+    "correct": 1
   },
   {
     "question": "Mục đích của kiểm thử chấp nhận là gì?",
@@ -1469,17 +1441,7 @@
     "correct": 2
   },
   {
-    "question": "Kỹ thuật đoán lỗi được sử dụng tốt nhất:",
-    "options": [
-      "Khi tiếp cận đầu tiên để tạo ra các test case",
-      "Sau khi các kỹ thuật chính thức được áp dụng",
-      "Bởi những người thử nghiệm thiếu kinh nghiệm",
-      "Sau khi hệ thống hoạt động"
-    ],
-    "correct": 1
-  },
-  {
-    "question": "Cho đoạn mã, phát biểu nào sau đây là đúng:\nIF A > B\nTHEN C =A -B \nRead D \nIF C =D \nThen Print 'Error' \nENDIF \nENDIF",
+    "question": "Cho đoạn mã, phát biểu nào sau đây là đúng: IF A > B THEN C =A - B Read D IF C =D Then Print 'Error' ENDIF ENDIF",
     "options": [
       "1 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
       "2 test case để phủ các dòng lệnh, 2 test case để phủ nhánh",
@@ -1509,7 +1471,7 @@
     "correct": 2
   },
   {
-    "question": "Điều nào sau đây không đúng với điều kiện phủ của kiểm thử?",
+    "question": "Điều nào sau đây KHÔNG ĐÚNG với điều kiện phủ của kiểm thử?",
     "options": [
       "Các điều kiện phủ thường được sử dụng khi chỉ định các tiêu chí hoàn thành kiểm thử",
       "Thước đo điều kiện phủ là tỷ lệ phần trăm yêu cầu của người dùng được phủ",
@@ -1578,16 +1540,7 @@
     ],
     "correct": 2
   },
-  {
-    "question": "Phát biểu nào sau đây là đúng về phương thức when() trong Mockito?",
-    "options": [
-      "Nó được sử dụng để tạo một đối tượng giả",
-      "Nó được sử dụng để xác minh rằng một phương thức đã được gọi trên một đối tượng giả",
-      "Nó được sử dụng để chỉ định hành vi của một lệnh gọi phương thức trên một đối tượng giả",
-      "Đây không phải là một phương thức hợp lệ trong Mockito"
-    ],
-    "correct": 2
-  },
+  
   {
     "question": "Điều nào sau đây là đúng về phương thức doThrow() trong Mockito?",
     "options": [
@@ -1599,7 +1552,7 @@
     "correct": 1
   },
   {
-    "question": "Cái nào sau đây không phải là ưu điểm của Mockito framework",
+    "question": "Cái nào sau đây KHÔNG PHẢI là ưu điểm của Mockito framework",
     "options": [
       "Giúp tạo ra các đối tượng giả lập",
       "Giúp test độc lập",
@@ -1619,7 +1572,7 @@
     "correct": 0
   },
   {
-    "question": "Bạn đang test một hệ thống xác định mức phí vận chuyển cho một nhà phân phối phụ tùng ô tô dựa trên web trong khu vực. Trọng lượng mà nhỏ hơn hoặc bằng 0 được xem là không hợp lệ. Xác định có bao nhiêu lớp tương đương cần thiết để test theo bảng giá sau\nTrọng lượng \t1 – 25 kg \t26 – 50 kg \tTrên 50 kg\nTiền ship \t$8.00 \t$12.00 \t$17.00",
+    "question": "Bạn đang test một hệ thống xác định mức phí vận chuyển cho một nhà phân phối phụ tùng ô tô dựa trên web trong khu vực. Trọng lượng mà nhỏ hơn hoặc bằng 0 được xem là không hợp lệ. Xác định có bao nhiêu lớp tương đương cần thiết để test theo bảng giá sau\nTrọng lượng 1 –> 25 kg | 26 –> 50 kg | Trên 50 kg\nTiền ship | $8.00 | $12.00 | $17.00",
     "options": [
       "2",
       "4",
@@ -1639,7 +1592,7 @@
     "correct": 3
   },
   {
-    "question": "Phân vùng tương đương (còn gọi là lớp tương đương) là gì?",
+    "question": "Phân vùng tương đương là gì(còn gọi là lớp tương đương) ?",
     "options": [
       "Tập hợp các test case để test các lớp đối tượng",
       "Một dải (range) đầu vào hoặc đầu ra của các giá trị sao cho mỗi giá trị trong dải trở thành một test case",
@@ -1669,7 +1622,7 @@
     "correct": 1
   },
   {
-    "question": "Kỹ thuật nào sau đây không phải là một kỹ thuật kiểm thử hộp trắng",
+    "question": "Kỹ thuật nào sau đây KHÔNG PHẢI là một kỹ thuật kiểm thử hộp trắng",
     "options": [
       "Statement Testing",
       "Decision Testing",
@@ -1719,12 +1672,12 @@
     "correct": 3
   },
   {
-    "question": "Đặc điểm nào sau đây là đặc điểm của kiểm thử hồi quy?\ni) Kiểm thử hồi quy chỉ được chạy một lần\nii) Kiểm thử hồi quy được sử dụng sau khi các bản sửa lỗi đã được thực hiện\niii) Kiểm thử hồi quy thường được tự động\niv) Kiểm thử hồi quy không cần được bảo trì",
+    "question": "Đặc điểm nào sau đây là đặc điểm của kiểm thử hồi quy?\n1) Kiểm thử hồi quy chỉ được chạy một lần\n2) Kiểm thử hồi quy được sử dụng sau khi các bản sửa lỗi đã được thực hiện\n3) Kiểm thử hồi quy thường được tự động\n4) Kiểm thử hồi quy không cần được bảo trì",
     "options": [
-      "i, iii, iv",
-      "ii, iii",
-      "iii",
-      "ii, iv"
+      "1, 3, 4",
+      "2, 3",
+      "3",
+      "2, 4"
     ],
     "correct": 1
   },
@@ -1739,7 +1692,7 @@
     "correct": 3
   },
   {
-    "question": "Phương pháp nào sau đây không phải là 1 phương pháp test gia tăng (incremental testing)?",
+    "question": "Phương pháp nào sau đây KHÔNG PHẢI là 1 phương pháp test gia tăng (incremental testing)?",
     "options": [
       "Bottom up",
       "Big-bang",
@@ -1769,16 +1722,6 @@
     "correct": 1
   },
   {
-    "question": "Nguồn nào sau đây là nguồn tốt nhất để xác định \"Kết quả mong đợi\" cho các test case \"Kiểm thử chấp nhận\"",
-    "options": [
-      "Kết quả thực tế",
-      "Yêu cầu của người dùng",
-      "Đặc tả chương trình",
-      "Đặc tả hệ thống"
-    ],
-    "correct": 1
-  },
-  {
     "question": "Độ phức tap chu trình của đoạn mã giả sau là bao nhiêu?\nIF X<Y THEN\nStatement 1;\nENDIF\nIF Y>=Z THEN\nStatement 2;\nENDIF",
     "options": [
       "4",
@@ -1799,14 +1742,14 @@
     "correct": 1
   },
   {
-    "question": "Những hoạt động nào tạo thành một phần của test plan?\ni) Phát triển các test case\nii) Xác định các phương hướng test (test approach)\niii) Phân công tài nguyên\niv) Xây dựng môi trường test",
+    "question": "Những hoạt động nào tạo thành một phần của test plan?\n1. Phát triển các test case\n2. Xác định các phương hướng test (test approach)\n3. Phân công tài nguyên\n4. Xây dựng môi trường test",
     "options": [
-      "iv là đúng, i, ii & iii là sai",
-      "i, ii & iv là đúng, iii là sai",
-      "ii & iii là đúng, i & iv là sai",
-      "i, ii & iii là đúng, iv là sai"
+      "4 là đúng, 1, 2 & 3 là sai",
+      "1, 2 & 4 là đúng, 3 là sai",
+      "2 & 3 là đúng, 1 & 4 là sai",
+      "1, 2 & 3 là đúng, 4 là sai"
     ],
-    "correct": 2
+    "correct": 3
   },
   {
     "question": "Cho đoạn mã giả sau, số test case tối thiểu cần có để phủ tất cả các nhánh?\nint kiemTraNguyenTo(int k){\nif(k<2)\nreturn -1;\nfor(int i=2; i<k; i++)\nif(k%i==0)\nreturn -1;\nreturn 1;\n}",
@@ -1852,9 +1795,9 @@
     "question": "Phát biểu nào sau đây đúng về các hoạt động \"verification\" trong kiểm thử",
     "options": [
       "Đảm bảo rằng đó là điều người dùng thật sự muốn",
-      "Kiểm tra xem chúng ta có đang xây dựng đúng hệ thống không",
+      "Kiểm tra xem có đang xây dựng đúng hệ thống không",
       "Được thực hiện bởi một nhóm kiểm thử độc lập",
-      "Kiểm tra xem chúng tôi đang xây dựng hệ thống có đúng không"
+      "Kiểm tra xem có đang xây dựng hệ thống có đúng không"
     ],
     "correct": 3
   },
@@ -1887,6 +1830,175 @@
       "Phải thực hiện việc test 2 lần để có ít bug hơn"
     ],
     "correct": 2
+  }, 
+  {
+    "question": "Đầu vào nào sau đây thuộc cùng 1 lớp tương đương trong khoảng [1000 - 99999]?",
+    "options": [
+      "10000 - 50000 - 999999",
+      "1000 - 5000 - 10000",
+      "10000 - 999999",
+      "9999 - 50000 - 100000"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không có trong tài liệu test plan?",
+    "options": [
+      "Những gì không được kiểm tra",
+      "Môi trường thử nghiệm",
+      "Kế hoạch để đánh giá chất lượng",
+      "Lịch trình và thời hạn"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Khi nào nên sử dụng kiểm thử thủ công?",
+    "options": [
+      "Khi có thời gian hạn chế để thực hiện kiểm thử",
+      "Khi cần kiểm tra hiệu suất của hệ thống",
+      "Khi có nhiều test case lặp lại thường xuyên",
+      "Khi cần kiểm tra trải nghiệm của người dùng"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Kiểm thử phân vùng tương đương (equivalence partitioning) là kỹ thuật gì?",
+    "options": [
+      "Chia đầu vào thành các nhóm tương đương để giảm test case",
+      "Kiểm tra các giá trị biên của đầu vào",
+      "Kiểm tra tất cả các giá trị đầu vào có thể",
+      "Kiểm tra ngẫu nhiên các giá trị đầu vào"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Kiểm thử phi chức năng (non-functional testing) bao gồm những gì?",
+    "options": [
+      "Kiểm tra giao diện người dùng của ứng dụng",
+      "Kiểm tra tương tác giữa các module của hệ thống",
+      "Kiểm tra các yêu cầu chức năng của phần mềm",
+      "Kiểm tra hiệu suất, bảo mật, khả năng sử dụng"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Vai trò của developer trong kiểm thử phần mềm là gì?",
+    "options": [
+      "Thực hiện kiểm thử đơn vị và hỗ trợ các loại kiểm thử khác",
+      "Chỉ thực hiện kiểm thử chấp nhận của phần mềm",
+      "Chỉ viết mã nguồn cho ứng dụng",
+      "Không tham gia vào quá trình kiểm thử"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Kiểm thử tương thích (compatibility testing) là gì?",
+    "options": [
+      "Kiểm tra bảo mật của hệ thống phần mềm",
+      "Kiểm tra phần mềm trên các nền tảng và thiết bị khác nhau",
+      "Kiểm tra hiệu suất của ứng dụng phần mềm",
+      "Kiểm tra tương tác giữa các module của hệ thống"
+    ],
+    "correct": 1
+  },  {
+    "question": "Loại kiểm thử nào sau đây không phải là một phần của kiểm thử hệ thống:",
+    "options": [
+      "Kiểm thử khả năng phục hồi",
+      "Kiểm thử khả năng dễ sử dụng",
+      "Kiểm thử beta",
+      "Kiểm thử nghiệm hiệu suất, tải"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Trọng tâm chính của kiểm thử chấp nhận là:",
+    "options": [
+      "Để đảm bảo rằng hệ thống được tất cả người dùng chấp nhận",
+      "Kiểm bởi một nhóm thử nghiệm độc lập",
+      "Kiểm theo quan điểm kinh doanh",
+      "Tìm lỗi trong hệ thống"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Đối tượng nhỏ nhất được test trong Unit test là",
+    "options": [
+      "Gói (package)",
+      "Hằng số và biến",
+      "Phương thức",
+      "Lớp"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Phát biểu nào sau đây không đúng về kiểm thử hệ thống?",
+    "options": [
+      "Người dùng cuối nên tham gia vào test hệ thống.",
+      "Các bài test hệ thống thường được thực hiện bởi các nhóm độc lập.",
+      "Các lỗi được tìm thấy trong quá trình test hệ thống có thể rất tốn kém để sửa chữa.",
+      "Kiểm thử chức năng được sử dụng nhiều hơn kiểm thử cấu trúc."
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Ai thực hiện Unit Test",
+    "options": [
+      "Designer",
+      "Developer",
+      "User",
+      "Tester"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Kỹ thuật nào sau đây không phải là một hình thức của kiểm thử hộp trắng:",
+    "options": [
+      "Kiểm thử dòng dữ liệu",
+      "Kiểm thử giá trị biên",
+      "Kiểm thử dòng điều khiển",
+      "Kiểm thử bao phủ dòng lệnh"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Sự khác biệt chính giữa kiểm thử tĩnh và kiểm thử động là gì?",
+    "options": [
+      "Kiểm thử tĩnh phải được thực hiện trước khi kiểm thử động",
+      "Các test case thủ công được sử dụng để kiểm thử động; kiểm thử tự động được sử dụng để kiểm thử tĩnh",
+      "Kiểm thử động yêu cầu thực thi phần mềm; phần mềm không được thực thi trong quá trình kiểm thử tĩnh",
+      "Kiểm thử tĩnh được thực hiện bởi các nhà phát triển; kiểm thử động được thực hiện bởi tester"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Kỹ thuật nào sau đây là một hình thức kiểm thử tĩnh?",
+    "options": [
+      "Đoán lỗi",
+      "Review code",
+      "Cung cấp đầu vào và kiểm tra kết quả đầu ra",
+      "Kiểm thử hồi quy tự động"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Phát biểu nào sau đây là đúng?",
+    "options": [
+      "Độ độ bao phủ không ảnh hưởng đến độ tin cậy của bộ kiểm thử",
+      "Độ độ bao phủ càng nhỏ thì độ tin cậy của bộ kiểm thử càng cao",
+      "Độ độ bao phủ càng lớn thì độ tin cậy của bộ kiểm thử càng thấp",
+      "Độ độ bao phủ càng lớn thì độ tin cậy của bộ kiểm thử càng cao"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Độ bao phủ code được sử dụng như một thước để đo gì?",
+    "options": [
+      "Khuyết điểm của phần mềm",
+      "Việc test có hiệu quả không",
+      "Phân tích xu hướng",
+      "Thời gian test"
+    ],
+    "correct": 1
   }
     ];
     function shuffleArray(array) {
@@ -1916,7 +2028,7 @@
       const total = answersState.length;
       const done = correct + wrong;
       const totalScore = ((correct / total) * 10).toFixed(2);
-const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
+      const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
       statsDiv.innerHTML = `
   <span style="color: #2980b9;">Đã làm: ${done}</span> |
   <span style="color: #27ae60;">Đúng: ${correct}</span> |
@@ -1942,8 +2054,33 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
         marksContainer.appendChild(mark);
       }
     }
-
     function renderQuiz() {
+      // Danh sách feedback chất chơi
+      const correctFeedbacks = [
+        "✅ Chính xác! Bé iu giỏi quá!",
+        "🎯 Đúng rồi! Để đa đì thưởng cho!",
+        "🔥 Học giỏi nhể!",
+        "👏 Đúng luôn! Húp đc 10đ ko đây!",
+        "👏 Ai mà giỏi dữ ta!",
+        "👏 Đúng luôn! Con nhà người ta à!",
+        "👏 Thầy phải gọi bằng mồm",
+        "👏 Vỗ tay",
+        "👏 Ờ mây zing gút chóp em!",
+        "💡 Tuyệt vời, nắm vững kiến thức đếy!",
+        "🧠 Bộ não vàng đây rồi!",
+        "🌟 Đ tin đc, rùa thế!"
+      ];
+
+      const wrongFeedbacks = [
+        "❌ ANH NHẮC EMMMMMM!!!!. Đáp án đúng là:",
+        "🚫 Không giòn rồi! Cook lại đi! Đáp án đúng là:",
+        "😓 Chưa chính xác. Đáp án đúng là:",
+        "💥 Não cá vàng. Đáp án đúng là:",
+        "😬 Không đúng rồi! Đáp án phải là:",
+        "📛 Rớt phong độ rồi nha! Đáp án đúng là:",
+        "🙈 Sai nhẹ một chút, cẩn thận hơn nhé. Đáp án đúng là:"
+      ];
+
       quizContainer.innerHTML = '';
       quizData.forEach((q, i) => {
         const questionDiv = document.createElement('div');
@@ -1969,16 +2106,19 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
 
             if (index === q.correct) {
               btn.classList.add('correct');
-              feedback.textContent = "✅ Chính xác!";
+              const msg = correctFeedbacks[Math.floor(Math.random() * correctFeedbacks.length)];
+              feedback.textContent = msg;
               feedback.style.color = "#27ae60";
               answersState[i] = true;
             } else {
               btn.classList.add('wrong');
               allBtns[q.correct].classList.add('correct');
-              feedback.textContent = `❌ Sai rồi! Đáp án đúng là: \"${q.options[q.correct]}\"`;
+              const msg = wrongFeedbacks[Math.floor(Math.random() * wrongFeedbacks.length)];
+              // feedback.textContent = `${msg} "${q.options[q.correct]}"`;
               feedback.style.color = "#e74c3c";
               answersState[i] = false;
             }
+
             updateStats();
           });
           answersDiv.appendChild(btn);
@@ -1992,7 +2132,6 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
       updateStats();
       renderProgressMarks();
     }
-
     const bookmarkBtn = document.getElementById('bookmarkBtn');
     window.addEventListener('scroll', () => {
       bookmarkBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
@@ -2013,10 +2152,11 @@ const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
     shuffleAnswers(quizData);     // Xáo trộn thứ tự đáp án trong từng câu
     renderQuiz();
     function toggleReview() {
-  const content = document.getElementById("reviewContent");
-  content.style.display = content.style.display === "none" ? "block" : "none";
-}
-function retryWrongQuestions() {
+      const content = document.getElementById("reviewContent");
+      content.style.display = content.style.display === "none" ? "block" : "none";
+    }
+    function retryWrongQuestions() {
+  // Lọc ra các câu hỏi sai từ mảng quizData gốc (không phải từ kết quả làm lại trước đó)
   const wrongIndexes = answersState
     .map((val, idx) => val === false ? idx : null)
     .filter(val => val !== null);
@@ -2026,12 +2166,20 @@ function retryWrongQuestions() {
     return;
   }
 
+  // Tạo bản sao của các câu hỏi sai từ quizData gốc
   const retryData = wrongIndexes.map(idx => ({
-    ...quizData[idx],
-    index: idx
+    ...JSON.parse(JSON.stringify(quizData[idx])), // Deep copy để không ảnh hưởng đến quizData gốc
+    originalIndex: idx // Lưu lại vị trí gốc
   }));
 
-  shuffleAnswers(retryData);
+  // Xáo trộn câu hỏi và đáp án
+  shuffleArray(retryData);
+  retryData.forEach(q => {
+    const originalCorrect = q.options[q.correct];
+    shuffleArray(q.options);
+    q.correct = q.options.indexOf(originalCorrect);
+  });
+
   quizContainer.innerHTML = '';
 
   retryData.forEach((q, i) => {
@@ -2039,25 +2187,42 @@ function retryWrongQuestions() {
     questionDiv.className = 'question';
 
     const questionTitle = document.createElement('h3');
-    questionTitle.textContent = `Làm lại - Câu ${q.index + 1}: ${q.question}`;
+    questionTitle.textContent = `Làm lại - Câu ${q.originalIndex + 1}: ${q.question}`;
     questionDiv.appendChild(questionTitle);
 
     const answersDiv = document.createElement('div');
     answersDiv.className = 'answers';
 
+    const feedback = document.createElement('div');
+    feedback.style.marginTop = '10px';
+    feedback.style.fontWeight = 'bold';
+
     q.options.forEach((opt, index) => {
       const btn = document.createElement('button');
       btn.textContent = opt;
       btn.addEventListener('click', () => {
-        btn.classList.add(index === q.correct ? 'correct' : 'wrong');
-        answersDiv.querySelectorAll('button').forEach((b, idx) => {
-          if (idx === q.correct) b.classList.add('correct');
-          b.disabled = true;
-        });
+        const allBtns = answersDiv.querySelectorAll('button');
+        allBtns.forEach(b => b.disabled = true);
+
+        if (index === q.correct) {
+          btn.classList.add('correct');
+          feedback.textContent = "✅ Lần này đúng rồi!";
+          feedback.style.color = "#27ae60";
+          answersState[q.originalIndex] = true; // Cập nhật vào vị trí gốc
+        } else {
+          btn.classList.add('wrong');
+          allBtns[q.correct].classList.add('correct');
+          feedback.textContent = `❌ Vẫn chưa đúng. Đáp án đúng là: "${q.options[q.correct]}"`;
+          feedback.style.color = "#e74c3c";
+          answersState[q.originalIndex] = false; // Cập nhật vào vị trí gốc
+        }
+
+        updateStats();
       });
       answersDiv.appendChild(btn);
     });
 
+    answersDiv.appendChild(feedback);
     questionDiv.appendChild(answersDiv);
     quizContainer.appendChild(questionDiv);
   });
@@ -2065,7 +2230,62 @@ function retryWrongQuestions() {
   statsDiv.innerHTML = `<span style="color:#2c3e50;">📝 Đang làm lại các câu sai (${retryData.length} câu)</span>`;
 }
 
+    // nhạc nền
+    const music = document.getElementById('bg-music');
+    const playBtn = document.getElementById('play-btn');
+    const muteBtn = document.getElementById('mute-btn');
 
+    function togglePlay() {
+      if (music.paused) {
+        music.play();
+        playBtn.innerText = "Pause";
+      } else {
+        music.pause();
+        playBtn.innerText = "Play";
+      }
+    }
+
+    function toggleMute() {
+      music.muted = !music.muted;
+      muteBtn.innerText = music.muted ? "Unmute" : "Mute";
+    }
+
+    // Gợi ý: đảm bảo người dùng tương tác trước để auto-play hoạt động
+    document.addEventListener('click', function initAudio() {
+      music.play().catch(() => { });
+      document.removeEventListener('click', initAudio);
+    });
+
+    let lastScrollPosition = 0;
+
+// Cập nhật sự kiện scroll
+window.addEventListener('scroll', () => {
+  const bookmarkBtn = document.getElementById('bookmarkBtn');
+  const backToPosBtn = document.getElementById('backToPositionBtn');
+  
+  bookmarkBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+  backToPosBtn.style.display = lastScrollPosition > 0 && window.scrollY === 0 ? 'block' : 'none';
+});
+
+// Sự kiện click nút lên đầu trang
+document.getElementById('bookmarkBtn').addEventListener('click', () => {
+  lastScrollPosition = window.scrollY || document.documentElement.scrollTop;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+  // Hiển thị nút "xuống vị trí trước đó" sau khi cuộn lên
+  setTimeout(() => {
+    if (lastScrollPosition > 0) {
+      document.getElementById('backToPositionBtn').style.display = 'block';
+    }
+  }, 500);
+});
+
+// Sự kiện click nút xuống vị trí trước đó
+document.getElementById('backToPositionBtn').addEventListener('click', () => {
+  window.scrollTo({ top: lastScrollPosition, behavior: 'smooth' });
+  lastScrollPosition = 0;
+  document.getElementById('backToPositionBtn').style.display = 'none';
+});
   </script>
 </body>
 

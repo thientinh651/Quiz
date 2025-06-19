@@ -1,342 +1,982 @@
-[
+
   {
-    "question": "Cho đoạn mã, phát biểu nào sau đây là đúng:\nIF A > B\nTHEN C =A -B \nRead D \nIF C =D \nThen Print 'Error' \nENDIF \nENDIF",
+    "question": "Thuộc tính CSS nào định dạng bo góc một đối tượng với màu nền chỉ định?",
     "options": [
-      "1 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
-      "2 test case để phủ các dòng lệnh, 2 test case để phủ nhánh",
-      "2 test case để phủ các dòng lệnh, 3 test case để phủ nhánh",
-      "3 test case để phủ các dòng lệnh, 3 test case để phủ nhánh"
+      "border-conner",
+      "border-radius",
+      "border-radian",
+      "border -rounded"
     ],
     "correct": 1
   },
   {
-    "question": "Đầu vào nào sau đây thuộc cùng 1 lớp tương đương trong khoảng [1000 - 99999]?",
+    "question": "Cú pháp CSS nào được sử dụng để chuyển tất cả các thẻ <p> thành bold?",
     "options": [
-      "10000 - 50000 - 999999",
-      "1000 - 5000 - 10000",
-      "10000 - 999999",
-      "9999 - 50000 - 100000"
-    ],
-    "correct": 1
-  },
-  {
-    "question": "Nội dung nào sau đây không có trong tài liệu test plan?",
-    "options": [
-      "Những gì không được kiểm tra",
-      "Môi trường thử nghiệm",
-      "Kế hoạch để đánh giá chất lượng",
-      "Lịch trình và thời hạn"
+      "p {text-size:bold}",
+      "style:bold",
+      "p {font-weight:bold}",
+      "p {font:bold}"
     ],
     "correct": 2
   },
   {
-    "question": "Khi nào nên sử dụng kiểm thử thủ công?",
+    "question": "Thuộc tính gì của thẻ option để xác định phần tử đó được chọn?",
     "options": [
-      "Khi có thời gian hạn chế để thực hiện kiểm thử",
-      "Khi cần kiểm tra hiệu suất của hệ thống",
-      "Khi có nhiều test case lặp lại thường xuyên",
-      "Khi cần kiểm tra trải nghiệm của người dùng"
+      "checked",
+      "default",
+      "Tất cả đều đúng",
+      "Tất cả đều sai"
     ],
     "correct": 3
   },
   {
-    "question": "Kiểm thử phân vùng tương đương (equivalence partitioning) là kỹ thuật gì?",
+    "question": "Thuộc tính nào của CSS không cho hình nền lập lại?",
     "options": [
-      "Chia đầu vào thành các nhóm tương đương để giảm test case",
-      "Kiểm tra các giá trị biên của đầu vào",
-      "Kiểm tra tất cả các giá trị đầu vào có thể",
-      "Kiểm tra ngẫu nhiên các giá trị đầu vào"
+      "background-repeat: no-repeat",
+      "image-repeat",
+      "background-norepeat",
+      "bgimage-repeat"
     ],
     "correct": 0
   },
   {
-    "question": "Câu chưa có nội dung (Câu 6)",
+    "question": "Thẻ div nào sau đây có chiều rộng là 100px?",
     "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Câu chưa có nội dung (Câu 7)",
-    "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Câu chưa có nội dung (Câu 8)",
-    "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Kiểm thử phi chức năng (non-functional testing) bao gồm những gì?",
-    "options": [
-      "Kiểm tra giao diện người dùng của ứng dụng",
-      "Kiểm tra tương tác giữa các module của hệ thống",
-      "Kiểm tra các yêu cầu chức năng của phần mềm",
-      "Kiểm tra hiệu suất, bảo mật, khả năng sử dụng"
+      "<div style=\"width=100px\"></div>",
+      "<div width:\"100px\"></div>",
+      "<div width=\"100px\"></div>",
+      "<div style=\"width:100px\"></div>"
     ],
     "correct": 3
   },
   {
-    "question": "Câu chưa có nội dung (Câu 10)",
+    "question": "Chọn thứ tự định dạng liên kết đúng?",
     "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Câu chưa có nội dung (Câu 11)",
-    "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Câu chưa có nội dung (Câu 12)",
-    "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Vai trò của developer trong kiểm thử phần mềm là gì?",
-    "options": [
-      "Thực hiện kiểm thử đơn vị và hỗ trợ các loại kiểm thử khác",
-      "Chỉ thực hiện kiểm thử chấp nhận của phần mềm",
-      "Chỉ viết mã nguồn cho ứng dụng",
-      "Không tham gia vào quá trình kiểm thử"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Kiểm thử tương thích (compatibility testing) là gì?",
-    "options": [
-      "Kiểm tra bảo mật của hệ thống phần mềm",
-      "Kiểm tra phần mềm trên các nền tảng và thiết bị khác nhau",
-      "Kiểm tra hiệu suất của ứng dụng phần mềm",
-      "Kiểm tra tương tác giữa các module của hệ thống"
-    ],
-    "correct": 1
-  },
-  {
-    "question": "Câu chưa có nội dung (Câu 15)",
-    "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Câu chưa có nội dung (Câu 16)",
-    "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Câu chưa có nội dung (Câu 17)",
-    "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Câu chưa có nội dung (Câu 18)",
-    "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Loại kiểm thử nào sau đây không phải là một phần của kiểm thử hệ thống:",
-    "options": [
-      "Kiểm thử khả năng phục hồi",
-      "Kiểm thử khả năng dễ sử dụng",
-      "Kiểm thử beta",
-      "Kiểm thử nghiệm hiệu suất, tải"
+      "link > hover > visited > active",
+      "link > acitve > visisted > hover",
+      "link > visited > hover > active",
+      "Tất cả đều sai"
     ],
     "correct": 2
   },
   {
-    "question": "Trọng tâm chính của kiểm thử chấp nhận là:",
+    "question": "Lựa chọn thiết lập ảnh nền cố định?",
     "options": [
-      "Để đảm bảo rằng hệ thống được tất cả người dùng chấp nhận",
-      "Kiểm bởi một nhóm thử nghiệm độc lập",
-      "Kiểm theo quan điểm kinh doanh",
-      "Tìm lỗi trong hệ thống"
-    ],
-    "correct": 2
-  },
-  {
-    "question": "Câu chưa có nội dung (Câu 21)",
-    "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Đối tượng nhỏ nhất được test trong Unit test là",
-    "options": [
-      "Gói (package)",
-      "Hằng số và biến",
-      "Phương thức",
-      "Lớp"
-    ],
-    "correct": 2
-  },
-  {
-    "question": "Câu chưa có nội dung (Câu 23)",
-    "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Câu chưa có nội dung (Câu 24)",
-    "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Phát biểu nào sau đây không đúng về kiểm thử hệ thống?",
-    "options": [
-      "Người dùng cuối nên tham gia vào test hệ thống.",
-      "Các bài test hệ thống thường được thực hiện bởi các nhóm độc lập.",
-      "Các lỗi được tìm thấy trong quá trình test hệ thống có thể rất tốn kém để sửa chữa.",
-      "Kiểm thử chức năng được sử dụng nhiều hơn kiểm thử cấu trúc."
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Ai thực hiện Unit Test",
-    "options": [
-      "Designer",
-      "Developer",
-      "User",
-      "Tester"
+      "background-attachment: fix",
+      "background-attachment: fixed",
+      "background-attachment: scroll",
+      "Tất cả đều sai"
     ],
     "correct": 1
   },
   {
-    "question": "Kỹ thuật nào sau đây không phải là một hình thức của kiểm thử hộp trắng:",
+    "question": "Phương thức nào của jQuery tương đương câu lệnh javascript: document.getElementById(\"ID\").",
     "options": [
-      "Kiểm thử dòng dữ liệu",
-      "Kiểm thử giá trị biên",
-      "Kiểm thử dòng điều khiển",
-      "Kiểm thử bao phủ dòng lệnh"
-    ],
-    "correct": 1
-  },
-  {
-    "question": "Sự khác biệt chính giữa kiểm thử tĩnh và kiểm thử động là gì?",
-    "options": [
-      "Kiểm thử tĩnh phải được thực hiện trước khi kiểm thử động",
-      "Các test case thủ công được sử dụng để kiểm thử động; kiểm thử tự động được sử dụng để kiểm thử tĩnh",
-      "Kiểm thử động yêu cầu thực thi phần mềm; phần mềm không được thực thi trong quá trình kiểm thử tĩnh",
-      "Kiểm thử tĩnh được thực hiện bởi các nhà phát triển; kiểm thử động được thực hiện bởi tester"
-    ],
-    "correct": 2
-  },
-  {
-    "question": "Câu chưa có nội dung (Câu 30)",
-    "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
+      "$(\"#ID\");",
+      "$(\"ID\");",
+      "$(\"id=ID\");",
+      "$(\".ID\");"
     ],
     "correct": 0
   },
   {
-    "question": "Kỹ thuật nào sau đây là một hình thức kiểm thử tĩnh?",
+    "question": "Thuộc tính CSS nào định dạng liên kết không có gạch chân?",
     "options": [
-      "Đoán lỗi",
-      "Review code",
-      "Cung cấp đầu vào và kiểm tra kết quả đầu ra",
-      "Kiểm thử hồi quy tự động"
+      "text-align : none",
+      "text-decoration : none",
+      "text-decoration : underline",
+      "text-underline : none"
     ],
     "correct": 1
   },
   {
-    "question": "Phát biểu nào sau đây là đúng?",
+    "question": "Nếu có đoạn mã HTML và CSS như sau:\n<div>\n     <a href=\"#\">A</a>\n     <b><a href=\"#\">B</a></b>\n</div>\n<a href=\"#\">C</a>\n\ndiv > a{color:red}\nHỏi nội dung nào có màu đỏ?",
     "options": [
-      "Độ độ bao phủ không ảnh hưởng đến độ tin cậy của bộ kiểm thử",
-      "Độ độ bao phủ càng nhỏ thì độ tin cậy của bộ kiểm thử càng cao",
-      "Độ độ bao phủ càng lớn thì độ tin cậy của bộ kiểm thử càng thấp",
-      "Độ độ bao phủ càng lớn thì độ tin cậy của bộ kiểm thử càng cao"
+      "A",
+      "B",
+      "C",
+      "Tất cả đều đúng"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Nếu viết padding: 20px 50px 10px 30px thì padding-left là bao nhiêu?",
+    "options": [
+      "10px",
+      "50px",
+      "20px",
+      "30px"
     ],
     "correct": 3
   },
   {
-    "question": "Câu chưa có nội dung (Câu 33)",
+    "question": "Thuộc tính nào trong CSS dùng để định dạng chữ nghiêng?",
     "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
+      "text-decoration",
+      "text-transform",
+      "italic",
+      "font-style"
     ],
-    "correct": 0
+    "correct": 3
   },
   {
-    "question": "Câu chưa có nội dung (Câu 34)",
+    "question": "Nếu viết padding: 20px 40px 30px thì padding-top và padding-bottom là bao nhiêu?",
     "options": [
-      "Option A",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "correct": 0
-  },
-  {
-    "question": "Độ bao phủ code được sử dụng như một thước để đo gì?",
-    "options": [
-      "Khuyết điểm của phần mềm",
-      "Việc test có hiệu quả không",
-      "Phân tích xu hướng",
-      "Thời gian test"
+      "40px – 30px",
+      "20px – 30px",
+      "20px – 40px",
+      "30px – 40px"
     ],
     "correct": 1
+  },
+  {
+    "question": "Phương thức nào của jQuery tương đương với thuộc tính innerHTML của javascript?",
+    "options": [
+      "val();",
+      "content();",
+      "html();",
+      "innerHTML();"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Thuộc tính nào của thẻ input dùng để xác định giá trị khởi tạo cho textfield?",
+    "options": [
+      "init",
+      "initvalue",
+      "value",
+      "Default"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Chọn khai báo quan hệ Child selector giữa div và p?",
+    "options": [
+      "div ~ p",
+      "div > p",
+      "div + p",
+      "div * p"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Phương thức nào của jQuery ngăn ngừa code chạy trước khi trang web load xong?",
+    "options": [
+      "$(document).ready();",
+      "$(document).load();",
+      "$(body).onload();",
+      "$(body).load();"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Để truy xuất lấy giá trị phần tử textbox có name=n ra biến x, mã javascript là?",
+    "options": [
+      "x = docuemnt.frm.n.value;",
+      "x = docuemnt.frm.n.value();",
+      "x = document.getElementByName('n');",
+      "x = document.getElementsByName('n').value;"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Chọn thứ tự giá trị thuộc tính đúng mã CSS sau?",
+    "options": [
+      "border: #333 1px solid;",
+      "border: 1px solid #333;",
+      "border: solid 1px #333;",
+      "border: 1px #333 solid;"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Thuộc tính z-index dùng để?",
+    "options": [
+      "Định vị tương đối cho một thành phần",
+      "Quy định kiểu viền của một đối tượng web",
+      "Tạo hiệu ứng màu sắc cho liên kết",
+      "Đặt các thành phần web ở các lớp khác nhau"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Nếu viết padding: 20px 50px thì padding-right là bao nhiêu?",
+    "options": [
+      "10px",
+      "50px",
+      "20px",
+      "50px - 50px"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Đoạn mã CSS sau đại diện cho đối tượng nào? input[id^='abc']",
+    "options": [
+      "Những thẻ input mà thuộc tính id có giá trị bắt đầu là abc",
+      "Những thẻ input mà thuộc tính id có giá trị kết thúc là abc",
+      "Những thẻ input mà thuộc tính id có giá trị chứa abc",
+      "Tất cả đều sai"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Trong CSS, thuộc tính nào dùng để định dạng màu chữ?",
+    "options": [
+      "color",
+      "Font-color",
+      "text-color",
+      "font color"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Nhóm các đối tượng có cùng thuộc tính và có thể được sử dụng nhiều lần là?",
+    "options": [
+      "class",
+      "id",
+      "Cả class và id đều đúng",
+      "Cả class và id đều sai"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Thuộc tính CSS nào định dạng đối tượng ẩn nhưng vẫn chiếm vùng không gian?",
+    "options": [
+      "display: none",
+      "display: block",
+      "display: inline",
+      "visibility: hidden"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Chọn thứ tự định dạng liên kết trong CSS?",
+    "options": [
+      "a:link > a:visited > a:hover > a:active",
+      "a:visited > a:link > a:hover > a:active",
+      "a:link > a:hover > a:visited > a:active",
+      "a:active > a:link > a:visited > a:hover"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Đặt dòng liên kết với file CSS ở vùng nào trong trang HTML?",
+    "options": [
+      "Trong thẻ <head>",
+      "Trong thẻ <body>",
+      "Ở cuối trang HTML",
+      "Ở đầu trang HTML"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Thuộc tính nào trong CSS để làm mờ đối tượng",
+    "options": [
+      "transparent",
+      "blur",
+      "opacity",
+      "Tất cả đều sai"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Nếu có đoạn mã HTML và CSS như sau:\n<div>\n    <a href=\"#\">A</a>\n    <a href=\"#\"><b>B</b></a>\n    <b><a href=\"#\">C</a></b>\n</div>\n\ndiv  b  a{color:blue}\nHỏi nội dung nào có màu xanh?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "Tất cả đều đúng"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Thuộc tính CSS nào định dạng đường biên (border) table nét đơn?",
+    "options": [
+      "border-collapse : separate",
+      "border-collapse : 1px",
+      "border-line : collapse",
+      "border-collapse : collapse"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Chọn thứ tự định dạng các góc?",
+    "options": [
+      "top-left, bottom-right, top-right, bottom-left",
+      "top-left, top-right, bottom-right, bottom-left",
+      "top-right, bottom-right, bottom-left, top-left",
+      "top-left, top-right, bottom-left, bottom-right"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Để thay đổi màu chữ trong thẻ div có id=id1, câu lệnh javascript nào đúng?",
+    "options": [
+      "document.getElementById('id1').style.color='red';",
+      "document.getElementById('id1').style.color('red');",
+      "document.getElementById('id1').color='red';",
+      "document.getElementById('id1').color('red');"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Cách ẩn phần tử được chọn trong jQuery, sử dụng phương thức nào?",
+    "options": [
+      "hide();",
+      "visible(false);",
+      "hidden();",
+      "display(none);"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Để bỏ biểu tượng đánh dấu các phần tử trong một danh sách không thứ tự (<ul>) dùng thuộc tính CSS nào sau đây?",
+    "options": [
+      "list-style-type",
+      "list-style",
+      "style-image",
+      "list-symbol"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Thuộc tính CSS nào định dạng đối tượng nằm một hàng riêng biệt?",
+    "options": [
+      "display: none",
+      "display: block",
+      "display: inline",
+      "display: inline-block"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Thêm gì vào <input type=\"text\" /> để có được gợi ý \"Nhập số\" như sau:",
+    "options": [
+      "value=\"Nhập số\"",
+      "comment=\"Nhập số\"",
+      "hint=\"Nhập số\"",
+      "placeholder=\"Nhập số\""
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Để xóa nội dung của thẻ div có id=id1, đoạn lệnh nào sau đúng?",
+    "options": [
+      "document.getElementById('id1').innerHTML='';",
+      "document.getElementById('id1').HTML='';",
+      "document.getElementById('id1').value='';",
+      "document.getElementById('id1').delete()';"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Nếu có đoạn mã HTML và CSS như sau:\n<div>\n    <a href=\"#\">A</a>\n    <b><a href=\"#\">B</a></b>\n   <a href=\"#\">C</a>\n  </div>\n\ndiv > a{color:green}\nHỏi nội dung nào có màu xanh?",
+    "options": [
+      "A",
+      "B",
+      "A và C",
+      "Tất cả đều đúng"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Thuộc tính nào để tạo danh sách hiển thị tất cả các thành phần trong ô vuông?",
+    "options": [
+      "type:square",
+      "list-style-type: square",
+      "list-type: square",
+      "style-type: square"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Để chèn 1 file CSS vào trang HTML thì cú pháp nào đúng?",
+    "options": [
+      "<style rel=\"stylesheet\" src=\"...\"></style>",
+      "<a rel=\"stylesheet\" href=\"...\"></a>",
+      "<file rel=\"stylesheet\" href=\"...\"></file>",
+      "<div style=\"width:100px\"></div>",
+      "Chả cái nào đúng hết đâu!"
+    ],
+    "correct": 4
+  },
+  {
+    "question": "Đoạn mã CSS sau đại diện cho đối tượng nào? input[id*='abc']",
+    "options": [
+      "Những thẻ input mà thuộc tính id có giá trị bắt đầu là abc",
+      "Những thẻ input mà thuộc tính id có giá trị kết thúc là abc",
+      "Những thẻ input mà thuộc tính id có giá trị chứa abc",
+      "Tất cả đều sai"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Đoạn mã CSS sau đại diện cho đối tượng nào? input[id$='abc']",
+    "options": [
+      "Những thẻ input mà thuộc tính id có giá trị bắt đầu là abc",
+      "Những thẻ input mà thuộc tính id có giá trị kết thúc là abc",
+      "Những thẻ input mà thuộc tính id có giá trị chứa abc",
+      "Tất cả đều sai"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Thẻ HTML nào được sử dụng để trỏ tới external style sheet?",
+    "options": [
+      "<link url= \"stylesheet\" type= \"text/css\" href=\"style.css\">",
+      "<style src=\"style.css\">",
+      "<link rel= \"stylesheet\" type= \"text/css\" href=\"style.css\">",
+      "<stylesheet>style.css</stylesheet>"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Thuộc tính nào của thẻ <input type=\"text\" > để giới hạn số ký tự nhập vào?",
+    "options": [
+      "limit",
+      "chars",
+      "maxchar",
+      "maxlenght"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Thẻ HTML nào được sử dụng để khởi tạo internal style sheet?",
+    "options": [
+      "<style>",
+      "<css>",
+      "<script>",
+      "<stylesheet>"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Nếu có đoạn mã HTML và CSS như sau:\n<div>\n     <a href=\"#\">A</a>\n     <a href=\"#\"><b>B</b></a>\n     <b><a href=\"#\">C</a></b>\n</div>\n\ndiv, a{color:yellow}\nHỏi nội dung nào có màu vàng?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "Tất cả đều đúng"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Thuộc tính CSS nào dùng để ngăn không cho 1 đối tượng bị ảnh hưởng bởi các đối tượng được float trước đó?",
+    "options": [
+      "clear",
+      "anchor",
+      "fixed",
+      "static"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Thuộc tính và giá trị CSS nào dùng để chuyển tất cả các ký tự đầu thành chứ viết hoa?",
+    "options": [
+      "text-transform:uppercase",
+      "text-transform:capitaliza",
+      "text-transform:proper",
+      "Không thể làm được với CSS"
+    ],
+    "correct": 1
+  }, 
+  {
+    "question": "Thuộc tính nào của CSS không cho hình nền lập lại?",
+    "options": [
+      "background-repeat: no-repeat",
+      "image-repeat",
+      "background-norepeat",
+      "bgimage-repeat"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Chọn thứ tự định dạng liên kết đúng?",
+    "options": [
+      "link > hover > visited > active",
+      "link > acitve > visisted > hover",
+      "link > visited > hover > active",
+      "Tất cả đều sai"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Thuộc tính nào canh chỉnh nội dung các ô theo chiều dọc trong <table>?",
+    "options": [
+      "align",
+      "valign",
+      "halign",
+      "text-align"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Trong CSS, để canh vị trí hình nền nằm giữa, ta sử dụng thuộc tính nào?",
+    "options": [
+      "background-align",
+      "background-center",
+      "background-attachment",
+      "background-position"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Trong danh sách không thứ tự <ul> muốn sử dụng 1 hình ảnh khác làm biểu tượng thì phải làm sao?",
+    "options": [
+      "Thay đổi thuộc tính type",
+      "Thay đổi thuộc tính src",
+      "Dùng thuộc tính list-style-image",
+      "Không thay đổi được"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Thêm gì vào <input type=\"text\" /> để có được gợi ý \"Nhập số\" như sau:",
+    "options": [
+      "value=\"Nhập số\"",
+      "comment=\"Nhập số\"",
+      "hint=\"Nhập số\"",
+      "placeholder=\"Nhập số\""
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Đoạn mã ab<c>d</c> xuất ra trên trình duyệt là gì?",
+    "options": [
+      "ab<c>d</c>",
+      "abd",
+      "abcd",
+      "Lỗi"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Đâu là tag để xuống dòng trong web?",
+    "options": [
+      "<lb>",
+      "<br>",
+      "<break>",
+      "Tất cả đều sai"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Đoạn mã nào sau đây canh đều 2 bên?",
+    "options": [
+      "<p align=\"justify\">…</p>",
+      "<p><justify>…</justify></p>",
+      "<p style=\"align:justify\">…</p>",
+      "Tất cả đều đúng"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Đoạn mã This is a <span>sentence</span> xuất ra trình duyệt là gì?",
+    "options": [
+      "This is a sentence",
+      "This is a sentence",
+      "This is a sentence",
+      "This is a sentence"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Nếu viết padding: 20px 40px 30px thì padding-left và padding-right là bao nhiêu?",
+    "options": [
+      "40px – 30px",
+      "40px – 40px",
+      "20px – 40px",
+      "20px – 30px"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Trong textfield <input type=\"text\" /> thuộc tính nào giới hạn số ký tự nhập vào?",
+    "options": [
+      "size",
+      "maxlenght",
+      "width",
+      "value"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Cách viết CSS sau thuộc loại nào?\n<style type=\"text/css\">\np {color: red; align: center }\n</style>",
+    "options": [
+      "In line CSS",
+      "Internal CSS",
+      "External CSS",
+      "Cả 3 đều sai"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Đâu là tag tạo ra 1 danh sách đứng đầu bởi dấu chấm • ?",
+    "options": [
+      "<ul>",
+      "<list>",
+      "<ol>",
+      "<dl>"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Đoạn mã X<sub><u>2</u></sub> xuất ra trình duyệt là gì?",
+    "options": [
+      "X2",
+      "X2",
+      "X2",
+      "X2"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Ô nhập liệu nào sau đây có chiều rộng là 100px?",
+    "options": [
+      "<input type=\"text\" width=\"100px\" />",
+      "<input type=\"text\" style=\"width:100px\" />",
+      "Tất cả đều đúng",
+      "Tất cả đều sai"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Thêm thuộc tính nào vào <input type=\"text\" …> để không cho người dùng thay đổi giá trị của nó nhưng vẫn gửi dữ liệu lên server.",
+    "options": [
+      "enable=\"false\"",
+      "locked",
+      "readonly",
+      "change-value=\"no\""
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Thuộc tính nào xác định tốc độ chuyển động của thẻ <marquee>?",
+    "options": [
+      "scrollamount",
+      "behavior",
+      "direction",
+      "loop"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Đoạn mã This is a <br />sentence xuất ra trình duyệt là gì?",
+    "options": [
+      "This is a sentence",
+      "This is a\nsentence",
+      "This is a sentence",
+      "This is a <br />sentence"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Thẻ <dl>…</dl> là danh sách gì?",
+    "options": [
+      "Không có thứ tự",
+      "Mô tả/Định nghĩa",
+      "Có thứ tự",
+      "Tất cả đều sai"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Trong <table> sử dụng thẻ <th> nội dung sẽ tự động?",
+    "options": [
+      "Canh đều 2 bên",
+      "Canh phải",
+      "Canh giữa ô",
+      "Tất cả đều sai"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Định dạng font chữ là Times New Roman bằng CSS thì lựa chọn nào sau đây đúng nhất?",
+    "options": [
+      "font-face: \"Times New Roman\"",
+      "font-face: Times New Roman",
+      "font-family: \"Times New Roman\"",
+      "font-family: Times New Roman"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Trong CSS, thuộc tính nào dùng để định dạng màu chữ?",
+    "options": [
+      "color",
+      "Font-color",
+      "text-color",
+      "font color"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Từ HTML là từ viết tắt của từ nào?",
+    "options": [
+      "Hyperlinks and Text Markup Language",
+      "Home Tool Markup Language",
+      "Hyper Text Markup Language",
+      "Tất cả đều sai"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Thuộc tính CSS nào định dạng liên kết không có gạch chân?",
+    "options": [
+      "text-align : none",
+      "text-decoration : none",
+      "text-decoration : underline",
+      "text-underline : none"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Thuộc tính nào trong CSS dùng để định dạng chữ nghiêng?",
+    "options": [
+      "text-decoration",
+      "text-transform",
+      "italic",
+      "font-style"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Đâu là tag tạo ra chữ in nghiêng?",
+    "options": [
+      "<em>",
+      "<italics>",
+      "<i>",
+      "Cả <em> và <i>"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Để nối (trộn) các ô theo chiều dọc dùng thuộc tính?",
+    "options": [
+      "colpan",
+      "colspan",
+      "rowspan",
+      "rowpan"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Chọn thứ tự định dạng các góc?",
+    "options": [
+      "top-left, bottom-right, top-right, bottom-left",
+      "top-left, top-right, bottom-right, bottom-left",
+      "top-right, bottom-right, bottom-left, top-left",
+      "top-left, top-right, bottom-left, bottom-right"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Đoạn mã <pre> 1    -    10 </pre> xuất ra trình duyệt là gì?",
+    "options": [
+      "1-10",
+      "1        -        10",
+      "1 10",
+      "1-10"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Chọn khai báo quan hệ Child selector giữa div và p?",
+    "options": [
+      "div ~ p",
+      "div > p",
+      "div + p",
+      "div * p"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Để đánh dấu bookmark (liên kết trong) ta sử dụng cách nào sau đây?(chọn 2 đáp án)",
+    "options": [
+      "<a name=\"tên_bookmark\">…</a>",
+      "<p id=\" # tên_bookmark\">…</p>",
+      "<a name=\" # tên_bookmark\">…</a>",
+      "<p id=\"tên_bookmark\">…</p>"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Đoạn mã X<sup>2</sup> xuất ra trình duyệt là gì?",
+    "options": [
+      "X2",
+      "X2",
+      "X2",
+      "X<sup>2</sup>"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Thuộc tính CSS nào định dạng đối tường nằm một hàng riêng biệt?",
+    "options": [
+      "display: none",
+      "display: block",
+      "display: inline",
+      "display: inline-block"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Tag nào dùng để tạo tiêu đề kích lớn nhất?",
+    "options": [
+      "<heading>",
+      "<header>",
+      "<h1>",
+      "<h6>"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Để thêm vào form một đối tượng có thể lưu giữ giá trị và gửi lên server nhưng người dùng không thể thấy được, ta sử dụng?",
+    "options": [
+      "<input type=\"text\" hidden=\"yes\" />",
+      "<input type=\"text\" visible=\"no\" />",
+      "<input type=\"hidden\" />",
+      "<hidden type=\"text\">"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Thuộc tính màu nền trong <table> là?",
+    "options": [
+      "background",
+      "bordercolor",
+      "bgcolor",
+      "background-image"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Nếu viết padding: 20px 50px 10px 30px thì padding-left là bao nhiêu?",
+    "options": [
+      "10px",
+      "50px",
+      "20px",
+      "30px"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Để mở liên kết trong một cửa sổ mới sử dụng thuộc tính?",
+    "options": [
+      "target=\"_top\"",
+      "target=\"_self\"",
+      "target=\"_blank\"",
+      "target=\"_parent\""
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Thuộc tính nào để làm mờ đối tượng?",
+    "options": [
+      "opacity",
+      "blur",
+      "transparent",
+      "Tất cả đều sai"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Để bỏ biểu tượng đánh dấu các phần tử trong một danh sách không thứ tự (<ul>) dùng thuộc tính CSS nào?",
+    "options": [
+      "list-style-type: none;",
+      "list-type: none;",
+      "style-image: none;",
+      "list-symbol: none;"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Cellpadding là khoảng cách?",
+    "options": [
+      "Giữa các ô",
+      "Nội dung với lề trái",
+      "Từ biên đến nội dung ô",
+      "Nội dung với lề phải"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Thuộc tính CSS nào định dạng bo góc một đối tượng với màu nền chỉ định?",
+    "options": [
+      "border-conner",
+      "border-radius",
+      "border-radian",
+      "border –rounded"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Thuộc tính CSS nào định dạng liên kết không có gạch chân?",
+    "options": [
+      "text-align : none",
+      "text-decoration : none",
+      "text-decoration : underline",
+      "text-underline : none"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Tag nào tạo ra 1 drop-down list?",
+    "options": [
+      "<select>",
+      "<list>",
+      "<input type=\"dropdown\">",
+      "<input type=\"list\">"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Nếu có đoạn mã HTML và CSS như sau:\n<div>\n     <a href=\"#\">A</a>\n     <a href=\"#\"><b>B</b></a>\n     <b><a href=\"#\">C</a></b>\n</div>\ndiv, a{color:yellow}\nHỏi nội dung nào có màu vàng?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "Tất cả đều đúng"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Thuộc tính CSS nào dùng để ngăn không cho 1 đối tượng bị ảnh hưởng bởi các đối tượng được float trước đó?",
+    "options": [
+      "clear",
+      "anchor",
+      "fixed",
+      "static"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Trong CSS, thuộc tính nào để hiển thị nội dung text dưới dạng bold?",
+    "options": [
+      "font:b",
+      "font:bold",
+      "style:bold",
+      "font-weight:bold"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Thuộc tính và giá trị CSS nào dùng để chuyển tất cả các ký tự đầu thành chứ viết hoa?",
+    "options": [
+      "text-transform:uppercase",
+      "text-transform:capitaliza",
+      "text-transform:proper",
+      "Không thể làm được với CSS"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Thuộc tính CSS nào định dạng đường biên (border) table nét đơn?",
+    "options": [
+      "border-collapse : separate",
+      "border-collapse : 1px",
+      "border-line : collapse",
+      "border-collapse : collapse"
+    ],
+    "correct": 3
   }
-]
