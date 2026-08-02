@@ -1,1665 +1,598 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz Trắc Nghiệm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Quiz VATC — Điện thân xe</title>
   <link rel="icon" type="image/png" href="hehe.jpg" />
-
   <style>
+    :root {
+      --bg: #eef2f6;
+      --card: #ffffff;
+      --ink: #1a2332;
+      --muted: #5b6b7c;
+      --line: #d7dee7;
+      --accent: #0b6e4f;
+      --accent-2: #1b4f72;
+      --ok: #1e7a46;
+      --ok-bg: #dff5e8;
+      --bad: #b42318;
+      --bad-bg: #fde8e6;
+      --shadow: 0 8px 24px rgba(26, 35, 50, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background: #f4f6f8;
       margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #d9ebe3 0%, transparent 55%),
+        radial-gradient(900px 400px at 100% 0%, #d6e4f2 0%, transparent 50%),
+        var(--bg);
+      color: var(--ink);
+      padding: 18px 14px 90px;
     }
 
-    h1 {
+    .wrap { max-width: 820px; margin: 0 auto; }
+
+    header {
       text-align: center;
-      color: #2c3e50;
+      margin-bottom: 18px;
+    }
+    header h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.35rem, 3.5vw, 1.9rem);
+      letter-spacing: -0.02em;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
-    .question {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin: 16px 0 10px;
     }
-
-    .answers button {
-      display: block;
-      margin: 8px 0;
-      padding: 12px;
-      width: 100%;
-      border: 1px solid #ccc;
-      background: white;
+    .toolbar select,
+    .toolbar button {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 14px;
       cursor: pointer;
-      border-radius: 8px;
-      transition: 0.3s;
-      text-align: left;
-      font-size: 15px;
-      box-sizing: border-box;
-      /* a */
     }
-
-    .answers button:hover {
-      background-color: #eee;
-      /* transform: scale(1.02); */
+    .toolbar button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      font-weight: 600;
     }
-
-    .answers button.correct {
-      background-color: #c8f7c5;
-      border-color: #27ae60;
-      font-weight: bold;
-      color: black;
-      transform: scale(1.02);
-    }
-
-    .answers button.wrong {
-      background-color: #fddede;
-      border-color: #e74c3c;
+    .toolbar button.ghost {
+      background: var(--accent-2);
+      border-color: var(--accent-2);
+      color: #fff;
     }
 
     #stats {
       text-align: center;
-      font-weight: bold;
-      margin: 60px 0 20px 0;
-      color: #34495e;
+      font-weight: 600;
+      margin: 12px 0 18px;
+      line-height: 1.6;
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
     #progressBar {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 8px;
-      background: #eee;
-      z-index: 999;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: rgba(0,0,0,0.06);
+      z-index: 50;
     }
-
     #progress {
       height: 100%;
       width: 0%;
-      background: #27ae60;
-      transition: width 0.3s ease;
+      background: linear-gradient(90deg, var(--accent), #2bb673);
+      transition: width .25s ease;
     }
 
-    .progress-marks {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    .question {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 16px 16px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+    .question .meta {
       display: flex;
-      justify-content: space-between;
-      pointer-events: none;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
     }
-
-    .progress-marks span {
-      width: 1.5px;
-      background: #ccc;
-      height: 100%;
-    }
-
-    #bookmarkBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #27ae60;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      font-size: 22px;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      z-index: 1000;
-      display: none;
-    }
-
-    .nav-button,
-    #resetQuiz {
+    .chip {
       display: inline-block;
-      margin: 10px auto;
-      padding: 10px 20px;
-      background-color: #3498db;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s;
-      font-size: 16px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #e8eef5;
+      color: var(--accent-2);
+    }
+    .chip.set-dtx { background: #e7f5ef; color: var(--accent); }
+    .chip.set-tbkho { background: #fff4d6; color: #8a6d00; }
+    .question h3 {
+      margin: 0 0 12px;
+      font-size: 1.02rem;
+      line-height: 1.45;
+      white-space: pre-wrap;
     }
 
-    .nav-button2 {
-      display: inline-block;
-      margin: 10px auto;
-      padding: 10px 20px;
-      background-color: #2bb177;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s;
-      font-size: 16px;
-    }
-
-    .nav-button:hover,
-    #resetQuiz:hover {
-      background-color: #2980b9;
-    }
-
-    .nav-button2:hover {
-      background-color: #0fa39c;
-    }
-
-    .actions {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .playBtn {
-
-      min-width: 20px;
-      max-width: 60px;
-      position: fixed;
-      top: 20px;
-      right: 10px;
+    .figures {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      z-index: 1000;
+      margin: 0 0 14px;
+    }
+    .figures figure {
+      margin: 0;
+      background: #f7f9fb;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .figures img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      object-fit: contain;
+      background: #fff;
+      cursor: zoom-in;
     }
 
-    #backToPositionBtn {
+    .answers button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      margin: 8px 0;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+      cursor: pointer;
+      font-size: 15px;
+      line-height: 1.4;
+      transition: background .15s, border-color .15s, transform .15s;
+    }
+    .answers button:hover:not(:disabled) {
+      background: #f3f6f9;
+    }
+    .answers button.correct {
+      background: var(--ok-bg);
+      border-color: var(--ok);
+      color: #0f3d24;
+      font-weight: 700;
+    }
+    .answers button.wrong {
+      background: var(--bad-bg);
+      border-color: var(--bad);
+      color: #6b1510;
+    }
+    .feedback {
+      margin-top: 8px;
+      font-weight: 700;
+      min-height: 1.2em;
+    }
+
+    .lightbox {
       position: fixed;
-      bottom: 80px;
-      right: 30px;
-      background: #3498db;
-      color: white;
-      border: none;
-      border-radius: 50%;
+      inset: 0;
+      background: rgba(10, 16, 24, 0.88);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 100;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: min(96vw, 1400px);
+      max-height: 92vh;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 8px;
+    }
+
+    #toTop, #backPos {
+      position: fixed;
+      right: 16px;
       width: 44px;
       height: 44px;
-      font-size: 22px;
+      border: none;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 20px;
       cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      z-index: 1000;
+      box-shadow: var(--shadow);
       display: none;
+      z-index: 40;
     }
+    #toTop { bottom: 24px; background: var(--accent); }
+    #backPos { bottom: 78px; background: var(--accent-2); }
+
+    .loading, .error {
+      text-align: center;
+      padding: 40px 12px;
+      color: var(--muted);
+    }
+    .error { color: var(--bad); }
 
     @media (max-width: 600px) {
-      .question {
-        padding: 15px;
-      }
-
-      .answers button {
-        font-size: 14px;
-        padding: 10px;
-      }
-
-      .progress-marks span {
-        display: none;
-      }
-
-      .playBtn {
-        position: fixed;
-        top: 5px;
-        right: 5px;
-        /* flex-direction: row;  */
-        gap: 5px;
-      }
+      body { padding: 12px 10px 100px; }
+      .question { padding: 14px 12px; border-radius: 14px; }
+      .answers button { font-size: 14px; padding: 11px 12px; }
     }
   </style>
 </head>
-
 <body>
-  <div id="progressBar">
-    <div id="progress"></div>
-    <div class="progress-marks" id="progressMarks"></div>
-  </div>
-  <!-- <div style="text-align: center; margin-bottom: 20px;">
-    <button onclick="toggleReview()" class="nav-button2">Mở trang ôn tập lý thuyết</button>
-  </div> -->
+  <div id="progressBar"><div id="progress"></div></div>
+  <div class="wrap">
+    <header>
+      <h1>Quiz VATC — Điện thân xe</h1>
+      <p>Đề ĐTX + mức TB/khó · hình kỹ thuật giữ nguyên chi tiết</p>
+    </header>
 
+    <div class="toolbar">
+      <select id="setFilter" aria-label="Chọn bộ đề">
+        <option value="all">Tất cả bộ đề</option>
+        <option value="dtx">Đề thi thử ĐTX</option>
+        <option value="tbkho">Đề TB + khó</option>
+      </select>
+      <select id="sectionFilter" aria-label="Chọn phần">
+        <option value="all">Tất cả phần</option>
+      </select>
+      <button class="primary" id="btnStart">Bắt đầu / Xáo trộn</button>
+      <button class="ghost" id="btnRetry">Làm lại câu sai</button>
+      <button id="btnReset">Reset điểm</button>
+    </div>
 
-
-  <h1>Quiz Trắc Nghiệm WEB</h1>
-  <div style="text-align: center; margin-top: 10px;">
-    <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
-  </div>
-  <div id="stats"></div>
-  <div id="quiz"></div>
-  <div style="text-align: center; margin-top: 10px;">
-    <button class="nav-button" onclick="retryWrongQuestions()">🔁 Làm lại các câu sai</button>
-  </div>
-  <audio id="bg-music" src="NhacNen.mp3" loop></audio>
-  <!-- autoplay  -->
-  <div class="playBtn">
-    <button onclick="togglePlay()" id="play-btn"
-      style="padding: 6px 5px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
-      Play music
-    </button>
-
-    <button onclick="toggleMute()" id="mute-btn"
-      style="padding: 6px 5px; background-color: #f44336; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
-      Mute
-    </button>
+    <div id="stats">Đang tải câu hỏi…</div>
+    <div id="quiz"><div class="loading">Loading questions.json…</div></div>
   </div>
 
-  <div class="actions">
-    <button id="resetQuiz">🔄 Làm lại Quiz</button><br>
-
-
+  <button id="toTop" title="Lên đầu trang">↑</button>
+  <button id="backPos" title="Về vị trí trước">↓</button>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <img alt="Phóng to sơ đồ" />
   </div>
-
-  <button id="bookmarkBtn" title="Lên đầu trang">↑</button>
-  <button id="backToPositionBtn" title="Xuống vị trí trước đó" style="display: none;">↓</button>
 
   <script>
-    const quizData = [
-      {
-        "question": "Thuộc tính CSS nào định dạng bo góc một đối tượng với màu nền chỉ định?",
-        "options": [
-          "border-conner",
-          "border-radius",
-          "border-radian",
-          "border -rounded"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Cú pháp CSS nào được sử dụng để chuyển tất cả các thẻ <p> thành in đậm (bold)?",
-        "options": [
-          "p {text-size:bold}",
-          "style:bold",
-          "p {font-weight:bold}",
-          "p {font:bold}"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Thuộc tính gì của thẻ option để xác định phần tử đó được chọn?",
-        "options": [
-          "checked",
-          "default",
-          "Tất cả đều đúng",
-          "Tất cả đều sai"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Thẻ div nào sau đây có chiều rộng là 100px?",
-        "options": [
-          "<div style=\"width=100px\"></div>",
-          "<div width:\"100px\"></div>",
-          "<div width=\"100px\"></div>",
-          "<div style=\"width:100px;\"></div>"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Chọn thứ tự định dạng liên kết đúng?",
-        "options": [
-          "link > hover > visited > active",
-          "link > acitve > visisted > hover",
-          "link > visited > hover > active",
-          "Tất cả đều sai"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Lựa chọn thiết lập ảnh nền cố định?",
-        "options": [
-          "background-attachment: fix",
-          "background-attachment: fixed",
-          "background-attachment: scroll",
-          "Tất cả đều sai"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Phương thức nào của jQuery tương đương câu lệnh javascript: document.getElementById(\"ID\").",
-        "options": [
-          "$(\"#ID\");",
-          "$(\"ID\");",
-          "$(\"id=ID\");",
-          "$(\".ID\");"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Nếu có đoạn mã HTML và CSS như sau:\n<div>\n     <a href=\"#\">A</a>\n     <b><a href=\"#\">B</a></b>\n</div>\n<a href=\"#\">C</a>\n\ndiv > a{color:red}\nHỏi nội dung nào có màu đỏ?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "Tất cả đều đúng"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Thuộc tính nào trong CSS dùng để định dạng chữ nghiêng?",
-        "options": [
-          "text-decoration",
-          "text-transform",
-          "italic",
-          "font-style"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Nếu viết padding: 20px 40px 30px thì padding-top và padding-bottom là bao nhiêu?",
-        "options": [
-          "40px – 30px",
-          "20px – 30px",
-          "20px – 40px",
-          "30px – 40px"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Phương thức nào của jQuery tương đương với thuộc tính innerHTML của javascript?",
-        "options": [
-          "val();",
-          "content();",
-          "html();",
-          "innerHTML();"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Thuộc tính nào của thẻ input dùng để xác định giá trị khởi tạo cho textfield?",
-        "options": [
-          "init",
-          "initvalue",
-          "value",
-          "Default"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Phương thức nào của jQuery ngăn ngừa code chạy trước khi trang web load xong?",
-        "options": [
-          "$(document).ready();",
-          "$(document).load();",
-          "$(body).onload();",
-          "$(body).load();"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Để truy xuất lấy giá trị phần tử textbox có name=n ra biến x, mã javascript là?",
-        "options": [
-          "x = docuemnt.frm.n.value;",
-          "x = docuemnt.frm.n.value();",
-          "x = document.getElementByName('n');",
-          "x = document.getElementsByName('n').value;"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Chọn thứ tự giá trị thuộc tính đúng mã CSS sau?",
-        "options": [
-          "border: #333 1px solid;",
-          "border: 1px solid #333;",
-          "border: solid 1px #333;",
-          "border: 1px #333 solid;"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Thuộc tính z-index dùng để?",
-        "options": [
-          "Định vị tương đối cho một thành phần",
-          "Quy định kiểu viền của một đối tượng web",
-          "Tạo hiệu ứng màu sắc cho liên kết",
-          "Đặt các thành phần web ở các lớp khác nhau"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Nếu viết padding: 20px 50px thì padding-right là bao nhiêu?",
-        "options": [
-          "10px",
-          "50px",
-          "20px",
-          "50px - 50px"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Đoạn mã CSS sau đại diện cho đối tượng nào? input[id^='abc']",
-        "options": [
-          "Những thẻ input mà thuộc tính id có giá trị bắt đầu là abc",
-          "Những thẻ input mà thuộc tính id có giá trị kết thúc là abc",
-          "Những thẻ input mà thuộc tính id có giá trị chứa abc",
-          "Tất cả đều sai"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Nhóm các đối tượng có cùng thuộc tính và có thể được sử dụng nhiều lần là?",
-        "options": [
-          "class",
-          "id",
-          "Cả class và id đều đúng",
-          "Cả class và id đều sai"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Thuộc tính CSS nào định dạng đối tượng ẩn nhưng vẫn chiếm vùng không gian?",
-        "options": [
-          "display: none",
-          "display: block",
-          "display: inline",
-          "visibility: hidden"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Chọn thứ tự định dạng liên kết trong CSS?",
-        "options": [
-          "a:link > a:visited > a:hover > a:active",
-          "a:visited > a:link > a:hover > a:active",
-          "a:link > a:hover > a:visited > a:active",
-          "a:active > a:link > a:visited > a:hover"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Đặt dòng liên kết với file CSS ở vùng nào trong trang HTML?",
-        "options": [
-          "Trong thẻ <head>",
-          "Trong thẻ <body>",
-          "Ở cuối trang HTML",
-          "Ở đầu trang HTML"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Thuộc tính nào trong CSS để làm mờ đối tượng",
-        "options": [
-          "transparent",
-          "blur",
-          "opacity",
-          "Tất cả đều sai"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Nếu có đoạn mã HTML và CSS như sau:\n<div>\n    <a href=\"#\">A</a>\n    <a href=\"#\"><b>B</b></a>\n    <b><a href=\"#\">C</a></b>\n</div>\n\ndiv  b  a{color:blue}\nHỏi nội dung nào có màu xanh?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "Tất cả đều đúng"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Để thay đổi màu chữ trong thẻ div có id=id1, câu lệnh javascript nào đúng?",
-        "options": [
-          "document.getElementById('id1').style.color='red';",
-          "document.getElementById('id1').style.color('red');",
-          "document.getElementById('id1').color='red';",
-          "document.getElementById('id1').color('red');"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Cách ẩn phần tử được chọn trong jQuery, sử dụng phương thức nào?",
-        "options": [
-          "hide();",
-          "visible(false);",
-          "hidden();",
-          "display(none);"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Thuộc tính CSS nào định dạng đối tượng nằm một hàng riêng biệt?",
-        "options": [
-          "display: none",
-          "display: block",
-          "display: inline",
-          "display: inline-block"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Để xóa nội dung của thẻ div có id=id1, đoạn lệnh nào sau đúng?",
-        "options": [
-          "document.getElementById('id1').innerHTML='';",
-          "document.getElementById('id1').HTML='';",
-          "document.getElementById('id1').value='';",
-          "document.getElementById('id1').delete()';"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Nếu có đoạn mã HTML và CSS như sau:\n<div>\n    <a href=\"#\">A</a>\n    <b><a href=\"#\">B</a></b>\n   <a href=\"#\">C</a>\n  </div>\n\ndiv > a{color:green}\nHỏi nội dung nào có màu xanh?",
-        "options": [
-          "A",
-          "B",
-          "A và C",
-          "Tất cả đều đúng"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Thuộc tính nào để tạo danh sách hiển thị tất cả các thành phần trong ô vuông?",
-        "options": [
-          "type:square",
-          "list-style-type: square",
-          "list-type: square",
-          "style-type: square"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Để chèn 1 file CSS vào trang HTML thì cú pháp nào đúng?",
-        "options": [
-          "<style rel=\"stylesheet\" src=\"...\"></style>",
-          "<a rel=\"stylesheet\" href=\"...\"></a>",
-          "<file rel=\"stylesheet\" href=\"...\"></file>",
-          "<div style=\"width:100px\"></div>",
-          "<link rel=\"stylesheet\" href=\"duongdan/style.css\">"
-        ],
-        "correct": 4
-      },
-      {
-        "question": "Đoạn mã CSS sau đại diện cho đối tượng nào? input[id*='abc']",
-        "options": [
-          "Những thẻ input mà thuộc tính id có giá trị bắt đầu là abc",
-          "Những thẻ input mà thuộc tính id có giá trị kết thúc là abc",
-          "Những thẻ input mà thuộc tính id có giá trị chứa abc",
-          "Tất cả đều sai"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Đoạn mã CSS sau đại diện cho đối tượng nào? input[id$='abc']",
-        "options": [
-          "Những thẻ input mà thuộc tính id có giá trị bắt đầu là abc",
-          "Những thẻ input mà thuộc tính id có giá trị kết thúc là abc",
-          "Những thẻ input mà thuộc tính id có giá trị chứa abc",
-          "Tất cả đều sai"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Thẻ HTML nào được sử dụng để trỏ tới external style sheet?",
-        "options": [
-          "<link url= \"stylesheet\" type= \"text/css\" href=\"style.css\">",
-          "<style src=\"style.css\">",
-          "<link rel= \"stylesheet\" type= \"text/css\" href=\"style.css\">",
-          "<stylesheet>style.css</stylesheet>"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Thuộc tính nào của thẻ <input type=\"text\" > để giới hạn số ký tự nhập vào?",
-        "options": [
-          "limit",
-          "chars",
-          "maxchar",
-          "maxlength"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Thẻ HTML nào được sử dụng để khởi tạo internal style sheet?",
-        "options": [
-          "<style>",
-          "<css>",
-          "<script>",
-          "<stylesheet>"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Nếu có đoạn mã HTML và CSS như sau:\n<div>\n     <a href=\"#\">A</a>\n     <a href=\"#\"><b>B</b></a>\n     <b><a href=\"#\">C</a></b>\n</div>\n\ndiv, a{color:yellow}\nHỏi nội dung nào có màu vàng?",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "Tất cả đều đúng"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Thuộc tính và giá trị CSS nào dùng để chuyển tất cả các ký tự đầu thành chữ viết hoa?",
-        "options": [
-          "text-transform:uppercase",
-          "text-transform:capitaliza",
-          "text-transform:proper",
-          "Không thể làm được với CSS"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Thuộc tính nào của CSS không cho hình nền lập lại?",
-        "options": [
-          "background-repeat: no-repeat",
-          "image-repeat",
-          "background-norepeat",
-          "bgimage-repeat"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Trong danh sách không thứ tự <ul> muốn sử dụng 1 hình ảnh khác làm biểu tượng thì phải làm sao?",
-        "options": [
-          "Thay đổi thuộc tính type",
-          "Thay đổi thuộc tính src",
-          "Dùng thuộc tính list-style-image",
-          "Không thay đổi được"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Đoạn mã ab<c>d</c> xuất ra trên trình duyệt là gì?",
-        "options": [
-          "ab<c>d</c>",
-          "abd",
-          "abcd",
-          "Lỗi"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Đâu là tag để xuống dòng trong web?",
-        "options": [
-          "<lb>",
-          "<br>",
-          "<break>",
-          "Tất cả đều sai"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Nếu viết padding: 20px 40px 30px thì padding-left và padding-right là bao nhiêu?",
-        "options": [
-          "40px – 30px",
-          "40px – 40px",
-          "20px – 40px",
-          "20px – 30px"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Trong textfield <input type=\"text\" /> thuộc tính nào giới hạn số ký tự nhập vào?",
-        "options": [
-          "size",
-          "maxlength",
-          "width",
-          "value"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Cách viết CSS sau thuộc loại nào?\n<style type=\"text/css\">\np {color: red; align: center }\n</style>",
-        "options": [
-          "In line CSS",
-          "Internal CSS",
-          "External CSS",
-          "Cả 3 đều sai"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Đâu là tag tạo ra 1 danh sách đứng đầu bởi dấu chấm • ?",
-        "options": [
-          "<ul>",
-          "<list>",
-          "<ol>",
-          "<dl>"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Đoạn mã X<sub><u>2</u></sub> sẽ hiển thị như thế nào?",
-        "options": [
-          "X2 (gạch chân)",
-          "X₂ (gạch chân)",
-          "X₂",
-          "X² (gạch chân)"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Ô nhập liệu nào sau đây có chiều rộng là 100px?",
-        "options": [
-          "<input type=\"text\" width=\"100px\" />",
-          "<input type=\"text\" style=\"width:100px;\" />",
-          "Tất cả đều đúng",
-          "Tất cả đều sai"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Thêm thuộc tính nào vào <input type=\"text\" …> để không cho người dùng thay đổi giá trị của nó nhưng vẫn gửi dữ liệu lên server.",
-        "options": [
-          "enable=\"false\"",
-          "locked",
-          "readonly",
-          "change-value=\"no\""
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Đoạn mã This is a <br />sentence xuất ra trình duyệt là gì?",
-        "options": [
-          "This is a sentence",
-          "This is a\nsentence",
-          "This is a sentence",
-          "This is a <br />sentence"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Thẻ <dl>…</dl> là danh sách gì?",
-        "options": [
-          "Không có thứ tự",
-          "Mô tả/Định nghĩa",
-          "Có thứ tự",
-          "Tất cả đều sai"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Trong <table> sử dụng thẻ <th> nội dung sẽ tự động?",
-        "options": [
-          "Canh đều 2 bên",
-          "Canh phải",
-          "Canh giữa ô",
-          "Tất cả đều sai"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Trong CSS, thuộc tính nào dùng để định dạng màu chữ?",
-        "options": [
-          "color",
-          "Font-color",
-          "text-color",
-          "font color"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Từ HTML là từ viết tắt của từ nào?",
-        "options": [
-          "Hyperlinks and Text Markup Language",
-          "Home Tool Markup Language",
-          "Hyper Text Markup Language",
-          "Tất cả đều sai"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Thuộc tính CSS nào định dạng liên kết không có gạch chân?",
-        "options": [
-          "text-align : none",
-          "text-decoration : none",
-          "text-decoration : underline",
-          "text-underline : none"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Đâu là tag tạo ra chữ in nghiêng?",
-        "options": [
-          "<em>",
-          "<italics>",
-          "<i>",
-          "Cả <em> và <i>"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Để nối (trộn) các ô theo chiều dọc dùng thuộc tính?",
-        "options": [
-          "colpan",
-          "colspan",
-          "rowspan",
-          "rowpan"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Đoạn mã <pre> 1    -    10 </pre> xuất ra trình duyệt là gì?",
-        "options": [
-          "1-10",
-          "1        -        10",
-          "1 10",
-          "1-10"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Để đánh dấu bookmark (liên kết trong) ta sử dụng cách nào sau đây ?",
-        "options": [
-          "<a name=\"tên_bookmark\">…</a>",
-          "<p id=\"#tên_bookmark\">…</p>",
-          "<a name=\"#tên_bookmark\">…</a>",
-          "Không có cách nào",
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Để đánh dấu bookmark (liên kết trong) ta sử dụng cách nào sau đây ?",
-        "options": [
-          "Không có cách nào",
-          "<p id=\"#tên_bookmark\">…</p>",
-          "<a name=\"#tên_bookmark\">…</a>",
-          "<p id=\"tên_bookmark\">…</p>"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Tag nào dùng để tạo tiêu đề kích lớn nhất?",
-        "options": [
-          "<heading>",
-          "<header>",
-          "<h1>",
-          "<h6>"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Thuộc tính màu nền trong <table> là?",
-        "options": [
-          "background",
-          "bordercolor",
-          "bgcolor",
-          "background-image"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Nếu viết padding: 20px 50px 10px 30px thì padding-left là bao nhiêu?",
-        "options": [
-          "10px",
-          "50px",
-          "20px",
-          "30px"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Để mở liên kết trong một cửa sổ mới sử dụng thuộc tính?",
-        "options": [
-          "target=\"_top\"",
-          "target=\"_self\"",
-          "target=\"_blank\"",
-          "target=\"_parent\""
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Cellpadding là khoảng cách?",
-        "options": [
-          "Giữa các ô",
-          "Nội dung với lề trái",
-          "Từ biên đến nội dung ô",
-          "Nội dung với lề phải"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Tag nào tạo ra 1 drop-down list?",
-        "options": [
-          "<select>",
-          "<list>",
-          "<input type=\"dropdown\">",
-          "<input type=\"list\">"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Thuộc tính CSS nào dùng để ngăn không cho 1 đối tượng bị ảnh hưởng bởi các đối tượng được float trước đó?",
-        "options": [
-          "clear",
-          "anchor",
-          "fixed",
-          "static"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Trong CSS, thuộc tính nào để hiển thị nội dung text dưới dạng bold?",
-        "options": [
-          "font:b",
-          "font:bold",
-          "style:bold",
-          "font-weight:bold"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Đoạn mã This is a <span>sentence</span> xuất ra trình duyệt là gì?",
-        "options": [
-          "This is a sentence",
-          "This is a sentence",
-          "This is a sentence",
-          "This is a sentence"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Đâu là tag tạo ra liên kết (links) trong web?",
-        "options": [
-          "<a url=\"http://www.w3.com\">Click</a>",
-          "<a href=\"http://www.w3.com\">Click</a>",
-          "<a>http://www.w3.com</a>",
-          "<a namel=\"http://www.w3.com\">Click</a>"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Định dạng font chữ là Times New Roman bằng CSS thì lựa chọn nào sau đây đúng nhất?",
-        "options": [
-          "font-face: \"Times New Roman\"",
-          "font-face: Times New Roman",
-          "font-family: \"Times New Roman\"",
-          "font-family: Times New Roman"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Đoạn mã X<sup>2</sup> xuất ra trình duyệt là gì?",
-        "options": [
-          "X2",
-          "X2",
-          "X2",
-          "X<sup>2</sup>"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Trong CSS, để canh vị trí hình nền nằm giữa, ta sử dụng thuộc tính nào?",
-        "options": [
-          "background-align",
-          "background-center",
-          "background-attachment",
-          "background-position"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Chọn thứ tự định dạng các góc?",
-        "options": [
-          "top-left, bottom-right, top-right, bottom-left",
-          "top-left, top-right, bottom-right, bottom-left",
-          "top-right, bottom-right, bottom-left, top-left",
-          "top-left, top-right, bottom-left, bottom-right"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Đoạn mã <pre> 1    -    10 </pre> xuất ra trình duyệt là gì?",
-        "options": [
-          "1-10",
-          "1        -        10",
-          "1 10",
-          "1-10"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Chọn khai báo quan hệ Child selector giữa div và p?",
-        "options": [
-          "div ~ p",
-          "div > p",
-          "div + p",
-          "div * p"
-        ],
-        "correct": 1
-      },
-      {
-      "question": "Chọn khai báo quan hệ kế tiếp liền kề (Adjacent sibling selector) giữa h2 và p?",
-      "options": [
-        "h2 + p",
-        "h2 > p",
-        "h2 ~ p",
-        "h2 p"
-      ],
-      "correct": 0
-    },
-    {
-  "question": "Chọn khai báo quan hệ tất cả phần tử p là hậu tố của div (General sibling selector)?",
-  "options": [
-    "div > p",
-    "div + p",
-    "div ~ p",
-    "div p"
-  ],
-  "correct": 2
-},
-    {
-  "question": "Chọn khai báo chọn tất cả các phần tử p nằm trong div (Descendant selector)?",
-  "options": [
-    "div > p",
-    "div + p",
-    "div p",
-    "div ~ p"
-  ],
-  "correct": 2
-},
+    let bank = [];
+    let active = [];
+    let answersState = [];
+    let lastScroll = 0;
 
-{
-  "question": "Phương thức nào dùng để truy xuất phần tử theo id trong DOM?",
-  "options": [
-    "document.querySelectorAll()",
-    "document.getElementsByClassName()",
-    "document.getElementById()",
-    "document.getElementsByTagName()"
-  ],
-  "correct": 2
-},
-    {
-  "question": "Để thêm một sự kiện click vào nút button, phương thức nào sau đây là đúng?",
-  "options": [
-    "button.addClickListener()",
-    "button.addEventListener('click', function)",
-    "button.attachEvent('click', function)",
-    "button.on('click', function)"
-  ],
-  "correct": 1
-},
-    {
-  "question": "Lệnh nào dưới đây dùng để hiển thị hộp thoại thông báo?",
-  "options": [
-    "console.log()",
-    "alert()",
-    "confirm()",
-    "prompt()"
-  ],
-  "correct": 1
-},
-{
-  "question": "Phương thức nào dùng để lấy giá trị nhập từ người dùng trong JavaScript?",
-  "options": [
-    "alert()",
-    "prompt()",
-    "confirm()",
-    "input()"
-  ],
-  "correct": 1
-}
-,
-{
-  "question": "Trong JavaScript, từ khóa nào dùng để khai báo biến?",
-  "options": [
-    "dim",
-    "var",
-    "define",
-    "int"
-  ],
-  "correct": 1
-}
-,
-{
-  "question": "Đâu là cú pháp đúng để định nghĩa một hàm trong JavaScript?",
-  "options": [
-    "function myFunction[]",
-    "function myFunction()",
-    "def myFunction()",
-    "fun myFunction()"
-  ],
-  "correct": 1
-}
-,
-{
-  "question": "Lệnh nào sau đây dùng để truy xuất phần tử DOM có id là 'demo'?",
-  "options": [
-    "document.querySelector('#demo')",
-    "document.getElementById('demo')",
-    "document.getElementsByName('demo')",
-    "document.selectElementById('demo')"
-  ],
-  "correct": 1
-},
-{
-  "question": "Đoạn mã nào dưới đây là đúng để kiểm tra biến x có phải là số?",
-  "options": [
-    "isNumber(x)",
-    "checkNaN(x)",
-    "x.isNaN()",
-    "isNaN(x)"
-  ],
-  "correct": 3
-}
-,{
-  "question": "Hàm nào dùng để chuyển chuỗi '123' thành số nguyên?",
-  "options": [
-    "toInt('123')",
-    "parseFloat('123')",
-    "parseInt('123')",
-    "convertNumber('123')"
-  ],
-  "correct": 2
-}
-,{
-  "question": "Đâu là kết quả của biểu thức: (true || false) && false?",
-  "options": [
-    "true",
-    "false",
-    "undefined",
-    "null"
-  ],
-  "correct": 1
-}
-,{
-  "question": "Câu lệnh nào đúng để thay đổi nội dung phần tử HTML có id là 'title' thành 'Xin chào'?",
-  "options": [
-    "document.getElementById('title').innerText = 'Xin chào';",
-    "document.title = 'Xin chào';",
-    "document.getElement('title').value = 'Xin chào';",
-    "getElementById('title').setText('Xin chào');"
-  ],
-  "correct": 0
-}
-,{
-  "question": "Trong DOM, phương thức nào dùng để tạo thẻ HTML mới?",
-  "options": [
-    "document.appendElement()",
-    "document.createElement()",
-    "document.newTag()",
-    "document.buildElement()"
-  ],
-  "correct": 1
-}
-,
+    const quizEl = document.getElementById("quiz");
+    const statsEl = document.getElementById("stats");
+    const setFilter = document.getElementById("setFilter");
+    const sectionFilter = document.getElementById("sectionFilter");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
 
-
-    {
-      "question": "div > p là loại selector nào trong CSS?",
-      "options": [
-        "Universal selector (toàn cục)",
-        "Child selector (cha con)",
-        "Class selector (theo lớp)",
-        "Descendant selector (ông cha con)"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "div p là loại selector nào trong CSS?",
-      "options": [
-        "Universal selector (toàn cục)",
-        "Child selector (cha con)",
-        "Class selector (theo lớp)",
-        "Descendant selector (ông cha con)"
-      ],
-      "correct": 3
-    },
-      {
-        "question": "Đoạn mã nào sau đây canh đều 2 bên?",
-        "options": [
-          "<p align=\"justify\">…</p>",
-          "<p><justify>…</justify></p>",
-          "<p style=\"align:justify\">…</p>",
-          "Tất cả đều đúng"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Đâu là tag tạo ra 1 danh sách đứng đầu bằng số?",
-        "options": [
-          "<ul>",
-          "<list>",
-          "<ol>",
-          "<dl>"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Thuộc tính CSS nào định dạng đường biên (border) table nét đơn?",
-        "options": [
-          "border-collapse : separate",
-          "border-collapse : 1px",
-          "border-line : collapse",
-          "border-collapse : collapse"
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Để bỏ biểu tượng đánh dấu các phần tử trong một danh sách không thứ tự (<ul>) dùng thuộc tính CSS nào?",
-        "options": [
-          "list-style-type: none;",
-          "list-type: none;",
-          "style-image: none;",
-          "list-symbol: none;"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Để thêm vào form một đối tượng có thể lưu giữ giá trị và gửi lên server nhưng người dùng không thể thấy được, ta sử dụng?",
-        "options": [
-          "<input type=\"text\" hidden=\"yes\" />",
-          "<input type=\"text\" visible=\"no\" />",
-          "<input type=\"hidden\" />",
-          "<hidden type=\"text\">"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Đoạn mã ab<c>d</c> xuất ra trên trình duyệt là gì?",
-        "options": [
-          "ab<c>d</c>",
-          "abd",
-          "abcd",
-          "Lỗi"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Thuộc tính nào xác định tốc độ chuyển động của thẻ <marquee>?",
-        "options": [
-          "scrollamount",
-          "behavior",
-          "direction",
-          "loop"
-        ],
-        "correct": 0
-      },
-      {
-        "question": "Thuộc tính nào canh chỉnh nội dung các ô theo chiều dọc trong <table>?",
-        "options": [
-          "align",
-          "valign",
-          "halign",
-          "text-align"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Cách viết CSS sau thuộc loại nào?\n<style type=\"text/css\">\np {color: red; align: center }\n</style>",
-        "options": [
-          "In line CSS",
-          "Internal CSS",
-          "External CSS",
-          "Cả 3 đều sai"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Tag nào dùng để tạo tiêu đề kích lớn nhất?",
-        "options": [
-          "<heading>",
-          "<header>",
-          "<h1>",
-          "<h6>"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Để mở liên kết trong một cửa sổ mới sử dụng thuộc tính?",
-        "options": [
-          "target=\"_top\"",
-          "target=\"_self\"",
-          "target=\"_blank\"",
-          "target=\"_parent\""
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Trong <table> sử dụng thẻ <th> nội dung sẽ tự động?",
-        "options": [
-          "Canh đều 2 bên",
-          "Canh phải",
-          "Canh giữa ô",
-          "Tất cả đều sai"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Trong danh sách không thứ tự <ul> muốn sử dụng 1 hình ảnh khác làm biểu tượng thì phải làm sao?",
-        "options": [
-          "Thay đổi thuộc tính type",
-          "Thay đổi thuộc tính src",
-          "Dùng thuộc tính list-style-image",
-          "Không thay đổi được"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Thuộc tính màu nền trong <table> là?",
-        "options": [
-          "background",
-          "bordercolor",
-          "bgcolor",
-          "background-image"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "Thêm gì vào <input type=\"text\" /> để có được gợi ý \"Nhập số\" như sau:",
-        "options": [
-          "value=\"Nhập số\"",
-          "comment=\"Nhập số\"",
-          "hint=\"Nhập số\"",
-          "placeholder=\"Nhập số\""
-        ],
-        "correct": 3
-      },
-      {
-        "question": "Để nối (trộn) các ô theo chiều ngang dùng thuộc tính?",
-        "options": [
-          "colpan",
-          "colspan",
-          "rowpan",
-          "rowspan"
-        ],
-        "correct": 1
-      },
-      {
-        "question": "Tag nào tạo ra 1 drop-down list?",
-        "options": [
-          "<select>",
-          "<list>",
-          "<input type=\"dropdown\">",
-          "<input type=\"list\">"
-        ],
-        "correct": 0
-      }
+    const okMsgs = [
+      "✅ Chính xác!",
+      "🎯 Đúng rồi!",
+      "🔥 Tốt lắm!",
+      "👏 Chuẩn luôn!",
+      "💡 Nắm bài rồi!"
     ];
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
+    const badMsgs = [
+      "❌ Chưa đúng. Đáp án đúng:",
+      "🚫 Sai rồi. Đáp án đúng:",
+      "😓 Không chính xác. Đáp án đúng:",
+      "💥 Chưa ổn. Đáp án đúng:"
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+        [arr[i], arr[j]] = [arr[j], arr[i]];
       }
+      return arr;
     }
 
-    // Hàm xáo trộn đáp án từng câu và cập nhật lại chỉ số đúng
-    function shuffleAnswers(quizData) {
-      quizData.forEach(q => {
-        const originalCorrectAnswer = q.options[q.correct];
-        shuffleArray(q.options); // xáo trộn options
-        q.correct = q.options.indexOf(originalCorrectAnswer); // cập nhật lại chỉ số correct
+    function cloneQ(q) {
+      const copy = JSON.parse(JSON.stringify(q));
+      const letters = copy.optionLetters || copy.options.map((_, i) => "ABCDE"[i]);
+      const pairs = copy.options.map((text, i) => ({
+        text,
+        letter: letters[i],
+        isCorrect: i === copy.correct
+      }));
+      shuffle(pairs);
+      copy.options = pairs.map(p => p.text);
+      copy.optionLetters = pairs.map(p => p.letter);
+      copy.correct = pairs.findIndex(p => p.isCorrect);
+      return copy;
+    }
+
+    function filteredBank() {
+      const set = setFilter.value;
+      const sec = sectionFilter.value;
+      return bank.filter(q => {
+        if (set !== "all" && q.set !== set) return false;
+        if (sec !== "all" && (q.section || "") !== sec) return false;
+        return true;
       });
     }
 
-    const quizContainer = document.getElementById('quiz');
-    const statsDiv = document.getElementById('stats');
-    const answersState = Array(quizData.length).fill(null);
+    function rebuildSections() {
+      const set = setFilter.value;
+      const secs = [...new Set(
+        bank
+          .filter(q => set === "all" || q.set === set)
+          .map(q => q.section || "")
+          .filter(Boolean)
+      )];
+      const cur = sectionFilter.value;
+      sectionFilter.innerHTML = `<option value="all">Tất cả phần</option>` +
+        secs.map(s => `<option value="${s.replace(/"/g, "&quot;")}">${s}</option>`).join("");
+      if ([...sectionFilter.options].some(o => o.value === cur)) sectionFilter.value = cur;
+    }
 
     function updateStats() {
       const correct = answersState.filter(x => x === true).length;
       const wrong = answersState.filter(x => x === false).length;
       const notDone = answersState.filter(x => x === null).length;
-      const total = answersState.length;
+      const total = answersState.length || 1;
       const done = correct + wrong;
-      const totalScore = ((correct / total) * 10).toFixed(2);
-      const doneScore = done > 0 ? ((correct / done) * 10).toFixed(2) : "0.00";
-      statsDiv.innerHTML = `
-  <span style="color: #2980b9;">Đã làm: ${done}</span> |
-  <span style="color: #27ae60;">Đúng: ${correct}</span> |
-  <span style="color:rgb(225, 61, 43);">Sai: ${wrong}</span> |
-  <span style="color: #7f8c8d;">Chưa làm: ${notDone}</span> |
-  <span style="color: #8e44ad;">Điểm: ${totalScore}/10</span> |
-  <span style="color: #d35400;">Điểm theo ${done} câu đã làm: ${doneScore}/10</span>`;
-
-
-      document.getElementById('progress').style.width = `${(done / total) * 100}%`;
-
-      if (notDone === 0) {
-        statsDiv.innerHTML += `<br><span style="color: green; font-weight: bold;">🎉 Bạn đã hoàn thành bài quiz!</span>`;
+      const scoreAll = ((correct / total) * 10).toFixed(2);
+      const scoreDone = done ? ((correct / done) * 10).toFixed(2) : "0.00";
+      statsEl.innerHTML =
+        `<span style="color:#1b4f72">Đã làm: ${done}/${total}</span> · ` +
+        `<span style="color:#1e7a46">Đúng: ${correct}</span> · ` +
+        `<span style="color:#b42318">Sai: ${wrong}</span> · ` +
+        `<span>Chưa: ${notDone}</span><br>` +
+        `<span style="color:#6b3fa0">Điểm: ${scoreAll}/10</span> · ` +
+        `<span style="color:#9a5b00">Theo câu đã làm: ${scoreDone}/10</span>`;
+      document.getElementById("progress").style.width = `${(done / total) * 100}%`;
+      if (total && notDone === 0) {
+        statsEl.innerHTML += `<br><span style="color:#1e7a46">Hoàn thành bộ câu hỏi này.</span>`;
       }
     }
 
-    function renderProgressMarks() {
-      const marksContainer = document.getElementById("progressMarks");
-      marksContainer.innerHTML = "";
-      for (let i = 0; i < quizData.length; i++) {
-        const mark = document.createElement("span");
-        marksContainer.appendChild(mark);
-      }
-    }
-    function renderQuiz() {
-      // Danh sách feedback chất chơi
-      const correctFeedbacks = [
-        "✅ Chính xác! Bé iu giỏi quá!",
-        "🎯 Đúng rồi! Để đa đì thưởng cho!",
-        "🔥 Học giỏi nhể!",
-        "👏 Đúng luôn! Húp đc 10đ ko đây!",
-        "👏 Ai mà giỏi dữ ta!",
-        "👏 Đúng luôn! Con nhà người ta à!",
-        "👏 Thầy phải gọi bằng mồm",
-        "👏 Vỗ tay",
-        "👏 Ờ mây zing gút chóp em!",
-        "💡 Tuyệt vời, nắm vững kiến thức đếy!",
-        "🧠 Bộ não vàng đây rồi!",
-        "🌟 Đ tin đc, rùa thế!"
-      ];
-
-      const wrongFeedbacks = [
-        "❌ ANH NHẮC EMMMMMM!!!!. Đáp án đúng là:",
-        "🚫 Không giòn rồi! Cook lại đi! Đáp án đúng là:",
-        "😓 Chưa chính xác. Đáp án đúng là:",
-        "💥 Não cá vàng. Đáp án đúng là:",
-        "😬 Không đúng rồi! Đáp án phải là:",
-        "📛 Rớt phong độ rồi nha! Đáp án đúng là:",
-        "🙈 Sai nhẹ một chút, cẩn thận hơn nhé. Đáp án đúng là:"
-      ];
-
-      quizContainer.innerHTML = '';
-      quizData.forEach((q, i) => {
-        const questionDiv = document.createElement('div');
-        questionDiv.className = 'question';
-
-        const questionTitle = document.createElement('h3');
-        questionTitle.textContent = `Câu ${i + 1}: ${q.question}`;
-        questionDiv.appendChild(questionTitle);
-
-        const answersDiv = document.createElement('div');
-        answersDiv.className = 'answers';
-
-        const feedback = document.createElement('div');
-        feedback.style.marginTop = '10px';
-        feedback.style.fontWeight = 'bold';
-
-        q.options.forEach((opt, index) => {
-          const btn = document.createElement('button');
-          btn.textContent = opt;
-          btn.addEventListener('click', () => {
-            const allBtns = answersDiv.querySelectorAll('button');
-            allBtns.forEach(b => b.disabled = true);
-
-            if (index === q.correct) {
-              btn.classList.add('correct');
-              const msg = correctFeedbacks[Math.floor(Math.random() * correctFeedbacks.length)];
-              feedback.textContent = msg;
-              feedback.style.color = "#27ae60";
-              answersState[i] = true;
-            } else {
-              btn.classList.add('wrong');
-              allBtns[q.correct].classList.add('correct');
-              const msg = wrongFeedbacks[Math.floor(Math.random() * wrongFeedbacks.length)];
-              // feedback.textContent = `${msg} "${q.options[q.correct]}"`;
-              feedback.style.color = "#e74c3c";
-              answersState[i] = false;
-            }
-
-            updateStats();
-          });
-          answersDiv.appendChild(btn);
-        });
-
-        answersDiv.appendChild(feedback);
-        questionDiv.appendChild(answersDiv);
-        quizContainer.appendChild(questionDiv);
-      });
-
-      updateStats();
-      renderProgressMarks();
-    }
-    const bookmarkBtn = document.getElementById('bookmarkBtn');
-    window.addEventListener('scroll', () => {
-      bookmarkBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
-    });
-    bookmarkBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    document.getElementById("resetQuiz").addEventListener("click", () => {
-      answersState.fill(null);
-      shuffleArray(quizData);
-      shuffleAnswers(quizData);
-      renderQuiz();
-    });
-
-
-    shuffleArray(quizData);       // Xáo trộn thứ tự câu hỏi
-    shuffleAnswers(quizData);     // Xáo trộn thứ tự đáp án trong từng câu
-    renderQuiz();
-    function toggleReview() {
-      const content = document.getElementById("reviewContent");
-      content.style.display = content.style.display === "none" ? "block" : "none";
-    }
-    function retryWrongQuestions() {
-      // Lọc ra các câu hỏi sai từ mảng quizData gốc (không phải từ kết quả làm lại trước đó)
-      const wrongIndexes = answersState
-        .map((val, idx) => val === false ? idx : null)
-        .filter(val => val !== null);
-
-      if (wrongIndexes.length === 0) {
-        alert("Không có câu nào sai để làm lại.");
+    function renderQuiz(list) {
+      active = list;
+      answersState = Array(list.length).fill(null);
+      quizEl.innerHTML = "";
+      if (!list.length) {
+        quizEl.innerHTML = `<div class="error">Không có câu hỏi nào trong bộ lọc này.</div>`;
+        updateStats();
         return;
       }
 
-      // Tạo bản sao của các câu hỏi sai từ quizData gốc
-      const retryData = wrongIndexes.map(idx => ({
-        ...JSON.parse(JSON.stringify(quizData[idx])), // Deep copy để không ảnh hưởng đến quizData gốc
-        originalIndex: idx // Lưu lại vị trí gốc
-      }));
+      list.forEach((q, i) => {
+        const div = document.createElement("div");
+        div.className = "question";
+        div.dataset.index = i;
 
-      // Xáo trộn câu hỏi và đáp án
-      shuffleArray(retryData);
-      retryData.forEach(q => {
-        const originalCorrect = q.options[q.correct];
-        shuffleArray(q.options);
-        q.correct = q.options.indexOf(originalCorrect);
-      });
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        meta.innerHTML =
+          `<span class="chip set-${q.set}">${q.setName || q.set}</span>` +
+          (q.section ? `<span class="chip">${q.section}</span>` : "") +
+          `<span class="chip">Câu ${q.number}</span>`;
+        div.appendChild(meta);
 
-      quizContainer.innerHTML = '';
+        const title = document.createElement("h3");
+        title.textContent = `${i + 1}. ${q.question}`;
+        div.appendChild(title);
 
-      retryData.forEach((q, i) => {
-        const questionDiv = document.createElement('div');
-        questionDiv.className = 'question';
+        if (q.images && q.images.length) {
+          const figs = document.createElement("div");
+          figs.className = "figures";
+          q.images.forEach((src, idx) => {
+            const fig = document.createElement("figure");
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = `Hình minh họa câu ${q.number}` + (q.images.length > 1 ? ` (${idx + 1})` : "");
+            img.loading = "lazy";
+            img.decoding = "async";
+            img.addEventListener("click", () => {
+              lightboxImg.src = src;
+              lightbox.classList.add("open");
+            });
+            fig.appendChild(img);
+            figs.appendChild(fig);
+          });
+          div.appendChild(figs);
+        }
 
-        const questionTitle = document.createElement('h3');
-        questionTitle.textContent = `Làm lại - Câu ${q.originalIndex + 1}: ${q.question}`;
-        questionDiv.appendChild(questionTitle);
+        const answers = document.createElement("div");
+        answers.className = "answers";
+        const feedback = document.createElement("div");
+        feedback.className = "feedback";
 
-        const answersDiv = document.createElement('div');
-        answersDiv.className = 'answers';
-
-        const feedback = document.createElement('div');
-        feedback.style.marginTop = '10px';
-        feedback.style.fontWeight = 'bold';
-
-        q.options.forEach((opt, index) => {
-          const btn = document.createElement('button');
-          btn.textContent = opt;
-          btn.addEventListener('click', () => {
-            const allBtns = answersDiv.querySelectorAll('button');
-            allBtns.forEach(b => b.disabled = true);
-
-            if (index === q.correct) {
-              btn.classList.add('correct');
-              feedback.textContent = "✅ Lần này đúng rồi!";
-              feedback.style.color = "#27ae60";
-              answersState[q.originalIndex] = true; // Cập nhật vào vị trí gốc
+        const letters = q.optionLetters || q.options.map((_, idx) => "ABCDE"[idx]);
+        q.options.forEach((opt, oi) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.textContent = `${letters[oi]}. ${opt}`;
+          btn.addEventListener("click", () => {
+            [...answers.querySelectorAll("button")].forEach(b => b.disabled = true);
+            if (oi === q.correct) {
+              btn.classList.add("correct");
+              feedback.style.color = "#1e7a46";
+              feedback.textContent = okMsgs[Math.floor(Math.random() * okMsgs.length)];
+              answersState[i] = true;
             } else {
-              btn.classList.add('wrong');
-              allBtns[q.correct].classList.add('correct');
-              feedback.textContent = `❌ Vẫn chưa đúng. Đáp án đúng là: "${q.options[q.correct]}"`;
-              feedback.style.color = "#e74c3c";
-              answersState[q.originalIndex] = false; // Cập nhật vào vị trí gốc
+              btn.classList.add("wrong");
+              const right = answers.querySelectorAll("button")[q.correct];
+              if (right) right.classList.add("correct");
+              feedback.style.color = "#b42318";
+              const msg = badMsgs[Math.floor(Math.random() * badMsgs.length)];
+              feedback.textContent = `${msg} ${letters[q.correct]}. ${q.options[q.correct]}`;
+              answersState[i] = false;
             }
-
             updateStats();
           });
-          answersDiv.appendChild(btn);
+          answers.appendChild(btn);
         });
-
-        answersDiv.appendChild(feedback);
-        questionDiv.appendChild(answersDiv);
-        quizContainer.appendChild(questionDiv);
+        answers.appendChild(feedback);
+        div.appendChild(answers);
+        quizEl.appendChild(div);
       });
-
-      statsDiv.innerHTML = `<span style="color:#2c3e50;">📝 Đang làm lại các câu sai (${retryData.length} câu)</span>`;
+      updateStats();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
-    // nhạc nền
-    const music = document.getElementById('bg-music');
-    const playBtn = document.getElementById('play-btn');
-    const muteBtn = document.getElementById('mute-btn');
+    function startFresh() {
+      const src = filteredBank();
+      const list = shuffle(src.map(cloneQ));
+      renderQuiz(list);
+    }
 
-    function togglePlay() {
-      if (music.paused) {
-        music.play();
-        playBtn.innerText = "Pause";
-      } else {
-        music.pause();
-        playBtn.innerText = "Play";
+    document.getElementById("btnStart").addEventListener("click", startFresh);
+    document.getElementById("btnReset").addEventListener("click", () => {
+      answersState = answersState.map(() => null);
+      // re-render same questions order but reshuffle options
+      renderQuiz(active.map(q => {
+        // recover original from bank by id then clone fresh
+        const orig = bank.find(b => b.id === q.id) || q;
+        return cloneQ(orig);
+      }));
+    });
+    document.getElementById("btnRetry").addEventListener("click", () => {
+      const wrongIdx = answersState.map((v, i) => v === false ? i : null).filter(v => v !== null);
+      if (!wrongIdx.length) {
+        alert("Không có câu sai để làm lại.");
+        return;
       }
-    }
-
-    function toggleMute() {
-      music.muted = !music.muted;
-      muteBtn.innerText = music.muted ? "Unmute" : "Mute";
-    }
-
-    // Gợi ý: đảm bảo người dùng tương tác trước để auto-play hoạt động
-    document.addEventListener('click', function initAudio() {
-      // music.play().catch(() => { });
-      // document.removeEventListener('click', initAudio);
-    });
-
-    let lastScrollPosition = 0;
-
-    // Cập nhật sự kiện scroll
-    window.addEventListener('scroll', () => {
-      const bookmarkBtn = document.getElementById('bookmarkBtn');
-      const backToPosBtn = document.getElementById('backToPositionBtn');
-
-      bookmarkBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
-      backToPosBtn.style.display = lastScrollPosition > 0 && window.scrollY === 0 ? 'block' : 'none';
-    });
-
-    // Sự kiện click nút lên đầu trang
-    document.getElementById('bookmarkBtn').addEventListener('click', () => {
-      lastScrollPosition = window.scrollY || document.documentElement.scrollTop;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-
-      // Hiển thị nút "xuống vị trí trước đó" sau khi cuộn lên
-      setTimeout(() => {
-        if (lastScrollPosition > 0) {
-          document.getElementById('backToPositionBtn').style.display = 'block';
+      const retry = wrongIdx.map(i => {
+        const orig = bank.find(b => b.id === active[i].id) || active[i];
+        const c = cloneQ(orig);
+        c._origPos = i;
+        return c;
+      });
+      quizEl.innerHTML = "";
+      statsEl.innerHTML = `Đang làm lại ${retry.length} câu sai`;
+      const tempState = [...answersState];
+      retry.forEach((q, i) => {
+        const div = document.createElement("div");
+        div.className = "question";
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        meta.innerHTML = `<span class="chip">Làm lại</span><span class="chip">Câu gốc #${q._origPos + 1}</span>`;
+        div.appendChild(meta);
+        const title = document.createElement("h3");
+        title.textContent = q.question;
+        div.appendChild(title);
+        if (q.images && q.images.length) {
+          const figs = document.createElement("div");
+          figs.className = "figures";
+          q.images.forEach(src => {
+            const fig = document.createElement("figure");
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = "Hình minh họa";
+            img.loading = "lazy";
+            img.addEventListener("click", () => {
+              lightboxImg.src = src;
+              lightbox.classList.add("open");
+            });
+            fig.appendChild(img);
+            figs.appendChild(fig);
+          });
+          div.appendChild(figs);
         }
-      }, 500);
+        const answers = document.createElement("div");
+        answers.className = "answers";
+        const feedback = document.createElement("div");
+        feedback.className = "feedback";
+        const letters = q.optionLetters || q.options.map((_, idx) => "ABCDE"[idx]);
+        q.options.forEach((opt, oi) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.textContent = `${letters[oi]}. ${opt}`;
+          btn.addEventListener("click", () => {
+            [...answers.querySelectorAll("button")].forEach(b => b.disabled = true);
+            if (oi === q.correct) {
+              btn.classList.add("correct");
+              feedback.style.color = "#1e7a46";
+              feedback.textContent = "✅ Lần này đúng rồi!";
+              tempState[q._origPos] = true;
+            } else {
+              btn.classList.add("wrong");
+              answers.querySelectorAll("button")[q.correct]?.classList.add("correct");
+              feedback.style.color = "#b42318";
+              feedback.textContent = `❌ Vẫn sai. Đáp án: ${letters[q.correct]}. ${q.options[q.correct]}`;
+              tempState[q._origPos] = false;
+            }
+            answersState = tempState;
+            updateStats();
+          });
+          answers.appendChild(btn);
+        });
+        answers.appendChild(feedback);
+        div.appendChild(answers);
+        quizEl.appendChild(div);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // Sự kiện click nút xuống vị trí trước đó
-    document.getElementById('backToPositionBtn').addEventListener('click', () => {
-      window.scrollTo({ top: lastScrollPosition, behavior: 'smooth' });
-      lastScrollPosition = 0;
-      document.getElementById('backToPositionBtn').style.display = 'none';
+    setFilter.addEventListener("change", () => {
+      rebuildSections();
+      startFresh();
     });
+    sectionFilter.addEventListener("change", startFresh);
+
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightboxImg.src = "";
+    });
+
+    const toTop = document.getElementById("toTop");
+    const backPos = document.getElementById("backPos");
+    window.addEventListener("scroll", () => {
+      toTop.style.display = window.scrollY > 240 ? "block" : "none";
+      backPos.style.display = lastScroll > 0 && window.scrollY < 40 ? "block" : "none";
+    });
+    toTop.addEventListener("click", () => {
+      lastScroll = window.scrollY;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    backPos.addEventListener("click", () => {
+      window.scrollTo({ top: lastScroll, behavior: "smooth" });
+      lastScroll = 0;
+      backPos.style.display = "none";
+    });
+
+    fetch("questions.json")
+      .then(r => {
+        if (!r.ok) throw new Error("Không tải được questions.json");
+        return r.json();
+      })
+      .then(data => {
+        bank = data.questions || [];
+        document.querySelector("header h1").textContent = data.title || "Quiz VATC";
+        rebuildSections();
+        startFresh();
+      })
+      .catch(err => {
+        statsEl.textContent = "";
+        quizEl.innerHTML = `<div class="error">${err.message}</div>`;
+      });
   </script>
 </body>
-
 </html>
