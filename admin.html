@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Admin — Quiz VATC</title>
+  <link rel="icon" type="image/png" href="hehe.jpg" />
+  <style>
+    :root {
+      --bg: #eef2f6;
+      --card: #ffffff;
+      --ink: #1a2332;
+      --muted: #5b6b7c;
+      --line: #d7dee7;
+      --accent: #0b6e4f;
+      --accent-2: #1b4f72;
+      --ok: #1e7a46;
+      --ok-bg: #dff5e8;
+      --bad: #b42318;
+      --bad-bg: #fde8e6;
+      --warn: #9a5b00;
+      --warn-bg: #fff4d6;
+      --shadow: 0 8px 24px rgba(26, 35, 50, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background:
+        radial-gradient(1000px 420px at 0% 0%, #d9ebe3 0%, transparent 55%),
+        radial-gradient(800px 360px at 100% 0%, #d6e4f2 0%, transparent 50%),
+        var(--bg);
+      color: var(--ink);
+      padding: 16px 12px 80px;
+    }
+    .wrap { max-width: 920px; margin: 0 auto; }
+    h1 { margin: 0 0 4px; font-size: 1.45rem; }
+    .sub { color: var(--muted); margin: 0 0 16px; font-size: 0.92rem; }
+    a { color: var(--accent-2); }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+    }
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      margin: 10px 0 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 11px 12px;
+      font: inherit;
+      background: #fff;
+    }
+    textarea { min-height: 90px; resize: vertical; line-height: 1.45; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
+
+    .btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    button, .btn {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+    button.ghost { background: var(--accent-2); border-color: var(--accent-2); color: #fff; }
+    button.danger { background: var(--bad); border-color: var(--bad); color: #fff; }
+    button:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    .status {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      display: none;
+    }
+    .status.show { display: block; }
+    .status.ok { background: var(--ok-bg); color: #0f3d24; }
+    .status.err { background: var(--bad-bg); color: #6b1510; }
+    .status.info { background: #e8eef5; color: var(--accent-2); }
+    .status.warn { background: var(--warn-bg); color: var(--warn); }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .toolbar input, .toolbar select { flex: 1; min-width: 140px; }
+
+    .list { display: flex; flex-direction: column; gap: 8px; max-height: 42vh; overflow: auto; }
+    .qitem {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      cursor: pointer;
+      background: #fff;
+      text-align: left;
+    }
+    .qitem:hover, .qitem.active { border-color: var(--accent); background: #f3faf6; }
+    .qitem .meta { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+    .qitem .txt { font-size: 14px; line-height: 1.35; }
+
+    .chip {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e8eef5;
+      color: var(--accent-2);
+      margin-right: 4px;
+    }
+    .chip.ok { background: var(--ok-bg); color: var(--ok); }
+
+    .opt-row {
+      display: grid;
+      grid-template-columns: 36px 28px 1fr auto;
+      gap: 8px;
+      align-items: start;
+      margin-bottom: 8px;
+    }
+    .opt-row input[type="radio"] { margin-top: 12px; width: auto; }
+    .opt-row .letter {
+      margin-top: 10px;
+      font-weight: 800;
+      color: var(--accent-2);
+      text-align: center;
+    }
+    .opt-row textarea { min-height: 56px; }
+    .figures { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .fig {
+      width: 120px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      position: relative;
+    }
+    .fig img { display: block; width: 100%; height: 90px; object-fit: contain; background: #f7f9fb; }
+    .fig button {
+      width: 100%;
+      border-radius: 0;
+      border: none;
+      border-top: 1px solid var(--line);
+      padding: 6px;
+      font-size: 12px;
+      color: var(--bad);
+      background: #fff;
+    }
+    .help {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.45;
+      margin-top: 8px;
+    }
+    .help code {
+      background: #eef2f6;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+    #app { display: none; }
+    #loginScreen { display: block; }
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .dirty { color: var(--warn); font-weight: 700; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div>
+        <h1>Admin Quiz VATC</h1>
+        <p class="sub">Sửa câu hỏi · lưu thẳng lên GitHub Pages</p>
+      </div>
+      <a class="btn" href="index.html">← Về quiz</a>
+    </div>
+
+    <!-- LOGIN -->
+    <section id="loginScreen" class="card">
+      <h2 style="margin:0 0 8px;font-size:1.1rem;">Đăng nhập admin</h2>
+      <p class="help">
+        Cần <b>GitHub Personal Access Token</b> (classic) quyền <code>repo</code>.
+        Tạo tại:
+        <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">github.com/settings/tokens</a>.
+        Token chỉ lưu trên máy/ĐT này (localStorage), không đẩy lên repo.
+      </p>
+      <label>GitHub user / org</label>
+      <input id="owner" type="text" value="thientinh651" autocomplete="username" />
+      <label>Repo</label>
+      <input id="repo" type="text" value="Quiz" />
+      <label>Branch</label>
+      <input id="branch" type="text" value="main" />
+      <label>Personal Access Token</label>
+      <input id="token" type="password" placeholder="ghp_..." autocomplete="current-password" />
+      <div class="btns">
+        <button class="primary" id="btnLogin">Đăng nhập</button>
+        <button id="btnClearCreds" type="button">Xóa token đã lưu</button>
+      </div>
+      <div id="loginStatus" class="status"></div>
+    </section>
+
+    <!-- APP -->
+    <section id="app">
+      <div class="card">
+        <div class="toolbar">
+          <select id="setFilter">
+            <option value="all">Tất cả bộ đề</option>
+          </select>
+          <select id="sectionFilter">
+            <option value="all">Tất cả phần</option>
+          </select>
+          <input id="search" type="text" placeholder="Tìm theo nội dung / id / số câu..." />
+        </div>
+        <div class="btns" style="margin-top:0">
+          <button class="ghost" id="btnReload">Tải lại từ GitHub</button>
+          <button class="primary" id="btnSaveAll" disabled>💾 Lưu tất cả lên GitHub</button>
+          <button id="btnLogout">Đăng xuất</button>
+        </div>
+        <div id="dirtyFlag" class="dirty" style="display:none;margin-top:8px">● Có thay đổi chưa lưu</div>
+        <div id="appStatus" class="status"></div>
+        <p class="help" id="metaLine"></p>
+        <div id="list" class="list" style="margin-top:10px"></div>
+      </div>
+
+      <div class="card" id="editorCard" style="display:none">
+        <h2 style="margin:0 0 4px;font-size:1.1rem;">Sửa câu hỏi</h2>
+        <p class="help" id="editMeta"></p>
+
+        <label>ID (không đổi)</label>
+        <input id="fId" type="text" readonly />
+
+        <div class="row">
+          <div>
+            <label>Bộ đề (set)</label>
+            <select id="fSet"></select>
+          </div>
+          <div>
+            <label>Số câu (hiển thị)</label>
+            <input id="fNumber" type="number" min="1" />
+          </div>
+        </div>
+
+        <label>Phần / section</label>
+        <input id="fSection" type="text" placeholder="VD: NÂNG HẠ KÍNH" />
+
+        <label>Nội dung câu hỏi</label>
+        <textarea id="fQuestion"></textarea>
+
+        <label>Đáp án (chọn radio = đáp án đúng)</label>
+        <div id="optionsBox"></div>
+        <div class="btns">
+          <button type="button" id="btnAddOpt">+ Thêm đáp án</button>
+        </div>
+
+        <label>Hình ảnh</label>
+        <div id="imagesBox" class="figures"></div>
+        <div class="btns">
+          <label class="btn" style="cursor:pointer">
+            + Upload ảnh
+            <input id="fileImg" type="file" accept="image/*" hidden />
+          </label>
+        </div>
+
+        <div class="btns">
+          <button class="primary" id="btnApply">Áp dụng vào bộ nhớ</button>
+          <button class="primary" id="btnApplySave">Áp dụng + Lưu GitHub</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const LS_KEY = "vatc_quiz_admin_v1";
+    const PATH_JSON = "questions.json";
+
+    let creds = null;
+    let data = null;
+    let jsonSha = null;
+    let selectedId = null;
+    let dirty = false;
+    let pendingUploads = []; // {path, contentBase64, message}
+
+    const $ = (id) => document.getElementById(id);
+
+    function showStatus(el, type, msg) {
+      el.className = "status show " + type;
+      el.textContent = msg;
+    }
+    function hideStatus(el) {
+      el.className = "status";
+      el.textContent = "";
+    }
+
+    function loadCreds() {
+      try {
+        const raw = localStorage.getItem(LS_KEY);
+        return raw ? JSON.parse(raw) : null;
+      } catch {
+        return null;
+      }
+    }
+    function saveCreds(c) {
+      localStorage.setItem(LS_KEY, JSON.stringify(c));
+    }
+    function clearCreds() {
+      localStorage.removeItem(LS_KEY);
+    }
+
+    function apiHeaders() {
+      return {
+        Accept: "application/vnd.github+json",
+        Authorization: `Bearer ${creds.token}`,
+        "X-GitHub-Api-Version": "2022-11-28",
+      };
+    }
+
+    function apiUrl(path) {
+      return `https://api.github.com/repos/${creds.owner}/${creds.repo}${path}`;
+    }
+
+    async function ghGetContents(path) {
+      const url = apiUrl(`/contents/${path}?ref=${encodeURIComponent(creds.branch)}`);
+      const res = await fetch(url, { headers: apiHeaders() });
+      if (!res.ok) {
+        const t = await res.text();
+        throw new Error(`GET ${path} failed (${res.status}): ${t.slice(0, 200)}`);
+      }
+      return res.json();
+    }
+
+    async function ghPutContents(path, contentTextOrB64, sha, message, alreadyBase64 = false) {
+      const content = alreadyBase64
+        ? contentTextOrB64
+        : btoa(unescape(encodeURIComponent(contentTextOrB64)));
+      const body = {
+        message,
+        content,
+        branch: creds.branch,
+      };
+      if (sha) body.sha = sha;
+      const res = await fetch(apiUrl(`/contents/${path}`), {
+        method: "PUT",
+        headers: { ...apiHeaders(), "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      if (!res.ok) {
+        const t = await res.text();
+        throw new Error(`PUT ${path} failed (${res.status}): ${t.slice(0, 300)}`);
+      }
+      return res.json();
+    }
+
+    async function fileToBase64(file) {
+      const buf = await file.arrayBuffer();
+      const bytes = new Uint8Array(buf);
+      let binary = "";
+      const chunk = 0x8000;
+      for (let i = 0; i < bytes.length; i += chunk) {
+        binary += String.fromCharCode(...bytes.subarray(i, i + chunk));
+      }
+      return btoa(binary);
+    }
+
+    function setDirty(v) {
+      dirty = v;
+      $("dirtyFlag").style.display = v ? "block" : "none";
+      $("btnSaveAll").disabled = !v;
+    }
+
+    function currentQuestion() {
+      return data?.questions?.find((q) => q.id === selectedId) || null;
+    }
+
+    function rebuildSetFilter() {
+      const sets = data.sets || [];
+      const cur = $("setFilter").value || "all";
+      $("setFilter").innerHTML =
+        `<option value="all">Tất cả bộ đề</option>` +
+        sets.map((s) => `<option value="${s.id}">${s.name}</option>`).join("");
+      if ([...$("setFilter").options].some((o) => o.value === cur)) $("setFilter").value = cur;
+
+      $("fSet").innerHTML = sets.map((s) => `<option value="${s.id}">${s.name}</option>`).join("");
+    }
+
+    function rebuildSectionFilter() {
+      const set = $("setFilter").value;
+      const secs = [...new Set(
+        data.questions
+          .filter((q) => set === "all" || q.set === set)
+          .map((q) => q.section || "")
+          .filter(Boolean)
+      )];
+      const cur = $("sectionFilter").value || "all";
+      $("sectionFilter").innerHTML =
+        `<option value="all">Tất cả phần</option>` +
+        secs.map((s) => `<option value="${s.replace(/"/g, "&quot;")}">${s}</option>`).join("");
+      if ([...$("sectionFilter").options].some((o) => o.value === cur)) $("sectionFilter").value = cur;
+    }
+
+    function filteredQuestions() {
+      const set = $("setFilter").value;
+      const sec = $("sectionFilter").value;
+      const q = ($("search").value || "").trim().toLowerCase();
+      return data.questions.filter((item) => {
+        if (set !== "all" && item.set !== set) return false;
+        if (sec !== "all" && (item.section || "") !== sec) return false;
+        if (!q) return true;
+        const blob = [
+          item.id,
+          item.number,
+          item.section,
+          item.question,
+          ...(item.options || []),
+          item.correctLetter,
+        ]
+          .join(" ")
+          .toLowerCase();
+        return blob.includes(q);
+      });
+    }
+
+    function renderList() {
+      const list = filteredQuestions();
+      $("list").innerHTML = list
+        .map((item) => {
+          const active = item.id === selectedId ? " active" : "";
+          const letter = item.correctLetter || "?";
+          return `<button type="button" class="qitem${active}" data-id="${item.id}">
+            <div class="meta">
+              <span class="chip">${item.setName || item.set}</span>
+              ${item.section ? `<span class="chip">${item.section}</span>` : ""}
+              <span class="chip">Câu ${item.number}</span>
+              <span class="chip ok">Đúng: ${letter}</span>
+              <span class="chip">${item.id}</span>
+            </div>
+            <div class="txt">${escapeHtml(item.question).slice(0, 160)}${item.question.length > 160 ? "…" : ""}</div>
+          </button>`;
+        })
+        .join("") || `<p class="help">Không có câu nào khớp bộ lọc.</p>`;
+
+      $("list").querySelectorAll(".qitem").forEach((btn) => {
+        btn.addEventListener("click", () => selectQuestion(btn.dataset.id));
+      });
+      $("metaLine").textContent = `Tổng ${data.questions.length} câu · đang hiện ${list.length} · sha ${jsonSha?.slice(0, 7) || "?"}`;
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function selectQuestion(id) {
+      selectedId = id;
+      const q = currentQuestion();
+      if (!q) return;
+      $("editorCard").style.display = "block";
+      $("editMeta").textContent = `${q.setName || q.set} · Câu ${q.number}` + (q.section ? ` · ${q.section}` : "");
+      $("fId").value = q.id;
+      $("fSet").value = q.set;
+      $("fNumber").value = q.number;
+      $("fSection").value = q.section || "";
+      $("fQuestion").value = q.question || "";
+      renderOptionsEditor(q);
+      renderImagesEditor(q);
+      renderList();
+      $("editorCard").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function renderOptionsEditor(q) {
+      const letters = q.optionLetters && q.optionLetters.length
+        ? q.optionLetters
+        : (q.options || []).map((_, i) => "ABCDE"[i] || String(i + 1));
+      const opts = q.options || [];
+      $("optionsBox").innerHTML = opts
+        .map((text, i) => {
+          const letter = letters[i] || "ABCDE"[i] || "?";
+          const checked = i === q.correct ? "checked" : "";
+          return `<div class="opt-row" data-idx="${i}">
+            <input type="radio" name="correctOpt" value="${i}" ${checked} title="Đáp án đúng" />
+            <div class="letter">${letter}</div>
+            <textarea data-role="opt">${escapeHtml(text)}</textarea>
+            <button type="button" data-role="del" title="Xóa">✕</button>
+          </div>`;
+        })
+        .join("");
+
+      $("optionsBox").querySelectorAll('[data-role="del"]').forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const row = btn.closest(".opt-row");
+          const idx = Number(row.dataset.idx);
+          const draft = readOptionsFromForm();
+          if (draft.options.length <= 2) {
+            alert("Cần ít nhất 2 đáp án.");
+            return;
+          }
+          draft.options.splice(idx, 1);
+          draft.optionLetters.splice(idx, 1);
+          if (draft.correct === idx) draft.correct = 0;
+          else if (draft.correct > idx) draft.correct -= 1;
+          const temp = { ...q, ...draft };
+          renderOptionsEditor(temp);
+        });
+      });
+    }
+
+    function readOptionsFromForm() {
+      const rows = [...$("optionsBox").querySelectorAll(".opt-row")];
+      const options = rows.map((r) => r.querySelector('textarea[data-role="opt"]').value.trim());
+      const optionLetters = rows.map((r, i) => {
+        const L = r.querySelector(".letter")?.textContent?.trim();
+        return L || "ABCDE"[i] || String(i + 1);
+      });
+      const checked = $("optionsBox").querySelector('input[name="correctOpt"]:checked');
+      let correct = checked ? Number(checked.value) : 0;
+      if (correct < 0 || correct >= options.length) correct = 0;
+      return { options, optionLetters, correct, correctLetter: optionLetters[correct] };
+    }
+
+    function renderImagesEditor(q) {
+      const imgs = q.images || [];
+      $("imagesBox").innerHTML = imgs
+        .map(
+          (src, i) => `<div class="fig" data-i="${i}">
+            <img src="${src}?t=${Date.now()}" alt="" />
+            <button type="button" data-role="rm">Xóa</button>
+          </div>`
+        )
+        .join("") || `<p class="help">Chưa có ảnh.</p>`;
+
+      $("imagesBox").querySelectorAll('[data-role="rm"]').forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const i = Number(btn.closest(".fig").dataset.i);
+          q.images.splice(i, 1);
+          setDirty(true);
+          renderImagesEditor(q);
+        });
+      });
+    }
+
+    function applyEditorToData() {
+      const q = currentQuestion();
+      if (!q) throw new Error("Chưa chọn câu hỏi.");
+      const setMeta = (data.sets || []).find((s) => s.id === $("fSet").value);
+      const opts = readOptionsFromForm();
+      if (!opts.options.length || opts.options.some((o) => !o)) {
+        throw new Error("Đáp án không được để trống.");
+      }
+      q.set = $("fSet").value;
+      q.setName = setMeta?.name || q.set;
+      q.number = Number($("fNumber").value) || q.number;
+      q.section = $("fSection").value.trim();
+      q.question = $("fQuestion").value.trim();
+      q.options = opts.options;
+      q.optionLetters = opts.optionLetters;
+      q.correct = opts.correct;
+      q.correctLetter = opts.correctLetter;
+      setDirty(true);
+      renderList();
+      selectQuestion(q.id);
+      return q;
+    }
+
+    async function loadFromGitHub() {
+      showStatus($("appStatus"), "info", "Đang tải questions.json từ GitHub...");
+      const file = await ghGetContents(PATH_JSON);
+      jsonSha = file.sha;
+      const decoded = decodeURIComponent(escape(atob(file.content.replace(/\n/g, ""))));
+      data = JSON.parse(decoded);
+      pendingUploads = [];
+      setDirty(false);
+      rebuildSetFilter();
+      rebuildSectionFilter();
+      renderList();
+      showStatus($("appStatus"), "ok", `Đã tải ${data.questions.length} câu hỏi.`);
+    }
+
+    async function saveAllToGitHub() {
+      if (!data) return;
+      $("btnSaveAll").disabled = true;
+      showStatus($("appStatus"), "info", "Đang lưu lên GitHub...");
+
+      // upload pending images first
+      for (const up of pendingUploads) {
+        let sha = null;
+        try {
+          const existing = await ghGetContents(up.path);
+          sha = existing.sha;
+        } catch {
+          sha = null;
+        }
+        await ghPutContents(up.path, up.contentBase64, sha, up.message, true);
+      }
+      pendingUploads = [];
+
+      const pretty = JSON.stringify(data, null, 2) + "\n";
+      const result = await ghPutContents(
+        PATH_JSON,
+        pretty,
+        jsonSha,
+        `admin: update questions (${new Date().toISOString()})`
+      );
+      jsonSha = result.content.sha;
+      setDirty(false);
+      showStatus(
+        $("appStatus"),
+        "ok",
+        "Đã lưu. GitHub Pages cập nhật khoảng 30s–2 phút. Hard refresh quiz để thấy."
+      );
+      $("metaLine").textContent = `Tổng ${data.questions.length} câu · sha ${jsonSha.slice(0, 7)}`;
+    }
+
+    async function login() {
+      const owner = $("owner").value.trim();
+      const repo = $("repo").value.trim();
+      const branch = $("branch").value.trim() || "main";
+      const token = $("token").value.trim();
+      if (!owner || !repo || !token) {
+        showStatus($("loginStatus"), "err", "Điền đủ owner, repo, token.");
+        return;
+      }
+      creds = { owner, repo, branch, token };
+      showStatus($("loginStatus"), "info", "Đang kiểm tra token...");
+      try {
+        const res = await fetch(apiUrl(""), { headers: apiHeaders() });
+        if (!res.ok) throw new Error(`Repo không truy cập được (${res.status}). Kiểm tra token quyền repo.`);
+        saveCreds(creds);
+        $("loginScreen").style.display = "none";
+        $("app").style.display = "block";
+        await loadFromGitHub();
+      } catch (e) {
+        showStatus($("loginStatus"), "err", e.message || String(e));
+        creds = null;
+      }
+    }
+
+    function logout() {
+      clearCreds();
+      creds = null;
+      data = null;
+      selectedId = null;
+      $("app").style.display = "none";
+      $("loginScreen").style.display = "block";
+      $("token").value = "";
+      hideStatus($("loginStatus"));
+      showStatus($("loginStatus"), "info", "Đã đăng xuất.");
+    }
+
+    // events
+    $("btnLogin").addEventListener("click", login);
+    $("btnClearCreds").addEventListener("click", () => {
+      clearCreds();
+      $("token").value = "";
+      showStatus($("loginStatus"), "ok", "Đã xóa token local.");
+    });
+    $("btnLogout").addEventListener("click", logout);
+    $("btnReload").addEventListener("click", async () => {
+      if (dirty && !confirm("Có thay đổi chưa lưu. Tải lại sẽ mất. Tiếp tục?")) return;
+      try {
+        await loadFromGitHub();
+        $("editorCard").style.display = "none";
+        selectedId = null;
+      } catch (e) {
+        showStatus($("appStatus"), "err", e.message || String(e));
+      }
+    });
+    $("btnSaveAll").addEventListener("click", async () => {
+      try {
+        await saveAllToGitHub();
+      } catch (e) {
+        showStatus($("appStatus"), "err", e.message || String(e));
+        $("btnSaveAll").disabled = !dirty;
+      }
+    });
+    $("setFilter").addEventListener("change", () => {
+      rebuildSectionFilter();
+      renderList();
+    });
+    $("sectionFilter").addEventListener("change", renderList);
+    $("search").addEventListener("input", renderList);
+
+    $("btnAddOpt").addEventListener("click", () => {
+      const q = currentQuestion();
+      if (!q) return;
+      const draft = readOptionsFromForm();
+      const nextLetter = "ABCDE"[draft.options.length] || String(draft.options.length + 1);
+      draft.options.push("");
+      draft.optionLetters.push(nextLetter);
+      renderOptionsEditor({ ...q, ...draft });
+    });
+
+    $("btnApply").addEventListener("click", () => {
+      try {
+        applyEditorToData();
+        showStatus($("appStatus"), "ok", "Đã áp dụng vào bộ nhớ. Nhấn “Lưu tất cả lên GitHub” để publish.");
+      } catch (e) {
+        showStatus($("appStatus"), "err", e.message || String(e));
+      }
+    });
+
+    $("btnApplySave").addEventListener("click", async () => {
+      try {
+        applyEditorToData();
+        await saveAllToGitHub();
+      } catch (e) {
+        showStatus($("appStatus"), "err", e.message || String(e));
+        $("btnSaveAll").disabled = !dirty;
+      }
+    });
+
+    $("fileImg").addEventListener("change", async (e) => {
+      const file = e.target.files?.[0];
+      e.target.value = "";
+      const q = currentQuestion();
+      if (!file || !q) return;
+      try {
+        showStatus($("appStatus"), "info", "Đang chuẩn bị ảnh...");
+        const b64 = await fileToBase64(file);
+        const ext = (file.name.split(".").pop() || "png").toLowerCase().replace(/[^a-z0-9]/g, "") || "png";
+        const stamp = Date.now().toString(36);
+        const path = `images/${q.id}_${stamp}.${ext}`;
+        pendingUploads.push({
+          path,
+          contentBase64: b64,
+          message: `admin: add image for ${q.id}`,
+        });
+        if (!q.images) q.images = [];
+        q.images.push(path);
+        setDirty(true);
+        renderImagesEditor(q);
+        showStatus($("appStatus"), "warn", `Ảnh chờ upload: ${path}. Nhấn Lưu để đẩy lên GitHub.`);
+      } catch (err) {
+        showStatus($("appStatus"), "err", err.message || String(err));
+      }
+    });
+
+    // boot
+    const saved = loadCreds();
+    if (saved?.token) {
+      $("owner").value = saved.owner || "thientinh651";
+      $("repo").value = saved.repo || "Quiz";
+      $("branch").value = saved.branch || "main";
+      $("token").value = saved.token;
+      login();
+    }
+  </script>
+</body>
+</html>
