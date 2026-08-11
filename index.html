@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
   <title>Quiz VATC — Điện thân xe</title>
   <link rel="icon" type="image/png" href="hehe.jpg" />
   <style>
@@ -576,7 +578,7 @@
       backPos.style.display = "none";
     });
 
-    fetch("questions.json")
+    fetch("questions.json?v=20260811")
       .then(r => {
         if (!r.ok) throw new Error("Không tải được questions.json");
         return r.json();
