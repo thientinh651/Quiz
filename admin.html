@@ -138,18 +138,12 @@
 
     .opt-row {
       display: grid;
-      grid-template-columns: 36px 28px 1fr auto;
+      grid-template-columns: 36px 1fr auto;
       gap: 8px;
       align-items: start;
       margin-bottom: 8px;
     }
     .opt-row input[type="radio"] { margin-top: 12px; width: auto; }
-    .opt-row .letter {
-      margin-top: 10px;
-      font-weight: 800;
-      color: var(--accent-2);
-      text-align: center;
-    }
     .opt-row textarea { min-height: 56px; }
     .figures { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
     .fig {
@@ -442,7 +436,6 @@
           item.section,
           item.question,
           ...(item.options || []),
-          item.correctLetter,
         ]
           .join(" ")
           .toLowerCase();
@@ -455,13 +448,16 @@
       $("list").innerHTML = list
         .map((item) => {
           const active = item.id === selectedId ? " active" : "";
-          const letter = item.correctLetter || "?";
+          const correctText = (item.options && item.options[item.correct]) || "";
+          const correctPreview = correctText
+            ? escapeHtml(correctText).slice(0, 40) + (correctText.length > 40 ? "…" : "")
+            : "?";
           return `<button type="button" class="qitem${active}" data-id="${item.id}">
             <div class="meta">
               <span class="chip">${item.setName || item.set}</span>
               ${item.section ? `<span class="chip">${item.section}</span>` : ""}
               <span class="chip">Câu ${item.number}</span>
-              <span class="chip ok">Đúng: ${letter}</span>
+              <span class="chip ok">Đúng: ${correctPreview}</span>
               <span class="chip">${item.id}</span>
             </div>
             <div class="txt">${escapeHtml(item.question).slice(0, 160)}${item.question.length > 160 ? "…" : ""}</div>
@@ -501,17 +497,12 @@
     }
 
     function renderOptionsEditor(q) {
-      const letters = q.optionLetters && q.optionLetters.length
-        ? q.optionLetters
-        : (q.options || []).map((_, i) => "ABCDE"[i] || String(i + 1));
       const opts = q.options || [];
       $("optionsBox").innerHTML = opts
         .map((text, i) => {
-          const letter = letters[i] || "ABCDE"[i] || "?";
           const checked = i === q.correct ? "checked" : "";
           return `<div class="opt-row" data-idx="${i}">
             <input type="radio" name="correctOpt" value="${i}" ${checked} title="Đáp án đúng" />
-            <div class="letter">${letter}</div>
             <textarea data-role="opt">${escapeHtml(text)}</textarea>
             <button type="button" data-role="del" title="Xóa">✕</button>
           </div>`;
@@ -528,7 +519,6 @@
             return;
           }
           draft.options.splice(idx, 1);
-          draft.optionLetters.splice(idx, 1);
           if (draft.correct === idx) draft.correct = 0;
           else if (draft.correct > idx) draft.correct -= 1;
           const temp = { ...q, ...draft };
@@ -540,14 +530,10 @@
     function readOptionsFromForm() {
       const rows = [...$("optionsBox").querySelectorAll(".opt-row")];
       const options = rows.map((r) => r.querySelector('textarea[data-role="opt"]').value.trim());
-      const optionLetters = rows.map((r, i) => {
-        const L = r.querySelector(".letter")?.textContent?.trim();
-        return L || "ABCDE"[i] || String(i + 1);
-      });
       const checked = $("optionsBox").querySelector('input[name="correctOpt"]:checked');
       let correct = checked ? Number(checked.value) : 0;
       if (correct < 0 || correct >= options.length) correct = 0;
-      return { options, optionLetters, correct, correctLetter: optionLetters[correct] };
+      return { options, correct };
     }
 
     function renderImagesEditor(q) {
@@ -585,9 +571,9 @@
       q.section = $("fSection").value.trim();
       q.question = $("fQuestion").value.trim();
       q.options = opts.options;
-      q.optionLetters = opts.optionLetters;
       q.correct = opts.correct;
-      q.correctLetter = opts.correctLetter;
+      delete q.optionLetters;
+      delete q.correctLetter;
       setDirty(true);
       renderList();
       selectQuestion(q.id);
@@ -716,9 +702,7 @@
       const q = currentQuestion();
       if (!q) return;
       const draft = readOptionsFromForm();
-      const nextLetter = "ABCDE"[draft.options.length] || String(draft.options.length + 1);
       draft.options.push("");
-      draft.optionLetters.push(nextLetter);
       renderOptionsEditor({ ...q, ...draft });
     });
 

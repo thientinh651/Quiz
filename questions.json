@@ -18,12 +18,6 @@
       "section": "",
       "number": 1,
       "question": "Cho sơ đồ mạch điện hệ thống cửa sổ trời như hình bên dưới: Hãy cho biết Khi bật công tắc chế độ Up, ta đo tại chân số 10 màu đỏ của hộp tín hiệu như thế nào là đúng?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Tín hiệu dương (12V)",
         "Tín hiệu mass (0V)",
@@ -31,7 +25,6 @@
         "Không có tín hiệu gì cả"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/dtx_q001_1.png"
       ]
@@ -43,12 +36,6 @@
       "section": "",
       "number": 2,
       "question": "Trong hệ thống ghế chỉnh điện, Chức năng của bộ phận Limit switch là gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Thông báo cho hộp IMS Control biết đã đến hết hành trình và không cấp nguồn cho mô tơ chỉnh ghế điện nữa.",
         "Gửi tín hiệu nâng ghế lên cho hộp IMS Control giúp hộp điều khiển ghế nâng lên.",
@@ -56,7 +43,6 @@
         "Bật chế độ sưởi ghế."
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": [
         "images/dtx_q002_1.png"
       ]
@@ -68,12 +54,6 @@
       "section": "",
       "number": 3,
       "question": "Trong hệ thống khóa cửa bằng điện, công tắc điều khiển khóa cửa thường được đặt ở:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Cửa hành khách hoặc trên công tắc nâng hạ kính phụ",
         "Cửa tài xế hoặc trên công tắc nâng hạ kính tổng",
@@ -81,7 +61,6 @@
         "Nằm trên cụm công tắc đèn"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -91,12 +70,6 @@
       "section": "",
       "number": 4,
       "question": "Trong hệ thống khóa cửa bằng điện, thường bao gồm các bộ phận sau:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Công tắc khóa cửa, công tắc nâng hạ kính, công tắc mở khóa bằng chìa, công tắc báo chìa, công tắc báo cửa, công tắc báo vị trí khóa cửa, mô tơ khóa cửa.",
         "Công tắc khóa cửa, công tắc mở khóa bằng chìa, công tắc báo chìa, công tắc báo cửa, công tắc báo vị trí khóa cửa, hộp điều khiển khóa cửa, mô tơ khóa cửa.",
@@ -104,7 +77,6 @@
         "Công tắc khóa cửa, công tắc mở khóa bằng chìa, công tắc báo cửa, công tắc báo vị trí khóa cửa, hộp điều khiển khóa cửa, mô tơ khóa cửa."
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -114,12 +86,6 @@
       "section": "",
       "number": 5,
       "question": "Trong hệ thống khóa cửa bằng điện, khi chìa khóa vẫn còn gắn ở công tắc máy trong xe và các cửa xe đều đóng thì tài xế không khóa được cửa bằng điều khiển từ xa, tính năng này có được là nhờ:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Chức năng chống trộm",
         "Chức năng chống quên chìa",
@@ -127,7 +93,6 @@
         "Chức năng mở khóa 2 bước ở cửa tài xế"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -137,12 +102,6 @@
       "section": "",
       "number": 6,
       "question": "Trong hệ thống khóa cửa bằng điện, khi dùng chìa khóa mở cửa tài xoay sang phía “unlock” 2 lần liên tiếp trong khoản 3 giây tất cả các cửa của xe đều được mở, tình năng này có được là nhờ:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Chức năng chống trộm",
         "Chức năng chống quên chìa",
@@ -150,7 +109,6 @@
         "Chức năng mở khóa 2 bước ở cửa tài xế"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": []
     },
     {
@@ -160,12 +118,6 @@
       "section": "",
       "number": 7,
       "question": "Cho sơ đồ mạch điện hệ thống Lock cửa bên dưới: Công tắc được tô đỏ là công tắc gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Công tắc báo chìa",
         "Công tắc báo cửa",
@@ -173,7 +125,6 @@
         "Công tắc báo vị trí khóa cửa"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": [
         "images/dtx_q007_1.png"
       ]
@@ -185,12 +136,6 @@
       "section": "",
       "number": 8,
       "question": "Kim đồng hồ nhiệt độ nước kiểu cuộn dây chữ thập theo hình vẽ sau:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Điện trở cảm biến tăng thì kim đồng hồ đo nhiệt độ chỉ ở mức nhiệt độ cao",
         "Điện trở cảm biến tăng thì kim đồng hồ đo nhiệt độ chỉ ở mức nhiệt độ thấp",
@@ -198,7 +143,6 @@
         "Kim đồng hồ đo nhiệt độ không thay đổi theo điện trở cảm biến"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/dtx_q008_1.png"
       ]
@@ -210,12 +154,6 @@
       "section": "",
       "number": 9,
       "question": "Cảm biến nhiệt độ nước là gì:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Là thiết bị thay đổi điện trở theo nhiệt độ",
         "Vị trí thường đặt ở đường nước ra của động cơ",
@@ -223,7 +161,6 @@
         "Cả ba phương án trên"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": []
     },
     {
@@ -233,12 +170,6 @@
       "section": "",
       "number": 10,
       "question": "Đồng hồ tốc độ động cơ thường hoạt động theo cảm biến nào:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Cảm biến vị trí trục khuỷu (CKP)",
         "Cảm biến tốc độ bánh xe",
@@ -246,7 +177,6 @@
         "Cảm biến nhiệt độ nước làm mát"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -256,12 +186,6 @@
       "section": "",
       "number": 11,
       "question": "Trên hình táp lô có đèn báo như hình bên dưới, bạn hãy cho biết đèn này là đèn gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Đèn báo lỗi túi khí",
         "Đèn báo lỗi động cơ",
@@ -269,7 +193,6 @@
         "Đèn báo lỗi hệ thống mực nước rửa kính"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": [
         "images/dtx_q011_1.png"
       ]
@@ -281,12 +204,6 @@
       "section": "",
       "number": 12,
       "question": "Loa thường được lắp tại cánh cửa của xe được gọi là loa gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Loa Trép",
         "Loa Sub",
@@ -294,7 +211,6 @@
         "Loa Siêu trầm."
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": []
     },
     {
@@ -304,12 +220,6 @@
       "section": "",
       "number": 13,
       "question": "Bộ phận nào trên xe ô tô thu tín hiệu từ trạm phát sóng giúp tài xế có thể sử dụng được đài RADIO?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Loa trên xe ô tô",
         "Ăng-ten ngoài xe",
@@ -317,7 +227,6 @@
         "Đầu DVD"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -327,12 +236,6 @@
       "section": "",
       "number": 14,
       "question": "Đèn báo này thường sáng lên khi nào?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Khi khởi động xe.",
         "Khi có lỗi trong hệ thống động cơ hoặc hệ thống phụ trợ.",
@@ -340,7 +243,6 @@
         "Khi thiếu áp suất dầu phanh."
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/dtx_q014_1.png"
       ]
@@ -352,12 +254,6 @@
       "section": "",
       "number": 15,
       "question": "Cho mạch điện hệ thống Táp lô như hình bên dưới: Bạn hãy cho biết có bao nhiêu dương và mass cấp cho đồng hồ táp lô",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "1 Chân dương và 2 chân mass",
         "2 chân dương và 1 chân mass",
@@ -365,7 +261,6 @@
         "4 chân dương và 3 chân mass"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/dtx_q015_1.png"
       ]
@@ -377,12 +272,6 @@
       "section": "",
       "number": 15,
       "question": "Cho mạch điện hệ thống âm thanh như hình vẽ: Chân SPD gửi về hộp Radio Receiver Assembly có chức năng gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Giúp cho Radio nhớ được kênh AM và FM.",
         "Nguồn để cho đầu Radio hoạt động.",
@@ -390,7 +279,6 @@
         "Chân điều chỉnh âm thanh."
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/dtx_q016_1.png"
       ]
@@ -402,12 +290,6 @@
       "section": "",
       "number": 17,
       "question": "Trên xe Hyundai i10 2015, hiện tượng gì xảy ra khi đứt dây màu đỏ như hình bên dưới:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hệ thống gạt mưa không hoạt động bất kỳ chế độ nào",
         "Hệ thống gạt mưa chỉ chạy được chế độ Low",
@@ -415,7 +297,6 @@
         "Hệ thống gạt mưa mất chế độ INT"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/dtx_q017_1.png"
       ]
@@ -427,12 +308,6 @@
       "section": "",
       "number": 18,
       "question": "Nếu hệ thống đèn xi nhan không nhấp nháy mà chỉ sáng liên tục, nguyên nhân có thể là gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hư cục chớp",
         "Đứt cầu chì.",
@@ -440,7 +315,6 @@
         "Tất cả các nguyên nhân trên."
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -450,12 +324,6 @@
       "section": "",
       "number": 19,
       "question": "Điện trở (resistor) có chức năng gì trong mạch điện?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Tăng cường dòng điện.",
         "Cản trở dòng điện chạy qua.",
@@ -463,7 +331,6 @@
         "Tăng điện áp"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -473,12 +340,6 @@
       "section": "",
       "number": 20,
       "question": "Một điện trở có giá trị 10Ω và dòng điện 2A chạy qua. Điện áp trên điện trở là bao nhiêu?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "5V",
         "10V",
@@ -486,7 +347,6 @@
         "50V"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": []
     },
     {
@@ -496,12 +356,6 @@
       "section": "",
       "number": 21,
       "question": "Một bóng đèn có công suất 60W và được cấp điện áp 120V. Dòng điện chạy qua bóng đèn là bao nhiêu?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "0.5A",
         "1A",
@@ -509,7 +363,6 @@
         "3A"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -519,12 +372,6 @@
       "section": "",
       "number": 22,
       "question": "Một mạch điện có hai điện trở mắc song song: R1 = 4Ω và R2 = 4Ω. Tổng điện trở của mạch là bao nhiêu?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "2Ω",
         "4Ω",
@@ -532,7 +379,6 @@
         "8Ω"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -542,12 +388,6 @@
       "section": "",
       "number": 23,
       "question": "Cho mạch điện như hình vẽ, chọn gương phụ khiển DOWN đo tại chân công tắc chân nào sẽ có dương và mass cấp xuống:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Dây 10 có dương, dây 12 có mass",
         "Dây 10 có mass, dây 12 có dương",
@@ -555,7 +395,6 @@
         "Dây 12 có mass, dây 11 có dương"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": [
         "images/dtx_q023_1.png"
       ]
@@ -567,12 +406,6 @@
       "section": "",
       "number": 24,
       "question": "Nếu muốn đo điện áp tại một điểm trong mạch điện so với điểm mát (ground), ta phải:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Nối đầu dương vôn kế với điểm cần đo và đầu âm với điểm mát.",
         "Nối đầu âm vôn kế với điểm cần đo và đầu dương với điểm mát.",
@@ -580,7 +413,6 @@
         "Không cần nối với điểm mát."
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -590,12 +422,6 @@
       "section": "",
       "number": 25,
       "question": "Trong hệ thống gạt mưa như hình bên dưới, các chế độ khác bình thường chỉ mất chế độ INT nguyên nhân xảy ra là do đâu?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hư mô tơ",
         "Mất nguồn dương mô tơ",
@@ -603,7 +429,6 @@
         "Hư công tắc"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": [
         "images/dtx_q025_1.png"
       ]
@@ -615,12 +440,6 @@
       "section": "",
       "number": 26,
       "question": "Khi kích hoạt hệ thống khóa cửa từ xa, tín hiệu được truyền từ remote đến xe qua công nghệ nào?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hồng ngoại (IR).",
         "Bluetooth.",
@@ -628,7 +447,6 @@
         "Wi-fi"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": []
     },
     {
@@ -638,12 +456,6 @@
       "section": "",
       "number": 27,
       "question": "Trong mạch đèn TOYOTA INNOVA 2012, Hiện tượng gì sẽ xảy khi đứt dây được chéo trong mạch bên dưới:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Đèn bên tài không sáng COS và pha",
         "Bật đèn cos hoặc pha thì đèn bên tài sáng mờ, đèn bên phụ sáng tỏ.",
@@ -651,7 +463,6 @@
         "Đèn bên tài luôn sáng"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/dtx_q027_1.png"
       ]
@@ -663,12 +474,6 @@
       "section": "",
       "number": 28,
       "question": "Trong hệ thống đèn xi – nhan, Đứt cầu chì 15A Turn – HAZ, hiện tượng xảy ra là gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Mất chế độ xi – nhan, HAZ bình thường",
         "Mất chế độ HAZ, xi – nhan bình thường",
@@ -676,7 +481,6 @@
         "Đèn xi – nhan chớp nhanh hơn bình thường."
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/dtx_q028_1.png"
       ]
@@ -688,12 +492,6 @@
       "section": "",
       "number": 29,
       "question": "Khi kích hoạt tính năng khóa kép, thì làm cách nào chúng ta mở được cửa xe?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Dùng công tắc khóa cửa nhấn UNLOCK hoặc remote",
         "Dùng cần gạt cơ khí bên trong xe",
@@ -701,7 +499,6 @@
         "Dùng công tắc nâng hạ kính"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": []
     },
     {
@@ -711,12 +508,6 @@
       "section": "",
       "number": 30,
       "question": "Trong hệ thống khóa cửa, công tắc này bị chạm mass hiện tượng gì sẽ KHÔNG xảy ra?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Còi báo trong xe kêu liên tục khi cắm chìa vào trong ổ điện",
         "Đèn báo cửa luôn sáng",
@@ -724,7 +515,6 @@
         "Không khóa được xe"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": [
         "images/dtx_q030_1.png"
       ]
@@ -736,13 +526,6 @@
       "section": "",
       "number": 31,
       "question": "Cho mạch điện hệ thống gạt mưa như hình bên dưới. Hiện tượng: Tất cả các chế độ của hệ thống gạt mưa đều hoạt động bình thường, tuy nhiên khi tắt công tắc thì cần gạt mưa không về đúng vị trí. Trong các nguyên nhân dưới đây, nguyên nhân nào KHÔNG thể dẫn tới hiện tượng trên?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E"
-      ],
       "options": [
         "Đứt dây dương mô tơ gạt mưa.",
         "Hư tiếp điểm B – S trong công tắc đĩa cam.",
@@ -751,7 +534,6 @@
         "Đứt dây Mass của mô tơ gạt mưa."
       ],
       "correct": 4,
-      "correctLetter": "E",
       "images": [
         "images/dtx_q031_1.png"
       ]
@@ -763,12 +545,6 @@
       "section": "",
       "number": 32,
       "question": "Đâu là nguyên nhân dẫn đến hệ thống nâng hạ kính loại sử dụng cơ cấu chữ X phát ra tiếng va đập kim loại?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Khớp xoay bị rỉ sét",
         "Vành răng của cơ cấu bị mòn",
@@ -776,7 +552,6 @@
         "Tất cả đều đúng"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -786,12 +561,6 @@
       "section": "",
       "number": 33,
       "question": "KTV A nói: “Công tắc chỉnh gương thường được tích hợp chung với cụm công tắc nâng hạ kính”. KTV B nói: “Công tắc chỉnh gương phải được lắp đặt trên vô lăng” Theo bạn ai là người nói đúng?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "KTV A nói đúng.",
         "KTV B nói đúng.",
@@ -799,7 +568,6 @@
         "Cả hai KTV đều sai."
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -809,12 +577,6 @@
       "section": "",
       "number": 34,
       "question": "KTV A nói: “Bên trong cụm gương của hệ thống chỉnh gương thì mô tơ Horizontal là mô tơ điều chỉnh gương nghiêng theo hướng lên xuống”. KTV B nói: “ Mô tơ Vertical mới là mô tơ dùng để điều chỉnh gương nghiêng theo hướng lên xuống còn mô tơ Horizontal là mô tơ chỉnh gương nghiêng theo hướng trái phải”. Theo bạn, ai là người nói đúng?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "KTV A nói đúng.",
         "KTV B nói đúng.",
@@ -822,7 +584,6 @@
         "Cả hai KTV đều sau."
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -832,12 +593,6 @@
       "section": "",
       "number": 35,
       "question": "Trong các tên gọi dưới đây, đâu là tên gọi bằng tiếng Anh của cụm gương bên tài?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Outlet Rear View Mirror Assembly RH.",
         "Outlet Rear View Mirror Assembly LH.",
@@ -845,7 +600,6 @@
         "Outlet Mirror Switch Assembly RH."
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -855,12 +609,6 @@
       "section": "",
       "number": 36,
       "question": "Hệ thống đèn Matrix LED là gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hệ thống đèn chiếu sáng có thể điều chỉnh ánh sáng theo từng khu vực nhỏ của đèn",
         "Đèn có khả năng chiếu xa hơn thông thường",
@@ -868,7 +616,6 @@
         "Hệ thống đèn không sử dụng mô-đun điều khiển trung tâm"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -878,12 +625,6 @@
       "section": "",
       "number": 37,
       "question": "Hệ thống tự động điều chỉnh đèn pha (Automatic Headlight Leveling system) hoạt động dựa trên tín hiệu cảm biến nào?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Tốc độ của xe",
         "Cảm biến góc lái",
@@ -891,7 +632,6 @@
         "Cảm biến ánh sáng"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": []
     },
     {
@@ -901,12 +641,6 @@
       "section": "",
       "number": 38,
       "question": "Khi sử dụng cảm biến Hall Effect trong hệ thống nâng hạ kính, cảm biến này có chức năng gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Đo nhiệt độ động cơ",
         "Đo dòng điện tiêu thụ",
@@ -914,7 +648,6 @@
         "Đo áp suất trong hệ thống"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": []
     },
     {
@@ -924,12 +657,6 @@
       "section": "",
       "number": 39,
       "question": "Cho mạch điện hệ thống chỉnh gương như hình bên dưới. Khi chúng ta chỉnh gương bên phải nghiêng lên trên, thì tại chân số 4 (Dây màu trắng của công tắc chỉnh gương) Công tắc xuất tín hiệu gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Tín hiệu dương 12V.",
         "Tín hiệu mass.",
@@ -937,7 +664,6 @@
         "Không có tín hiệu gì."
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": [
         "images/dtx_q039_1.png"
       ]
@@ -949,12 +675,6 @@
       "section": "",
       "number": 40,
       "question": "Công tắc này là công tắc gì",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Công tắc sấy gương",
         "Công tắc sấy kính",
@@ -962,7 +682,6 @@
         "Công tắc sấy đèn"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": [
         "images/dtx_q040_1.png"
       ]
@@ -974,12 +693,6 @@
       "section": "NÂNG HẠ KÍNH",
       "number": 1,
       "question": "Cho mạch điện hệ thống nâng hạ kính xe Mitsubishi Xpander 2017 như hình bên dưới, công tắc bị đánh dấu X bị hư hiện tượng gì sẽ xảy ra?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hệ thống nâng hạ kính không hoạt động ở tất cả các cửa",
         "Công tắc tổng điều khiển được tất cả các cửa nhưng các công tắc phụ thì không được",
@@ -987,7 +700,6 @@
         "Công tắc tổng không điều khiển được tất cả các cửa nhưng các công tắc phụ thì được"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/tbkho_q001_1.png"
       ]
@@ -999,12 +711,6 @@
       "section": "NÂNG HẠ KÍNH",
       "number": 2,
       "question": "Cho mạch điện hệ thống nâng hạ kính xe KIA PICANTO 2012 như hình bên dưới, công tắc bị đánh dấu X bị hư hiện tượng gì sẽ xảy ra?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hệ thống không hoạt động được bất kỳ cửa nào",
         "Công tắc tổng chỉ điều khiển được cửa trước tài và sau tài (Các công tắc phụ vẫn sử dụng bình thường)",
@@ -1012,7 +718,6 @@
         "Cửa trước phụ và sau phụ không điều khiển được"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q002_1.png"
       ]
@@ -1024,12 +729,6 @@
       "section": "NÂNG HẠ KÍNH",
       "number": 3,
       "question": "Cho mạch điện hệ thống nâng hạ kính xe KIA PICANTO 2012 như hình bên dưới, dây màu cam bị đánh dấu X bị hư hiện tượng gì sẽ xảy ra?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Cửa tài không hoạt động",
         "Cửa tài chỉ hoạt động chế độ DOWN và AUTO",
@@ -1037,7 +736,6 @@
         "Cửa tài mất chế độ DOWN và AUTO DOWN"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q003_1.png"
       ]
@@ -1049,12 +747,6 @@
       "section": "NÂNG HẠ KÍNH",
       "number": 4,
       "question": "Cho sơ đồ mạch điện hệ thống nâng hạ kính xe Suzuki như hình bên dưới, dùng công tắc trước bên trái khiển cửa trước bên phải chế độ UP. Hãy cho biết tại chân số 2 (màu xanh dương/đỏ) và 4 (màu xanh dương /trắng) sẽ có tín hiệu gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Chân 2 tín hiệu Dương, Chân 4 tín hiệu Mass",
         "Chân 2 tín hiệu Mass. Chân 4 tín hiệu Dương",
@@ -1062,7 +754,6 @@
         "Cả hai chân không có gì *KHÓ (5 câu)"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q004_1.png"
       ]
@@ -1074,12 +765,6 @@
       "section": "NÂNG HẠ KÍNH",
       "number": 5,
       "question": "Cho mạch điện hệ thống nâng hạ kính điều khiển qua mạng LIN xe Chevrolet Cruze 2010 như hình bên dưới, Dây bị đánh dấu X bị hư hiện tượng gì sẽ xảy ra?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Tất cả các cửa không hoạt động",
         "Dùng công tắc tổng không điều khiển được cửa sau phụ. (các công tắc phụ sử dụng bình thường)",
@@ -1087,7 +772,6 @@
         "Công tắc tổng không điều khiển được hai cửa sau."
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/tbkho_q005_1.png"
       ]
@@ -1099,12 +783,6 @@
       "section": "NÂNG HẠ KÍNH",
       "number": 6,
       "question": "Khi đo điện áp tại hai chân mô tơ nâng hạ kính, thấy có điện áp 12V nhưng mô – tơ không quay, nguyên nhân nào có thể xảy ra?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Công tắc bị hỏng",
         "Dây nguồn công tắc bị đứt",
@@ -1112,7 +790,6 @@
         "Rơ le cấp nguồn bị lỗi"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": []
     },
     {
@@ -1122,12 +799,6 @@
       "section": "NÂNG HẠ KÍNH",
       "number": 7,
       "question": "Khi dùng công tắc tổng khiển cửa trước phụ chế độ UP, thấy kính lên chậm hơn sao với các cửa khác nguyên nhân nào KHÔNG gây ra hiện tượng?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Cháy cuộn Rotor mô tơ cửa tài",
         "Kẹt compa cửa tài, hoặc cao su cửa bị chai",
@@ -1135,7 +806,6 @@
         "Giắc điện mô tơ bị oxi hóa"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -1145,12 +815,6 @@
       "section": "NÂNG HẠ KÍNH",
       "number": 8,
       "question": "Cho mạch điện hệ thống nâng hạ kính điều khiển qua mạng LIN xe Lexus GX470 2007 như hình bên dưới, Dây bị đánh dấu X bị hư hiện tượng gì sẽ xảy ra?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Tất cả các cửa không hoạt động",
         "Dùng công tắc tổng không điều khiển được cửa sau tài. (các công tắc phụ sử dụng bình thường)",
@@ -1158,7 +822,6 @@
         "Công tắc tổng không điều khiển được hai cửa sau."
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q008_1.png"
       ]
@@ -1170,12 +833,6 @@
       "section": "NÂNG HẠ KÍNH",
       "number": 9,
       "question": "Dùng công tắc nâng hạ kính khiển chế độ AUTO UP, kính chạy lên điểm đóng hoàn toàn rồi chạy xuống một đoạn. Phương pháp xử lý pan bệnh này:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Thay mô tơ, sau đó Reset lại",
         "Thay công tắc tổng, sau đó Reset lại",
@@ -1183,7 +840,6 @@
         "Vô hiệu hóa chế độ Auto, sau đó Reset lại"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": []
     },
     {
@@ -1193,12 +849,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 1,
       "question": "Cho xe Mitsubishi Xpander đời 2019 có mạch điện hệ thống Chỉnh gương như hình. Bạn hãy cho biết khi chỉnh gương bên phụ nghiêng lên, Chân nào tại công tắc sẽ xuất hiện điện dương và điện âm?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Chân 4 dương, Chân 8 mass",
         "Chân 9 dương, Chân 4 mass",
@@ -1206,7 +856,6 @@
         "Chân 4 dương, Chân 9 mass"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q010_1.png"
       ]
@@ -1218,12 +867,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 2,
       "question": "Làm thế nào để lưu vị trí gương vào bộ nhớ sau khi đã điều chỉnh?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Nhấn giữ nút MEM hoặc SET + số (1 hoặc 2) cho đến khi có âm thanh xác nhận",
         "Đạp phanh 3 lần liên tiếp",
@@ -1231,7 +874,6 @@
         "Nhấn và giữ cần số ở vị trí R trong 10 giây"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -1241,12 +883,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 3,
       "question": "Trên các dòng xe hiện đại được trang bị hệ thống gập gương điện, hiện tượng khi ON chìa lên là bên trong cụm gương tài nghe tiếng cụp cụp bên trong, nguyên nhân nào sau đây gây ra hiện tượng trên?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hư mạch ngắt dòng bên trong mô tơ gập gương",
         "Hư mô tơ gập gương",
@@ -1254,7 +890,6 @@
         "Mòn bánh răng dẫn động của cơ cấu gập gương"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": []
     },
     {
@@ -1264,12 +899,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 4,
       "question": "Cho xe Nissan Frontier đời 2009 có mạch điện hệ thống Chỉnh gương như hình. Bạn hãy cho biết khi chỉnh gương bên tài sang trái, Chân nào tại công tắc sẽ xuất hiện điện dương và điện âm?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Chân số 6 dương, chân số 5 mass",
         "Chân số 5 dương, chân số 6 mass",
@@ -1277,7 +906,6 @@
         "Chân số 7 dương, chân số 4 mass"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q013_1.png"
       ]
@@ -1289,12 +917,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 5,
       "question": "Cho xe Ford Focus đời 2009 có mạch điện hệ thống Chỉnh gương như hình. Bạn hãy cho biết khi chỉnh gương bên tài sang phải, Chân nào tại công tắc sẽ xuất hiện điện dương và điện âm?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Chân số 7 dương, chân số 6 mass",
         "Chân số 6 dương, chân số 8 mass",
@@ -1302,7 +924,6 @@
         "Chân số 8 dương, chân số 6 mass"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q014_1.png"
       ]
@@ -1314,12 +935,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 6,
       "question": "Cho xe Mitsubishi Xpander đời 2019 có mạch điện hệ thống Chỉnh gương như hình. Hiện tượng chỉnh hướng trái phải gương tài không hoạt động, các chế độ khác bình thường. Nguyên nhân nào KHÔNG gây ra hiện tượng trên?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hư mô tơ Horizontal của gương tài",
         "Hư công tắc chỉnh gương",
@@ -1327,7 +942,6 @@
         "Đứt dây số 8 của công tắc màu trắng"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/tbkho_q015_1.png"
       ]
@@ -1339,12 +953,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 7,
       "question": "Cảm biến nào thường được sử dụng để xác định vị trí gương khi nhớ mặt gương?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Cảm biến nhiệt độ",
         "Cảm biến quang học",
@@ -1352,7 +960,6 @@
         "Cảm biến radar"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": []
     },
     {
@@ -1362,12 +969,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 8,
       "question": "Cho sơ đồ mạch điện như hình bên dưới chân tín hiệu cảm biến vị trí mặt gương của mô tơ trái phải là chân nào?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "RVC",
         "VSSR",
@@ -1375,7 +976,6 @@
         "RE1 *KHÓ"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/tbkho_q017_1.png"
       ]
@@ -1387,12 +987,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 9,
       "question": "Cho sơ đồ mạch điện như hình bên dưới, chân VSSR của cụm gương gửi tín hiệu dạng gì cho hộp Remote Control Mirror ECU?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Tín hiệu sóng RF",
         "Tín hiệu xung Sin",
@@ -1400,7 +994,6 @@
         "Tín hiệu xung Vuông"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/tbkho_q018_1.png"
       ]
@@ -1412,12 +1005,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 10,
       "question": "Cho sơ đồ mạch điện như hình bên dưới, Đo chân RVC của cụm gương được điện áp báo nhiêu Volt so với mass?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "5V",
         "12V",
@@ -1425,7 +1012,6 @@
         "0V"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": [
         "images/tbkho_q019_1.png"
       ]
@@ -1437,12 +1023,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 11,
       "question": "Hệ thống sấy gương thường sử dụng chung một cầu chì với hệ thống nào?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hệ thống chiếu sáng nội thất",
         "Hệ thống sưởi kính sau",
@@ -1450,7 +1030,6 @@
         "Hệ thống sưởi ấm"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -1460,12 +1039,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 12,
       "question": "Khi hệ thống sấy gương hoạt động, nếu đo điện áp đầu vào là 12V nhưng gương không nóng, dòng điện đo được là 0A. Nguyên nhân có thể là gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Điện trở sấy bị đứt mạch",
         "Có điện áp ảo do đo nhầm chế độ trên đồng hồ vạn năng",
@@ -1473,7 +1046,6 @@
         "Chạm mát gây ngắn mạch"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -1483,12 +1055,6 @@
       "section": "CHỈNH GƯƠNG",
       "number": 13,
       "question": "Hệ thống nhớ mặt gương thường liên kết với hệ thống nào trên xe để tự động điều chỉnh khi tài xế vào xe?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hệ thống nhận diện dấu vân tay",
         "Hệ thống nhớ ghế lái",
@@ -1496,7 +1062,6 @@
         "Hệ thống cảnh báo điểm mù (BSM)"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -1506,12 +1071,6 @@
       "section": "LOCK CỬA",
       "number": 1,
       "question": "Hệ thống khóa cửa điều khiển từ xa trên ô tô thường sử dụng loại sóng vô tuyến nào để truyền tín hiệu?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "AM (Amplitude Modulation)",
         "FM (Frequency Modulation)",
@@ -1519,7 +1078,6 @@
         "LF (Low Frequency)"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": []
     },
     {
@@ -1529,12 +1087,6 @@
       "section": "LOCK CỬA",
       "number": 2,
       "question": "Cho mạch điện khóa cửa trên xe Madza BT50 2015, Khi nhấn phím LOCK hai lần trên điều khiển từ xa trong 5s, hộp điều khiển khóa cửa sẽ điều khiển các chân được khoanh tròn như thế nào?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Chân số 8 dương; Chân số 1,10,11 mass",
         "Chân số 1,11 dương; Chân số 8,10 mass",
@@ -1542,7 +1094,6 @@
         "Chân số 10 dương; Chân số 1,8,11 mass"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q024_1.png"
       ]
@@ -1554,12 +1105,6 @@
       "section": "LOCK CỬA",
       "number": 3,
       "question": "Chức năng này trên máy chẩn đoán dùng để làm gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Kích hoạt mô tơ khóa cửa",
         "Kiểm tra hoạt động của công tắc khóa cửa",
@@ -1567,7 +1112,6 @@
         "Kiểm tra hoạt động của các Ăng – ten nhận sóng"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/tbkho_q025_1.png"
       ]
@@ -1579,12 +1123,6 @@
       "section": "LOCK CỬA",
       "number": 4,
       "question": "Trong hệ thống mạng giao tiếp, Hộp khóa cửa giao tiếp với các hộp Táp lô thông qua mạng CAN để nhận dữ liệu gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Dữ liệu tua máy",
         "Dữ liệu nhiệt độ nước làm mát",
@@ -1592,7 +1130,6 @@
         "Dữ liệu tốc độ xe"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": [
         "images/tbkho_q026_1.png"
       ]
@@ -1604,12 +1141,6 @@
       "section": "LOCK CỬA",
       "number": 5,
       "question": "Trong cụm khóa cửa cửa tài, Công tắc được chỉ vào là công tắc gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Công tắc khóa cửa",
         "Công tắc khóa cửa dùng chìa",
@@ -1617,7 +1148,6 @@
         "Công tắc báo vị trí cụm khóa cửa"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": [
         "images/tbkho_q027_1.png"
       ]
@@ -1629,12 +1159,6 @@
       "section": "LOCK CỬA",
       "number": 6,
       "question": "Tên tiếng anh của công tắc này?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Unlock Warning Switch",
         "Door Lock Switch",
@@ -1642,7 +1166,6 @@
         "Power Window Main Switch"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": [
         "images/tbkho_q028_1.png"
       ]
@@ -1654,12 +1177,6 @@
       "section": "LOCK CỬA",
       "number": 7,
       "question": "Bộ phận nào thường kết hợp với hệ thống chống trộm để ngăn xe bị khởi động trái phép?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hệ thống chống bó cứng phanh (ABS)",
         "Hệ thống mã hóa động cơ (Immobilizer)",
@@ -1667,7 +1184,6 @@
         "Hệ thống trợ lực lái điện (EPS)"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -1677,12 +1193,6 @@
       "section": "LOCK CỬA",
       "number": 8,
       "question": "Khi nào công tắc báo vị trí cụm khóa cửa gửi tín hiệu “đã khóa” về BCM?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Khi mô tơ chấp hành khóa cửa hoàn tất hành trình khóa",
         "Khi công tắc báo vị trí cửa phát hiện cửa đã mở",
@@ -1690,7 +1200,6 @@
         "Khi xe đạt tốc độ trên 60 km/h *KHÓ (5 câu)"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -1700,12 +1209,6 @@
       "section": "LOCK CỬA",
       "number": 9,
       "question": "Tính năng khóa kép (Double Lock) trên ô tô có tác dụng gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Ngăn chặn mở cửa từ bên trong khi xe đã bị khóa",
         "Tự động khóa tất cả cửa khi xe đạt tốc độ 20 km/h",
@@ -1713,7 +1216,6 @@
         "Khóa cửa khi chìa khóa nằm ngoài xe"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -1723,12 +1225,6 @@
       "section": "LOCK CỬA",
       "number": 10,
       "question": "Cho sơ đồ mạch điện hệ thống khóa cửa xe có điều khiển từ xa Toyota Camry 2006, dây màu tím của hệ thống bị đứt, hiện tượng gì sẽ xảy ra?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hệ thống không khóa cửa được khi dùng điều khiển từ xa và công tắc khóa cửa bên tài và bên phụ",
         "Hệ thống không mở khóa cửa được khi dùng điều khiển từ xa và công tắc khóa cửa bên tài và bên phụ",
@@ -1736,7 +1232,6 @@
         "Hệ thống không khóa cửa được khi dùng công tắc khóa cửa bên phụ, dùng điều khiển từ xa và công tắc khóa cửa bên tài thì bình thường."
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/tbkho_q032_1.png"
       ]
@@ -1748,12 +1243,6 @@
       "section": "LOCK CỬA",
       "number": 11,
       "question": "Nhiệm vụ của công tắc này là gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Bật/tắt đèn trần trong xe theo chế độ cửa (DOOR) hoặc tắt hẳn (OFF)",
         "Điều chỉnh độ sáng của màn hình trung tâm",
@@ -1761,7 +1250,6 @@
         "Điều chỉnh gương chiếu hậu"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": [
         "images/tbkho_q033_1.png"
       ]
@@ -1773,12 +1261,6 @@
       "section": "LOCK CỬA",
       "number": 12,
       "question": "Công tắc báo chìa hoạt động như thế nào?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "ON khi cửa khóa và OFF khi cửa chưa khóa",
         "ON khi cửa mở và OFF khi cửa đóng",
@@ -1786,7 +1268,6 @@
         "ON khi có chìa trong xe và OFF khi không có chìa trong xe"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/tbkho_q034_1.png"
       ]
@@ -1798,12 +1279,6 @@
       "section": "LOCK CỬA",
       "number": 13,
       "question": "Sau khi rửa xe, hệ thống báo đèn cốp xe mở dù thực tế cốp đã đóng. Nguyên nhân KHÔNG gây ra hiện tượng trên?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Nước làm chập công tắc hoặc dây tín hiệu bị ẩm",
         "Hệ thống điều khiển bị lỗi do thay đổi nhiệt độ đột ngột",
@@ -1811,7 +1286,6 @@
         "Hở mạch công tắc báo đóng/mở cốp"
       ],
       "correct": 3,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q035_1.png"
       ]
@@ -1823,12 +1297,6 @@
       "section": "THÔNG TIN",
       "number": 1,
       "question": "Mô tả nào sau đây là SAI về đèn báo sau?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Đèn này sáng khi On chìa khóa và đề nổ phải tắt",
         "Đèn này là đèn báo lỗi động cơ",
@@ -1836,7 +1304,6 @@
         "Đèn này sáng khi đề nổ và On chìa khóa không sáng"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": [
         "images/tbkho_q036_1.png"
       ]
@@ -1848,12 +1315,6 @@
       "section": "THÔNG TIN",
       "number": 2,
       "question": "Bộ phận nào trong xe cảm nhận sự thay đổi áp suất nhớt",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Đồng hồ đo áp suất",
         "Lọc nhớt",
@@ -1861,7 +1322,6 @@
         "Công tắc áp suất nhớt"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": []
     },
     {
@@ -1871,12 +1331,6 @@
       "section": "THÔNG TIN",
       "number": 3,
       "question": "Cảm biến nào thường được sử dụng để đo tốc độ quay của bánh xe và gửi dữ liệu đến hệ thống điều khiển trung tâm?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Cảm biến nhiệt độ NTC/PTC",
         "Cảm biến Hall",
@@ -1884,7 +1338,6 @@
         "Cảm biến oxy *TB(14caau)"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -1894,12 +1347,6 @@
       "section": "THÔNG TIN",
       "number": 4,
       "question": "Xe Kia Picanto 2012, Dây tín hiệu cảm biến phao nhiên liệu bị chạm mass. Hiện tượng xảy ra là gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Kim chỉ E",
         "Kim chỉ F",
@@ -1907,7 +1354,6 @@
         "Kim chạy lên rồi chạy xuống"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q039_1.png"
       ]
@@ -1919,12 +1365,6 @@
       "section": "THÔNG TIN",
       "number": 5,
       "question": "Cảm biến tốc độ xe thường được gắn ở đâu?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Trục cam động cơ",
         "Trục khuỷu động cơ",
@@ -1932,7 +1372,6 @@
         "Trục đầu ra hộp số"
       ],
       "correct": 3,
-      "correctLetter": "D",
       "images": []
     },
     {
@@ -1942,12 +1381,6 @@
       "section": "THÔNG TIN",
       "number": 6,
       "question": "Đồng hồ táp lô bị lỗi kim tốc độ xe không lên nhưng ODO Trip vẫn chạy lên. Pan nằm ở đâu?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hư cảm biến tốc độ xe",
         "Hư đồng hồ táp lô",
@@ -1955,7 +1388,6 @@
         "Đồng hồ táp lô bị mất nguồn"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -1965,12 +1397,6 @@
       "section": "THÔNG TIN",
       "number": 7,
       "question": "Xe đang di chuyển đèn báo này sáng lên, nguyên nhân do đâu:",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Đèn báo lỗi chính",
         "Đèn báo nhắc nhở bảo dưỡng",
@@ -1978,7 +1404,6 @@
         "Đèn báo lỗi động cơ"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q042_1.png"
       ]
@@ -1990,12 +1415,6 @@
       "section": "THÔNG TIN",
       "number": 8,
       "question": "Thành phần nào của phao nhiên liệu giúp tạo ra tín hiệu điện để hiển thị mức nhiên liệu?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Cần phao",
         "Biến trở điện",
@@ -2003,7 +1422,6 @@
         "Van điều áp"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": []
     },
     {
@@ -2013,12 +1431,6 @@
       "section": "THÔNG TIN",
       "number": 9,
       "question": "Cách tốt nhất để kiểm tra xem phao nhiên liệu có hoạt động đúng hay không là gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Sử dụng đồng hồ đo điện trở để kiểm tra biến trở của phao",
         "Kiểm tra bằng mắt thường mà không cần tháo rời",
@@ -2026,7 +1438,6 @@
         "Đo áp suất nhiên liệu trong đường ống"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": []
     },
     {
@@ -2036,12 +1447,6 @@
       "section": "THÔNG TIN",
       "number": 10,
       "question": "Cho mạch điện táp lô Kia Sorento 2015, hiện tượng hai dây của phao xăng bị chạm vào nhau là gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Kim chỉ chữ E",
         "Kim chỉ chữ F",
@@ -2049,7 +1454,6 @@
         "Kim nhảy loạn"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q045_1.png"
       ]
@@ -2061,12 +1465,6 @@
       "section": "THÔNG TIN",
       "number": 11,
       "question": "Cho mạch điện táp lô Kia Sorento 2015, hiện tượng dây tín hiệu của phao xăng bị đứt là gì?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Kim chỉ chữ E",
         "Kim chỉ chữ F",
@@ -2074,7 +1472,6 @@
         "Kim nhảy loạn"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": [
         "images/tbkho_q046_1.png"
       ]
@@ -2086,12 +1483,6 @@
       "section": "THÔNG TIN",
       "number": 12,
       "question": "Khi đề nổ máy đèn như hình bên dưới luôn sáng, nguyên nhân gì gây ra hiện tượng trên?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Hết dầu phanh",
         "Hết nước rửa kính",
@@ -2099,7 +1490,6 @@
         "Áp suất phanh không đủ"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/tbkho_q047_1.png"
       ]
@@ -2111,12 +1501,6 @@
       "section": "THÔNG TIN",
       "number": 13,
       "question": "Khi đề nổ máy đèn như hình bên dưới luôn sáng, nguyên nhân gì gây ra hiện tượng trên?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Đèn báo lỗi hệ thống ESP",
         "Đèn báo lỗi hệ thống TCS",
@@ -2124,7 +1508,6 @@
         "Đèn báo lỗi hệ thống SRS"
       ],
       "correct": 0,
-      "correctLetter": "A",
       "images": [
         "images/tbkho_q048_1.png"
       ]
@@ -2136,12 +1519,6 @@
       "section": "THÔNG TIN",
       "number": 14,
       "question": "Khi đề nổ máy đèn như hình bên dưới luôn sáng, nguyên nhân gì gây ra hiện tượng trên?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Đèn báo lỗi động cơ",
         "Đèn báo lỗi hộp số",
@@ -2149,7 +1526,6 @@
         "Đèn báo lỗi hệ thống túi khí"
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q049_1.png"
       ]
@@ -2161,12 +1537,6 @@
       "section": "THÔNG TIN",
       "number": 15,
       "question": "Chi tiết được khoanh đỏ trong sơ đồ mạch điện bên dưới, có chức năng gì trong hệ thống thông tin?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Điều khiển đèn báo nhiệt độ bên tài",
         "Điều khiển đèn báo ABS",
@@ -2174,7 +1544,6 @@
         "Điều khiển đèn báo tài xế đã ngồi vào ghế"
       ],
       "correct": 2,
-      "correctLetter": "C",
       "images": [
         "images/tbkho_q050_1.png"
       ]
@@ -2186,12 +1555,6 @@
       "section": "THÔNG TIN",
       "number": 16,
       "question": "Cho mạch điện hệ thống thông tin như hình bên dưới, khi ON chìa điện áp đo tại chân 23 giắc F1 của đồng hồ táp lô có giá trị bao nhiêu?",
-      "optionLetters": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
       "options": [
         "Không ảnh hưởng đến hệ thống, bật – tắt gạt mưa hệ thống hoạt động bình thường.",
         "Hệ thống gạt mưa không hoạt động.",
@@ -2199,7 +1562,6 @@
         "Hệ thống hoạt động bình thường, nhưng tắt về OFF gạt mưa không dừng ngay mà chạy tiếp."
       ],
       "correct": 1,
-      "correctLetter": "B",
       "images": [
         "images/tbkho_q051_1.png"
       ]

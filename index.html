@@ -315,16 +315,15 @@
 
     function cloneQ(q) {
       const copy = JSON.parse(JSON.stringify(q));
-      const letters = copy.optionLetters || copy.options.map((_, i) => "ABCDE"[i]);
       const pairs = copy.options.map((text, i) => ({
         text,
-        letter: letters[i],
         isCorrect: i === copy.correct
       }));
       shuffle(pairs);
       copy.options = pairs.map(p => p.text);
-      copy.optionLetters = pairs.map(p => p.letter);
       copy.correct = pairs.findIndex(p => p.isCorrect);
+      delete copy.optionLetters;
+      delete copy.correctLetter;
       return copy;
     }
 
@@ -425,11 +424,10 @@
         const feedback = document.createElement("div");
         feedback.className = "feedback";
 
-        const letters = q.optionLetters || q.options.map((_, idx) => "ABCDE"[idx]);
         q.options.forEach((opt, oi) => {
           const btn = document.createElement("button");
           btn.type = "button";
-          btn.textContent = `${letters[oi]}. ${opt}`;
+          btn.textContent = opt;
           btn.addEventListener("click", () => {
             [...answers.querySelectorAll("button")].forEach(b => b.disabled = true);
             if (oi === q.correct) {
@@ -443,7 +441,7 @@
               if (right) right.classList.add("correct");
               feedback.style.color = "#b42318";
               const msg = badMsgs[Math.floor(Math.random() * badMsgs.length)];
-              feedback.textContent = `${msg} ${letters[q.correct]}. ${q.options[q.correct]}`;
+              feedback.textContent = `${msg} ${q.options[q.correct]}`;
               answersState[i] = false;
             }
             updateStats();
@@ -521,11 +519,10 @@
         answers.className = "answers";
         const feedback = document.createElement("div");
         feedback.className = "feedback";
-        const letters = q.optionLetters || q.options.map((_, idx) => "ABCDE"[idx]);
         q.options.forEach((opt, oi) => {
           const btn = document.createElement("button");
           btn.type = "button";
-          btn.textContent = `${letters[oi]}. ${opt}`;
+          btn.textContent = opt;
           btn.addEventListener("click", () => {
             [...answers.querySelectorAll("button")].forEach(b => b.disabled = true);
             if (oi === q.correct) {
@@ -537,7 +534,7 @@
               btn.classList.add("wrong");
               answers.querySelectorAll("button")[q.correct]?.classList.add("correct");
               feedback.style.color = "#b42318";
-              feedback.textContent = `❌ Vẫn sai. Đáp án: ${letters[q.correct]}. ${q.options[q.correct]}`;
+              feedback.textContent = `❌ Vẫn sai. Đáp án: ${q.options[q.correct]}`;
               tempState[q._origPos] = false;
             }
             answersState = tempState;
