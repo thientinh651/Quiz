@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <title>Ôn điện cơ bản</title>
+  <link rel="icon" type="image/png" href="../hehe.jpg" />
+  <style>
+    :root {
+      --bg: #eef2f6;
+      --card: #ffffff;
+      --ink: #1a2332;
+      --muted: #5b6b7c;
+      --line: #d7dee7;
+      --accent: #0b6e4f;
+      --accent-2: #1b4f72;
+      --ok: #1e7a46;
+      --ok-bg: #dff5e8;
+      --bad: #b42318;
+      --bad-bg: #fde8e6;
+      --shadow: 0 8px 24px rgba(26, 35, 50, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #d9ebe3 0%, transparent 55%),
+        radial-gradient(900px 400px at 100% 0%, #d6e4f2 0%, transparent 50%),
+        var(--bg);
+      color: var(--ink);
+      padding: 18px 14px 90px;
+    }
+
+    .wrap { max-width: 820px; margin: 0 auto; }
+
+    header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    header h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.35rem, 3.5vw, 1.9rem);
+      letter-spacing: -0.02em;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin: 16px 0 10px;
+    }
+    .toolbar select,
+    .toolbar button {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .toolbar button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      font-weight: 600;
+    }
+    .toolbar button.ghost {
+      background: var(--accent-2);
+      border-color: var(--accent-2);
+      color: #fff;
+    }
+
+    #stats {
+      text-align: center;
+      font-weight: 600;
+      margin: 12px 0 18px;
+      line-height: 1.6;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    #progressBar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: rgba(0,0,0,0.06);
+      z-index: 50;
+    }
+    #progress {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), #2bb673);
+      transition: width .25s ease;
+    }
+
+    .question {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 16px 16px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+    .question .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .chip {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #e8eef5;
+      color: var(--accent-2);
+    }
+    .chip.set-dtx { background: #e7f5ef; color: var(--accent); }
+    .chip.set-tbkho { background: #fff4d6; color: #8a6d00; }
+    .question h3 {
+      margin: 0 0 12px;
+      font-size: 1.02rem;
+      line-height: 1.45;
+      white-space: pre-wrap;
+    }
+
+    .figures {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 0 0 14px;
+    }
+    .figures figure {
+      margin: 0;
+      background: #f7f9fb;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .figures img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      object-fit: contain;
+      background: #fff;
+      cursor: zoom-in;
+    }
+
+    .answers button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      margin: 8px 0;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+      cursor: pointer;
+      font-size: 15px;
+      line-height: 1.4;
+      transition: background .15s, border-color .15s, transform .15s;
+    }
+    .answers button:hover:not(:disabled) {
+      background: #f3f6f9;
+    }
+    .answers button.correct {
+      background: var(--ok-bg);
+      border-color: var(--ok);
+      color: #0f3d24;
+      font-weight: 700;
+    }
+    .answers button.wrong {
+      background: var(--bad-bg);
+      border-color: var(--bad);
+      color: #6b1510;
+    }
+    .feedback {
+      margin-top: 8px;
+      font-weight: 700;
+      min-height: 1.2em;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 16, 24, 0.88);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 100;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: min(96vw, 1400px);
+      max-height: 92vh;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 8px;
+    }
+
+    #toTop, #backPos {
+      position: fixed;
+      right: 16px;
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      display: none;
+      z-index: 40;
+    }
+    #toTop { bottom: 24px; background: var(--accent); }
+    #backPos { bottom: 78px; background: var(--accent-2); }
+
+    .loading, .error {
+      text-align: center;
+      padding: 40px 12px;
+      color: var(--muted);
+    }
+    .error { color: var(--bad); }
+
+    @media (max-width: 600px) {
+      body { padding: 12px 10px 100px; }
+      .question { padding: 14px 12px; border-radius: 14px; }
+      .answers button { font-size: 14px; padding: 11px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="progressBar"><div id="progress"></div></div>
+  <div class="wrap">
+    <header>
+      <h1>Ôn điện cơ bản</h1>
+      <p>Công thức · ký hiệu · diode · transistor · MOSFET · rơ le · phân áp…</p>
+      <p style="margin-top:8px"><a href="../index.html" style="color:#1b4f72;font-size:0.9rem">← Về quiz ĐTX</a></p>
+    </header>
+
+    <div class="toolbar">
+      <select id="setFilter" aria-label="Chọn bộ đề" style="display:none">
+        <option value="all">Tất cả</option>
+        <option value="coban" selected>Điện cơ bản</option>
+      </select>
+      <select id="sectionFilter" aria-label="Chọn phần">
+        <option value="all">Tất cả phần</option>
+      </select>
+      <button class="primary" id="btnStart">Bắt đầu / Xáo trộn</button>
+      <button class="ghost" id="btnRetry">Làm lại câu sai</button>
+      <button id="btnReset">Reset điểm</button>
+    </div>
+
+    <div id="stats">Đang tải câu hỏi…</div>
+    <div id="quiz"><div class="loading">Loading questions.json…</div></div>
+  </div>
+
+  <button id="toTop" title="Lên đầu trang">↑</button>
+  <button id="backPos" title="Về vị trí trước">↓</button>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <img alt="Phóng to sơ đồ" />
+  </div>
+
+  <script>
+    let bank = [];
+    let active = [];
+    let answersState = [];
+    let lastScroll = 0;
+
+    const quizEl = document.getElementById("quiz");
+    const statsEl = document.getElementById("stats");
+    const setFilter = document.getElementById("setFilter");
+    const sectionFilter = document.getElementById("sectionFilter");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+
+    const okMsgs = [
+      "✅ Chính xác!",
+      "🎯 Đúng rồi!",
+      "🔥 Tốt lắm!",
+      "👏 Chuẩn luôn!",
+      "💡 Nắm bài rồi!"
+    ];
+    const badMsgs = [
+      "❌ Chưa đúng. Đáp án đúng:",
+      "🚫 Sai rồi. Đáp án đúng:",
+      "😓 Không chính xác. Đáp án đúng:",
+      "💥 Chưa ổn. Đáp án đúng:"
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function cloneQ(q) {
+      const copy = JSON.parse(JSON.stringify(q));
+      const pairs = copy.options.map((text, i) => ({
+        text,
+        isCorrect: i === copy.correct
+      }));
+      shuffle(pairs);
+      copy.options = pairs.map(p => p.text);
+      copy.correct = pairs.findIndex(p => p.isCorrect);
+      delete copy.optionLetters;
+      delete copy.correctLetter;
+      return copy;
+    }
+
+    function filteredBank() {
+      const set = setFilter.value;
+      const sec = sectionFilter.value;
+      return bank.filter(q => {
+        if (set !== "all" && q.set !== set) return false;
+        if (sec !== "all" && (q.section || "") !== sec) return false;
+        return true;
+      });
+    }
+
+    function rebuildSections() {
+      const set = setFilter.value;
+      const secs = [...new Set(
+        bank
+          .filter(q => set === "all" || q.set === set)
+          .map(q => q.section || "")
+          .filter(Boolean)
+      )];
+      const cur = sectionFilter.value;
+      sectionFilter.innerHTML = `<option value="all">Tất cả phần</option>` +
+        secs.map(s => `<option value="${s.replace(/"/g, "&quot;")}">${s}</option>`).join("");
+      if ([...sectionFilter.options].some(o => o.value === cur)) sectionFilter.value = cur;
+    }
+
+    function updateStats() {
+      const correct = answersState.filter(x => x === true).length;
+      const wrong = answersState.filter(x => x === false).length;
+      const notDone = answersState.filter(x => x === null).length;
+      const total = answersState.length || 1;
+      const done = correct + wrong;
+      const scoreAll = ((correct / total) * 10).toFixed(2);
+      const scoreDone = done ? ((correct / done) * 10).toFixed(2) : "0.00";
+      statsEl.innerHTML =
+        `<span style="color:#1b4f72">Đã làm: ${done}/${total}</span> · ` +
+        `<span style="color:#1e7a46">Đúng: ${correct}</span> · ` +
+        `<span style="color:#b42318">Sai: ${wrong}</span> · ` +
+        `<span>Chưa: ${notDone}</span><br>` +
+        `<span style="color:#6b3fa0">Điểm: ${scoreAll}/10</span> · ` +
+        `<span style="color:#9a5b00">Theo câu đã làm: ${scoreDone}/10</span>`;
+      document.getElementById("progress").style.width = `${(done / total) * 100}%`;
+      if (total && notDone === 0) {
+        statsEl.innerHTML += `<br><span style="color:#1e7a46">Hoàn thành bộ câu hỏi này.</span>`;
+      }
+    }
+
+    function renderQuiz(list) {
+      active = list;
+      answersState = Array(list.length).fill(null);
+      quizEl.innerHTML = "";
+      if (!list.length) {
+        quizEl.innerHTML = `<div class="error">Không có câu hỏi nào trong bộ lọc này.</div>`;
+        updateStats();
+        return;
+      }
+
+      list.forEach((q, i) => {
+        const div = document.createElement("div");
+        div.className = "question";
+        div.dataset.index = i;
+
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        meta.innerHTML =
+          `<span class="chip set-${q.set}">${q.setName || q.set}</span>` +
+          (q.section ? `<span class="chip">${q.section}</span>` : "") +
+          `<span class="chip">Câu ${q.number}</span>`;
+        div.appendChild(meta);
+
+        const title = document.createElement("h3");
+        title.textContent = `${i + 1}. ${q.question}`;
+        div.appendChild(title);
+
+        if (q.images && q.images.length) {
+          const figs = document.createElement("div");
+          figs.className = "figures";
+          q.images.forEach((src, idx) => {
+            const fig = document.createElement("figure");
+            const img = document.createElement("img");
+            img.src = src + (src.includes("?") ? "&" : "?") + "v=4";
+            img.alt = `Hình minh họa câu ${q.number}` + (q.images.length > 1 ? ` (${idx + 1})` : "");
+            img.loading = "lazy";
+            img.decoding = "async";
+            img.addEventListener("error", () => {
+              img.replaceWith(Object.assign(document.createElement("div"), {
+                className: "error",
+                textContent: "Không tải được hình: " + src
+              }));
+            });
+            img.addEventListener("click", () => {
+              lightboxImg.src = src;
+              lightbox.classList.add("open");
+            });
+            fig.appendChild(img);
+            figs.appendChild(fig);
+          });
+          div.appendChild(figs);
+        }
+
+        const answers = document.createElement("div");
+        answers.className = "answers";
+        const feedback = document.createElement("div");
+        feedback.className = "feedback";
+
+        q.options.forEach((opt, oi) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.textContent = opt;
+          btn.addEventListener("click", () => {
+            [...answers.querySelectorAll("button")].forEach(b => b.disabled = true);
+            if (oi === q.correct) {
+              btn.classList.add("correct");
+              feedback.style.color = "#1e7a46";
+              feedback.textContent = okMsgs[Math.floor(Math.random() * okMsgs.length)];
+              answersState[i] = true;
+            } else {
+              btn.classList.add("wrong");
+              const right = answers.querySelectorAll("button")[q.correct];
+              if (right) right.classList.add("correct");
+              feedback.style.color = "#b42318";
+              const msg = badMsgs[Math.floor(Math.random() * badMsgs.length)];
+              feedback.textContent = `${msg} ${q.options[q.correct]}`;
+              answersState[i] = false;
+            }
+            updateStats();
+          });
+          answers.appendChild(btn);
+        });
+        answers.appendChild(feedback);
+        div.appendChild(answers);
+        quizEl.appendChild(div);
+      });
+      updateStats();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function startFresh() {
+      const src = filteredBank();
+      const list = shuffle(src.map(cloneQ));
+      renderQuiz(list);
+    }
+
+    document.getElementById("btnStart").addEventListener("click", startFresh);
+    document.getElementById("btnReset").addEventListener("click", () => {
+      answersState = answersState.map(() => null);
+      // re-render same questions order but reshuffle options
+      renderQuiz(active.map(q => {
+        // recover original from bank by id then clone fresh
+        const orig = bank.find(b => b.id === q.id) || q;
+        return cloneQ(orig);
+      }));
+    });
+    document.getElementById("btnRetry").addEventListener("click", () => {
+      const wrongIdx = answersState.map((v, i) => v === false ? i : null).filter(v => v !== null);
+      if (!wrongIdx.length) {
+        alert("Không có câu sai để làm lại.");
+        return;
+      }
+      const retry = wrongIdx.map(i => {
+        const orig = bank.find(b => b.id === active[i].id) || active[i];
+        const c = cloneQ(orig);
+        c._origPos = i;
+        return c;
+      });
+      quizEl.innerHTML = "";
+      statsEl.innerHTML = `Đang làm lại ${retry.length} câu sai`;
+      const tempState = [...answersState];
+      retry.forEach((q, i) => {
+        const div = document.createElement("div");
+        div.className = "question";
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        meta.innerHTML = `<span class="chip">Làm lại</span><span class="chip">Câu gốc #${q._origPos + 1}</span>`;
+        div.appendChild(meta);
+        const title = document.createElement("h3");
+        title.textContent = q.question;
+        div.appendChild(title);
+        if (q.images && q.images.length) {
+          const figs = document.createElement("div");
+          figs.className = "figures";
+          q.images.forEach(src => {
+            const fig = document.createElement("figure");
+            const img = document.createElement("img");
+            img.src = src + (src.includes("?") ? "&" : "?") + "v=4";
+            img.alt = "Hình minh họa";
+            img.loading = "lazy";
+            img.addEventListener("error", () => {
+              img.replaceWith(Object.assign(document.createElement("div"), {
+                className: "error",
+                textContent: "Không tải được hình: " + src
+              }));
+            });
+            img.addEventListener("click", () => {
+              lightboxImg.src = src;
+              lightbox.classList.add("open");
+            });
+            fig.appendChild(img);
+            figs.appendChild(fig);
+          });
+          div.appendChild(figs);
+        }
+        const answers = document.createElement("div");
+        answers.className = "answers";
+        const feedback = document.createElement("div");
+        feedback.className = "feedback";
+        q.options.forEach((opt, oi) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.textContent = opt;
+          btn.addEventListener("click", () => {
+            [...answers.querySelectorAll("button")].forEach(b => b.disabled = true);
+            if (oi === q.correct) {
+              btn.classList.add("correct");
+              feedback.style.color = "#1e7a46";
+              feedback.textContent = "✅ Lần này đúng rồi!";
+              tempState[q._origPos] = true;
+            } else {
+              btn.classList.add("wrong");
+              answers.querySelectorAll("button")[q.correct]?.classList.add("correct");
+              feedback.style.color = "#b42318";
+              feedback.textContent = `❌ Vẫn sai. Đáp án: ${q.options[q.correct]}`;
+              tempState[q._origPos] = false;
+            }
+            answersState = tempState;
+            updateStats();
+          });
+          answers.appendChild(btn);
+        });
+        answers.appendChild(feedback);
+        div.appendChild(answers);
+        quizEl.appendChild(div);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    setFilter.addEventListener("change", () => {
+      rebuildSections();
+      startFresh();
+    });
+    sectionFilter.addEventListener("change", startFresh);
+
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightboxImg.src = "";
+    });
+
+    const toTop = document.getElementById("toTop");
+    const backPos = document.getElementById("backPos");
+    window.addEventListener("scroll", () => {
+      toTop.style.display = window.scrollY > 240 ? "block" : "none";
+      backPos.style.display = lastScroll > 0 && window.scrollY < 40 ? "block" : "none";
+    });
+    toTop.addEventListener("click", () => {
+      lastScroll = window.scrollY;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    backPos.addEventListener("click", () => {
+      window.scrollTo({ top: lastScroll, behavior: "smooth" });
+      lastScroll = 0;
+      backPos.style.display = "none";
+    });
+
+    fetch("questions.json?v=1")
+      .then(r => {
+        if (!r.ok) throw new Error("Không tải được questions.json");
+        return r.json();
+      })
+      .then(data => {
+        bank = data.questions || [];
+        document.querySelector("header h1").textContent = data.title || "Quiz VATC";
+        rebuildSections();
+        startFresh();
+      })
+      .catch(err => {
+        statsEl.textContent = "";
+        quizEl.innerHTML = `<div class="error">${err.message}</div>`;
+      });
+  </script>
+</body>
+</html>

@@ -130,8 +130,7 @@
       background: #e8eef5;
       color: var(--accent-2);
     }
-    .chip.set-dtx { background: #e7f5ef; color: var(--accent); }
-    .chip.set-tbkho { background: #fff4d6; color: #8a6d00; }
+    .chip[class*="set-"] { background: #e7f5ef; color: var(--accent); }
     .question h3 {
       margin: 0 0 12px;
       font-size: 1.02rem;
@@ -195,6 +194,7 @@
       margin-top: 8px;
       font-weight: 700;
       min-height: 1.2em;
+      white-space: pre-line;
     }
 
     .lightbox {
@@ -252,15 +252,13 @@
   <div class="wrap">
     <header>
       <h1>Quiz VATC — Điện thân xe</h1>
-      <p>Đề ĐTX + mức TB/khó · hình kỹ thuật giữ nguyên chi tiết</p>
+      <p>Điều khiển động cơ: khởi động · nạp · xăng · Diesel · từ viết tắt</p>
       <p style="margin-top:8px"><a href="admin.html" style="color:#1b4f72;font-size:0.9rem">Admin sửa câu hỏi</a></p>
     </header>
 
     <div class="toolbar">
       <select id="setFilter" aria-label="Chọn bộ đề">
         <option value="all">Tất cả bộ đề</option>
-        <option value="dtx">Đề thi thử ĐTX</option>
-        <option value="tbkho">Đề TB + khó</option>
       </select>
       <select id="sectionFilter" aria-label="Chọn phần">
         <option value="all">Tất cả phần</option>
@@ -435,7 +433,7 @@
             if (oi === q.correct) {
               btn.classList.add("correct");
               feedback.style.color = "#1e7a46";
-              feedback.textContent = okMsgs[Math.floor(Math.random() * okMsgs.length)];
+              feedback.textContent = okMsgs[Math.floor(Math.random() * okMsgs.length)]; if (q.note) feedback.textContent += "\n📖 " + q.note;
               answersState[i] = true;
             } else {
               btn.classList.add("wrong");
@@ -443,7 +441,7 @@
               if (right) right.classList.add("correct");
               feedback.style.color = "#b42318";
               const msg = badMsgs[Math.floor(Math.random() * badMsgs.length)];
-              feedback.textContent = `${msg} ${q.options[q.correct]}`;
+              feedback.textContent = `${msg} ${q.options[q.correct]}`; if (q.note) feedback.textContent += "\n📖 " + q.note;
               answersState[i] = false;
             }
             updateStats();
@@ -530,13 +528,13 @@
             if (oi === q.correct) {
               btn.classList.add("correct");
               feedback.style.color = "#1e7a46";
-              feedback.textContent = "✅ Lần này đúng rồi!";
+              feedback.textContent = "✅ Lần này đúng rồi!"; if (q.note) feedback.textContent += "\n📖 " + q.note;
               tempState[q._origPos] = true;
             } else {
               btn.classList.add("wrong");
               answers.querySelectorAll("button")[q.correct]?.classList.add("correct");
               feedback.style.color = "#b42318";
-              feedback.textContent = `❌ Vẫn sai. Đáp án: ${q.options[q.correct]}`;
+              feedback.textContent = `❌ Vẫn sai. Đáp án: ${q.options[q.correct]}`; if (q.note) feedback.textContent += "\n📖 " + q.note;
               tempState[q._origPos] = false;
             }
             answersState = tempState;
@@ -578,13 +576,14 @@
       backPos.style.display = "none";
     });
 
-    fetch("questions.json?v=20260811")
+    fetch("questions.json?v=20261006")
       .then(r => {
         if (!r.ok) throw new Error("Không tải được questions.json");
         return r.json();
       })
       .then(data => {
         bank = data.questions || [];
+        (data.sets || []).forEach(x => setFilter.add(new Option(x.name, x.id)));
         document.querySelector("header h1").textContent = data.title || "Quiz VATC";
         rebuildSections();
         startFresh();

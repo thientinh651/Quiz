@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160">
+  <rect width="300" height="160" fill="#f7fafc"/>
+  <line x1="40" y1="80" x2="120" y2="80" stroke="#1a2332" stroke-width="3"/>
+  <line x1="120" y1="40" x2="120" y2="120" stroke="#1a2332" stroke-width="4"/>
+  <line x1="145" y1="40" x2="145" y2="120" stroke="#1a2332" stroke-width="4"/>
+  <line x1="145" y1="80" x2="230" y2="80" stroke="#1a2332" stroke-width="3"/>
+  <text x="80" y="65" text-anchor="middle" font-size="14" font-weight="700" fill="#0b6e4f" font-family="Segoe UI,Arial">+</text>
+  <text x="190" y="65" text-anchor="middle" font-size="14" font-weight="700" fill="#b42318" font-family="Segoe UI,Arial">-</text>
+</svg>

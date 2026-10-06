@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280">
+  <rect width="280" height="280" fill="#f7fafc"/>
+  <circle cx="150" cy="140" r="70" fill="none" stroke="#1a2332" stroke-width="2.5"/>
+  <line x1="120" y1="100" x2="120" y2="180" stroke="#1a2332" stroke-width="4"/>
+  <line x1="40" y1="140" x2="120" y2="140" stroke="#1a2332" stroke-width="2.5"/>
+  <text x="50" y="130" font-size="13" font-weight="700" fill="#0b6e4f" font-family="Segoe UI,Arial">B</text>
+  <line x1="120" y1="115" x2="190" y2="60" stroke="#1a2332" stroke-width="2.5"/>
+  <line x1="190" y1="60" x2="190" y2="40" stroke="#1a2332" stroke-width="2.5"/>
+  <text x="200" y="50" font-size="13" font-weight="700" fill="#1b4f72" font-family="Segoe UI,Arial">C</text>
+  <line x1="120" y1="165" x2="185" y2="220" stroke="#1a2332" stroke-width="2.5"/>
+  <polygon points="135,175 148,185 140,165" fill="#1a2332"/>
+  <line x1="185" y1="220" x2="185" y2="250" stroke="#1a2332" stroke-width="2.5"/>
+  <text x="195" y="245" font-size="13" font-weight="700" fill="#b42318" font-family="Segoe UI,Arial">E</text>
+</svg>

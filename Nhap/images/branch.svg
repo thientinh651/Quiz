@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 240">
+  <rect width="380" height="240" fill="#f7fafc"/>
+  <line x1="40" y1="120" x2="120" y2="120" stroke="#1a2332" stroke-width="3"/>
+  <circle cx="120" cy="120" r="5" fill="#0b6e4f"/>
+  <line x1="120" y1="120" x2="180" y2="60" stroke="#1a2332" stroke-width="2.5"/>
+  <path d="M180 60 L195 45 L210 75 L225 45 L240 75 L255 60" fill="none" stroke="#1b4f72" stroke-width="2.5"/>
+  <line x1="255" y1="60" x2="320" y2="60" stroke="#1a2332" stroke-width="2.5"/>
+  <text x="340" y="65" font-size="12" fill="#5b6b7c" font-family="Segoe UI,Arial">I1</text>
+  <line x1="120" y1="120" x2="180" y2="180" stroke="#1a2332" stroke-width="2.5"/>
+  <path d="M180 180 L195 165 L210 195 L225 165 L240 195 L255 180" fill="none" stroke="#0b6e4f" stroke-width="2.5"/>
+  <line x1="255" y1="180" x2="320" y2="180" stroke="#1a2332" stroke-width="2.5"/>
+  <text x="340" y="185" font-size="12" fill="#5b6b7c" font-family="Segoe UI,Arial">I2</text>
+  <text x="60" y="110" font-size="12" fill="#5b6b7c" font-family="Segoe UI,Arial">It</text>
+</svg>

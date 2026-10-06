@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 180">
+  <rect width="360" height="180" fill="#f7fafc"/>
+  <line x1="40" y1="90" x2="130" y2="90" stroke="#1a2332" stroke-width="3"/>
+  <polygon points="130,50 130,130 210,90" fill="#1b4f72" stroke="#1b4f72" stroke-width="2"/>
+  <path d="M195 50 L210 50 L210 130 L225 130" fill="none" stroke="#1a2332" stroke-width="4" stroke-linecap="square"/>
+  <line x1="210" y1="90" x2="300" y2="90" stroke="#1a2332" stroke-width="3"/>
+  <text x="85" y="70" text-anchor="middle" font-size="13" font-weight="700" fill="#1b4f72" font-family="Segoe UI,Arial">A</text>
+  <text x="265" y="70" text-anchor="middle" font-size="13" font-weight="700" fill="#b42318" font-family="Segoe UI,Arial">K</text>
+</svg>

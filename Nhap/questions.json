@@ -1,0 +1,861 @@
+{
+  "title": "Ôn điện cơ bản — Công thức & linh kiện",
+  "sets": [
+    {
+      "id": "coban",
+      "name": "Điện cơ bản"
+    }
+  ],
+  "questions": [
+    {
+      "id": "cb-q001",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Công thức & đơn vị",
+      "number": 1,
+      "question": "Định luật Ohm được viết đúng là:",
+      "options": [
+        "V = I × R",
+        "V = I / R",
+        "V = I + R",
+        "V = R / I"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/ohm.jpg"
+      ]
+    },
+    {
+      "id": "cb-q002",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Công thức & đơn vị",
+      "number": 2,
+      "question": "Đơn vị đo cường độ dòng điện (Ampere) viết tắt là:",
+      "options": [
+        "A",
+        "V",
+        "Ω",
+        "W"
+      ],
+      "correct": 0,
+      "images": []
+    },
+    {
+      "id": "cb-q003",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Công thức & đơn vị",
+      "number": 3,
+      "question": "Đơn vị đo điện áp (Voltage) là:",
+      "options": [
+        "Volt (V)",
+        "Ampere (A)",
+        "Ohm (Ω)",
+        "Watt (W)"
+      ],
+      "correct": 0,
+      "images": []
+    },
+    {
+      "id": "cb-q004",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Công thức & đơn vị",
+      "number": 4,
+      "question": "Đơn vị đo điện trở (Resistance) là:",
+      "options": [
+        "Ohm (Ω)",
+        "Farad (F)",
+        "Henry (H)",
+        "Joule (J)"
+      ],
+      "correct": 0,
+      "images": []
+    },
+    {
+      "id": "cb-q005",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Công thức & đơn vị",
+      "number": 5,
+      "question": "Công suất điện P (Watt) tính đúng theo công thức nào?",
+      "options": [
+        "P = V × I",
+        "P = V / I",
+        "P = V + I",
+        "P = V − I"
+      ],
+      "correct": 0,
+      "images": []
+    },
+    {
+      "id": "cb-q006",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Công thức & đơn vị",
+      "number": 6,
+      "question": "Khi biết I và R, công suất còn tính được bằng:",
+      "options": [
+        "P = I² × R",
+        "P = I / R",
+        "P = I + R",
+        "P = R / I²"
+      ],
+      "correct": 0,
+      "images": []
+    },
+    {
+      "id": "cb-q007",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Công thức & đơn vị",
+      "number": 7,
+      "question": "Một mạch có V = 12V, R = 4Ω. Cường độ dòng điện I là:",
+      "options": [
+        "3A",
+        "48A",
+        "0.33A",
+        "16A"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/ohm.jpg"
+      ]
+    },
+    {
+      "id": "cb-q008",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Công thức & đơn vị",
+      "number": 8,
+      "question": "Điện trở tiếng Anh là:",
+      "options": [
+        "Resistor",
+        "Relay",
+        "Capacitor",
+        "Transistor"
+      ],
+      "correct": 0,
+      "images": []
+    },
+    {
+      "id": "cb-q009",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tên tiếng Anh",
+      "number": 9,
+      "question": "Tụ điện tiếng Anh là:",
+      "options": [
+        "Capacitor",
+        "Conductor",
+        "Converter",
+        "Collector"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/cap_unit.jpeg"
+      ]
+    },
+    {
+      "id": "cb-q010",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tên tiếng Anh",
+      "number": 10,
+      "question": "Rơ le (rowle) tiếng Anh là:",
+      "options": [
+        "Relay",
+        "Resistor",
+        "Regulator",
+        "Rectifier"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/relay1.webp"
+      ]
+    },
+    {
+      "id": "cb-q011",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tên tiếng Anh",
+      "number": 11,
+      "question": "Điôt tiếng Anh là:",
+      "options": [
+        "Diode",
+        "Dipole",
+        "Divider",
+        "Driver"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/diode_types.png"
+      ]
+    },
+    {
+      "id": "cb-q012",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tên tiếng Anh",
+      "number": 12,
+      "question": "Nhiệt điện trở tiếng Anh thường gọi là:",
+      "options": [
+        "Thermistor",
+        "Thyristor",
+        "Thermostat",
+        "Transformer"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/thermistor.png"
+      ]
+    },
+    {
+      "id": "cb-q013",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tên tiếng Anh",
+      "number": 13,
+      "question": "Quang trở tiếng Anh là:",
+      "options": [
+        "Photoresistor (LDR)",
+        "Photodiode",
+        "Phototransistor",
+        "Photovoltaic"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/ldr.png"
+      ]
+    },
+    {
+      "id": "cb-q014",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Cầu phân áp",
+      "number": 14,
+      "question": "Công thức điện áp ra của cầu phân áp (R1 trên, R2 dưới) là:",
+      "options": [
+        "Vout = Vin × R2 / (R1 + R2)",
+        "Vout = Vin × R1 / (R1 + R2)",
+        "Vout = Vin × (R1 + R2)",
+        "Vout = Vin / (R1 × R2)"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/symbols2.jpg"
+      ]
+    },
+    {
+      "id": "cb-q015",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Cầu phân áp",
+      "number": 15,
+      "question": "Vin = 12V, R1 = 1kΩ, R2 = 1kΩ. Vout tại điểm giữa khoảng:",
+      "options": [
+        "6V",
+        "12V",
+        "0V",
+        "24V"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/symbols2.jpg"
+      ]
+    },
+    {
+      "id": "cb-q016",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Cầu phân áp",
+      "number": 16,
+      "question": "Cầu phân áp dùng để làm gì?",
+      "options": [
+        "Lấy một phần điện áp từ nguồn",
+        "Tăng dòng điện lên gấp đôi",
+        "Đổi AC thành DC",
+        "Khuyếch đại tín hiệu RF"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/symbols2.jpg"
+      ]
+    },
+    {
+      "id": "cb-q017",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Mạch nối tiếp / song song",
+      "number": 17,
+      "question": "Hai điện trở nối tiếp, điện trở tương đương là:",
+      "options": [
+        "Rt = R1 + R2",
+        "Rt = R1 × R2",
+        "Rt = R1 / R2",
+        "1/Rt = 1/R1 + 1/R2"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/series.svg"
+      ]
+    },
+    {
+      "id": "cb-q018",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Mạch nối tiếp / song song",
+      "number": 18,
+      "question": "Hai điện trở song song, công thức đúng là:",
+      "options": [
+        "1/Rt = 1/R1 + 1/R2",
+        "Rt = R1 + R2",
+        "Rt = R1 − R2",
+        "Rt = R1 × R2 × 2"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/series.svg"
+      ]
+    },
+    {
+      "id": "cb-q019",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Mạch nối tiếp / song song",
+      "number": 19,
+      "question": "Trong mạch nối tiếp, điều nào đúng?",
+      "options": [
+        "Dòng điện I giống nhau qua mọi phần tử",
+        "Điện áp giống nhau trên mọi phần tử",
+        "Điện trở tương đương luôn nhỏ hơn điện trở nhỏ nhất",
+        "Ngắt một phần tử thì nhánh khác vẫn chạy"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/series.svg"
+      ]
+    },
+    {
+      "id": "cb-q020",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Mạch nối tiếp / song song",
+      "number": 20,
+      "question": "Trong mạch song song, điều nào đúng?",
+      "options": [
+        "Điện áp trên các nhánh bằng nhau",
+        "Dòng điện trên các nhánh luôn bằng nhau",
+        "Rt luôn bằng R1 + R2",
+        "Chỉ có một đường đi cho dòng điện"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/symbols1.jpg"
+      ]
+    },
+    {
+      "id": "cb-q021",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Phân nhánh",
+      "number": 21,
+      "question": "Tại điểm phân nhánh, định luật Kirchhoff về dòng nói rằng:",
+      "options": [
+        "Tổng dòng vào = tổng dòng ra (It = I1 + I2 + …)",
+        "Tổng dòng vào luôn bằng 0",
+        "Dòng chỉ đi một nhánh duy nhất",
+        "Điện áp nhánh cộng lại bằng 0"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/symbols3.jpg"
+      ]
+    },
+    {
+      "id": "cb-q022",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Phân nhánh",
+      "number": 22,
+      "question": "Nhánh có điện trở nhỏ hơn sẽ:",
+      "options": [
+        "Mang dòng điện lớn hơn (cùng điện áp)",
+        "Mang dòng điện nhỏ hơn",
+        "Không mang dòng",
+        "Luôn cháy trước"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/symbols3.jpg"
+      ]
+    },
+    {
+      "id": "cb-q023",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Nhiệt điện trở",
+      "number": 23,
+      "question": "Thermistor loại NTC khi nhiệt độ tăng thì:",
+      "options": [
+        "Điện trở giảm",
+        "Điện trở tăng",
+        "Điện trở không đổi",
+        "Điện trở về 0 ngay lập tức"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/thermistor.png"
+      ]
+    },
+    {
+      "id": "cb-q024",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Nhiệt điện trở",
+      "number": 24,
+      "question": "Thermistor loại PTC khi nhiệt độ tăng thì:",
+      "options": [
+        "Điện trở tăng",
+        "Điện trở giảm",
+        "Chỉ đổi chiều dòng",
+        "Chỉ đổi điện dung"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/thermistor.png"
+      ]
+    },
+    {
+      "id": "cb-q025",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Quang trở",
+      "number": 25,
+      "question": "Quang trở (LDR) khi ánh sáng mạnh hơn thì:",
+      "options": [
+        "Điện trở giảm",
+        "Điện trở tăng",
+        "Điện áp nguồn tăng",
+        "Tụ điện phóng hết"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/ldr.png"
+      ]
+    },
+    {
+      "id": "cb-q026",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Rơ le",
+      "number": 26,
+      "question": "Nguyên lý hoạt động chính của rơ le là:",
+      "options": [
+        "Cuộn dây tạo từ trường hút tiếp điểm cơ khí",
+        "Bán dẫn khuếch đại dòng base",
+        "Tụ điện nạp phóng theo chu kỳ",
+        "Diode chỉnh lưu nửa kỳ"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/relay2.webp"
+      ]
+    },
+    {
+      "id": "cb-q027",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Rơ le",
+      "number": 27,
+      "question": "Trên rơ le ô tô, chân COM thường là chân số:",
+      "options": [
+        "30",
+        "85",
+        "86",
+        "87a"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/relay3.webp"
+      ]
+    },
+    {
+      "id": "cb-q028",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Rơ le",
+      "number": 28,
+      "question": "Chân NO (Normally Open) của rơ le thường là:",
+      "options": [
+        "87",
+        "30",
+        "85",
+        "86"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/relay2.webp"
+      ]
+    },
+    {
+      "id": "cb-q029",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Diode",
+      "number": 29,
+      "question": "Trên ký hiệu diode, phía tam giác (mũi tên) là:",
+      "options": [
+        "Anode (+)",
+        "Cathode (−)",
+        "Gate",
+        "Emitter"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/diode_symbol.webp"
+      ]
+    },
+    {
+      "id": "cb-q030",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Diode",
+      "number": 30,
+      "question": "Cathode của diode tương ứng với:",
+      "options": [
+        "Vạch kẻ (phía thanh ngang của ký hiệu)",
+        "Đỉnh mũi tên",
+        "Chân Gate",
+        "Chân Source"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/diode_symbol.webp"
+      ]
+    },
+    {
+      "id": "cb-q031",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Diode",
+      "number": 31,
+      "question": "Diode phân cực thuận (forward) nghĩa là:",
+      "options": [
+        "Anode dương hơn Cathode → dòng chạy qua",
+        "Cathode dương hơn Anode → dòng chạy qua",
+        "Hai cực cùng điện áp → dẫn mạnh",
+        "Luôn chặn dòng dù chiều nào"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/diode_types.png"
+      ]
+    },
+    {
+      "id": "cb-q032",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Diode",
+      "number": 32,
+      "question": "Zener diode thường dùng để:",
+      "options": [
+        "Ổn áp khi phân cực nghịch (tại Vz)",
+        "Khuếch đại tín hiệu âm thanh",
+        "Tạo từ trường như rơ le",
+        "Đo nhiệt độ nước làm mát"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/diode_symbol.webp"
+      ]
+    },
+    {
+      "id": "cb-q033",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Transistor",
+      "number": 33,
+      "question": "Transistor lưỡng cực có 3 cực là:",
+      "options": [
+        "Base – Collector – Emitter",
+        "Gate – Drain – Source",
+        "Anode – Cathode – Gate",
+        "COM – NO – NC"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/npn_pnp.png"
+      ]
+    },
+    {
+      "id": "cb-q034",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Transistor",
+      "number": 34,
+      "question": "Trên ký hiệu, mũi tên Emitter hướng ra ngoài Base là loại:",
+      "options": [
+        "NPN",
+        "PNP",
+        "N-MOSFET",
+        "P-MOSFET"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/npn_pnp.png"
+      ]
+    },
+    {
+      "id": "cb-q035",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Transistor",
+      "number": 35,
+      "question": "Trên ký hiệu, mũi tên Emitter hướng vào Base là loại:",
+      "options": [
+        "PNP",
+        "NPN",
+        "SCR",
+        "IGBT"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/npn_pnp.png"
+      ]
+    },
+    {
+      "id": "cb-q036",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Transistor",
+      "number": 36,
+      "question": "Transistor NPN phân cực thuận (hoạt động dẫn) khi:",
+      "options": [
+        "Base dương hơn Emitter (Vbe ≈ 0.6–0.7V)",
+        "Base âm hơn Emitter",
+        "Collector nối mass, Emitter nối +12V",
+        "Không cần điện áp Base"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/npn_pnp.png"
+      ]
+    },
+    {
+      "id": "cb-q037",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tụ điện",
+      "number": 37,
+      "question": "Tụ điện có khả năng chính là:",
+      "options": [
+        "Tích trữ điện tích / năng lượng điện trường",
+        "Tạo từ trường liên tục như cuộn dây",
+        "Đổi AC thành cơ năng",
+        "Đo tốc độ vòng quay"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/cap_unit.jpeg"
+      ]
+    },
+    {
+      "id": "cb-q038",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tụ điện",
+      "number": 38,
+      "question": "Đơn vị điện dung của tụ là:",
+      "options": [
+        "Farad (F)",
+        "Ohm (Ω)",
+        "Henry (H)",
+        "Watt (W)"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/cap_unit.jpeg"
+      ]
+    },
+    {
+      "id": "cb-q039",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tụ điện",
+      "number": 39,
+      "question": "Công thức liên hệ điện tích – điện dung – điện áp là:",
+      "options": [
+        "Q = C × V",
+        "Q = C / V",
+        "Q = C + V",
+        "C = Q × V"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/cap_unit.jpeg"
+      ]
+    },
+    {
+      "id": "cb-q040",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "MOSFET",
+      "number": 40,
+      "question": "Ba cực của MOSFET là:",
+      "options": [
+        "Gate – Drain – Source",
+        "Base – Collector – Emitter",
+        "Anode – Cathode – Gate",
+        "Input – Output – Ground"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/nmos_pmos.webp"
+      ]
+    },
+    {
+      "id": "cb-q041",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "MOSFET",
+      "number": 41,
+      "question": "N-channel MOSFET thường dùng phía nào trên xe / mạch công suất?",
+      "options": [
+        "Low-side (phía mass / âm)",
+        "Chỉ dùng trên ắc quy 24V",
+        "Thay thế cầu chì",
+        "Chỉ đo cảm biến"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/nmos.webp"
+      ]
+    },
+    {
+      "id": "cb-q042",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "MOSFET",
+      "number": 42,
+      "question": "P-channel MOSFET thường gắn high-side (phía dương) vì:",
+      "options": [
+        "Dẫn khi Gate âm hơn Source (Vgs âm)",
+        "Dẫn khi Gate dương mạnh hơn Source",
+        "Không cần điện áp Gate",
+        "Chỉ dẫn dòng xoay chiều"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/nmos_vs_pmos.webp"
+      ]
+    },
+    {
+      "id": "cb-q043",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "MOSFET",
+      "number": 43,
+      "question": "Cực điều khiển MOSFET (gần như không lấy dòng) là:",
+      "options": [
+        "Gate",
+        "Drain",
+        "Source",
+        "Emitter"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/nmos.webp"
+      ]
+    },
+    {
+      "id": "cb-q044",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tổng hợp",
+      "number": 44,
+      "question": "Watt (W) là đơn vị của:",
+      "options": [
+        "Công suất",
+        "Điện trở",
+        "Điện dung",
+        "Từ thông"
+      ],
+      "correct": 0,
+      "images": []
+    },
+    {
+      "id": "cb-q045",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tổng hợp",
+      "number": 45,
+      "question": "Hai điện trở 4Ω và 4Ω nối song song. Rt bằng:",
+      "options": [
+        "2Ω",
+        "8Ω",
+        "4Ω",
+        "1Ω"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/series.svg"
+      ]
+    },
+    {
+      "id": "cb-q046",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tổng hợp",
+      "number": 46,
+      "question": "Diode silicon phân cực thuận, sụt áp điển hình khoảng:",
+      "options": [
+        "0.6 – 0.7V",
+        "0V",
+        "5V",
+        "12V"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/diode_types.png"
+      ]
+    },
+    {
+      "id": "cb-q047",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tổng hợp",
+      "number": 47,
+      "question": "Cảm biến nhiệt nước kiểu NTC trên xe: nước nóng hơn thì tín hiệu thường:",
+      "options": [
+        "Điện trở cảm biến giảm (điện áp phân áp đổi theo)",
+        "Điện trở cảm biến tăng vô hạn",
+        "Cảm biến hở mạch",
+        "Chỉ đổi tần số không đổi R"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/thermistor.png"
+      ]
+    },
+    {
+      "id": "cb-q048",
+      "set": "coban",
+      "setName": "Điện cơ bản",
+      "section": "Tổng hợp",
+      "number": 48,
+      "question": "Ký hiệu nào dưới đây là Zener (ổn áp)?",
+      "options": [
+        "Diode có cathode gập chữ Z / gãy",
+        "Tam giác thường không gãy cathode",
+        "Cuộn dây hình chữ nhật",
+        "Hai thanh song song của tụ"
+      ],
+      "correct": 0,
+      "images": [
+        "images/web/diode_symbol.webp"
+      ]
+    }
+  ]
+}

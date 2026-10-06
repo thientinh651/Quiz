@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220">
+  <rect width="420" height="220" fill="#f7fafc"/>
+  <line x1="30" y1="100" x2="55" y2="100" stroke="#1a2332" stroke-width="2.5"/>
+  <path d="M55 100 L65 85 L75 115 L85 85 L95 115 L105 85 L115 115 L125 100" fill="none" stroke="#0b6e4f" stroke-width="2.5"/>
+  <text x="90" y="75" text-anchor="middle" font-size="12" font-weight="700" fill="#0b6e4f" font-family="Segoe UI,Arial">R1</text>
+  <line x1="125" y1="100" x2="145" y2="100" stroke="#1a2332" stroke-width="2.5"/>
+  <path d="M145 100 L155 85 L165 115 L175 85 L185 115 L195 85 L205 115 L215 100" fill="none" stroke="#1b4f72" stroke-width="2.5"/>
+  <text x="180" y="75" text-anchor="middle" font-size="12" font-weight="700" fill="#1b4f72" font-family="Segoe UI,Arial">R2</text>
+  <line x1="215" y1="100" x2="240" y2="100" stroke="#1a2332" stroke-width="2.5"/>
+  <line x1="270" y1="100" x2="295" y2="100" stroke="#1a2332" stroke-width="2.5"/>
+  <line x1="295" y1="50" x2="295" y2="150" stroke="#1a2332" stroke-width="2.5"/>
+  <line x1="295" y1="50" x2="320" y2="50" stroke="#1a2332" stroke-width="2.5"/>
+  <path d="M320 50 L330 35 L340 65 L350 35 L360 65 L370 50" fill="none" stroke="#0b6e4f" stroke-width="2.5"/>
+  <line x1="370" y1="50" x2="390" y2="50" stroke="#1a2332" stroke-width="2.5"/>
+  <text x="345" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#0b6e4f" font-family="Segoe UI,Arial">R1</text>
+  <line x1="295" y1="150" x2="320" y2="150" stroke="#1a2332" stroke-width="2.5"/>
+  <path d="M320 150 L330 135 L340 165 L350 135 L360 165 L370 150" fill="none" stroke="#1b4f72" stroke-width="2.5"/>
+  <line x1="370" y1="150" x2="390" y2="150" stroke="#1a2332" stroke-width="2.5"/>
+  <text x="345" y="185" text-anchor="middle" font-size="12" font-weight="700" fill="#1b4f72" font-family="Segoe UI,Arial">R2</text>
+  <line x1="390" y1="50" x2="390" y2="150" stroke="#1a2332" stroke-width="2.5"/>
+  <line x1="390" y1="100" x2="410" y2="100" stroke="#1a2332" stroke-width="2.5"/>
+</svg>

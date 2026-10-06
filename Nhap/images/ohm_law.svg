@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260">
+  <rect width="320" height="260" fill="#f7fafc"/>
+  <polygon points="160,30 270,230 50,230" fill="#e8f5ef" stroke="#0b6e4f" stroke-width="3"/>
+  <line x1="100" y1="130" x2="220" y2="130" stroke="#0b6e4f" stroke-width="2"/>
+  <line x1="160" y1="130" x2="160" y2="230" stroke="#0b6e4f" stroke-width="2"/>
+  <text x="160" y="100" text-anchor="middle" font-size="28" font-weight="700" fill="#0b6e4f" font-family="Segoe UI,Arial">V</text>
+  <text x="110" y="190" text-anchor="middle" font-size="26" font-weight="700" fill="#1b4f72" font-family="Segoe UI,Arial">I</text>
+  <text x="210" y="190" text-anchor="middle" font-size="26" font-weight="700" fill="#1b4f72" font-family="Segoe UI,Arial">R</text>
+</svg>
