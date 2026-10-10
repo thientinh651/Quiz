@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320" font-family="Segoe UI, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="320.0" y="22.0" font-size="15" text-anchor="middle" font-weight="700" fill="#1a2332">Mạch cảm biến áp suất ống rail (RPS) – 3 dây</text>
+<rect x="30.0" y="60.0" width="220.0" height="220.0" rx="6" fill="#eef4fb" stroke="#1a2332" stroke-width="2"/>
+<text x="140.0" y="78.0" font-size="13" text-anchor="middle" font-weight="700" fill="#1a2332">ECM</text>
+<rect x="60.0" y="90.0" width="60.0" height="26.0" rx="0" fill="#fff" stroke="#1f5fa8" stroke-width="2"/>
+<text x="90.0" y="108.0" font-size="13" text-anchor="middle" font-weight="700" fill="#1f5fa8">5 V</text>
+<polyline points="120.0,103.0 250.0,103.0" fill="none" stroke="#1a2332" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="250.0" cy="103.0" r="4" fill="#fff" stroke="#1a2332" stroke-width="1.5"/>
+<text x="242.0" y="107.0" font-size="11" text-anchor="end" font-weight="600" fill="#1a2332">VC</text>
+<circle cx="250.0" cy="170.0" r="4" fill="#fff" stroke="#1a2332" stroke-width="1.5"/>
+<text x="242.0" y="174.0" font-size="11" text-anchor="end" font-weight="600" fill="#1a2332">PCR</text>
+<polyline points="160.0,170.0 167.0,175.0 153.0,180.0 167.0,185.0 153.0,190.0 167.0,195.0 153.0,200.0 167.0,205.0 153.0,210.0 167.0,215.0 153.0,220.0 167.0,225.0 160.0,230.0" fill="none" stroke="#1a2332" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="172.0" y="204.0" font-size="12" text-anchor="start" font-weight="400" fill="#1a2332">R kéo xuống</text>
+<polyline points="160.0,170.0 246.0,170.0" fill="none" stroke="#1a2332" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="160.0" cy="170.0" r="3.5" fill="#1a2332" stroke="#1a2332" stroke-width="1"/>
+<polyline points="160.0,230.0 160.0,250.0" fill="none" stroke="#1a2332" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="250.0" cy="250.0" r="4" fill="#fff" stroke="#1a2332" stroke-width="1.5"/>
+<text x="242.0" y="254.0" font-size="11" text-anchor="end" font-weight="600" fill="#1a2332">E2</text>
+<polyline points="160.0,250.0 246.0,250.0" fill="none" stroke="#1a2332" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="420.0" y="70.0" width="180.0" height="200.0" rx="6" fill="#fff7e6" stroke="#1a2332" stroke-width="2"/>
+<text x="510.0" y="88.0" font-size="13" text-anchor="middle" font-weight="700" fill="#1a2332">Cảm biến RPS</text>
+<rect x="460.0" y="120.0" width="100.0" height="80.0" rx="0" fill="#fff" stroke="#8a96a3" stroke-width="2"/>
+<text x="510.0" y="165.0" font-size="11" text-anchor="middle" font-weight="400" fill="#1a2332">cầu điện trở</text>
+<text x="510.0" y="178.2" font-size="11" text-anchor="middle" font-weight="400" fill="#1a2332">+ IC khuếch đại</text>
+<polyline points="254.0,103.0 440.0,103.0" fill="none" stroke="#1f5fa8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="254.0,170.0 440.0,170.0" fill="none" stroke="#1e7a46" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="254.0,250.0 440.0,250.0" fill="none" stroke="#8a96a3" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="340.0" cy="88.0" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+<text x="340.0" y="92.5" font-size="13" text-anchor="middle" font-weight="700" fill="#c0392b">a</text>
+<circle cx="340.0" cy="155.0" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+<text x="340.0" y="159.5" font-size="13" text-anchor="middle" font-weight="700" fill="#c0392b">b</text>
+<circle cx="340.0" cy="235.0" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+<text x="340.0" y="239.5" font-size="13" text-anchor="middle" font-weight="700" fill="#c0392b">c</text>
+</svg>

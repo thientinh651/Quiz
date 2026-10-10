@@ -2,3 +2,4 @@
 _*.py
 __pycache__/
 *.pyc
+_tmp_sheets/

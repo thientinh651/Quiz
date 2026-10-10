@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" width="680" height="330" font-family="Segoe UI, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="340.0" y="22.0" font-size="15" text-anchor="middle" font-weight="700" fill="#1a2332">Mạch đèn – đo điện áp tại các điểm khi công tắc đang BẬT</text>
+<line x1="60.0" y1="140.0" x2="60.0" y2="152.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="44.0" y1="152.0" x2="76.0" y2="152.0" stroke="#1a2332" stroke-width="3" stroke-linecap="round"/>
+<line x1="52.0" y1="160.0" x2="68.0" y2="160.0" stroke="#1a2332" stroke-width="5" stroke-linecap="round"/>
+<line x1="44.0" y1="168.0" x2="76.0" y2="168.0" stroke="#1a2332" stroke-width="3" stroke-linecap="round"/>
+<line x1="52.0" y1="176.0" x2="68.0" y2="176.0" stroke="#1a2332" stroke-width="5" stroke-linecap="round"/>
+<line x1="60.0" y1="176.0" x2="60.0" y2="188.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<text x="80.0" y="154.0" font-size="14" text-anchor="start" font-weight="700" fill="#1a2332">+</text>
+<text x="82.0" y="172.0" font-size="12" text-anchor="start" font-weight="400" fill="#1a2332">Ắc quy</text>
+<line x1="60.0" y1="188.0" x2="60.0" y2="196.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="46.0" y1="196.0" x2="74.0" y2="196.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="51.0" y1="201.0" x2="69.0" y2="201.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="56.0" y1="206.0" x2="64.0" y2="206.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<polyline points="60.0,140.0 60.0,80.0 140.0,80.0" fill="none" stroke="#1a2332" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="140.0" y="74.0" width="26.0" height="12.0" rx="0" fill="#fff" stroke="#1a2332" stroke-width="2"/>
+<line x1="140.0" y1="80.0" x2="166.0" y2="80.0" stroke="#1a2332" stroke-width="1.2" stroke-linecap="round"/>
+<text x="153.0" y="70.0" font-size="11" text-anchor="middle" font-weight="400" fill="#1a2332">10A</text>
+<polyline points="166.0,80.0 240.0,80.0" fill="none" stroke="#1a2332" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="240.0" cy="80.0" r="3.5" fill="#1a2332" stroke="#1a2332" stroke-width="1"/>
+<circle cx="300.0" cy="80.0" r="3.5" fill="#1a2332" stroke="#1a2332" stroke-width="1"/>
+<line x1="240.0" y1="80.0" x2="300.0" y2="80.0" stroke="#1a2332" stroke-width="2.5" stroke-linecap="round"/>
+<text x="270.0" y="108.0" font-size="11" text-anchor="middle" font-weight="400" fill="#1a2332">Công tắc</text>
+<polyline points="300.0,80.0 450.0,80.0" fill="none" stroke="#1a2332" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="470.0" cy="80.0" r="16" fill="#fff" stroke="#1a2332" stroke-width="2"/>
+<line x1="458.8" y1="68.8" x2="481.2" y2="91.2" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="458.8" y1="91.2" x2="481.2" y2="68.8" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<text x="470.0" y="118.0" font-size="11" text-anchor="middle" font-weight="400" fill="#1a2332">Bóng đèn</text>
+<polyline points="486.0,80.0 580.0,80.0 580.0,200.0" fill="none" stroke="#1a2332" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="560.0" y="200.0" width="40.0" height="20.0" rx="0" fill="#ddd" stroke="#1a2332" stroke-width="2"/>
+<text x="580.0" y="240.0" font-size="11" text-anchor="middle" font-weight="400" fill="#1a2332">điểm</text>
+<text x="580.0" y="253.2" font-size="11" text-anchor="middle" font-weight="400" fill="#1a2332">bắt mass</text>
+<polyline points="580.0,220.0 580.0,250.0" fill="none" stroke="#1a2332" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="580.0" y1="250.0" x2="580.0" y2="258.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="566.0" y1="258.0" x2="594.0" y2="258.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="571.0" y1="263.0" x2="589.0" y2="263.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="576.0" y1="268.0" x2="584.0" y2="268.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<circle cx="110.0" cy="56.0" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+<text x="110.0" y="60.5" font-size="13" text-anchor="middle" font-weight="700" fill="#c0392b">A</text>
+<circle cx="110.0" cy="80.0" r="3.5" fill="#c0392b" stroke="#c0392b" stroke-width="1"/>
+<circle cx="210.0" cy="56.0" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+<text x="210.0" y="60.5" font-size="13" text-anchor="middle" font-weight="700" fill="#c0392b">B</text>
+<circle cx="210.0" cy="80.0" r="3.5" fill="#c0392b" stroke="#c0392b" stroke-width="1"/>
+<circle cx="380.0" cy="56.0" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+<text x="380.0" y="60.5" font-size="13" text-anchor="middle" font-weight="700" fill="#c0392b">C</text>
+<circle cx="380.0" cy="80.0" r="3.5" fill="#c0392b" stroke="#c0392b" stroke-width="1"/>
+<circle cx="530.0" cy="56.0" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+<text x="530.0" y="60.5" font-size="13" text-anchor="middle" font-weight="700" fill="#c0392b">D</text>
+<circle cx="530.0" cy="80.0" r="3.5" fill="#c0392b" stroke="#c0392b" stroke-width="1"/>
+<rect x="120.0" y="160.0" width="360.0" height="140.0" rx="6" fill="#fbfcfd" stroke="#1a2332" stroke-width="2"/>
+<text x="300.0" y="184.0" font-size="12" text-anchor="middle" font-weight="700" fill="#1a2332">Que đen ở cọc (−) ắc quy, que đỏ đo tại:</text>
+<text x="200.0" y="220.0" font-size="14" text-anchor="start" font-weight="700" fill="#1a2332">Điểm A:  12,4 V</text>
+<text x="370.0" y="220.0" font-size="14" text-anchor="start" font-weight="700" fill="#1a2332">Điểm B:  12,4 V</text>
+<text x="200.0" y="254.0" font-size="14" text-anchor="start" font-weight="700" fill="#1a2332">Điểm C:  12,3 V</text>
+<text x="370.0" y="254.0" font-size="14" text-anchor="start" font-weight="700" fill="#c0392b">Điểm D:  11,9 V</text>
+<text x="300.0" y="288.0" font-size="13" text-anchor="middle" font-weight="700" fill="#c0392b">Đèn KHÔNG sáng</text>
+</svg>

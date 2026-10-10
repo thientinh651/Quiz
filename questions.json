@@ -20,6 +20,10 @@
   {
    "id": "vt",
    "name": "Từ viết tắt / tiếng Anh"
+  },
+  {
+   "id": "nc",
+   "name": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện"
   }
  ],
  "questions": [
@@ -20397,6 +20401,2584 @@
    "images": [
     "images/diesel_img33.jpg"
    ]
+  },
+  {
+   "id": "nc-q001",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Sơ đồ mạch & đo",
+   "number": 1,
+   "question": "Xe số tự động, cần số ở P, vặn khóa sang START: máy đề im lặng hoàn toàn. Đo theo hình: điểm B = 12,2 V, điểm C = 0 V. Lỗi nằm ở đâu?",
+   "options": [
+    "Cầu chì AM2 bị đứt nên mất nguồn",
+    "Cuộn dây relay đề bị đứt, relay không hút",
+    "Công tắc P/N bị hở hoặc chỉnh lệch vị trí",
+    "Cuộn giữ trong công tắc từ bị đứt"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/kd_mach_do.svg"
+   ],
+   "note": "Đo áp theo dòng điện: B có 12 V (khóa điện tốt) mà C mất áp → linh kiện nằm giữa B và C (công tắc P/N) bị hở. Cầu chì AM2 nằm TRƯỚC điểm B nên không thể là lỗi. Mẹo: điểm cuối còn điện và điểm đầu mất điện kẹp đúng chỗ hỏng.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q002",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Sơ đồ mạch & đo",
+   "number": 2,
+   "question": "Theo hình, khi đề: A = 12,4 V, D (cực 50) = 11,6 V, E (cực 30) = 11,8 V nhưng KHÔNG nghe tiếng 'tạch' nào ở máy khởi động. Kết luận hợp lý nhất?",
+   "options": [
+    "Relay đề không đóng nên cực 50 không có điện",
+    "Ắc quy quá yếu, không đủ lực hút pít-tông",
+    "Công tắc P/N hở nên mạch điều khiển mất điện",
+    "Hư bên trong công tắc từ (cuộn dây/mass)"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/kd_mach_do.svg"
+   ],
+   "note": "Cực 50 đã có 11,6 V nghĩa là toàn bộ mạch điều khiển (khóa, P/N, relay) đều tốt; ắc quy cũng đủ áp. Có điện vào 50 mà không có tiếng tạch → cuộn hút/cuộn giữ hoặc mass của công tắc từ có vấn đề.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q003",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Sơ đồ mạch & đo",
+   "number": 3,
+   "question": "Đề nghe 'tạch' rất rõ nhưng motor không quay. Khi giữ khóa ở START: E (cực 30) = 11,5 V, F (cực C) = 0 V. Hư hỏng nằm ở đâu?",
+   "options": [
+    "Chổi than mòn hết, mất tiếp xúc với cổ góp",
+    "Tiếp điểm chính cháy rỗ, không dẫn điện",
+    "Cáp dương từ ắc quy đến cực 30 bị lỏng",
+    "Cuộn dây phần ứng bị chạm mass với lõi thép"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/kd_mach_do.svg"
+   ],
+   "note": "Tiếng 'tạch' = pít-tông đã bị hút. Cực 30 có 11,5 V nhưng cực C = 0 V → dòng không đi qua được tiếp điểm chính. Nếu tiếp điểm tốt, C phải ≈ áp cực 30; khi đó motor không quay mới nghĩ tới chổi than/phần ứng.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q004",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Sơ đồ mạch & đo",
+   "number": 4,
+   "question": "Đề có tiếng 'tạch', motor không quay; khi đề đo cực C (F) = 10,9 V, cực 30 = 11,0 V. Bước kiểm tra tiếp theo hợp lý nhất?",
+   "options": [
+    "Sạc lại ắc quy rồi đề thử lại thêm vài lần",
+    "Thay công tắc từ vì tiếp điểm chính bị hỏng",
+    "Tháo máy đề kiểm tra chổi than, cổ góp, phần ứng",
+    "Thay relay đề vì tiếp điểm relay bị cháy rỗ"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/kd_mach_do.svg"
+   ],
+   "note": "C ≈ 30 nghĩa là tiếp điểm chính đã đóng tốt, điện đã tới motor. Motor vẫn không quay → hở mạch bên trong motor (chổi than mòn/kẹt, cổ góp bẩn, phần ứng/cuộn cảm đứt) hoặc kẹt cơ khí.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q005",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Sơ đồ mạch & đo",
+   "number": 5,
+   "question": "Ắc quy mới sạc đầy (12,6 V, đề vẫn giữ trên 10 V) nhưng mỗi lần đề máy khởi động kêu 'tạch – tạch – tạch' liên tục, bánh răng ra vào liên tục. Nguyên nhân đúng?",
+   "options": [
+    "Tiếp điểm chính bị dính chết không nhả",
+    "Cuộn giữ bị đứt hoặc mất mass",
+    "Cuộn hút bị đứt nên không giữ được lâu",
+    "Lò xo hồi vị bánh răng bendix bị gãy"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/kd_mach_do.svg"
+   ],
+   "note": "Khi tiếp điểm chính đóng, hai đầu cuộn hút (50 và C) cùng ≈ 12 V nên cuộn hút mất dòng; chỉ còn cuộn giữ giữ pít-tông. Cuộn giữ hở → pít-tông nhả → tiếp điểm mở → cuộn hút lại hút → lặp lại 'tạch tạch'. Nếu ắc quy yếu cũng gây hiện tượng này, nên câu hỏi đã loại trừ ắc quy.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q006",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Sơ đồ mạch & đo",
+   "number": 6,
+   "question": "Vì sao ngay khi tiếp điểm chính đóng thì cuộn hút gần như không còn dòng điện?",
+   "options": [
+    "Cuộn hút có diode nối tiếp chặn dòng ngược",
+    "ECU ngắt mass cuộn hút sau khoảng 0,5 giây",
+    "Hai đầu cuộn hút có điện áp gần bằng nhau",
+    "Relay đề tự ngắt cực 50 ngay sau khi đề"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/kd_mach_do.svg"
+   ],
+   "note": "Cuộn hút nối giữa 50 và C. Tiếp điểm chính đóng → C được nối thẳng cực 30 (≈ áp ắc quy) nên chênh áp trên cuộn hút ≈ 0. Đây là thiết kế cố ý để giảm dòng tiêu thụ và nhiệt; việc giữ pít-tông giao cho cuộn giữ.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q007",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Sơ đồ mạch & đo",
+   "number": 7,
+   "question": "Đo sụt áp như hình khi đang đề, đồng hồ chỉ 1,8 V. Kết luận đúng?",
+   "options": [
+    "Bình thường, vì dòng đề lớn nên sụt áp phải lớn",
+    "Công tắc từ hỏng tiếp điểm, cần thay công tắc từ",
+    "Ắc quy yếu, cần thay ắc quy mới cùng dung lượng",
+    "Cáp dương/đầu cos có điện trở lớn, cần vệ sinh siết lại"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/kd_sut_ap.svg"
+   ],
+   "note": "Đồng hồ nối song song với chính đoạn cáp dương nên chỉ đọc phần áp mất trên cáp. Tiêu chuẩn thường ≤ 0,5 V. 1,8 V là bị 'ăn' mất điện trên cáp/đầu cos → đề yếu dù ắc quy tốt. Mẹo: đo sụt áp phải đo KHI CÓ TẢI.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q008",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Sơ đồ mạch & đo",
+   "number": 8,
+   "question": "Đo sụt áp phía mass khi đề: que đỏ ở thân máy, que đen ở cọc (–) ắc quy. Giá trị nào cho thấy mạch mass ĐẠT?",
+   "options": [
+    "12,4 V",
+    "0,2 V",
+    "9,6 V",
+    "1,2 V"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Đoạn dây mass càng tốt thì áp rơi trên nó càng gần 0. Tiêu chuẩn phổ biến ≤ 0,5 V (mass tốt thường 0,1–0,3 V). 9,6 V là tiêu chuẩn điện áp ẮC QUY khi đề – không phải sụt áp – đây là bẫy hay gặp.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q009",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Sơ đồ mạch & đo",
+   "number": 9,
+   "question": "Theo giáo trình, khi đề, điện áp giữa cực 30 và mass phải đạt bao nhiêu? Nếu thấp hơn thì nghi ngờ gì trước tiên?",
+   "options": [
+    "≥ 9,6 V; thấp hơn thì thay máy khởi động",
+    "≥ 12 V; thấp hơn thì sạc lại ắc quy ngay",
+    "≥ 8,0 V; thấp hơn thì kiểm tra cáp cực 30",
+    "≥ 8,0 V; thấp hơn thì thay công tắc P/N"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Hai con số dễ nhầm: 9,6 V là tiêu chuẩn tại CỌC ẮC QUY khi đề; 8,0 V là tiêu chuẩn tại CỰC 30 và CỰC 50 máy khởi động. Ắc quy đạt 9,6 V mà cực 30 < 8 V → mất áp trên cáp.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q010",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Sơ đồ mạch & đo",
+   "number": 10,
+   "question": "Đề đo tại cọc ắc quy chỉ còn 7,9 V, máy đề quay rất chậm. Điều nào nên làm TRƯỚC TIÊN?",
+   "options": [
+    "Tháo máy khởi động kiểm tra chổi than và cổ góp",
+    "Đo điện trở cuộn dây relay đề và công tắc P/N",
+    "Thay công tắc từ vì tiếp điểm chính đã mòn",
+    "Kiểm tra, sạc và thử tải ắc quy trước tiên"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Tại cọc ắc quy khi đề phải ≥ 9,6 V. Dưới mức này là ắc quy yếu/hỏng (hoặc máy đề kéo dòng quá lớn do kẹt). Luôn loại trừ ắc quy trước – rẻ và nhanh nhất.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q011",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Sơ đồ mạch & đo",
+   "number": 11,
+   "question": "Trên xe có hệ thống chống trộm (immobilizer) đang kích hoạt, vặn START máy đề không hoạt động. Theo giáo trình, nguyên nhân là gì?",
+   "options": [
+    "Công tắc từ bị khóa cơ khí bằng chốt điện",
+    "Relay máy khởi động bị giữ ở trạng thái ngắt",
+    "ECU cắt mass cuộn giữ trong công tắc từ",
+    "Cầu chì máy khởi động tự nhảy khi khóa cửa"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Giáo trình: trên xe có chống trộm, khi hệ thống kích hoạt thì relay máy khởi động ở trạng thái ngắt ngay cả khi khóa điện ở START → cực 50 không có điện. Đừng vội thay máy đề.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q012",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Sơ đồ mạch & đo",
+   "number": 12,
+   "question": "Xe số sàn (MT): khi đạp hết bàn đạp ly hợp thì đề được, khi không đạp thì không đề. Đây là:",
+   "options": [
+    "Lỗi dây mass công tắc từ, tiếp xúc chập chờn",
+    "Công tắc ly hợp bị dính, cần thay công tắc mới",
+    "Relay đề yếu, chỉ hút được khi ly hợp đã ngắt",
+    "Bình thường – công tắc an toàn ly hợp"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Công tắc ly hợp (MT) và công tắc P/N (AT) là công tắc an toàn mắc nối tiếp với cuộn relay đề: chỉ cho đề khi đã cắt truyền lực. Hiện tượng này là đúng thiết kế.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q013",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Công tắc từ",
+   "number": 13,
+   "question": "Trong hình, cuộn (1) nối giữa cực 50 và cực C. Cuộn này là gì và đặc điểm dây quấn?",
+   "options": [
+    "Cuộn giữ – dây nhỏ, nhiều vòng, dòng nhỏ",
+    "Cuộn hút – dây nhỏ, nhiều vòng, dòng nhỏ",
+    "Cuộn hút – dây to, ít vòng, dòng lớn",
+    "Cuộn giữ – dây to, ít vòng, dòng lớn"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/kd_cong_tac_tu.svg"
+   ],
+   "note": "Cuộn hút (pull-in): 50 → C → qua motor xuống mass, cần lực lớn ban đầu nên dây to. Cuộn giữ (hold-in): 50 → thân (mass), chỉ cần giữ nên dây nhỏ. Mẹo: 'Hút nối C, Giữ nối thân'.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q014",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Công tắc từ",
+   "number": 14,
+   "question": "Trong hình, nếu cuộn (2) bị đứt nhưng cuộn (1) còn tốt, hiện tượng khi đề sẽ là:",
+   "options": [
+    "Hoàn toàn im lặng, không có tiếng động nào",
+    "Đề bình thường nhưng nhả khóa máy đề vẫn quay",
+    "Kêu 'tạch tạch' liên tục, bánh răng ra vào liên tục",
+    "Motor quay tít nhưng bánh răng không bật ra"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/kd_cong_tac_tu.svg"
+   ],
+   "note": "Cuộn (2) là cuộn giữ (50 ↔ thân). Mất cuộn giữ thì sau khi tiếp điểm đóng không gì giữ được pít-tông → nhả → hút lại → lặp. Nếu cuộn (1) đứt thì pít-tông không được hút đủ mạnh – thường im lặng.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q015",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Công tắc từ",
+   "number": 15,
+   "question": "Hình (1): nối (+) vào cực 50, (–) vào thân VÀ cực C. Đây là phép thử gì, đạt khi nào?",
+   "options": [
+    "Thử giữ – bánh răng ở yên bên ngoài",
+    "Thử không tải – motor quay êm",
+    "Thử hồi vị – bánh răng thụt vào nhanh",
+    "Thử hút – bánh răng bendix bật ra ngoài"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/kd_3_phep_thu.svg"
+   ],
+   "note": "Nối C xuống (–) để cuộn hút có đường về; cả cuộn hút và cuộn giữ cùng tác dụng → bánh răng phải bật ra.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q016",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Công tắc từ",
+   "number": 16,
+   "question": "Hình (2): giữ nguyên như (1) rồi tháo dây ở cực C. Bánh răng thụt vào ngay lập tức. Kết luận?",
+   "options": [
+    "Cuộn giữ bị hở (hoặc mất mass thân)",
+    "Cuộn hút bị hở",
+    "Công tắc từ tốt, đúng tiêu chuẩn",
+    "Lò xo hồi vị quá yếu"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/kd_3_phep_thu.svg"
+   ],
+   "note": "Tháo C thì cuộn hút mất đường về, chỉ còn cuộn giữ. Đạt khi bánh răng VẪN Ở NGOÀI. Thụt vào ngay = cuộn giữ không làm việc.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q017",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Công tắc từ",
+   "number": 17,
+   "question": "Hình (3): (+) vào cực C, (–) vào thân, cực 50 để hở; kéo bánh răng ra rồi buông. Vì sao bánh răng PHẢI thụt về nhanh nếu công tắc tốt?",
+   "options": [
+    "Từ trường hai cuộn ngược chiều, triệt tiêu nhau",
+    "Tiếp điểm chính mở nên toàn mạch bị ngắt hoàn toàn",
+    "Cực 50 hở nên không cuộn nào có dòng điện chạy",
+    "Cuộn hút đảo cực tạo lực đẩy pít-tông về sau"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/kd_3_phep_thu.svg"
+   ],
+   "note": "C → cuộn hút → 50 → cuộn giữ → thân: hai cuộn nối tiếp, dòng chạy qua cuộn hút theo chiều NGƯỢC lúc bình thường → hai từ trường khử nhau → lò xo đẩy về. Đây cũng là lý do khi nhả khóa, máy đề ngắt ngay.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q018",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Kiểm tra chi tiết",
+   "number": 18,
+   "question": "Đo như hình (một que ở cổ góp, một que ở lõi thép phần ứng) được 0,2 Ω và có tiếng bíp. Kết luận?",
+   "options": [
+    "Chổi than ngắn, cần thay chổi than",
+    "Phần ứng bị chạm mass – phải thay",
+    "Phần ứng tốt vì cuộn dây thông mạch",
+    "Cổ góp mòn, cần tiện láng lại"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/kd_phan_ung.svg"
+   ],
+   "note": "Giữa cổ góp và lõi phải CÁCH ĐIỆN (không thông, ≥ cỡ MΩ). Thông mạch = chạm mass. Ngược lại, giữa các lá cổ góp với nhau thì phải THÔNG. Mẹo: 'Cổ góp – cổ góp: thông; Cổ góp – lõi: cách'.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q019",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Kiểm tra chi tiết",
+   "number": 19,
+   "question": "Dùng máy kiểm tra (growler) có lưỡi cưa đặt song song lõi rotor, quay rotor thì lưỡi cưa rung/bị hút. Kết luận?",
+   "options": [
+    "Ổ bi đỡ phần ứng bị rơ làm lệch tâm",
+    "Các khung dây phần ứng bị chạm chập với nhau",
+    "Cổ góp bị mòn méo, cần tiện láng lại",
+    "Phần ứng tốt, từ trường phân bố đều quanh lõi"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Khung dây chạm chập tạo mạch kín, máy kiểm tra cảm ứng dòng → sinh từ trường hút lưỡi cưa. Lưỡi cưa đứng yên mới là tốt.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q020",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Kiểm tra chi tiết",
+   "number": 20,
+   "question": "Kiểm tra ly hợp một chiều của máy đề: giữ vỏ, xoay bánh răng bendix. Kết quả nào là ĐẠT?",
+   "options": [
+    "Quay nặng đều và có tiếng rít ở cả hai chiều",
+    "Quay nhẹ được cả hai chiều như nhau",
+    "Bị khóa cứng ở cả hai chiều quay",
+    "Một chiều quay nhẹ, chiều kia khóa"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Ly hợp một chiều truyền mô-men từ motor sang bánh đà nhưng không cho bánh đà kéo ngược motor khi máy đã nổ. Quay được cả 2 chiều = trượt (đề rú không kéo máy).",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q021",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Kiểm tra chi tiết",
+   "number": 21,
+   "question": "Máy khởi động: khi đề motor rú lên rất nhanh, có tiếng 'xè' nhưng trục khuỷu không quay. Chi tiết nghi ngờ nhất?",
+   "options": [
+    "Ly hợp một chiều bị trượt, không truyền mô-men",
+    "Chổi than bị mòn hết, kẹt trong giá",
+    "Cuộn giữ công tắc từ bị hở mạch",
+    "Tiếp điểm chính bị cháy rỗ một phần"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Motor quay được (điện tốt) nhưng không truyền mô-men → ly hợp một chiều trượt hoặc bánh răng không ăn khớp vành răng.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q022",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Kiểm tra chi tiết",
+   "number": 22,
+   "question": "Trong hình bộ truyền hành tinh, chi tiết số 1 được dẫn động bởi trục phần ứng. Chi tiết số 4 có vai trò gì?",
+   "options": [
+    "Bánh răng bao – quay cùng chiều phần ứng",
+    "Cần dẫn – nối với trục bendix, là đầu ra mô-men",
+    "Bánh răng hành tinh – quay quanh trục của nó",
+    "Bánh răng mặt trời – nhận mô-men từ phần ứng"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/kd_hanh_tinh.svg"
+   ],
+   "note": "1: bánh răng mặt trời (vào, gắn trục phần ứng); 3: bánh răng hành tinh; 2: bánh răng bao (cố định, có đĩa ly hợp hấp thụ mô-men thừa); 4: cần dẫn (ra). Tỉ số giảm tốc ≈ 1:5.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q023",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Kiểm tra chi tiết",
+   "number": 23,
+   "question": "Ở máy đề loại hành tinh, bánh răng bao (số 2) được giữ cố định qua đĩa ly hợp. Nếu xuất hiện mô-men quá lớn (vd. máy bị kẹt) thì điều gì xảy ra?",
+   "options": [
+    "Công tắc từ tự ngắt cực 30 để bảo vệ motor",
+    "Bánh răng mặt trời tự nhả khỏi trục phần ứng",
+    "Cần dẫn bị khóa cứng vào vỏ máy khởi động",
+    "Bánh răng bao trượt để hấp thụ mô-men thừa"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/kd_hanh_tinh.svg"
+   ],
+   "note": "Thiết bị hấp thụ mô-men: đĩa ly hợp ăn khớp với bánh răng bao; khi mô-men quá tải, bánh răng bao quay trượt → bảo vệ bánh răng hành tinh.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q024",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "KĐ · Kiểm tra chi tiết",
+   "number": 24,
+   "question": "Motor máy khởi động mắc kiểu nối tiếp (cuộn kích nối tiếp phần ứng). Đặc tính nào ĐÚNG?",
+   "options": [
+    "Dòng điện giữ không đổi theo tốc độ quay",
+    "Lúc bắt đầu quay: dòng và mô-men lớn nhất",
+    "Mô-men lớn nhất khi motor chạy không tải",
+    "Tốc độ càng cao thì mô-men xoắn càng lớn"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Lúc đứng yên chưa có sức phản điện động → dòng cực lớn → mô-men cực đại (cần để phá quán tính trục khuỷu). Tốc độ tăng → sức phản điện động tăng → dòng và mô-men giảm, điện áp ắc quy hồi lên.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q025",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Sơ đồ & chẩn đoán",
+   "number": 25,
+   "question": "Theo hình, cực S của tiết chế dùng để làm gì?",
+   "options": [
+    "Điều khiển bật/tắt bóng đèn báo nạp",
+    "Cảm nhận điện áp ắc quy để điều chỉnh",
+    "Cấp điện cho cuộn rotor khi bật khóa điện",
+    "Nhận điện áp pha từ cuộn stator"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/nap_mach_ic.svg"
+   ],
+   "note": "Ghi nhớ các cực: B – đầu ra; IG – nguồn từ khóa điện; S – cảm nhận áp ắc quy; L – đèn báo nạp; P – điện áp pha stator (để biết máy phát có phát hay không); F – cuộn rotor; E – mass.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q026",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Sơ đồ & chẩn đoán",
+   "number": 26,
+   "question": "Bật khóa ON, động cơ CHƯA nổ: đèn báo nạp sáng. Vì sao?",
+   "options": [
+    "Lỗi: cuộn rotor bị ngắn mạch xuống mass",
+    "Lỗi: máy phát chưa nạp nên ECU báo lỗi",
+    "Lỗi: cực S mất kết nối tới cọc ắc quy",
+    "Bình thường – cực P chưa có điện áp"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/nap_mach_ic.svg"
+   ],
+   "note": "Máy chưa quay → stator không phát → điện áp cực P = 0 → M.IC bật transistor đèn. Đèn sáng khi ON là kiểm tra bóng đèn luôn. Nổ máy mà đèn tắt mới là đúng.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q027",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Sơ đồ & chẩn đoán",
+   "number": 27,
+   "question": "Bật khóa ON (máy chưa nổ) nhưng đèn báo nạp KHÔNG sáng. Nên kiểm tra gì trước?",
+   "options": [
+    "Bóng đèn, cầu chì, dây tới cực L",
+    "Diode chỉnh lưu và các cuộn dây stator",
+    "Ổ bi, puly và độ căng dây đai máy phát",
+    "Dây cực B và đầu cos cọc dương ắc quy"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/nap_mach_ic.svg"
+   ],
+   "note": "Đèn chỉ cần mạch: khóa điện → bóng → cực L → transistor trong M.IC → mass. Stator/diode chỉ ảnh hưởng khi máy đã quay.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q028",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Sơ đồ & chẩn đoán",
+   "number": 28,
+   "question": "Máy đang nổ, đèn báo nạp sáng; đo cực B được 12,0 V (ắc quy không được nạp). Hư hỏng nào phù hợp NHẤT?",
+   "options": [
+    "Cuộn rotor hở / chổi than mòn",
+    "Dây cực S bị tuột khỏi ắc quy",
+    "Cực F bị chạm mass trong tiết chế",
+    "Ắc quy bị quá nạp, sôi dung dịch"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/nap_mach_ic.svg"
+   ],
+   "note": "Rotor hở → không có từ trường → stator không phát → cực P = 0 → M.IC bật đèn; điện áp chỉ còn là áp ắc quy. F chạm mass thì ngược lại: quá nạp (áp cao).",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q029",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Sơ đồ & chẩn đoán",
+   "number": 29,
+   "question": "Máy đang nổ, đo cực B = 16,4 V và tăng theo tốc độ; đèn báo nạp sáng. Nguyên nhân phù hợp?",
+   "options": [
+    "Một diode chỉnh lưu bị hở mạch",
+    "Cuộn rotor bị hở mạch hoàn toàn",
+    "Dây đai dẫn động máy phát bị trùng",
+    "Cực F chạm mass (E), mất điều khiển kích từ"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/nap_mach_ic.svg"
+   ],
+   "note": "F–E chạm nhau → dòng kích từ đi thẳng xuống mass, bỏ qua Tr1 → tiết chế mất quyền điều chỉnh → điện áp tăng vọt. M.IC phát hiện áp cực S quá cao và bật đèn cảnh báo.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q030",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Sơ đồ & chẩn đoán",
+   "number": 30,
+   "question": "Dây cực S bị đứt, máy vẫn nổ. M.IC xử lý thế nào?",
+   "options": [
+    "Ngắt hẳn dòng kích từ, máy phát ngừng phát",
+    "Điều chỉnh theo cực B và bật đèn báo",
+    "Tăng tối đa dòng kích từ để bù điện áp ắc quy",
+    "Không phát hiện được, đèn báo tắt bình thường"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/nap_mach_ic.svg"
+   ],
+   "note": "Mất tín hiệu S, M.IC chuyển sang dùng áp cực B (khoảng 13,3–16,3 V tùy loại) để điều chỉnh, tránh quá nạp, đồng thời bật đèn báo nạp để báo lỗi.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q031",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Sơ đồ & chẩn đoán",
+   "number": 31,
+   "question": "Tiết chế loại M có thêm cực M. Tín hiệu ở cực M dùng để làm gì?",
+   "options": [
+    "Báo nhiệt độ máy phát về đồng hồ táp-lô",
+    "Nhận lệnh từ ECU để bật đèn báo nạp",
+    "Cấp nguồn 5 V cho cảm biến dòng ắc quy",
+    "Báo tải máy phát (xung) về ECU"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Tr3 làm việc đồng bộ với Tr1; cực M phát xung cho ECU biết máy phát đang tải nặng/nhẹ. ECU dùng để điều khiển bộ sưởi PTC, bù ga cầm chừng…",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q032",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Sơ đồ & chẩn đoán",
+   "number": 32,
+   "question": "Đo điện áp nạp không tải (2 000 v/p, tắt hết phụ tải, 25 °C). Kết quả nào nằm trong tiêu chuẩn thông dụng?",
+   "options": [
+    "14,2 V",
+    "15,8 V",
+    "12,4 V",
+    "16,5 V"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Tiêu chuẩn thường gặp 13,2–14,8 V. 12,4 V = không nạp (chỉ là áp ắc quy). > 15 V = quá nạp (hỏng tiết chế, F chạm mass…), làm sôi ắc quy, cháy bóng đèn.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q033",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Sơ đồ & chẩn đoán",
+   "number": 33,
+   "question": "Điện áp nạp không tải đạt 14,2 V, nhưng khi bật đèn pha, quạt gió, sấy kính… (có tải) thì dòng nạp rất thấp và áp tụt dưới 12,5 V. Nghi ngờ hợp lý?",
+   "options": [
+    "Đèn báo nạp bị cháy nên M.IC không kích",
+    "Tiết chế điều chỉnh sai ngưỡng điện áp",
+    "Diode/cuộn stator hỏng hoặc đai trượt",
+    "Dây cực S bị đứt nên tiết chế đo sai"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Không tải thì máy phát yếu vẫn đủ áp; chỉ khi tải lớn mới lộ công suất thiếu. Hỏng 1 pha/diode hoặc đai trùng giảm công suất mạnh. Vì vậy phải kiểm tra CẢ có tải và không tải.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q034",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Kiểm tra chi tiết",
+   "number": 34,
+   "question": "Đo như hình: lần 1 (que đỏ ở P1, que đen ở B) = 0,52 V; lần 2 đảo que = OL. Kết luận?",
+   "options": [
+    "Diode âm còn tốt",
+    "Diode dương bị hở mạch",
+    "Diode dương còn tốt",
+    "Diode dương bị chạm (ngắn mạch)"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/nap_diode.svg"
+   ],
+   "note": "Thang diode: chiều thuận đọc ≈ 0,4–0,7 V, chiều nghịch OL. Diode cho dòng từ P1 (stator) LÊN cực B → là diode dương (cathode nối B). Hai chiều đều ≈ 0 → chạm; hai chiều đều OL → hở.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q035",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Kiểm tra chi tiết",
+   "number": 35,
+   "question": "Kiểm tra diode ÂM: que nào đặt ở đâu để đồng hồ báo dẫn (≈ 0,5 V)?",
+   "options": [
+    "Que đỏ ở P1, que đen ở cực E",
+    "Que đỏ ở cực B, que đen ở P1",
+    "Que đỏ ở cực E (mass), que đen ở P1",
+    "Que đỏ ở P1, que đen ở cực B"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Diode âm: anode ở mass (E), cathode ở đầu pha P. Dẫn thuận khi que đỏ (+) ở anode → đỏ ở E, đen ở P. Giáo trình: kiểm tra diode âm đo giữa E và P1…P4.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q036",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Kiểm tra chi tiết",
+   "number": 36,
+   "question": "Hình (a) là gợn sóng bình thường tại cực B. Hình (b) cho thấy cứ đều đặn một số nhịp bị hụt sâu. Kết luận?",
+   "options": [
+    "Máy phát hoạt động bình thường khi tải lớn",
+    "Ắc quy đã sạc đầy nên điện áp dao động",
+    "Hở một diode hoặc một pha stator",
+    "Tiết chế đang điều chỉnh giảm điện áp nạp"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/nap_gon_song.svg"
+   ],
+   "note": "Chỉnh lưu cầu 3 pha cho chuỗi bướu đều. Mất một diode → mất một phần chu kỳ của một pha → xuất hiện các 'hố' lặp lại có chu kỳ. Máy hiện sóng phát hiện ngay cả khi điện áp trung bình còn gần chuẩn.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q037",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Kiểm tra chi tiết",
+   "number": 37,
+   "question": "Đo điện trở giữa hai vòng tiếp điện của rotor như hình được OL. Kết luận và hệ quả khi lắp lên xe?",
+   "options": [
+    "Rotor đứt – máy phát không phát",
+    "Rotor chạm mass – ắc quy sẽ bị quá nạp",
+    "Rotor tốt – máy phát sẽ phát bình thường",
+    "Vòng tiếp điện mòn – chỉ cần láng lại"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/nap_rotor.svg"
+   ],
+   "note": "Giữa 2 vòng tiếp điện phải có điện trở nhỏ (vài ohm, cỡ 2–3 Ω). OL = đứt cuộn. Còn giữa vòng tiếp điện và trục thì phải KHÔNG thông (cách điện).",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q038",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Kiểm tra chi tiết",
+   "number": 38,
+   "question": "Hình kiểu (X) có điểm N. Gọi E là sức điện động mỗi cuộn, I là dòng mỗi cuộn. Điện áp dây và dòng dây của kiểu (X) là:",
+   "options": [
+    "Ud = √3·E ; Id = √3·I",
+    "Ud = E ; Id = √3·I",
+    "Ud = E ; Id = I",
+    "Ud = √3·E ; Id = I"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/nap_dau_day.svg"
+   ],
+   "note": "(X) là hình sao: áp dây = √3 áp pha, dòng dây = dòng pha → cho điện áp cao, phổ biến trên ô tô. (Y) là tam giác: Ud = E, Id = √3·I → dòng lớn. Điểm N = điểm trung hòa.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q039",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Kiểm tra chi tiết",
+   "number": 39,
+   "question": "Một số máy phát lắp thêm 2 diode nối vào điểm trung hòa N. Mục đích?",
+   "options": [
+    "Lấy thêm điện áp điểm N để tăng công suất ở tốc độ cao",
+    "Bảo vệ tiết chế khỏi quá áp khi tải bị ngắt đột ngột",
+    "Cấp tín hiệu tốc độ máy phát về đồng hồ táp-lô",
+    "Giảm nhiễu sóng radio do từ trường stator gây ra"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/nap_dau_day.svg"
+   ],
+   "note": "Ở tốc độ cao (> ~2 000–3 000 v/p) điện áp điểm N dao động vượt áp ra và dưới 0 V; 2 diode trung hòa lấy thêm phần này → tăng công suất khoảng 10–15%.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q040",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Kiểm tra chi tiết",
+   "number": 40,
+   "question": "Chổi than máy phát dùng vật liệu nào và kiểm tra thế nào?",
+   "options": [
+    "Grafit – kim loại; đo chiều dài nhô ra",
+    "Thép mạ niken; đo độ cứng, thay nếu bị mềm",
+    "Grafit; đo cách điện với vỏ, thay nếu thông",
+    "Đồng nguyên chất; đo điện trở, thay nếu > 1 Ω"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Chổi than làm bằng grafit – kim loại, điện trở nhỏ, chống mòn. Dùng thước kẹp đo chiều dài nhô ra, nhỏ hơn giới hạn thì thay.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q041",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nạp · Kiểm tra chi tiết",
+   "number": 41,
+   "question": "Khi tháo máy phát, chi tiết nào cần dùng 'giẻ giữ puly + súng hơi/đầu tuýp' và vì sao?",
+   "options": [
+    "Đai ốc puly – để puly không xoay theo khi nới",
+    "Vít giữ tiết chế – để không gãy chân hàn",
+    "Đai ốc cực B – để không chạm mass vỏ",
+    "Đai ốc nắp sau – để không vỡ nắp nhựa"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Giáo trình: dùng máy siết hơi tháo đai ốc puly, dùng giẻ/cảo giữ puly không cho xoay. Trước đó tháo ắc quy (–) và dây cực B.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q042",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nguồn ECM & nguồn 5 V",
+   "number": 42,
+   "question": "ECM báo ĐỒNG THỜI lỗi điện áp thấp của TPS, MAP và APP. Theo hình, nguyên nhân hợp lý NHẤT là gì?",
+   "options": [
+    "Dây E2 của cảm biến MAP bị đứt",
+    "Dây tín hiệu VTA của TPS bị đứt",
+    "Dây VC dùng chung bị chạm mass",
+    "Cả ba cảm biến cùng hỏng trong một lúc"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/x_vc_chung.svg"
+   ],
+   "note": "Nhiều mã lỗi cùng lúc ở các cảm biến KHÁC NHAU → tìm điểm CHUNG (VC hoặc E2), không thay từng cảm biến. VC chạm mass thì mọi cảm biến dùng VC đều mất 5 V → tín hiệu thấp.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q043",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nguồn ECM & nguồn 5 V",
+   "number": 43,
+   "question": "Rút giắc cảm biến TPS, bật khóa ON, đo chân VC trên giắc phía dây xe so với mass được 0 V. Nhưng khi rút luôn giắc MAP thì VC lên 5 V. Kết luận?",
+   "options": [
+    "Cảm biến TPS hỏng bên trong, cần thay TPS",
+    "ECM hỏng mạch ổn áp 5 V, cần thay ECM",
+    "Cảm biến MAP bị chạm mass bên trong, kéo sập VC",
+    "Dây VC từ ECM tới cảm biến TPS bị đứt"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/x_vc_chung.svg"
+   ],
+   "note": "Tháo lần lượt từng cảm biến dùng chung VC: tháo cái nào mà VC hồi lại 5 V thì chính cái đó (hoặc dây của nó) đang ngắn mạch. Kỹ thuật 'cô lập nhánh'.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q044",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nguồn ECM & nguồn 5 V",
+   "number": 44,
+   "question": "Theo hình, ECM nhận các điện áp: BATT = 12,4 V; IGSW = 12,3 V (khóa ON); +B = 0 V. Xe không nổ, không giao tiếp được máy chẩn đoán. Hư hỏng nằm ở đâu?",
+   "options": [
+    "Dây nguồn thường trực BATT bị đứt",
+    "Dây mass E1 của ECM tiếp xúc kém",
+    "Rơle chính, cầu chì EFI hoặc mạch MREL",
+    "Khóa điện hoặc dây IGSW tới ECM"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/x_role_chinh.svg"
+   ],
+   "note": "IGSW có điện = ECM đã nhận lệnh bật. ECM điều khiển rơle chính qua MREL; tiếp điểm rơle (qua cầu chì EFI) cấp +B. +B = 0 → kiểm tra cầu chì EFI, rơle chính và dây MREL.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q045",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nguồn ECM & nguồn 5 V",
+   "number": 45,
+   "question": "Vì sao trên nhiều xe, sau khi tắt khóa điện rơle chính VẪN giữ thêm vài giây?",
+   "options": [
+    "Để ECM lưu dữ liệu, đặt lại cơ cấu",
+    "Để bơm xăng giữ áp suất trong đường ống",
+    "Để ắc quy được máy phát nạp thêm sau khi tắt",
+    "Để quạt két nước chạy thêm làm mát ECM"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/x_role_chinh.svg"
+   ],
+   "note": "Loại rơle chính do ECM điều khiển (chân MREL): ECM giữ rơle sau khi tắt khóa để lưu dữ liệu học, đặt lại van ISC/bướm ga điện tử… rồi mới ngắt.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q046",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nguồn ECM & nguồn 5 V",
+   "number": 46,
+   "question": "Chân BATT của ECM (nguồn thường trực) bị mất điện. Hậu quả dễ nhận thấy nhất?",
+   "options": [
+    "Đèn Check Engine sáng liên tục khi chạy",
+    "Xe không thể khởi động được nữa",
+    "Bơm xăng chạy liên tục kể cả khi tắt máy",
+    "Mất mã lỗi và các giá trị tự học sau khi tắt khóa"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "BATT giữ bộ nhớ (DTC, giá trị học fuel trim, cầm chừng…) khi tắt khóa. Động cơ vẫn nổ được nhờ +B. Tháo cọc ắc quy cũng xóa bộ nhớ vì lý do này.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q047",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nguồn ECM & nguồn 5 V",
+   "number": 47,
+   "question": "Mass E1 của ECM tiếp xúc kém (có điện trở). Biểu hiện nào ĐIỂN HÌNH?",
+   "options": [
+    "Nhiều tín hiệu lệch, lỗi chập chờn",
+    "Chỉ riêng bơm xăng không chạy được",
+    "Động cơ chạy hoàn toàn bình thường",
+    "Chỉ riêng cảm biến oxy báo lỗi mạch sấy"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "E1 là mass hoạt động của ECM; mass kém làm mọi mức điện áp tham chiếu bị dịch → nhiều lỗi 'ma', khó tái hiện. Kiểm tra bằng đo sụt áp E1 → mass thân máy khi máy chạy (≈ 0,1 V trở xuống).",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q048",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · ECT / IAT",
+   "number": 48,
+   "question": "Trong mạch ECT như hình, khi động cơ NÓNG lên thì điện áp tại chân THW thay đổi thế nào?",
+   "options": [
+    "Dao động liên tục 0–5 V",
+    "Giảm xuống",
+    "Không đổi, luôn bằng 5 V",
+    "Tăng lên"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/x_ect_mach.svg"
+   ],
+   "note": "NTC: nóng → điện trở cảm biến giảm → chia áp với R chuẩn → điện áp THW giảm. Lạnh ~ 3–4 V, nóng máy ~ 0,5–1 V.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q049",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · ECT / IAT",
+   "number": 49,
+   "question": "Data list báo nhiệt độ nước −40 °C trong khi máy đã nóng. Rút giắc cảm biến, dùng dây nối tắt hai chân giắc phía dây xe → data list nhảy lên khoảng 140 °C. Kết luận?",
+   "options": [
+    "Cảm biến ECT hở bên trong",
+    "Dây số (1) THW bị đứt",
+    "Dây số (2) E2 bị đứt",
+    "ECM hỏng mạch đọc nhiệt độ"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/x_ect_mach.svg"
+   ],
+   "note": "−40 °C = ECM thấy mạch hở (THW ≈ 5 V). Nối tắt giắc → 140 °C (THW ≈ 0 V) chứng tỏ dây (1), (2) và ECM đều tốt → lỗi nằm ở chính cảm biến. Mẹo: '−40 hở, 140 chập'.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q050",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · ECT / IAT",
+   "number": 50,
+   "question": "Data list báo −40 °C. Nối tắt hai chân giắc phía dây xe, giá trị VẪN −40 °C. Bước tiếp theo?",
+   "options": [
+    "Kiểm tra thông mạch dây (1), (2)",
+    "Thay ECM vì chắc chắn đã hỏng mạch đọc",
+    "Thay cảm biến ECT mới cùng mã số",
+    "Xả gió hệ thống làm mát rồi đo lại"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/x_ect_mach.svg"
+   ],
+   "note": "Nối tắt mà ECM vẫn thấy hở → hở nằm trên dây (1) hoặc (2) hoặc giắc ECM. Chỉ nghĩ tới ECM khi dây đã tốt.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q051",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · ECT / IAT",
+   "number": 51,
+   "question": "Dựa vào đồ thị, điện trở cảm biến ở điểm P (20 °C) và Q (80 °C) xấp xỉ:",
+   "options": [
+    "P ≈ 250 Ω ; Q ≈ 30 Ω",
+    "P ≈ 25 kΩ ; Q ≈ 3 kΩ",
+    "P ≈ 0,3 kΩ ; Q ≈ 2,5 kΩ",
+    "P ≈ 2,5 kΩ ; Q ≈ 0,3 kΩ"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/x_ntc_duong_cong.svg"
+   ],
+   "note": "Giáo trình: ECT ở 20 °C khoảng 2–3 kΩ; ở 80 °C khoảng 0,3 kΩ. Chú ý trục điện trở là thang log. NTC: nhiệt độ tăng → điện trở giảm.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q052",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · ECT / IAT",
+   "number": 52,
+   "question": "Máy đã nóng hẳn (quạt két nước đã chạy) nhưng đo điện trở ECT được 2,4 kΩ. Triệu chứng xe nhiều khả năng gặp?",
+   "options": [
+    "Khó nổ khi máy lạnh vì ECM tưởng máy đã nóng",
+    "Đánh lửa quá sớm gây kích nổ liên tục khi tải",
+    "Quạt két nước chạy liên tục ngay cả khi máy lạnh",
+    "Hao xăng, khói đen, cầm chừng cao kéo dài"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/x_ntc_duong_cong.svg"
+   ],
+   "note": "2,4 kΩ ứng với ~20 °C. ECM 'tưởng' máy lạnh → làm đậm hâm nóng, tăng cầm chừng → hao xăng, khói đen, bugi muội. Trường hợp ngược lại (báo nóng khi lạnh) mới gây khó nổ lạnh.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q053",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · ECT / IAT",
+   "number": 53,
+   "question": "Khi mạch cảm biến nhiệt độ khí nạp (IAT) bị hỏng, ECM thường xử lý thế nào?",
+   "options": [
+    "Dùng −40 °C để làm đậm tối đa",
+    "Dùng giá trị mặc định ~20 °C",
+    "Bỏ qua, xe chạy bình thường không báo lỗi",
+    "Tắt động cơ ngay để bảo vệ"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Chế độ dự phòng (fail-safe): ECM thay bằng giá trị mặc định ~20 °C để xe vẫn chạy được về gara, đồng thời lưu mã P0110–P0113.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q054",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · ECT / IAT",
+   "number": 54,
+   "question": "Ở 25 °C, điện trở cảm biến IAT khoảng bao nhiêu theo giáo trình?",
+   "options": [
+    "8–10 kΩ",
+    "40–60 kΩ",
+    "200–300 Ω",
+    "1–1,6 kΩ"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "IAT ~ 1–1,6 kΩ ở 25 °C. ECT ~ 2–3 kΩ ở 20 °C, ~ 0,2–0,3 kΩ ở gần 100 °C. Đều là NTC.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q055",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Oxy & Fuel trim",
+   "number": 55,
+   "question": "Trong 4 tín hiệu cảm biến oxy (đã nóng máy), hình nào là cảm biến và hệ thống đang làm việc BÌNH THƯỜNG?",
+   "options": [
+    "Hình (2)",
+    "Hình (3)",
+    "Hình (4)",
+    "Hình (1)"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/x_o2_4_dang.svg"
+   ],
+   "note": "Zirconia bình thường dao động liên tục 0,1–0,9 V quanh 0,45 V (vòng kín). (2) luôn thấp = báo nghèo; (3) luôn cao = báo giàu; (4) đứng yên ~0,45 V = cảm biến chết/chưa nóng.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q056",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Oxy & Fuel trim",
+   "number": 56,
+   "question": "Tín hiệu như hình (2). Phun thêm xăng (hoặc gas) vào họng hút, điện áp lập tức vọt lên 0,9 V. Kết luận?",
+   "options": [
+    "Hỗn hợp đang giàu do kim phun rò nhỏ giọt",
+    "Dây sấy cảm biến bị đứt nên tín hiệu thấp",
+    "Cảm biến oxy hỏng, phản ứng sai – cần thay",
+    "Cảm biến tốt – hỗn hợp nghèo thật"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/x_o2_4_dang.svg"
+   ],
+   "note": "Thử làm giàu: cảm biến phản ứng nhanh lên cao → cảm biến còn tốt. Vậy 0,1 V là phản ánh đúng hỗn hợp nghèo (rò chân không, áp xăng thấp, kim phun tắc…).",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q057",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Oxy & Fuel trim",
+   "number": 57,
+   "question": "Tín hiệu như hình (4), đứng yên ~0,45 V kể cả khi thử làm giàu hoặc làm nghèo. Nguyên nhân hợp lý?",
+   "options": [
+    "ECM đang ở chế độ vòng kín ổn định nhất",
+    "Hỗn hợp đang ở đúng tỉ lệ lý tưởng 14,7:1",
+    "Bộ xúc tác hoạt động quá tốt nên tín hiệu phẳng",
+    "Cảm biến không hoạt động / chưa đủ nóng"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/x_o2_4_dang.svg"
+   ],
+   "note": "Ở vòng kín, tín hiệu PHẢI dao động. Phẳng ở ~0,45 V (điện áp ECM đặt sẵn) nghĩa là cảm biến không phát được tín hiệu: phần tử chết, chưa đủ nhiệt (> 350 °C) hoặc bộ sấy đứt (sấy ~6–13 Ω).",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q058",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Oxy & Fuel trim",
+   "number": 58,
+   "question": "Hình (3): tín hiệu luôn ~0,8 V. Nhóm nguyên nhân nào phù hợp?",
+   "options": [
+    "Kim phun rò, áp xăng cao, EVAP kẹt mở",
+    "Kim phun bị tắc một phần, phun ít xăng",
+    "Áp suất xăng thấp do bơm yếu hoặc lọc tắc",
+    "Rò chân không sau bướm ga, khí lọt vào cổ hút"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/x_o2_4_dang.svg"
+   ],
+   "note": "Luôn cao = hỗn hợp giàu (thiếu oxy). Rò chân không/áp xăng thấp/kim tắc lại làm NGHÈO. Phân loại đúng nhóm giàu–nghèo là kỹ năng cốt lõi.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q059",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Oxy & Fuel trim",
+   "number": 59,
+   "question": "So sánh xe X và xe Y. Xe nào có bộ xúc tác bị suy giảm?",
+   "options": [
+    "Xe Y",
+    "Xe X",
+    "Không xe nào",
+    "Cả hai xe"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/x_o2_xuc_tac.svg"
+   ],
+   "note": "Xúc tác tốt 'lưu trữ' oxy nên sau xúc tác (S2) ổn định ~0,6–0,7 V. Xúc tác hỏng → khí ra giống khí vào → S2 dao động theo S1. ECM dùng chính phép so sánh này để báo lỗi xúc tác.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q060",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Oxy & Fuel trim",
+   "number": 60,
+   "question": "Cảm biến A/F (wideband) hiển thị trên data list 3,6 V. Hỗn hợp đang:",
+   "options": [
+    "Giàu",
+    "Đúng 14,7:1",
+    "Nghèo",
+    "Không xác định được"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "A/F ngược với oxy thường: điện áp CAO (> 3,3 V) = nghèo, THẤP (< 3,3 V) = giàu (thang hiển thị Toyota ~2,2–4,2 V). Oxy zirconia: cao = giàu. Đây là bẫy kinh điển.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q061",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Oxy & Fuel trim",
+   "number": 61,
+   "question": "Data list: cầm chừng STFT = +18 %, LTFT = +15 %; ở 2 500 v/p STFT = +2 %, LTFT = +3 %. Nghi ngờ đầu tiên?",
+   "options": [
+    "Rò chân không sau cảm biến lưu lượng khí",
+    "Áp suất xăng quá cao do bộ điều áp kẹt",
+    "Kim phun bị rò nhỏ giọt khi đóng",
+    "Van EVAP kẹt mở hút hơi xăng liên tục"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Fuel trim dương = ECM đang BÙ THÊM xăng (hỗn hợp nghèo). Nghèo chỉ ở cầm chừng, hết khi tải cao → khí lọt cố định chiếm tỉ lệ lớn lúc ít gió → điển hình rò chân không.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q062",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Oxy & Fuel trim",
+   "number": 62,
+   "question": "STFT ≈ +5 % nhưng LTFT = −22 % ở mọi chế độ. ECM đang làm gì?",
+   "options": [
+    "Ở chế độ vòng hở, bỏ qua cảm biến oxy",
+    "Cắt bớt xăng lâu dài (xu hướng giàu)",
+    "Phun thêm xăng vì hỗn hợp đang nghèo",
+    "Tăng góc đánh lửa sớm để bù công suất"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Trim âm = bớt xăng. LTFT là giá trị học dài hạn, STFT dao động ngắn quanh nó. −22 % kéo dài → nguồn giàu thường trực: kim rò, áp xăng cao, cảm biến MAF báo dư gió…",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q063",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Oxy & Fuel trim",
+   "number": 63,
+   "question": "Trong trường hợp nào ECM chạy VÒNG HỞ (không dùng cảm biến oxy để hiệu chỉnh)?",
+   "options": [
+    "Cầm chừng khi đã nóng máy và tắt điều hòa",
+    "Mọi lúc khi xe có bộ xúc tác ba thành phần",
+    "Khởi động, máy lạnh, toàn tải, lỗi O2",
+    "Chạy đều ở tốc độ ổn định khi đã nóng máy"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Vòng hở khi: khởi động, máy lạnh/hâm nóng, tăng tốc mạnh/toàn tải, giảm tốc cắt xăng, lỗi cảm biến oxy. Vòng kín ở chế độ ổn định đã nóng máy.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q064",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Oxy & Fuel trim",
+   "number": 64,
+   "question": "Đo điện trở bộ sấy cảm biến oxy loại thường (zirconia) theo giáo trình. Giá trị nào đạt?",
+   "options": [
+    "OL",
+    "8 Ω",
+    "0 Ω",
+    "80 Ω"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Bộ sấy cảm biến oxy thường ~6–13 Ω (A/F ~1–4 Ω). 0 Ω = chập, OL = đứt → mã lỗi bộ sấy (P0031/P0032…), xe chậm vào vòng kín.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q065",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Dạng sóng cảm biến",
+   "number": 65,
+   "question": "Hình (A) và (B) là tín hiệu CKP đo khi đề. Đặc điểm nào phân biệt ĐÚNG?",
+   "options": [
+    "Cả hai đều loại điện từ, chỉ khác tốc độ đề",
+    "(A) Hall, (B) điện từ",
+    "(A) quang cần nguồn 5 V, (B) điện từ",
+    "(A) điện từ, (B) Hall"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/x_ckp_2_dang.svg"
+   ],
+   "note": "Điện từ: tự phát xoay chiều, 2 dây, biên độ và tần số tăng theo tốc độ. Hall/quang: cần nguồn (3 dây), ra xung vuông biên độ không đổi.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q066",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Dạng sóng cảm biến",
+   "number": 66,
+   "question": "Đoạn 'khoảng trống' (răng khuyết) trên tín hiệu CKP dùng để làm gì?",
+   "options": [
+    "Đánh dấu thời điểm mở van điều khiển cầm chừng",
+    "Xác định vị trí chuẩn trục khuỷu",
+    "Đo tốc độ bánh xe để điều khiển hộp số",
+    "Báo cho ECM biết động cơ đang kích nổ"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/x_ckp_2_dang.svg"
+   ],
+   "note": "Vành răng thiếu răng (vd. 36−2): ECM đếm răng từ chỗ khuyết để biết góc trục khuỷu tuyệt đối; kết hợp CMP để biết xy-lanh nào đang ở kỳ nén.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q067",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Dạng sóng cảm biến",
+   "number": 67,
+   "question": "Cảm biến CKP loại điện từ 2 dây: đo điện trở cuộn dây (giáo trình) và kiểm tra động bằng gì?",
+   "options": [
+    "Khoảng 0 Ω; đo điện áp DC 5 V khi bật khóa",
+    "Vài trăm Ω; khi đề đo điện áp AC/máy hiện sóng",
+    "Khoảng 12 kΩ; đo tần số khi tắt máy",
+    "Hàng MΩ; đo dòng điện khi máy chạy cầm chừng"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Cuộn dây điện từ có điện trở vài trăm Ω (tùy hãng, VD 200–1 500 Ω). Kiểm tra động: khi đề phải có điện áp AC (sin). Loại Hall không đo điện trở mà đo nguồn – mass – xung tín hiệu.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q068",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Dạng sóng cảm biến",
+   "number": 68,
+   "question": "Đề máy, đồng hồ vòng tua trên data list = 0 v/p, không có tia lửa, không phun xăng; bơm xăng chỉ chạy khi đang đề. Cảm biến nào đáng nghi nhất?",
+   "options": [
+    "Cảm biến vị trí trục khuỷu (NE/CKP)",
+    "Cảm biến nhiệt độ nước làm mát",
+    "Cảm biến tiếng gõ",
+    "Cảm biến oxy phía trước"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Không có NE → ECM không biết động cơ đang quay → không phun, không đánh lửa, không giữ bơm (bơm chỉ chạy nhờ tín hiệu STA khi đề). Vòng tua 0 khi đề là manh mối mạnh nhất.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q069",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Dạng sóng cảm biến",
+   "number": 69,
+   "question": "Quét chân ga từ từ như hình, đoạn nào chứng tỏ TPS hỏng?",
+   "options": [
+    "Đoạn ~4,5 V lúc đạp ga hết hành trình",
+    "Chỗ tụt đột ngột về ~0 V giữa hành trình",
+    "Đoạn điện áp giảm dần đều khi nhả ga",
+    "Đoạn ~0,6 V lúc nhả ga hoàn toàn"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/x_tps_quet.svg"
+   ],
+   "note": "Tín hiệu phải tăng/giảm trơn tru, không gai. Sụt về ~0 V giữa chừng = 'điểm chết' do mòn rãnh điện trở → giật, hụt ga tại đúng vị trí đó. 0,6 V cầm chừng và 4,5 V hết ga là bình thường.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q070",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Dạng sóng cảm biến",
+   "number": 70,
+   "question": "Cảm biến bàn đạp ga có 2 tín hiệu như hình. Vì sao nhà sản xuất làm 2 tín hiệu lệch nhau?",
+   "options": [
+    "Để tăng gấp đôi độ nhạy của bàn đạp ga",
+    "Để ECM đối chiếu, phát hiện sai lệch",
+    "Để dùng chung nguồn, tiết kiệm dây điện",
+    "Một tín hiệu cho phun xăng, một cho đánh lửa"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/x_app_2_tin_hieu.svg"
+   ],
+   "note": "VPA và VPA2 luôn có quan hệ cố định. Lệch quan hệ → P2138 (tương quan). Mất 1 tín hiệu: xe vẫn chạy hạn chế; mất cả 2: chỉ còn cầm chừng nhanh (~1 000–1 200 v/p) – theo giáo trình.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q071",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Dạng sóng cảm biến",
+   "number": 71,
+   "question": "Theo đặc tính MAP trong hình, khi bật khóa ON (máy chưa nổ, ở ngang mực nước biển) điện áp PIM khoảng bao nhiêu?",
+   "options": [
+    "Khoảng 1,4 V",
+    "Đúng 5,0 V",
+    "Khoảng 4,3 V",
+    "Khoảng 0,4 V"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/x_map_dac_tinh.svg"
+   ],
+   "note": "Máy chưa nổ → áp suất cổ hút = áp suất khí quyển ≈ 101 kPa → điện áp cao (~4,3 V). Cầm chừng có chân không ~30–35 kPa → ~1,1–1,4 V.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q072",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Dạng sóng cảm biến",
+   "number": 72,
+   "question": "Ống chân không nối cảm biến MAP bị tuột khi máy đang cầm chừng. ECM sẽ:",
+   "options": [
+    "Không ảnh hưởng vì ECM dùng TPS thay thế",
+    "ECM tăng góc đánh lửa làm máy rú ga",
+    "Hỗn hợp giàu, khói đen vì ECM tưởng tải nặng",
+    "Hỗn hợp nghèo, máy chết vì thiếu xăng"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/x_map_dac_tinh.svg"
+   ],
+   "note": "Tuột ống → cảm biến đo áp suất khí quyển → giống lúc đạp hết ga. ECM theo MAP mà tính lượng khí nạp nên phun rất đậm.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q073",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Dạng sóng cảm biến",
+   "number": 73,
+   "question": "Trong hình tín hiệu KNK, chu kỳ cháy nào có kích nổ và ECM phản ứng thế nào?",
+   "options": [
+    "Chu kỳ 2 – tăng góc đánh lửa sớm hơn",
+    "Chu kỳ 2 – làm muộn góc đánh lửa",
+    "Chu kỳ 2 – ECM tăng thời gian phun",
+    "Chu kỳ 1 và 3 – ECM cắt nhiên liệu"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/x_knk.svg"
+   ],
+   "note": "Kích nổ → rung tần số cao (≈ 6–13 kHz) → biên độ tín hiệu áp điện vọt lên. ECM làm muộn thời điểm đánh lửa đến khi hết kích nổ rồi tăng dần trở lại.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q074",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Dạng sóng cảm biến",
+   "number": 74,
+   "question": "Thay cảm biến tiếng gõ nhưng siết bu-lông lỏng hơn tiêu chuẩn nhiều. Hệ quả có thể xảy ra?",
+   "options": [
+    "Không ảnh hưởng vì cảm biến dùng từ trường",
+    "Cảm biến bị chập mạch xuống mass thân máy",
+    "ECM luôn báo kích nổ và làm muộn lửa",
+    "Tín hiệu yếu, bỏ sót kích nổ"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Cảm biến áp điện cảm nhận rung qua mặt tiếp xúc với thân máy. Lỏng → truyền rung kém → tín hiệu yếu. (Siết quá chặt/sai lực cũng làm sai lệch.) Phải siết đúng mô-men.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q075",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nhiên liệu & kim phun",
+   "number": 75,
+   "question": "Theo hình mạch bơm xăng, khi ĐANG ĐỀ, cuộn nào của rơle mở mạch kéo tiếp điểm đóng?",
+   "options": [
+    "L1 – ECM nối mass theo tín hiệu NE",
+    "L2 – ECM nối mass qua chân FC",
+    "L1 – nhận điện từ cực ST của khóa điện",
+    "Không cuộn nào – bơm chạy nhờ rơle EFI"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/x_bom_xang.svg"
+   ],
+   "note": "Khi đề: ST cấp điện cho L1 → bơm chạy ngay. Khi máy đã nổ (ECM nhận NE): ECM bật transistor nối mass chân FC → L2 giữ tiếp điểm. Khi nhả khóa về ON, L1 mất điện, L2 giữ bơm.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q076",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nhiên liệu & kim phun",
+   "number": 76,
+   "question": "Xe nổ được khi đang đề nhưng tắt máy NGAY khi nhả khóa từ START về ON. Theo hình, lỗi nằm ở đâu?",
+   "options": [
+    "L2, dây FC hoặc transistor bơm",
+    "Cuộn L1 hoặc dây từ cực ST của khóa",
+    "Cầu chì EFI bị đứt khi nhả khóa điện",
+    "Bơm xăng bị kẹt cơ khí khi đang chạy"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/x_bom_xang.svg"
+   ],
+   "note": "Khi đề bơm chạy nhờ L1 → nổ được. Nhả khóa → L1 mất điện, cần L2 giữ. Tắt ngay = L2/FC/transistor (hoặc tín hiệu NE) không giữ được. Cầu chì EFI đứt thì đã không nổ được ngay từ đầu.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q077",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nhiên liệu & kim phun",
+   "number": 77,
+   "question": "Vì sao khi bật khóa ON mà không đề (động cơ không quay), bơm xăng chỉ chạy khoảng 2 giây rồi tắt?",
+   "options": [
+    "Bơm quá nhiệt nên rơle nhiệt tự ngắt bảo vệ",
+    "Rơle EFI có mạch hẹn giờ tự ngắt sau 2 giây",
+    "Không có tín hiệu NE nên ECM ngắt bơm để an toàn",
+    "Áp suất đủ nên bộ điều áp ra lệnh ngắt bơm"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/x_bom_xang.svg"
+   ],
+   "note": "Chạy mồi 2 giây để tạo áp; sau đó ECM chỉ giữ bơm khi thấy NE (động cơ quay). Ý nghĩa an toàn: xe tai nạn, máy chết thì bơm dừng, không phun xăng ra ngoài.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q078",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nhiên liệu & kim phun",
+   "number": 78,
+   "question": "Trên xe có túi khí, khi túi khí bung thì hệ thống nhiên liệu được xử lý thế nào?",
+   "options": [
+    "Van EVAP mở ra để xả hết hơi xăng",
+    "Bơm chạy tối đa để giữ áp suất đường ống",
+    "Kim phun mở hết để xả áp đường ống",
+    "Ngắt bơm nhiên liệu để giảm nguy cơ cháy"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Khi nhận tín hiệu túi khí bung (hoặc công tắc quán tính khi va chạm), bơm nhiên liệu bị ngắt. Một số xe phải reset công tắc quán tính mới nổ lại được.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q079",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nhiên liệu & kim phun",
+   "number": 79,
+   "question": "Hình dạng sóng điện áp đo tại chân kim phun nối về ECM. Đoạn số (2) có ý nghĩa gì?",
+   "options": [
+    "Điện áp tự cảm sinh ra khi ECM ngắt dòng",
+    "Kim phun đang mở (ECM nối mass)",
+    "Điện áp ắc quy chờ sẵn trước khi phun",
+    "Kim phun đóng, cuộn dây không có dòng điện"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/x_kim_phun_song.svg"
+   ],
+   "note": "(1) ≈ 12–14 V: ECM chưa nối mass, kim đóng. (2) ≈ 0 V: transistor ECM dẫn, có dòng → kim mở. (3) xung 60–80 V: điện áp tự cảm khi ngắt dòng (chứng tỏ cuộn dây kim còn tốt).",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q080",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nhiên liệu & kim phun",
+   "number": 80,
+   "question": "Đọc hình (1 ô ngang = 1 ms). Thời gian phun xấp xỉ bao nhiêu?",
+   "options": [
+    "Khoảng 2,0 ms",
+    "Khoảng 3,2 ms",
+    "Khoảng 5,2 ms",
+    "Khoảng 6,4 ms"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/x_kim_phun_song.svg"
+   ],
+   "note": "Độ rộng xung = đoạn ở 0 V: từ 2,0 ms tới 5,2 ms ≈ 3,2 ms. Không tính đoạn xung tự cảm. Cầm chừng nóng máy thường ~2–4 ms.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q081",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nhiên liệu & kim phun",
+   "number": 81,
+   "question": "Đo tại chân kim #3 (về ECM) khi đề: đường thẳng 12 V, không có đoạn xuống 0 V. Các kim khác bình thường. Nguyên nhân hợp lý?",
+   "options": [
+    "Đứt dây #30 về ECM / ECM không điều khiển",
+    "Cầu chì cấp nguồn chung cho các kim bị đứt",
+    "Cuộn dây bên trong kim phun #3 bị đứt",
+    "Dây nguồn +B đi tới riêng kim #3 bị đứt"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/x_kim_phun_mach.svg"
+   ],
+   "note": "Có 12 V tại chân này nghĩa là nguồn đi QUA cuộn kim tới đây → cuộn kim và dây nguồn còn tốt. Không bao giờ xuống 0 V → phía ECM không nối mass được (đứt dây #30 hoặc driver ECM). Nếu cuộn kim đứt thì chân này đọc 0 V.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q082",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nhiên liệu & kim phun",
+   "number": 82,
+   "question": "Đo tại điểm D (chân kim #4 về ECM) khi bật khóa ON được 0 V, trong khi A, B, C đều 12 V. Nguyên nhân?",
+   "options": [
+    "Transistor điều khiển kim #4 trong ECM bị hỏng",
+    "Kim #4 bị tắc bẩn đầu phun",
+    "Dây từ chân #40 về ECM bị đứt",
+    "Cuộn kim #4 hoặc dây nguồn kim #4 đứt"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/x_kim_phun_mach.svg"
+   ],
+   "note": "Khi chưa phun, chân về ECM phải bằng điện áp nguồn (đi xuyên qua cuộn kim). 0 V = mất nguồn trước điểm D: cuộn kim đứt hoặc dây nguồn đứt. Tắc bẩn là lỗi cơ, không làm mất điện áp.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q083",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nhiên liệu & kim phun",
+   "number": 83,
+   "question": "Kim phun điện trở cao (high-impedance) thường có điện trở cuộn dây khoảng:",
+   "options": [
+    "0,5–3 Ω",
+    "11–16 Ω",
+    "200–300 Ω",
+    "2–3 kΩ"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Kim phun loại điện trở cao ~11–16 Ω được ECM điều khiển trực tiếp. Loại điện trở thấp ~0,5–3 Ω cần mạch hạn dòng/điện trở phụ. Kim phun GDI dùng điện áp cao từ mạch tăng áp của ECM.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q084",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nhiên liệu & kim phun",
+   "number": 84,
+   "question": "Khi ắc quy yếu (điện áp thấp), ECM xử lý thời gian phun thế nào?",
+   "options": [
+    "Giữ nguyên, không có hiệu chỉnh",
+    "Giảm thời gian phun để bảo vệ kim",
+    "Tăng thời gian phun để bù độ trễ mở kim",
+    "Cắt phun cho đến khi điện áp tăng"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Điện áp thấp → kim mở chậm hơn → lượng phun thực tế ít. ECM cộng thêm 'thời gian bù điện áp' (hiệu chỉnh theo điện áp ắc quy).",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q085",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Nhiên liệu & kim phun",
+   "number": 85,
+   "question": "Hệ thống phun xăng trực tiếp (GDI) khác MPI ở điểm nào?",
+   "options": [
+    "Chỉ một kim phun đặt trước bướm ga",
+    "Phun vào cổ hút, áp suất thấp hơn MPI",
+    "Phun thẳng vào buồng đốt, có bơm cao áp",
+    "Không cần cảm biến áp suất nhiên liệu"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "GDI: bơm tiếp vận (áp thấp) → bơm cao áp (dẫn động từ trục cam) → ống phân phối có cảm biến áp suất → kim phun trong xy-lanh. Ưu: công suất cao, tiết kiệm, nhưng dễ bám muội xu-páp nạp.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q086",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Đánh lửa",
+   "number": 86,
+   "question": "Trong hệ thống đánh lửa như hình, tín hiệu IGF có vai trò gì?",
+   "options": [
+    "Cảm biến báo vị trí piston xy-lanh số 1",
+    "IC đánh lửa báo về ECM là đã có tia lửa",
+    "ECM ra lệnh cho IC bắt đầu cấp dòng sơ cấp",
+    "ECM điều khiển thời gian ngậm điện bô bin"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/x_cop.svg"
+   ],
+   "note": "IGT: ECM → IC (lệnh đánh lửa, xung 0–5 V). IGF: IC → ECM (xác nhận). Mất IGF, nhiều ECM (Toyota) sẽ ngắt phun nhiên liệu để bảo vệ bộ xúc tác.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q087",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Đánh lửa",
+   "number": 87,
+   "question": "Xe Toyota đề nổ được 2–3 giây rồi tắt, có mã lỗi liên quan IGF. Giải thích phù hợp?",
+   "options": [
+    "Van ISC đóng hoàn toàn ngay khi nổ máy",
+    "Bugi bị ướt xăng nên tắt lửa sau vài giây",
+    "Mất IGF nên ECM cắt phun để bảo vệ xúc tác",
+    "Bơm xăng mất tín hiệu NE nên ngừng chạy"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/x_cop.svg"
+   ],
+   "note": "Không có IGF = ECM nghĩ không có lửa → xăng phun vào sẽ không cháy, đổ vào xúc tác gây quá nhiệt → ECM chủ động cắt phun. Kiểm tra dây IGF, nguồn/mass IC đánh lửa.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q088",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Đánh lửa",
+   "number": 88,
+   "question": "Trên dạng sóng thứ cấp, các phần A, B, C, D lần lượt là:",
+   "options": [
+    "A cháy · B đánh lửa · C ngậm điện · D dao động",
+    "A ngậm điện · B cháy · C đánh lửa · D dao động",
+    "A đánh lửa · B ngậm điện · C cháy · D dao động",
+    "A đánh lửa · B cháy · C dao động · D ngậm điện"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/x_thu_cap.svg"
+   ],
+   "note": "A: điện áp cao nhất để phá khe hở bugi (kV). B: duy trì tia lửa (~1–2 ms). C: năng lượng còn dư dao động tắt dần. D: khi bắt đầu cấp dòng sơ cấp (ngậm điện) – chuẩn bị lần đánh lửa sau.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q089",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Đánh lửa",
+   "number": 89,
+   "question": "Đường đánh lửa (A) của MỘT xy-lanh cao bất thường so với các xy-lanh còn lại. Nguyên nhân phù hợp?",
+   "options": [
+    "Khe hở bugi rộng / dây cao áp đứt",
+    "Khe hở bugi quá hẹp so với tiêu chuẩn",
+    "Bugi bị nứt sứ, rò điện xuống mass",
+    "Bugi bị bám muội than dẫn điện"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/x_thu_cap.svg"
+   ],
+   "note": "Càng khó phóng điện → cần điện áp càng cao: khe hở rộng, đứt dây, hỗn hợp nghèo. Ngược lại muội than, nứt sứ (rò) hoặc khe hở hẹp làm đường đánh lửa THẤP.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q090",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Đánh lửa",
+   "number": 90,
+   "question": "Bô bin loại đánh lửa trực tiếp có số vòng dây sơ cấp/thứ cấp và đặc điểm dây nào đúng?",
+   "options": [
+    "Sơ cấp ~20 000 vòng dây nhỏ; thứ cấp ~300 vòng dây to",
+    "Sơ cấp ~25 vòng dây to; thứ cấp ~2 500 vòng dây nhỏ",
+    "Sơ cấp ~300 vòng dây to; thứ cấp ~20 000 vòng dây nhỏ",
+    "Sơ cấp và thứ cấp bằng nhau, khoảng 1 000 vòng mỗi cuộn"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Giáo trình: thứ cấp W2 = 19 000–26 000 vòng, Ø 0,07–0,1 mm; sơ cấp W1 = 250–400 vòng, Ø 0,69–0,8 mm. Tỉ số vòng lớn → điện áp thứ cấp hàng chục kV.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q091",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Đánh lửa",
+   "number": 91,
+   "question": "Dây cao áp (loại lõi carbon) đo điện trở bao nhiêu thì còn dùng được theo giáo trình?",
+   "options": [
+    "Khoảng 0–1 Ω",
+    "Khoảng 200–300 Ω",
+    "Trên 1 MΩ",
+    "Khoảng 9–25 kΩ"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Dây cao áp lõi carbon có điện trở để chống nhiễu: ~9–25 kΩ (tùy chiều dài). OL/rất lớn = đứt lõi → đường đánh lửa cao, bỏ máy.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q092",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Đánh lửa",
+   "number": 92,
+   "question": "Bugi tháo ra có lớp muội đen KHÔ, mịn bám khắp đầu sứ. Nguyên nhân thường gặp?",
+   "options": [
+    "Đánh lửa quá sớm làm bugi quá nóng",
+    "Hỗn hợp giàu hoặc tia lửa yếu",
+    "Hỗn hợp quá nghèo trong thời gian dài",
+    "Dầu bôi trơn lọt vào buồng đốt"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Muội đen khô: thừa xăng/lửa yếu (cũng gặp khi ECT báo lạnh sai). Ướt dầu, bóng: lọt dầu (xéc-măng, phớt). Trắng/cháy rỗ: quá nhiệt (quá sớm, quá nghèo, bugi sai nhiệt trị).",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q093",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Đánh lửa",
+   "number": 93,
+   "question": "Hệ thống DIS dùng một bô bin cho 2 xy-lanh (bugi đôi). Phát biểu nào ĐÚNG?",
+   "options": [
+    "Chỉ bugi đang ở kỳ nén mới có tia lửa",
+    "Cần bộ chia điện để chia tia lửa cho 2 bugi",
+    "Cùng đánh lửa: một ở kỳ nén, một ở kỳ xả",
+    "Đánh lửa lần lượt, cách nhau 180° trục cam"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Hai bugi mắc nối tiếp qua cuộn thứ cấp: cùng phóng điện. Bugi ở kỳ xả (áp thấp) gần như không tốn điện áp ('tia lửa lãng phí'), phần lớn năng lượng dồn cho bugi ở kỳ nén.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q094",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Đánh lửa",
+   "number": 94,
+   "question": "Dùng đèn đặt lửa (timing light) như hình để làm gì?",
+   "options": [
+    "Kiểm tra áp suất nén cuối kỳ nén",
+    "Kiểm tra/chỉnh thời điểm đánh lửa",
+    "Kiểm tra có tia lửa ở bugi hay không",
+    "Đo điện trở dây cao áp từng xy-lanh"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/p_den_dat_lua.jpg"
+   ],
+   "note": "Kẹp cảm ứng vào dây cao áp xy-lanh 1, đèn chớp đúng lúc đánh lửa làm dấu trên puly 'đứng yên' để đọc góc. Với xe cũ có bộ chia điện, nới bu-lông xoay bộ chia để chỉnh.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q095",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Cầm chừng (ISC/ETCS)",
+   "number": 95,
+   "question": "Van ISC kiểu quay 2 cuộn như hình. Cuộn B (RSC) bị đứt. Hiện tượng thường gặp theo giáo trình?",
+   "options": [
+    "Van về vị trí mặc định, ~1 000–1 200 v/p",
+    "Không ảnh hưởng vì cuộn A làm thay cuộn B",
+    "Van đóng hoàn toàn, máy chết khi nhả ga",
+    "Van mở hết cỡ, máy rú lên khoảng 3 000 v/p"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/x_isc_quay.svg"
+   ],
+   "note": "Hai cuộn kéo ngược chiều nhau theo tỉ lệ làm việc. Mất một cuộn (hoặc hở mạch), nam châm vĩnh cửu đưa van về vị trí mặc định → cầm chừng cố định ~1 000–1 200 v/p, không điều chỉnh được nữa.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q096",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Cầm chừng (ISC/ETCS)",
+   "number": 96,
+   "question": "Van ISC loại mô-tơ bước: khi tắt khóa điện thì van ở trạng thái nào và vì sao?",
+   "options": [
+    "Ở giữa – để tiết kiệm điện ắc quy",
+    "Không xác định – tùy vị trí lúc tắt máy",
+    "Mở hoàn toàn – để lần sau dễ nổ",
+    "Đóng hoàn toàn – để chống bụi lọt vào"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Giáo trình: khi tắt khóa, ECM (nhờ rơle chính giữ thêm) mở van ISC hết cỡ để lần đề sau có nhiều gió → dễ nổ; nổ xong van đóng dần theo nhiệt độ nước.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q097",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Cầm chừng (ISC/ETCS)",
+   "number": 97,
+   "question": "Bật điều hòa khi đang cầm chừng nhưng vòng tua tụt mạnh, rung giật. Hệ thống nào nhiều khả năng đang lỗi?",
+   "options": [
+    "Hệ thống điều khiển cầm chừng",
+    "Cảm biến tiếng gõ báo sai làm muộn lửa",
+    "Cảm biến oxy phía sau bộ xúc tác",
+    "Bơm xăng và bộ điều áp nhiên liệu"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Khi có tải (A/C, trợ lực lái, đèn…) ECM phải tăng gió cầm chừng (chế độ điều khiển dự tính). Van/bướm ga bám muội hoặc van ISC kẹt → không bù được → tụt vòng tua.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q098",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Cầm chừng (ISC/ETCS)",
+   "number": 98,
+   "question": "Trong hình, chi tiết số mấy là van ISC loại mô-tơ bước?",
+   "options": [
+    "Số 4",
+    "Số 2",
+    "Số 3",
+    "Số 1"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/p_isc_5loai.jpg"
+   ],
+   "note": "1: van xoay (rotary). 2: mô-tơ bước (stepper). 3: solenoid điều khiển hiệu dụng (duty). 4: cụm bướm ga điều khiển bằng mô-tơ (ETCS). 5: solenoid ON-OFF.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q099",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Cầm chừng (ISC/ETCS)",
+   "number": 99,
+   "question": "Trong hình, ở loại số 4, lượng không khí cầm chừng được điều khiển như thế nào?",
+   "options": [
+    "Dây ga cơ khí nối thẳng bàn đạp ga",
+    "Van hằng nhiệt sáp giãn nở theo nhiệt độ",
+    "Van solenoid trên đường gió tắt qua bướm ga",
+    "Mô-tơ chỉnh góc mở bướm ga chính"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/p_isc_5loai.jpg"
+   ],
+   "note": "Loại 4 là ETCS-i (bướm ga điện tử): bướm ga không đóng hoàn toàn khi cầm chừng mà được mô-tơ điều chỉnh góc mở. Các loại 1, 2, 3, 5 điều khiển gió đi TẮT qua bướm ga.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q100",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · Cầm chừng (ISC/ETCS)",
+   "number": 100,
+   "question": "Bướm ga điện tử (ETCS) mất điều khiển mô-tơ (lỗi nghiêm trọng). Theo cơ chế an toàn, bướm ga sẽ:",
+   "options": [
+    "Đóng kín hoàn toàn, động cơ chết máy ngay",
+    "Mở hết cỡ để động cơ không bị chết máy",
+    "Giữ nguyên góc mở tại thời điểm xảy ra lỗi",
+    "Lò xo đưa về góc mở nhỏ cố định"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Khi ECM ngắt mô-tơ, lò xo hồi vị kéo bướm ga về vị trí mở nhỏ mặc định → xe chạy chậm về gara được; đèn Check Engine sáng.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q101",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · VVT-i / EVAP / EGR",
+   "number": 101,
+   "question": "Van VVT-i (OCV) bị kẹt ở vị trí làm sớm cam nạp khi đang cầm chừng. Triệu chứng hay gặp?",
+   "options": [
+    "Không ảnh hưởng gì khi cầm chừng",
+    "Cầm chừng rung, dễ chết máy",
+    "Đèn báo áp suất dầu sáng liên tục",
+    "Công suất tăng mạnh ở tốc độ thấp"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Cầm chừng ECM đặt cam ở vị trí muộn nhất (trùng điệp nhỏ). Kẹt sớm → khí xả hồi lại cửa nạp nhiều → cháy kém, rung, chết máy. Dầu bẩn làm kẹt OCV là nguyên nhân phổ biến.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q102",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · VVT-i / EVAP / EGR",
+   "number": 102,
+   "question": "Van EVAP (VSV) kẹt luôn mở. Lúc nào ảnh hưởng thấy rõ nhất?",
+   "options": [
+    "Chỉ khi bật điều hòa và đèn pha cùng lúc",
+    "Lúc động cơ còn rất lạnh vào buổi sáng sớm",
+    "Lúc tăng tốc hết ga ở tốc độ cao trên cao tốc",
+    "Lúc cầm chừng và ngay sau khi đổ đầy xăng"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Hơi xăng trong than hoạt tính bị hút liên tục vào cổ hút. Lúc lưu lượng khí ít (cầm chừng) hoặc vừa đổ xăng (nhiều hơi) thì phần hơi này làm giàu hỗn hợp đáng kể → fuel trim âm, khó nổ.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q103",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Xăng · VVT-i / EVAP / EGR",
+   "number": 103,
+   "question": "Van EGR kẹt mở ở chế độ cầm chừng sẽ gây:",
+   "options": [
+    "Tăng công suất rõ rệt khi cầm chừng",
+    "Tăng lượng NOx thải ra môi trường",
+    "Giảm nhiệt độ khí xả, máy êm hơn",
+    "Cầm chừng rung, có thể chết máy"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "EGR đưa khí xả trơ vào buồng đốt để GIẢM NOx ở tải trung bình. Cầm chừng mà vẫn đưa khí xả vào → hỗn hợp loãng khí trơ → cháy không ổn định.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q104",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Common Rail",
+   "number": 104,
+   "question": "Trong hình hệ thống CRDI, chi tiết số 2 (lắp trên bơm cao áp) là gì?",
+   "options": [
+    "Cảm biến RPS",
+    "Van an toàn cơ khí",
+    "Van SCV (định lượng)",
+    "Van RPRV"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/d_crdi.svg"
+   ],
+   "note": "1: bơm cao áp; 2: SCV (Suction Control Valve) trên bơm; 3: ống rail; 4: van điều chỉnh áp suất RPRV ở đầu rail; 5: cảm biến áp suất rail RPS; 6: kim phun. ECM điều khiển áp suất bằng SCV (đầu vào) và/hoặc RPRV (đầu xả).",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q105",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Common Rail",
+   "number": 105,
+   "question": "Theo hình, chi tiết số 5 báo cho ECM thông tin gì?",
+   "options": [
+    "Nhiệt độ nhiên liệu bên trong ống rail",
+    "Lượng nhiên liệu hồi về thùng chứa",
+    "Thời điểm phun thực tế của kim số 1",
+    "Áp suất thực tế trong ống rail"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/d_crdi.svg"
+   ],
+   "note": "Số 5 là cảm biến RPS. ECM so sánh áp suất thực tế (RPS) với áp suất mục tiêu (tính từ tốc độ – CKP và tải – APP) rồi điều khiển SCV/RPRV.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q106",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Common Rail",
+   "number": 106,
+   "question": "Áp suất ống rail trên CRDI có thể lên tới khoảng bao nhiêu?",
+   "options": [
+    "Khoảng 100–150 bar",
+    "Khoảng 3–4 bar",
+    "Khoảng 20–30 bar",
+    "Trên 1 600 bar"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Giáo trình: áp suất trong rail có thể > 2 000 bar; cầm chừng ~250–300 bar. Vì vậy TUYỆT ĐỐI không nới đường ống cao áp khi máy đang chạy.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q107",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Common Rail",
+   "number": 107,
+   "question": "Mạch RPS 3 dây như hình. ECM báo P0193 (điện áp tín hiệu > 4,75 V). Khả năng nào phù hợp?",
+   "options": [
+    "Dây nguồn (a) bị đứt",
+    "(b) chạm 5 V hoặc (c) bị đứt",
+    "Dây tín hiệu (b) bị đứt",
+    "Dây tín hiệu (b) chạm mass"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/d_rps_mach.svg"
+   ],
+   "note": "Mã cao (High): tín hiệu bị kéo lên → chạm VC hoặc mất mass cảm biến (cảm biến đưa thẳng 5 V ra). Mã thấp (P0192 < 0,25 V): mất nguồn (a), đứt tín hiệu (b) – vì có R kéo xuống – hoặc (b) chạm mass.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q108",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Common Rail",
+   "number": 108,
+   "question": "Cùng mạch như hình, dây (a) VC bị đứt. Tín hiệu PCR ECM nhận được sẽ:",
+   "options": [
+    "≈ 0 V – mã thấp (P0192)",
+    "Dao động 0–5 V – lỗi tương quan",
+    "≈ 5 V – mã cao (P0193)",
+    "Không đổi vì cảm biến tự phát điện"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/d_rps_mach.svg"
+   ],
+   "note": "Không có nguồn, cảm biến không xuất được tín hiệu; điện trở kéo xuống trong ECM kéo PCR về 0 V → 'circuit low'. Cách lý luận này áp dụng cho mọi cảm biến 3 dây 5 V.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q109",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Common Rail",
+   "number": 109,
+   "question": "Theo đặc tính trong hình, data list báo áp suất rail ~800 bar thì điện áp tín hiệu RPS khoảng:",
+   "options": [
+    "≈ 2,3 V",
+    "≈ 1,0 V",
+    "≈ 4,75 V",
+    "≈ 0,5 V"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/d_rps_dac_tinh.svg"
+   ],
+   "note": "Đường đặc tính tuyến tính 0,5 V (0 bar) → 4,5 V (~1 800 bar). 800 bar ≈ 0,5 + 800/1800 × 4 ≈ 2,3 V. Dưới 0,25 V hoặc trên 4,75 V là vùng báo lỗi mạch.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q110",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Common Rail",
+   "number": 110,
+   "question": "Data list như hình: khi tăng ga nhanh, áp suất thực tế không theo kịp mục tiêu. Nhóm nguyên nhân phù hợp?",
+   "options": [
+    "Van RPRV đóng quá chặt, không xả được áp",
+    "Thiếu nhiên liệu cấp vào hoặc rò áp suất rail",
+    "Bugi sấy hỏng nên buồng đốt không đủ nhiệt",
+    "Cảm biến bàn đạp ga báo sai vị trí bàn đạp"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/d_ap_rail.svg"
+   ],
+   "note": "Mục tiêu tăng nhưng thực tế tụt lại → hệ thống không tạo/giữ được áp: thiếu dầu đầu vào (lọc tắc, có gió, bơm tiếp vận) hoặc rò áp (kim hồi dầu nhiều, RPRV rò). Xe thường yếu, hụt ga, có thể vào chế độ giới hạn.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q111",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Common Rail",
+   "number": 111,
+   "question": "Đo dầu hồi kim phun như hình. Kết luận?",
+   "options": [
+    "Kim #1, #2, #4 bị tắc vì hồi quá ít dầu",
+    "Kim #3 tốt nhất vì dầu lưu thông nhiều",
+    "Kim #3 bị mòn/rò, hồi dầu quá nhiều",
+    "Tất cả bình thường vì kim nào cũng có dầu hồi"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/d_dau_hoi.svg"
+   ],
+   "note": "Kim còn tốt hồi dầu ít và đều nhau. Một kim hồi gấp 3 lần → van điều khiển/bi kim mòn → rò áp rail → khó nổ khi nóng, yếu máy, áp rail thấp.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q112",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Common Rail",
+   "number": 112,
+   "question": "Hình so sánh 2 loại van SCV. Rút giắc van SCV loại X khi máy đang chạy thì điều gì xảy ra?",
+   "options": [
+    "Không thay đổi vì van tự giữ vị trí cũ",
+    "Lưu lượng tối đa → áp rail vọt cao",
+    "Đóng hoàn toàn → động cơ chết máy ngay",
+    "Đóng một nửa → cầm chừng không đổi"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/d_scv.svg"
+   ],
+   "note": "Loại X: không có dòng = lưu lượng lớn nhất (thường mở – NO); tăng dòng → giảm lưu lượng. Loại Y ngược lại (thường đóng – NC): rút giắc → không có dầu vào bơm → chết máy. Phải biết xe dùng loại nào trước khi thử!",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q113",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Common Rail",
+   "number": 113,
+   "question": "Van RPRV gắn trên ống rail còn được gọi là 'van xả áp nhanh' vì:",
+   "options": [
+    "Nó xả gió lẫn trong rail khi mới khởi động",
+    "Nó xả dầu từ rail về thùng khi giảm tải",
+    "Nó xả dầu từ kim phun về bơm tiếp vận",
+    "Nó mở cho dầu từ thùng vào rail khi đạp ga"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/p_rprv.jpg"
+   ],
+   "note": "RPRV vừa là van an toàn (áp quá cao thì mở), vừa giúp hạ áp nhanh khi giảm tải để lượng phun giảm theo kịp – điều khiển theo xung hiệu dụng của ECM.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q114",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Common Rail",
+   "number": 114,
+   "question": "Trên một số xe, khi ECM báo lỗi cảm biến RPS hoặc van SCV, ECM sẽ:",
+   "options": [
+    "Ngắt phun hoặc giới hạn công suất",
+    "Bỏ qua lỗi và cho chạy bình thường",
+    "Chuyển sang dùng bơm VE dự phòng",
+    "Tăng áp suất rail tối đa để bù lỗi"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Giáo trình: một số xe khi lỗi RPS/SCV/RPRV thì ngắt kim phun (động cơ không nổ); một số khác cho chạy nhưng giới hạn tốc độ/công suất để về gara.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q115",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Common Rail",
+   "number": 115,
+   "question": "Cảm biến áp suất rail (RPS) làm việc theo nguyên lý nào?",
+   "options": [
+    "Phần tử áp điện tạo điện áp khi bị rung",
+    "Cuộn dây cảm ứng tạo điện áp xoay chiều",
+    "Phần tử Hall tạo xung vuông theo áp suất",
+    "Màng biến dạng thay đổi điện trở cầu"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/p_rps.jpg"
+   ],
+   "note": "Dầu áp suất cao làm màng biến dạng (~1 mm ở 1 500 bar) → điện trở cầu thay đổi (0–70 mV) → khuếch đại thành 0,25–4,75 V gửi ECM.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q116",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Bugi sấy & xử lý khí thải",
+   "number": 116,
+   "question": "Đo điện trở từng bugi sấy như hình (đã tháo thanh nối). Triệu chứng xe nhiều khả năng gặp?",
+   "options": [
+    "Mất công suất khi máy đã nóng hẳn",
+    "Khó nổ lạnh, rung, khói trắng lúc đầu",
+    "Đèn báo áp suất dầu sáng khi cầm chừng",
+    "Khói đen khi tăng tốc ở tốc độ cao"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/d_bugi_say.svg"
+   ],
+   "note": "Bugi sấy tốt ~0,5–1 Ω (tùy loại); #3 OL = đứt. Ảnh hưởng chủ yếu khi máy lạnh: xy-lanh 3 khó cháy → rung, khói trắng (nhiên liệu chưa cháy) cho tới khi máy ấm.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q117",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Bugi sấy & xử lý khí thải",
+   "number": 117,
+   "question": "Thứ tự các bộ xử lý khí thải Diesel phổ biến tính từ động cơ ra là:",
+   "options": [
+    "DPF → DOC → SCR",
+    "SCR → DOC → DPF",
+    "DOC → DPF → SCR",
+    "DOC → SCR → DPF"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "DOC (oxy hóa CO, HC, tạo nhiệt) → DPF (lọc hạt muội, cần nhiệt để tái sinh) → SCR (phun dung dịch urê khử NOx). Mẹo: 'Ô xi – Phin – Sạch NOx'.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q118",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Bugi sấy & xử lý khí thải",
+   "number": 118,
+   "question": "Cảm biến chênh áp DPF báo chênh áp trước–sau lọc rất cao. ECM hiểu là gì và làm gì?",
+   "options": [
+    "Turbo hỏng → giảm áp suất tăng áp",
+    "Lọc đầy muội → ECM kích hoạt tái sinh đốt muội",
+    "Lọc bị thủng → ngắt phun ngay lập tức",
+    "SCR hết urê → tăng lượng khí EGR"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Muội bám nhiều → cản trở dòng khí → chênh áp tăng. ECM phun muộn/phun bổ sung để nâng nhiệt độ DPF (~600 °C) đốt muội. Chênh áp quá thấp bất thường mới nghi lọc vỡ/ống cảm biến tuột.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q119",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Diesel · Bugi sấy & xử lý khí thải",
+   "number": 119,
+   "question": "Turbo biến thiên hình học (VGT) tăng áp suất tăng áp ở tốc độ thấp bằng cách:",
+   "options": [
+    "Tăng tốc độ quạt làm mát khí nạp",
+    "Đóng van EGR để có nhiều khí xả hơn",
+    "Khép cánh hướng dòng để khí xả đi nhanh hơn",
+    "Mở hết van xả cho khí đi tắt tua-bin"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Cánh hướng dòng khép lại → tiết diện nhỏ → tốc độ khí tăng → tua-bin quay nhanh dù lưu lượng thấp. Tốc độ cao thì mở cánh ra để tránh quá áp.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q120",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Kỹ thuật đo – mẹo xưởng",
+   "number": 120,
+   "question": "Mạch đèn như hình: A, B, C ≈ 12,4 V; D = 11,9 V; đèn KHÔNG sáng. Lỗi ở đâu?",
+   "options": [
+    "Hở mạch phía mass sau bóng đèn",
+    "Công tắc tiếp xúc kém, có điện trở",
+    "Bóng đèn bị đứt tim",
+    "Cầu chì 10A bị đứt"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/c_den_do_ap.svg"
+   ],
+   "note": "Không có dòng thì không có sụt áp trên bóng → điểm sau bóng vẫn gần bằng áp nguồn. Nếu bóng đứt, D phải ≈ 0 V (vì D vẫn nối mass). D còn ~12 V chứng tỏ bóng còn thông nhưng đường về mass bị hở.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q121",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Kỹ thuật đo – mẹo xưởng",
+   "number": 121,
+   "question": "Quạt két nước không quay; đo X và Y so với mass thân xe đều 12,5 V như hình. Kết luận?",
+   "options": [
+    "Hở mạch mass của quạt",
+    "Rơle quạt không đóng tiếp điểm",
+    "Cầu chì 30A bị đứt",
+    "Mô-tơ quạt bị đứt cuộn dây"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/c_mat_mass.svg"
+   ],
+   "note": "Y cũng có 12,5 V → điện đi xuyên qua mô-tơ được (mô-tơ không đứt) nhưng không về được mass. Nếu mô-tơ đứt, Y ≈ 0 V. Nếu rơle/cầu chì hỏng, X = 0 V.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q122",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Kỹ thuật đo – mẹo xưởng",
+   "number": 122,
+   "question": "Rơle 4 chân như hình: chân nào là cuộn điều khiển và chân nào là tiếp điểm tải theo ký hiệu ISO quen dùng?",
+   "options": [
+    "Cuộn: (2)(4) · Tiếp điểm: (1)(3)",
+    "Cuộn: (3)(4) · Tiếp điểm: (1)(2)",
+    "Cuộn: (1)(3) · Tiếp điểm: (2)(4)",
+    "Cuộn: (1)(2) · Tiếp điểm: (3)(4)"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/c_role_4_chan.svg"
+   ],
+   "note": "Ký hiệu cuộn dây (lò xo) giữa (1)–(2): 85/86 (điện trở ~60–100 Ω). Tiếp điểm thường mở giữa (3)–(4): 30 (nguồn) – 87 (ra tải). Mẹo thử nhanh: cầu nối 30–87 bằng dây có cầu chì, tải chạy → lỗi ở phía điều khiển.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q123",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Kỹ thuật đo – mẹo xưởng",
+   "number": 123,
+   "question": "Rút rơle bơm xăng, dùng dây có cầu chì nối tắt chân 30–87 trên hộp cầu chì: bơm chạy. Kết luận?",
+   "options": [
+    "Dây mass của bơm xăng bị hở mạch",
+    "Cầu chì bơm xăng đã đứt từ trước",
+    "Bơm xăng hỏng vì phải cầu nối mới chạy",
+    "Lỗi ở rơle hoặc mạch điều khiển cuộn"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Cầu nối 30–87 bỏ qua rơle: nếu bơm chạy thì nguồn → bơm → mass đều tốt. Còn lại: rơle hỏng (cuộn/tiếp điểm) hoặc cuộn không được cấp điện/mass (85/86, ECM).",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q124",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Kỹ thuật đo – mẹo xưởng",
+   "number": 124,
+   "question": "Đo điện áp một dây nguồn khi TÁCH tải ra (hở mạch) được 12,4 V, nhưng cắm tải vào thì tải không chạy. Vì sao phép đo hở mạch dễ đánh lừa?",
+   "options": [
+    "Đồng hồ vạn năng không đo được điện áp DC",
+    "Không tải thì không có sụt áp trên điện trở xấu",
+    "Tải bị hỏng thì luôn làm điện áp tăng lên",
+    "Điện áp đo được là điện áp xoay chiều"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Một sợi dây chỉ còn vài sợi đồng/giắc oxy hóa vẫn đọc đủ 12 V khi không tải (I ≈ 0 → U = I·R ≈ 0). Phải đo khi CÓ TẢI hoặc đo sụt áp để lộ điện trở xấu.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q125",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Kỹ thuật đo – mẹo xưởng",
+   "number": 125,
+   "question": "Kiểm tra cầu chì nhanh mà không tháo: bật mạch, đo điện áp từng chân cầu chì so với mass. Kết quả nào chứng tỏ cầu chì ĐỨT?",
+   "options": [
+    "Một chân 12 V, chân kia 0 V",
+    "Cả hai chân đều 0 V",
+    "Cả hai chân đều 12 V",
+    "Cả hai chân đều khoảng 6 V"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Cầu chì tốt: hai chân cùng điện áp. Đứt: phía nguồn còn 12 V, phía tải mất (0 V hoặc trôi). Cả hai 0 V → chưa có nguồn tới cầu chì.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q126",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Kỹ thuật đo – mẹo xưởng",
+   "number": 126,
+   "question": "Đo điện trở một cảm biến đang còn cắm giắc với ECM và bật khóa ON. Vì sao làm vậy là SAI?",
+   "options": [
+    "Cảm biến sẽ bị nóng lên khi đo điện trở",
+    "Điện trở chỉ đo được khi máy đang nổ",
+    "ECM sẽ tự xóa mã lỗi khi gắn đồng hồ",
+    "Thang Ω tự phát dòng – mạch có điện sẽ đo sai"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Nguyên tắc: đo Ω phải TẮT nguồn và tách linh kiện khỏi mạch (rút giắc). Đo V thì đo khi mạch có điện, càng sát điều kiện làm việc càng tốt.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q127",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Kỹ thuật đo – mẹo xưởng",
+   "number": 127,
+   "question": "Khi kiểm tra tín hiệu cảm biến trên giắc ECM, dùng phương pháp nào để không làm hỏng chân giắc?",
+   "options": [
+    "Cắt vỏ dây rồi kẹp cá sấu vào lõi đồng",
+    "Chọc que đo thẳng vào lỗ chân cái phía trước",
+    "Rút giắc ra rồi đo chân phía ECM khi bật khóa",
+    "Đo luồn phía sau giắc (back-probe)"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Chọc que to vào chân cái làm doãng chân → tiếp xúc kém về sau (lỗi chập chờn). Cắt vỏ dây gây oxy hóa. Back-probe giữ mạch nguyên trạng và an toàn.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q128",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nhận diện ảnh thật",
+   "number": 128,
+   "question": "Chi tiết trong ảnh được bắt vào thân máy ở vị trí đối diện vành răng trên trục khuỷu. Nếu nó hỏng thì hiện tượng điển hình là gì?",
+   "options": [
+    "Máy nổ nhưng không lên ga quá 3 000 v/p",
+    "Máy chạy bình thường, chỉ hao xăng nhẹ",
+    "Đề không nổ, vòng tua = 0, không phun, không lửa",
+    "Đèn báo nạp sáng nhưng máy chạy bình thường"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/p_ckp.jpg"
+   ],
+   "note": "Đây là cảm biến vị trí trục khuỷu (CKP). Mất CKP → ECM không có tín hiệu NE → không phun, không đánh lửa. Đây là tín hiệu 'sống còn' của động cơ.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q129",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nhận diện ảnh thật",
+   "number": 129,
+   "question": "Cảm biến ren đồng như ảnh vặn vào áo nước động cơ. Nếu ECM nhận giá trị sai từ nó, chức năng nào KHÔNG bị ảnh hưởng trực tiếp?",
+   "options": [
+    "Hiệu chỉnh góc đánh lửa theo nhiệt độ",
+    "Làm đậm khi máy lạnh, cầm chừng nhanh",
+    "Đo lượng không khí nạp vào động cơ",
+    "Điều khiển quạt két nước làm mát"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/p_ect.jpg"
+   ],
+   "note": "Đây là cảm biến nhiệt độ nước làm mát (ECT). ECT dùng cho: làm đậm hâm nóng, cầm chừng nhanh, góc đánh lửa, quạt két, chuyển số hộp AT, EGR/EVAP, vòng kín… Lượng khí nạp do MAF/MAP đo.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q130",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nhận diện ảnh thật",
+   "number": 130,
+   "question": "Hai chi tiết trong ảnh đều bắt vào thân xy-lanh, có lỗ bắt bu-lông giữa và chứa phần tử áp điện. Chúng là gì?",
+   "options": [
+    "Cảm biến nhiệt độ nước",
+    "Cảm biến tiếng gõ (kích nổ)",
+    "Cảm biến vị trí trục cam",
+    "Cảm biến áp suất dầu"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/p_knk.jpg"
+   ],
+   "note": "KNK dùng tinh thể áp điện, phát điện áp khi rung ở tần số kích nổ (6–13 kHz). Lắp trên thân máy/lốc máy; phải siết đúng mô-men.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q131",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nhận diện ảnh thật",
+   "number": 131,
+   "question": "Chi tiết dạng ống dài trong ảnh cắm trực tiếp lên đầu bugi. Theo giáo trình, với loại đời mới, cách kiểm tra thường dùng là gì?",
+   "options": [
+    "Kiểm tra tia lửa và tình trạng vỏ bọc",
+    "Đo điện trở thứ cấp phải đạt 9–25 kΩ",
+    "Đo điện áp AC khi đề phải lớn hơn 2 V",
+    "Thổi khí nén kiểm tra rò ở đầu chụp bugi"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_cop.jpg"
+   ],
+   "note": "Đây là bô bin đánh lửa trực tiếp (COP). Giáo trình: bô bin đời cũ đo được điện trở sơ/thứ cấp; bô bin đời mới (tích hợp IC) thường đánh giá bằng kiểm tra tia lửa và vỏ bọc.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q132",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nhận diện ảnh thật",
+   "number": 132,
+   "question": "Bộ dây trong ảnh đo điện trở một sợi được OL. Hậu quả và loại hệ thống sử dụng nó?",
+   "options": [
+    "Đèn báo nạp sáng; dùng để nối máy phát và ắc quy",
+    "Kim phun không mở; dùng cho mạch kim phun xăng",
+    "Không ảnh hưởng; dùng cho hệ thống đánh lửa COP",
+    "Bỏ máy xy-lanh đó; dùng cho bộ chia điện/DIS"
+   ],
+   "correct": 3,
+   "images": [
+    "images/hard/p_daycaoap.jpg"
+   ],
+   "note": "Đây là bộ dây cao áp (lõi carbon ~9–25 kΩ). OL = đứt lõi → không có tia lửa ở bugi đó → bỏ máy. Hệ thống COP không dùng dây cao áp.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q133",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nhận diện ảnh thật",
+   "number": 133,
+   "question": "Hai chi tiết trong ảnh lắp trên máy phát/xe đời cũ. Chúng là gì?",
+   "options": [
+    "Rơle đề và công tắc từ của máy khởi động",
+    "Tiết chế rung và rơle đèn báo nạp",
+    "Rơle bơm xăng và rơle mở mạch C/OPN",
+    "Tiết chế vi mạch M.IC và bộ chỉnh lưu"
+   ],
+   "correct": 1,
+   "images": [
+    "images/hard/p_tiet_che_rung.jpg"
+   ],
+   "note": "Máy phát đời cũ dùng tiết chế rung (có tiếp điểm, cuộn dây) lắp RỜI bên ngoài, kèm rơle đèn báo nạp; kích thước lớn nên không lắp liền máy phát. Ngày nay dùng tiết chế vi mạch lắp trong máy phát.",
+   "level": "hard"
+  },
+  {
+   "id": "nc-q134",
+   "set": "nc",
+   "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
+   "section": "Nhận diện ảnh thật",
+   "number": 134,
+   "question": "Chi tiết khoanh đỏ gắn ở đầu ống rail và có đường ống nối về thùng nhiên liệu (đã che chữ). Đó là gì?",
+   "options": [
+    "Cảm biến áp suất rail (RPS)",
+    "Cảm biến nhiệt độ nhiên liệu",
+    "Van điều chỉnh áp suất rail (RPRV)",
+    "Van định lượng nhiên liệu (SCV)"
+   ],
+   "correct": 2,
+   "images": [
+    "images/hard/p_rprv.jpg"
+   ],
+   "note": "RPRV lắp trên rail, mở cho dầu về thùng (vì vậy có đường hồi). RPS cũng ở đầu rail nhưng chỉ có giắc điện, không có đường hồi. SCV nằm trên bơm cao áp.",
+   "level": "hard"
   }
  ]
 }

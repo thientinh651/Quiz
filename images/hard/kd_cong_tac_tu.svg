@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" width="640" height="330" font-family="Segoe UI, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="320.0" y="22.0" font-size="15" text-anchor="middle" font-weight="700" fill="#1a2332">Công tắc từ (relay gài khớp) – cấu tạo bên trong</text>
+<rect x="140.0" y="70.0" width="300.0" height="170.0" rx="10" fill="#f6f8fa" stroke="#1a2332" stroke-width="2"/>
+<rect x="190.0" y="135.0" width="200.0" height="40.0" rx="0" fill="#d5dbe2" stroke="#1a2332" stroke-width="2"/>
+<text x="290.0" y="160.0" font-size="12" text-anchor="middle" font-weight="400" fill="#1a2332">Pít-tông (lõi thép)</text>
+<line x1="390.0" y1="155.0" x2="520.0" y2="155.0" stroke="#1a2332" stroke-width="4" stroke-linecap="round"/>
+<text x="470.0" y="145.0" font-size="11" text-anchor="middle" font-weight="400" fill="#8a96a3">→ cần gạt bendix</text>
+<rect x="195.0" y="95.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="195.0" y="185.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="219.0" y="95.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="219.0" y="185.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="243.0" y="95.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="243.0" y="185.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="267.0" y="95.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="267.0" y="185.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="291.0" y="95.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="291.0" y="185.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="315.0" y="95.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="315.0" y="185.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="339.0" y="95.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="339.0" y="185.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="363.0" y="95.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="363.0" y="185.0" width="18.0" height="30.0" rx="0" fill="#c9dcf2" stroke="#1f5fa8" stroke-width="1.5"/>
+<rect x="198.0" y="80.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="198.0" y="217.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="222.0" y="80.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="222.0" y="217.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="246.0" y="80.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="246.0" y="217.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="270.0" y="80.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="270.0" y="217.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="294.0" y="80.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="294.0" y="217.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="318.0" y="80.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="318.0" y="217.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="342.0" y="80.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="342.0" y="217.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="366.0" y="80.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<rect x="366.0" y="217.0" width="12.0" height="13.0" rx="0" fill="#f6d7b5" stroke="#d9822b" stroke-width="1.2"/>
+<text x="110.0" y="112.0" font-size="15" text-anchor="middle" font-weight="700" fill="#1f5fa8">(1)</text>
+<line x1="122.0" y1="108.0" x2="192.0" y2="108.0" stroke="#1f5fa8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="110.0" y="88.0" font-size="15" text-anchor="middle" font-weight="700" fill="#d9822b">(2)</text>
+<line x1="122.0" y1="86.0" x2="196.0" y2="86.0" stroke="#d9822b" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="150.0" cy="290.0" r="4" fill="#fff" stroke="#1a2332" stroke-width="1.5"/>
+<text x="158.0" y="294.0" font-size="11" text-anchor="start" font-weight="600" fill="#1a2332">50</text>
+<circle cx="300.0" cy="290.0" r="4" fill="#fff" stroke="#1a2332" stroke-width="1.5"/>
+<text x="308.0" y="294.0" font-size="11" text-anchor="start" font-weight="600" fill="#1a2332">C (→ motor)</text>
+<circle cx="460.0" cy="290.0" r="4" fill="#fff" stroke="#1a2332" stroke-width="1.5"/>
+<text x="468.0" y="294.0" font-size="11" text-anchor="start" font-weight="600" fill="#1a2332">Thân (mass)</text>
+<polyline points="150.0,286.0 150.0,240.0 200.0,240.0" fill="none" stroke="#8a96a3" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 3"/>
+<text x="20.0" y="265.0" font-size="12" text-anchor="start" font-weight="400" fill="#1a2332">Cuộn (1): nối 50 ↔ C</text>
+<text x="20.0" y="279.4" font-size="12" text-anchor="start" font-weight="400" fill="#1a2332">Cuộn (2): nối 50 ↔ thân</text>
+</svg>

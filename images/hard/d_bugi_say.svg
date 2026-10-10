@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 320" width="660" height="320" font-family="Segoe UI, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="330.0" y="22.0" font-size="15" text-anchor="middle" font-weight="700" fill="#1a2332">Mạch bugi sấy 4 xy-lanh – đo điện trở từng bugi (đã tháo thanh nối)</text>
+<polyline points="60.0,70.0 600.0,70.0" fill="none" stroke="#1a2332" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="60.0" y="60.0" font-size="12" text-anchor="start" font-weight="700" fill="#1a2332">Từ rơle bugi sấy</text>
+<line x1="140.0" y1="70.0" x2="140.0" y2="120.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<rect x="131.0" y="120.0" width="18.0" height="90.0" rx="4" fill="#e6e6e6" stroke="#1a2332" stroke-width="2"/>
+<rect x="135.0" y="210.0" width="10.0" height="30.0" rx="3" fill="#d65a31" stroke="#a33" stroke-width="2"/>
+<line x1="140.0" y1="250.0" x2="140.0" y2="258.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="126.0" y1="258.0" x2="154.0" y2="258.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="131.0" y1="263.0" x2="149.0" y2="263.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="136.0" y1="268.0" x2="144.0" y2="268.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<text x="140.0" y="290.0" font-size="13" text-anchor="middle" font-weight="700" fill="#1a2332">#1: 0,6 Ω</text>
+<line x1="270.0" y1="70.0" x2="270.0" y2="120.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<rect x="261.0" y="120.0" width="18.0" height="90.0" rx="4" fill="#e6e6e6" stroke="#1a2332" stroke-width="2"/>
+<rect x="265.0" y="210.0" width="10.0" height="30.0" rx="3" fill="#d65a31" stroke="#a33" stroke-width="2"/>
+<line x1="270.0" y1="250.0" x2="270.0" y2="258.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="256.0" y1="258.0" x2="284.0" y2="258.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="261.0" y1="263.0" x2="279.0" y2="263.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="266.0" y1="268.0" x2="274.0" y2="268.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<text x="270.0" y="290.0" font-size="13" text-anchor="middle" font-weight="700" fill="#1a2332">#2: 0,7 Ω</text>
+<line x1="400.0" y1="70.0" x2="400.0" y2="120.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<rect x="391.0" y="120.0" width="18.0" height="90.0" rx="4" fill="#e6e6e6" stroke="#1a2332" stroke-width="2"/>
+<rect x="395.0" y="210.0" width="10.0" height="30.0" rx="3" fill="#d65a31" stroke="#a33" stroke-width="2"/>
+<line x1="400.0" y1="250.0" x2="400.0" y2="258.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="386.0" y1="258.0" x2="414.0" y2="258.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="391.0" y1="263.0" x2="409.0" y2="263.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="396.0" y1="268.0" x2="404.0" y2="268.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<text x="400.0" y="290.0" font-size="13" text-anchor="middle" font-weight="700" fill="#c0392b">#3: OL Ω</text>
+<line x1="530.0" y1="70.0" x2="530.0" y2="120.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<rect x="521.0" y="120.0" width="18.0" height="90.0" rx="4" fill="#e6e6e6" stroke="#1a2332" stroke-width="2"/>
+<rect x="525.0" y="210.0" width="10.0" height="30.0" rx="3" fill="#d65a31" stroke="#a33" stroke-width="2"/>
+<line x1="530.0" y1="250.0" x2="530.0" y2="258.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="516.0" y1="258.0" x2="544.0" y2="258.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="521.0" y1="263.0" x2="539.0" y2="263.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<line x1="526.0" y1="268.0" x2="534.0" y2="268.0" stroke="#1a2332" stroke-width="2" stroke-linecap="round"/>
+<text x="530.0" y="290.0" font-size="13" text-anchor="middle" font-weight="700" fill="#1a2332">#4: 0,6 Ω</text>
+</svg>
