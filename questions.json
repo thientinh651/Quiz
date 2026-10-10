@@ -5555,10 +5555,10 @@
    "number": 31,
    "question": "MAP là viết tắt của gì và đo gì?",
    "options": [
-    "Main Air Pump",
+    "Mass Air Pressure",
     "Manifold Absolute Pressure",
-    "Max Air Position",
-    "Mass Air Pressure"
+    "Mass Absolute Pressure",
+    "Manifold Air Position"
    ],
    "correct": 1,
    "images": [],
@@ -9644,10 +9644,10 @@
    "number": 280,
    "question": "APP viết đầy đủ là gì?",
    "options": [
-    "Air Pump Pulse",
+    "Auto Pressure Pulse Sensor",
     "Air Pressure Pump",
     "Accelerator Pedal Position Sensor",
-    "Auto Pressure Position"
+    "Accelerator Pump Pressure Sensor"
    ],
    "correct": 2,
    "images": []
@@ -10066,8 +10066,8 @@
    "number": 306,
    "question": "Cảm biến Narrowband tạo tín hiệu điện áp trong khoảng nào?",
    "options": [
-    "0 – 12 V",
-    "1 – 5 V",
+    "0,5 – 4,5 V",
+    "1 – 12 V",
     "0 – 5 V",
     "0,1 – 0,9 V"
    ],
@@ -10162,12 +10162,12 @@
    "number": 312,
    "question": "Cảm biến Wideband sản sinh điện áp trong khoảng nào tùy lượng oxy còn sót?",
    "options": [
-    "1 – 5 V",
-    "100 – 900 mV",
     "0 – 12 V",
-    "0 – 5 V"
+    "0 – 5 V",
+    "2,2 – 4,2 V",
+    "100 – 900 mV"
    ],
-   "correct": 1,
+   "correct": 3,
    "images": []
   },
   {
@@ -10420,9 +10420,9 @@
    "number": 328,
    "question": "Dãy điện áp đo được của cảm biến Oxy loại Zirconium là bao nhiêu?",
    "options": [
+    "2,2 – 4,2 V",
+    "0,5 – 4,5 V",
     "0 – 5 V",
-    "0 - 12 V",
-    "1 - 5 V",
     "0,1 – 0,9 V"
    ],
    "correct": 3,
@@ -12209,12 +12209,12 @@
    "number": 437,
    "question": "Điện áp cấp cho cuộn dây kim phun GDI để nhấc kim là bao nhiêu?",
    "options": [
-    "12 V",
     "220 V",
-    "5 V",
-    "50 – 90 V"
+    "5 – 12 V",
+    "50 – 90 V",
+    "12 – 14 V"
    ],
-   "correct": 3,
+   "correct": 2,
    "images": []
   },
   {
@@ -13061,8 +13061,8 @@
    "options": [
     "Tụ điện",
     "Bộ chia điện",
-    "Bô bin",
-    "Bugi"
+    "Bộ đánh lửa sớm",
+    "Bô bin đánh lửa"
    ],
    "correct": 1,
    "images": []
@@ -13092,12 +13092,12 @@
    "number": 491,
    "question": "Khe hở giữa các má vít khi mở hết nằm trong khoảng nào?",
    "options": [
+    "3,0 – 5,0 mm",
     "0,3 – 0,5 mm",
-    "3 – 5 mm",
-    "1 – 2 mm",
-    "0,03 mm"
+    "0,03 – 0,05 mm",
+    "1 – 2 mm"
    ],
-   "correct": 0,
+   "correct": 1,
    "images": []
   },
   {
@@ -13306,12 +13306,12 @@
    "number": 504,
    "question": "Tín hiệu của cảm biến quang trong bộ chia điện có dạng gì?",
    "options": [
-    "Sóng tam giác",
     "Xung vuông 0 – 5 V",
-    "Điện áp DC",
-    "Hình sin"
+    "Hình sin",
+    "Sóng sin 0,5 – 4,5 V",
+    "Xung tam giác 0 – 12 V"
    ],
-   "correct": 1,
+   "correct": 0,
    "images": []
   },
   {
@@ -13978,9 +13978,9 @@
    "question": "Tín hiệu đầu vào chế độ dự tính gồm gì?",
    "options": [
     "NE, NSW, A/C, PS, ELS",
+    "VC, E2, VTA, PIM",
     "STA, IDL, THW",
-    "VC, E2",
-    "THW, THA"
+    "NE, G, IGT, IGF"
    ],
    "correct": 0,
    "images": []
@@ -14010,12 +14010,12 @@
    "number": 547,
    "question": "ELS là tín hiệu gì?",
    "options": [
-    "Nhiệt độ",
-    "Oxy",
     "Phụ tải điện",
-    "Tốc độ xe"
+    "Tốc độ xe",
+    "Nhiệt độ dầu",
+    "Tốc độ động cơ"
    ],
-   "correct": 2,
+   "correct": 0,
    "images": [],
    "note": "Electrical Load Signal"
   },
@@ -14718,10 +14718,10 @@
    "number": 590,
    "question": "Điện trở mô tơ bướm ga khi kiểm tra khoảng bao nhiêu?",
    "options": [
-    "0 Ω",
-    "1 – 5 kΩ",
+    "0 – 0,1 Ω",
+    "100 – 200 kΩ",
     "0,3 – 100 Ω",
-    "100 kΩ"
+    "1 – 5 kΩ"
    ],
    "correct": 2,
    "images": []
@@ -14750,12 +14750,12 @@
    "number": 592,
    "question": "Xung điều khiển mô tơ bướm ga đo bằng dụng cụ nào?",
    "options": [
+    "Máy hiện sóng",
+    "Đồng hồ VOM",
     "Ampe kế",
-    "VOM",
-    "Thước kẹp",
-    "Máy hiện sóng"
+    "Đèn thử LED"
    ],
-   "correct": 3,
+   "correct": 0,
    "images": []
   },
   {
@@ -15083,10 +15083,10 @@
    "number": 612,
    "question": "Các bộ phận chính của hệ thống EVAP nằm giữa những đâu?",
    "options": [
-    "Bướm ga và ống xả",
+    "Ắc quy và ECU",
     "Lọc gió, ống nạp, than, bình xăng",
-    "Bình xăng và bugi",
-    "Ắc quy và ECU"
+    "Bướm ga, ống xả, bộ xúc tác",
+    "Bình xăng, bugi, bô bin"
    ],
    "correct": 1,
    "images": [],
@@ -15435,12 +15435,12 @@
    "number": 633,
    "question": "Khi van EGR bị kẹt ở trạng thái mở, động cơ có hiện tượng gì?",
    "options": [
-    "Máy mạnh hơn",
-    "Không ảnh hưởng gì",
-    "Chạy êm hơn",
-    "Rung, chết máy, khói đen"
+    "Chạy êm, tiết kiệm xăng",
+    "Rung, chết máy, khói đen",
+    "Máy mạnh hơn ở cầm chừng",
+    "Không ảnh hưởng gì"
    ],
-   "correct": 3,
+   "correct": 1,
    "images": [],
    "note": "Đáp án đầy đủ: Nổ không êm, chết máy, khói đen"
   },
@@ -15520,12 +15520,12 @@
    "number": 638,
    "question": "Hệ thống ACIS điều khiển bằng van gì?",
    "options": [
-    "Van ISC",
-    "Van OCV",
     "VSV chân không",
-    "Van EGR"
+    "Van EGR",
+    "Van OCV dầu",
+    "Van ISC dạng xoay"
    ],
-   "correct": 2,
+   "correct": 0,
    "images": [],
    "note": "Đáp án đầy đủ: Van VSV chuyển chân không do ECU điều khiển"
   },
@@ -16115,9 +16115,9 @@
    "number": 26,
    "question": "Cơ cấu tắt máy trên bơm VE dùng gì?",
    "options": [
+    "Van EGR chân không",
+    "Van OCV điện từ",
     "Chuột tắt máy",
-    "Van OCV",
-    "Van EGR",
     "Van cắt nhiên liệu"
    ],
    "correct": 3,
@@ -16503,9 +16503,9 @@
    "question": "ECM dựa vào cảm biến nào để điều khiển mở kim phun đúng xylanh và đúng thời điểm?",
    "options": [
     "Cảm biến trục cam",
-    "Cảm biến ECT",
     "Cảm biến MAF",
-    "Cảm biến MAP"
+    "Cảm biến lưu lượng khí",
+    "Cảm biến nhiệt độ nước"
    ],
    "correct": 0,
    "images": [],
@@ -16688,9 +16688,9 @@
    "number": 60,
    "question": "Bơm tiếp vận có mấy loại?",
    "options": [
-    "3 loại",
-    "4 loại",
-    "1 loại",
+    "Điện và thủy lực",
+    "Cơ khí và khí nén",
+    "Chỉ loại cơ khí",
     "Điện và cơ khí"
    ],
    "correct": 3,
@@ -16706,9 +16706,9 @@
    "question": "Bơm tiếp vận cơ khí thường dùng các loại nào?",
    "options": [
     "Bánh răng, cánh gạt",
-    "Bơm piston",
-    "Bơm ly tâm",
-    "Bơm màng"
+    "Trục vít, piston",
+    "Piston, màng",
+    "Ly tâm, màng"
    ],
    "correct": 0,
    "images": [],
@@ -16857,9 +16857,9 @@
    "number": 70,
    "question": "Cách xả gió với loại bơm điện là gì?",
    "options": [
-    "Ấn bơm tay",
-    "Đạp ga liên tục",
-    "Mở van EGR",
+    "Đạp ga liên tục khi đề",
+    "Mở van RPRV xả gió",
+    "Ấn bơm tay xả gió",
     "Nới ống, kích bơm quay"
    ],
    "correct": 3,
@@ -17059,10 +17059,10 @@
    "number": 82,
    "question": "Van SCV được bố trí ở đường nào trên bơm cao áp?",
    "options": [
-    "Đường xả áp",
-    "Đường dầu hồi",
+    "Đường dầu hồi về thùng",
+    "Đường dầu xả áp",
     "Đường cấp dầu thấp áp",
-    "Đường dầu cao áp"
+    "Đường dầu cao áp ra rail"
    ],
    "correct": 2,
    "images": []
@@ -17076,9 +17076,9 @@
    "question": "ECU điều khiển van SCV dựa vào tín hiệu nào?",
    "options": [
     "APP, CKP, áp rail",
-    "ECT",
-    "Cảm biến oxy",
-    "MAF"
+    "VSS, NSW, A/C",
+    "Oxy, KNK, MAP",
+    "ECT, IAT, MAF"
    ],
    "correct": 0,
    "images": [],
@@ -17093,9 +17093,9 @@
    "question": "Tên gọi khác của van định lượng dầu gồm gì?",
    "options": [
     "IMV, FPRV, MPROP",
-    "EGR, DPF",
-    "ISC, ISCV",
-    "VVT, OCV"
+    "ISC, ISCV, ACV",
+    "EGR, DPF, SCR",
+    "VVT, OCV, VSV"
    ],
    "correct": 0,
    "images": []
@@ -17125,9 +17125,9 @@
    "question": "MPROP viết tắt của gì?",
    "options": [
     "Magnetic proportioning valve",
+    "Metered Pump Rail Output",
     "Main Pressure Pump",
-    "Metered Pump Rail",
-    "Motor Pump Output"
+    "Motor Proportional Pump"
    ],
    "correct": 0,
    "images": []
@@ -17293,10 +17293,10 @@
    "number": 96,
    "question": "Trên ống rail thường trang bị gì?",
    "options": [
-    "Cảm biến oxy",
-    "Bugi sấy",
+    "Bô bin và cảm biến KNK",
+    "Cảm biến oxy và bugi sấy",
     "Cảm biến áp và van RPRV",
-    "Bô bin"
+    "Bugi sấy và van EGR"
    ],
    "correct": 2,
    "images": [],
@@ -17429,9 +17429,9 @@
    "number": 104,
    "question": "Lỗi Performance của RPRV cần kiểm tra gì?",
    "options": [
-    "Bugi sấy",
-    "Kim phun",
-    "Bơm tiếp vận",
+    "Bơm tiếp vận và lọc",
+    "Kim phun và mã kim",
+    "Bugi sấy và rơle sấy",
     "Van và đường hồi"
    ],
    "correct": 3,
@@ -17682,9 +17682,9 @@
    "question": "Điện áp cấp cho cuộn dây điện từ kim phun CRDI khoảng bao nhiêu?",
    "options": [
     "Khoảng 80 V",
-    "5 V",
-    "12 V",
-    "220 V"
+    "Khoảng 12 V",
+    "Khoảng 5 V",
+    "Khoảng 220 V"
    ],
    "correct": 0,
    "images": []
@@ -17749,13 +17749,13 @@
    "question": "Kim phun Piezo dùng điện áp nhấc kim lên tới bao nhiêu?",
    "options": [
     "~160 V",
-    "24 V",
-    "12 V",
-    "80 V"
+    "Khoảng 24 V",
+    "Khoảng 12 V",
+    "Khoảng 80 V"
    ],
    "correct": 0,
    "images": [],
-   "note": "Đáp án đầy đủ: Tới khoảng 160 V"
+   "note": "Đáp án đầy đủ: Khoảng 160 V"
   },
   {
    "id": "diesel-q124",
@@ -17934,10 +17934,10 @@
    "number": 134,
    "question": "Các hư hỏng thường gặp của kim phun CRDI là gì?",
    "options": [
-    "Cháy bugi đánh lửa",
+    "Nứt vỏ, gãy chân kim",
     "Đứt cuộn, kẹt, đái, hồi nhiều",
-    "Mòn bạc trục khuỷu",
-    "Nứt vỏ hộp số"
+    "Cháy bugi, đứt bô bin",
+    "Mòn bạc, nứt trục khuỷu"
    ],
    "correct": 1,
    "images": [],
@@ -18002,10 +18002,10 @@
    "number": 138,
    "question": "Mã lỗi P062D thể hiện gì?",
    "options": [
-    "Injector Circuit Performance",
+    "Injector Circuit High Voltage Input",
     "Voltage Regulator for Injector Malfunction",
-    "Injector Circuit Open",
-    "Injector Circuit High"
+    "Injector Circuit Performance Problem",
+    "Injector Circuit Open / Malfunction"
    ],
    "correct": 1,
    "images": [],
@@ -18053,9 +18053,9 @@
    "number": 141,
    "question": "Có hai phương pháp tăng áp nào cho động cơ?",
    "options": [
-    "EGR và DPF",
-    "ISC và ETCS",
-    "VVT và ACIS",
+    "VVT-i và ACIS",
+    "EGR và lọc muội DPF",
+    "ISC và ETCS-i",
     "Turbocharger và Supercharger"
    ],
    "correct": 3,
@@ -18137,10 +18137,10 @@
    "number": 146,
    "question": "Intercooler có tên tiếng Việt là gì?",
    "options": [
-    "Bộ tăng áp",
+    "Bộ lọc khí nạp",
     "Bộ làm mát khí nạp",
-    "Bộ lọc khí",
-    "Bộ nén khí"
+    "Bộ nén khí nạp",
+    "Bộ tăng áp khí nạp"
    ],
    "correct": 1,
    "images": []
@@ -18290,9 +18290,9 @@
    "question": "VGT có thể được dẫn động bằng những cách nào?",
    "options": [
     "Mô-tơ hoặc chân không",
-    "Chỉ mô-tơ",
-    "Chỉ chân không",
-    "Dây đai"
+    "Chỉ bầu chân không",
+    "Dây đai trục khuỷu",
+    "Chỉ mô-tơ bước"
    ],
    "correct": 0,
    "images": [],
@@ -18323,10 +18323,10 @@
    "number": 157,
    "question": "Bơm chân không trên Diesel được dẫn động bởi đâu?",
    "options": [
-    "Trục các-đăng",
     "Mô-tơ bơm ABS",
+    "Trục các-đăng",
     "Trục cam/máy phát",
-    "Dây đai quạt"
+    "Dây đai quạt gió"
    ],
    "correct": 2,
    "images": [],
@@ -18422,10 +18422,10 @@
    "number": 163,
    "question": "Nếu áp suất tăng áp không đạt 160 kPa thì cần kiểm tra gì?",
    "options": [
-    "Bugi sấy",
-    "Lọc nhớt",
+    "Lọc nhớt và bơm dầu",
+    "Ắc quy và máy phát",
     "Đường nạp, turbo, intercooler, EGR",
-    "Ắc quy"
+    "Bugi sấy và rơle sấy"
    ],
    "correct": 2,
    "images": [],
@@ -18456,9 +18456,9 @@
    "number": 165,
    "question": "Nguyên nhân hệ thống tăng áp yếu có thể gồm gì?",
    "options": [
-    "Bugi sấy hỏng",
-    "Lọc dầu bẩn",
-    "Hỏng ắc quy",
+    "Lọc dầu bẩn, nhớt kém",
+    "Ắc quy yếu, máy phát",
+    "Bugi sấy, rơle sấy",
     "Turbo, BPS, rò nạp/xả, EGR"
    ],
    "correct": 3,
@@ -18575,10 +18575,10 @@
    "number": 172,
    "question": "Mã lỗi P2563 là gì?",
    "options": [
-    "Turbocharger Boost Sensor Circuit Low",
-    "Turbocharger Boost Sensor Circuit High",
+    "Turbocharger/Supercharger Underboost Condition",
+    "Turbocharger Boost Sensor A Circuit High",
     "Turbocharger Boost Control Position Sensor Performance",
-    "Turbocharger Underboost"
+    "Turbocharger Boost Sensor A Circuit Low"
    ],
    "correct": 2,
    "images": [],
@@ -18609,10 +18609,10 @@
    "number": 174,
    "question": "Hệ thống EGR Diesel được dừng lại dưới các điều kiện nào?",
    "options": [
-    "Khi cầm chừng",
-    "Khi máy nóng",
+    "Khi tải nhẹ, đường bằng",
+    "Khi máy nóng, tải vừa",
     "Lạnh, tải lớn, độ cao lớn",
-    "Khi tải nhẹ"
+    "Khi cầm chừng nóng máy"
    ],
    "correct": 2,
    "images": [],
@@ -18659,10 +18659,10 @@
    "number": 177,
    "question": "VSV-EGR là gì?",
    "options": [
-    "Van điều áp nhiên liệu",
+    "Van điện từ điều khiển turbo",
     "Van chân không điều khiển EGR",
-    "Van tắt máy",
-    "Van điều khiển turbo"
+    "Van điện từ tắt máy",
+    "Van điện từ điều áp nhiên liệu"
    ],
    "correct": 1,
    "images": [],
@@ -18693,9 +18693,9 @@
    "number": 179,
    "question": "Khi van EGR Diesel bị kẹt mở thì ảnh hưởng gì?",
    "options": [
-    "Chạy êm hơn",
-    "Giảm khói",
+    "Giảm khói đen rõ",
     "Máy mạnh hơn",
+    "Máy chạy êm hơn",
     "Giảm hiệu quả turbo"
    ],
    "correct": 3,
@@ -18744,10 +18744,10 @@
    "number": 182,
    "question": "Nguyên nhân mã lỗi P0401 có thể là gì?",
    "options": [
-    "Bugi sấy hỏng",
-    "Van EGR kẹt mở",
+    "Turbo hỏng, rò khí xả",
+    "Van EGR kẹt mở hoàn toàn",
     "EGR kẹt đóng, MAF sai…",
-    "Turbo hỏng"
+    "Bugi sấy hỏng, rơle sấy"
    ],
    "correct": 2,
    "images": [],
@@ -18846,9 +18846,9 @@
    "question": "Chất gây ô nhiễm chính đặc trưng của Diesel là gì?",
    "options": [
     "Muội than",
-    "NH3",
-    "HC",
-    "CO"
+    "Khí NH3",
+    "Hydrocacbon",
+    "Khí CO"
    ],
    "correct": 0,
    "images": [],
@@ -18879,9 +18879,9 @@
    "number": 190,
    "question": "Một số tên gọi khác của bầu lọc muội Diesel gồm gì?",
    "options": [
-    "ISC, ISCV",
     "EGR, VGT",
     "MAP, MAF",
+    "ISC, ISCV",
     "CPF, CDPF, DPD"
    ],
    "correct": 3,
@@ -19047,13 +19047,13 @@
    "question": "ECM giám sát nhiệt độ khí xả khi DPF Regeneration nhờ cảm biến nào?",
    "options": [
     "EGTS",
-    "MAP",
-    "MAF",
-    "ECT"
+    "Cảm biến MAP",
+    "Cảm biến MAF",
+    "Cảm biến ECT"
    ],
    "correct": 0,
    "images": [],
-   "note": "Đáp án đầy đủ: EGTS (cảm biến nhiệt độ khí xả)"
+   "note": "Đáp án đầy đủ: Cảm biến EGTS"
   },
   {
    "id": "diesel-q201",
@@ -19149,9 +19149,9 @@
    "question": "Hệ thống bugi sấy giúp gì cho động cơ Diesel?",
    "options": [
     "Hỗ trợ khởi động lạnh",
-    "Giảm khói đen",
-    "Tăng công suất",
-    "Tăng tốc nhanh"
+    "Tăng công suất khi nóng",
+    "Giảm khói đen khi tải",
+    "Tăng tốc nhanh hơn"
    ],
    "correct": 0,
    "images": [],
@@ -19216,9 +19216,9 @@
    "question": "Hệ thống điều khiển xoáy lốc gió nạp SCV (Swirl Control Valve) dùng để làm gì?",
    "options": [
     "Tăng xoáy lốc khí nạp",
-    "Giảm xoáy lốc",
-    "Đo lưu lượng gió",
-    "Lọc bụi khí nạp"
+    "Giảm xoáy lốc khí nạp",
+    "Đo lưu lượng khí nạp",
+    "Lọc bụi trong khí nạp"
    ],
    "correct": 0,
    "images": [],
@@ -19283,10 +19283,10 @@
    "number": 214,
    "question": "Việc bật sấy nhiên liệu dựa vào tín hiệu nào?",
    "options": [
-    "Cảm biến oxy",
+    "Lưu lượng khí nạp",
     "Nhiệt độ nhiên liệu",
-    "Cảm biến RPS",
-    "Cảm biến MAF"
+    "Áp suất ống rail",
+    "Tín hiệu oxy khí xả"
    ],
    "correct": 1,
    "images": [],
@@ -19317,10 +19317,10 @@
    "number": 2,
    "question": "APP là viết tắt của gì?",
    "options": [
-    "Air Pressure Pump",
+    "Accelerator Pump Pressure",
     "Accelerator Pedal Position Sensor",
-    "Auto Position Pulse",
-    "Axle Pedal Position"
+    "Axle Pedal Pulse Sensor",
+    "Auto Pedal Position Switch"
    ],
    "correct": 1,
    "images": [],
@@ -19351,9 +19351,9 @@
    "number": 4,
    "question": "BPS là viết tắt của gì?",
    "options": [
-    "Brake Pedal Switch",
+    "Brake Pedal Pressure Switch",
     "Booster (Boost) Pressure Sensor",
-    "Battery Power Supply",
+    "Battery Power Supply Sensor",
     "Blower Position Sensor"
    ],
    "correct": 1,
@@ -19419,10 +19419,10 @@
    "number": 8,
    "question": "DLI là viết tắt của gì?",
    "options": [
-    "Direct Load Injection",
+    "Direct Load Injection System",
     "Digital Level Indicator",
     "Distributorless Ignition System",
-    "Dual Line Ignition"
+    "Dual Line Ignition Switch"
    ],
    "correct": 2,
    "images": [],
@@ -19979,10 +19979,10 @@
    "number": 41,
    "question": "SRS là viết tắt của gì?",
    "options": [
-    "Steering Rack Sensor",
     "Starter Relay Switch",
+    "Speed Regulation System",
     "Supplementary Restraint System",
-    "Speed Regulation System"
+    "Steering Rack Sensor System"
    ],
    "correct": 2,
    "images": [],
@@ -21171,7 +21171,7 @@
    "number": 21,
    "question": "Máy khởi động: khi đề motor rú lên rất nhanh, có tiếng 'xè' nhưng trục khuỷu không quay. Chi tiết nghi ngờ nhất?",
    "options": [
-    "Ly hợp một chiều bị trượt, không truyền mô-men",
+    "Ly hợp một chiều trượt",
     "Chổi than bị mòn hết, kẹt trong giá",
     "Cuộn giữ công tắc từ bị hở mạch",
     "Tiếp điểm chính bị cháy rỗ một phần"
