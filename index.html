@@ -98,6 +98,36 @@
       border-color: var(--accent-2);
       color: #fff;
     }
+    .toolbar .searchbar {
+      flex: 1 1 100%;
+      display: flex;
+      gap: 8px;
+    }
+    .toolbar .searchbar input {
+      flex: 1;
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+    .toolbar .searchbar input:focus {
+      outline: 2px solid #b9d9cb;
+      outline-offset: 1px;
+      border-color: var(--accent);
+    }
+    .search-status {
+      display: none;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: -4px 0 14px;
+    }
+    .search-status.show { display: block; }
 
     #stats {
       text-align: center;
@@ -274,6 +304,11 @@
     </header>
 
     <div class="toolbar">
+      <div class="searchbar">
+        <input type="search" id="searchInput" placeholder="Tìm câu hỏi trong tất cả bộ đề… (vd: BPS, rail, 50V)" autocomplete="off" aria-label="Tìm câu hỏi">
+        <button id="btnSearch">Tìm</button>
+        <button id="btnClearSearch" style="display:none">Xóa</button>
+      </div>
       <select id="setFilter" aria-label="Chọn bộ đề">
         <option value="all">Tất cả bộ đề</option>
       </select>
@@ -286,6 +321,7 @@
       <label class="imgonly"><input type="checkbox" id="imgOnly"> Chỉ câu có hình</label>
     </div>
 
+    <div id="searchStatus" class="search-status"></div>
     <div id="stats">Đang tải câu hỏi…</div>
     <div id="quiz"><div class="loading">Loading questions.json…</div></div>
   </div>
@@ -308,6 +344,10 @@
     const sectionFilter = document.getElementById("sectionFilter");
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = lightbox.querySelector("img");
+    const searchInput = document.getElementById("searchInput");
+    const searchStatus = document.getElementById("searchStatus");
+    const btnClearSearch = document.getElementById("btnClearSearch");
+    let searchQuery = "";
 
     const okMsgs = [
       "✅ Chính xác!",
@@ -363,6 +403,90 @@
       delete copy.optionLetters;
       delete copy.correctLetter;
       return copy;
+    }
+
+    function normalizeText(s) {
+      return (s || "").toString().normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d").replace(/Đ/g, "D")
+        .toLowerCase();
+    }
+
+    function compactUnits(s) {
+      return s.replace(/(\d)\s+(v|a|w|f|h|ω|ohm|kpa|bar|kv|ma|kω|mω)(?![a-z0-9])/g, "$1$2");
+    }
+
+    function escapeRegExp(s) {
+      return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    }
+
+    function searchBank(raw) {
+      const needle = normalizeText(raw).trim().replace(/\s+/g, " ");
+      if (!needle) return [];
+      const tokens = needle.split(/\s+/).filter(Boolean);
+      const haystack = q => normalizeText([
+        q.question,
+        (q.options || []).join(" "),
+        q.note || "",
+        q.section || "",
+        q.setName || "",
+        "cau " + q.number
+      ].join(" ")).replace(/\s+/g, " ");
+
+      if (tokens.length > 1) {
+        const compactNeedle = compactUnits(needle);
+        const phraseHits = bank.filter(q => {
+          const hay = haystack(q);
+          return hay.includes(needle) || compactUnits(hay).includes(compactNeedle);
+        });
+        if (phraseHits.length) return phraseHits;
+      }
+
+      const patterns = tokens.map(t =>
+        new RegExp("(^|[^a-z0-9])" + escapeRegExp(t) + "([^a-z0-9]|$)")
+      );
+      return bank.filter(q => {
+        const hay = haystack(q);
+        const compact = compactUnits(hay);
+        return patterns.every(re => re.test(hay) || re.test(compact));
+      });
+    }
+
+    function resetSearchUI() {
+      searchQuery = "";
+      searchInput.value = "";
+      searchStatus.textContent = "";
+      searchStatus.classList.remove("show");
+      btnClearSearch.style.display = "none";
+    }
+
+    function runSearch() {
+      const raw = searchInput.value.trim();
+      if (!raw) {
+        startFresh();
+        return;
+      }
+      const results = searchBank(raw);
+      searchQuery = raw;
+      btnClearSearch.style.display = "inline-block";
+      searchStatus.classList.add("show");
+      if (!results.length) {
+        active = [];
+        answersState = [];
+        quizEl.innerHTML = "";
+        const err = document.createElement("div");
+        err.className = "error";
+        err.textContent = `Không tìm thấy câu hỏi nào chứa “${raw}”.`;
+        quizEl.appendChild(err);
+        statsEl.textContent = "";
+        document.getElementById("progress").style.width = "0%";
+        searchStatus.textContent = `Không có kết quả trong ${bank.length} câu.`;
+        return;
+      }
+      const limit = 100;
+      renderQuiz(results.slice(0, limit).map(cloneQ));
+      searchStatus.textContent = `Tìm thấy ${results.length} câu trong ${bank.length} câu` +
+        (results.length > limit ? ` · hiển thị ${limit} câu đầu` : "") + ".";
     }
 
     function filteredBank() {
@@ -497,12 +621,29 @@
     }
 
     function startFresh() {
+      resetSearchUI();
       const src = filteredBank();
       const list = shuffle(src.map(cloneQ));
       renderQuiz(list);
     }
 
     document.getElementById("btnStart").addEventListener("click", startFresh);
+    document.getElementById("btnSearch").addEventListener("click", runSearch);
+    btnClearSearch.addEventListener("click", startFresh);
+    searchInput.addEventListener("keydown", event => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        runSearch();
+      } else if (event.key === "Escape") {
+        startFresh();
+      }
+    });
+    searchInput.addEventListener("search", () => {
+      if (!searchInput.value && searchQuery) startFresh();
+    });
+    searchInput.addEventListener("input", () => {
+      if (!searchInput.value && searchQuery) startFresh();
+    });
     document.getElementById("btnReset").addEventListener("click", () => {
       answersState = answersState.map(() => null);
       // re-render same questions order but reshuffle options
