@@ -269,7 +269,7 @@
   <div class="wrap">
     <header>
       <h1>Quiz VATC — Điện thân xe</h1>
-      <p>Điều khiển động cơ: khởi động · nạp · xăng · Diesel · từ viết tắt</p>
+      <p>Điều khiển động cơ: khởi động · nạp · xăng · Diesel · từ viết tắt · chuyên đề đọc kỹ</p>
       <p style="margin-top:8px"><a href="admin.html" style="color:#1b4f72;font-size:0.9rem">Admin sửa câu hỏi</a></p>
     </header>
 
@@ -617,7 +617,7 @@
       backPos.style.display = "none";
     });
 
-    fetch("questions.json?v=20261017a")
+    fetch("questions.json?v=20261022a")
       .then(r => {
         if (!r.ok) throw new Error("Không tải được questions.json");
         return r.json();

@@ -24,6 +24,10 @@
   {
    "id": "nc",
    "name": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện"
+  },
+  {
+   "id": "cd",
+   "name": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển"
   }
  ],
  "questions": [
@@ -26445,6 +26449,771 @@
    "level": "hard",
    "pdfPage": 170,
    "bookPage": 182
+  },
+  {
+   "id": "cd-q001",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kim phun & bơm nhiên liệu",
+   "number": 1,
+   "question": "Điện áp cấp cho cuộn kim phun của hệ thống GDI được nâng lên khoảng bao nhiêu để mở kim?",
+   "options": [
+    "Khoảng 160 V, nhờ hộp EDU gắn trên động cơ",
+    "Khoảng 12 V, lấy trực tiếp từ bình ắc quy",
+    "Khoảng 50 V, nhờ mạch tăng áp trong ECU",
+    "Khoảng 5 V, dùng chung nguồn với cảm biến"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "GDI dùng khoảng 50 V để thắng áp suất buồng đốt; MPI 12 V; CRDI 80–160 V."
+  },
+  {
+   "id": "cd-q002",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kim phun & bơm nhiên liệu",
+   "number": 2,
+   "question": "Kim phun xăng đa điểm MPI được đo điện trở cuộn dây khoảng 14 Ω và làm việc với nguồn 12 V. Kết luận nào đúng?",
+   "options": [
+    "Kim MPI bình thường: 12 V, trở cuộn trên 10 Ω",
+    "Kim GDI bình thường: 12 V, trở cuộn trên 10 Ω",
+    "Kim CRDI bình thường: 12 V, trở cuộn trên 10 Ω",
+    "Kim hỏng vì điện trở 14 Ω là quá cao so với chuẩn"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "MPI: 12 V, điện trở cuộn trên 10 Ω. GDI và CRDI dùng điện áp cao hơn nên không suy ra từ 12 V."
+  },
+  {
+   "id": "cd-q003",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kim phun & bơm nhiên liệu",
+   "number": 3,
+   "question": "Trong CRDI, xung điện áp mở kim phun thường nằm trong khoảng nào?",
+   "options": [
+    "5 – 12 V, lấy từ nguồn cảm biến",
+    "200 – 300 V, do bơm cao áp tạo",
+    "12 – 24 V, lấy từ bình ắc quy",
+    "80 – 160 V, nhờ hộp EDU nâng áp"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "CRDI dùng 80–160 V; MPI 12 V; GDI khoảng 50 V."
+  },
+  {
+   "id": "cd-q004",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kim phun & bơm nhiên liệu",
+   "number": 4,
+   "question": "Thứ tự điện áp kích kim từ thấp đến cao giữa MPI, GDI và CRDI là?",
+   "options": [
+    "GDI 12 V → MPI 50 V → CRDI 80–160 V",
+    "MPI 12 V → GDI 50 V → CRDI 80–160 V",
+    "MPI 12 V → CRDI 50 V → GDI 80–160 V",
+    "CRDI 12 V → GDI 50 V → MPI 80–160 V"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Thứ tự đúng: MPI 12 V < GDI 50 V < CRDI 80–160 V."
+  },
+  {
+   "id": "cd-q005",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kim phun & bơm nhiên liệu",
+   "number": 5,
+   "question": "Bơm nhiên liệu của hệ thống phun xăng đa điểm MPI tạo áp suất khoảng bao nhiêu?",
+   "options": [
+    "Khoảng 3 000 bar",
+    "Khoảng 30 bar",
+    "Khoảng 3 bar",
+    "Khoảng 300 bar"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "MPI khoảng 3 bar; GDI 20–200 bar; CRDI 200–2500 bar."
+  },
+  {
+   "id": "cd-q006",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kim phun & bơm nhiên liệu",
+   "number": 6,
+   "question": "Bơm cao áp của hệ thống GDI tạo áp suất nhiên liệu trong dải nào?",
+   "options": [
+    "20 – 200 bar",
+    "2500 – 5000 bar",
+    "3 – 5 bar",
+    "200 – 2500 bar"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "GDI 20–200 bar; MPI khoảng 3 bar; CRDI 200–2500 bar."
+  },
+  {
+   "id": "cd-q007",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kim phun & bơm nhiên liệu",
+   "number": 7,
+   "question": "Bơm cao áp CRDI có thể tạo áp suất tối đa khoảng bao nhiêu?",
+   "options": [
+    "2500 – 5000 bar",
+    "20 – 200 bar",
+    "3 bar",
+    "200 – 2500 bar"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "CRDI 200–2500 bar; GDI 20–200 bar; MPI khoảng 3 bar."
+  },
+  {
+   "id": "cd-q008",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kim phun & bơm nhiên liệu",
+   "number": 8,
+   "question": "Cặp thông số nào ghép đúng hệ thống với dải áp suất bơm nhiên liệu?",
+   "options": [
+    "MPI 3 bar – GDI 200–2500 bar – CRDI 20–200 bar",
+    "MPI 3 bar – GDI 20–200 bar – CRDI 200–2500 bar",
+    "MPI 20–200 bar – GDI 3 bar – CRDI 200–2500 bar",
+    "MPI 200–2500 bar – GDI 20–200 bar – CRDI 3 bar"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Đọc cả ba cụm: MPI 3 bar, GDI 20–200 bar, CRDI 200–2500 bar."
+  },
+  {
+   "id": "cd-q009",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kim phun & bơm nhiên liệu",
+   "number": 9,
+   "question": "Hộp EDU trên xe CRDI nhận 12 V rồi nâng lên 80–160 V. Điện áp cao này được dùng để làm gì?",
+   "options": [
+    "Điều khiển mô-tơ bướm ga",
+    "Sấy bugi sấy lúc khởi động",
+    "Mở kim phun dầu ở áp suất cao",
+    "Cấp nguồn cảm biến áp suất rail"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "EDU nâng 12 V lên 80–160 V để mở kim phun dầu; bugi sấy, bướm ga và cảm biến không dùng mức này."
+  },
+  {
+   "id": "cd-q010",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "BPS & cảm biến áp suất rail",
+   "number": 10,
+   "question": "Theo bảng giá trị của BPS (Boost Pressure Sensor) trên động cơ Diesel: ON chìa – nổ cầm chừng – full ga lần lượt là?",
+   "options": [
+    "1,5 V/100 kPa – 1,5 V/100 kPa – 4,5 V/300 kPa",
+    "0,5 V/0 kPa – 1,5 V/300 kPa – 4,5 V/2500 kPa",
+    "1,5 V/100 kPa – 1,5 V/300 kPa – 4,5 V/300 kPa",
+    "0,5 V/0 kPa – 1,5 V/100 kPa – 4,5 V/300 kPa"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "BPS: ON chìa và cầm chừng đều 1,5 V/100 kPa; full ga 4,5 V/300 kPa."
+  },
+  {
+   "id": "cd-q011",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "BPS & cảm biến áp suất rail",
+   "number": 11,
+   "question": "Theo bảng giá trị của cảm biến áp suất ống rail: ON chìa – nổ cầm chừng – full ga lần lượt là?",
+   "options": [
+    "1,5 V/100 bar – 1,5 V/100 bar – 4,5 V/300 bar",
+    "1,5 V/100 bar – 1,5 V/300 bar – 4,5 V/2500 bar",
+    "0,5 V/0 bar – 1,5 V/100 bar – 4,5 V/300 bar",
+    "0,5 V/0 bar – 1,5 V/300 bar – 4,5 V/2500 bar"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Rail: ON chìa 0,5 V/0 bar; cầm chừng 1,5 V/300 bar; full ga 4,5 V/2500 bar. Đọc kỹ đơn vị: BPS dùng kPa, rail dùng bar."
+  },
+  {
+   "id": "cd-q012",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "BPS & cảm biến áp suất rail",
+   "number": 12,
+   "question": "Khi bật khóa ON nhưng chưa nổ máy, BPS và cảm biến áp suất rail báo khác nhau thế nào?",
+   "options": [
+    "BPS 0,5 V/0 kPa; rail 1,5 V/100 bar",
+    "BPS 1,5 V/100 kPa; rail 0,5 V/0 bar",
+    "BPS 1,5 V/300 kPa; rail 1,5 V/100 bar",
+    "BPS 4,5 V/300 kPa; rail 0,5 V/2500 bar"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "ON chìa: BPS đo áp khí trời khoảng 100 kPa nên 1,5 V; rail chưa có áp nên 0,5 V/0 bar."
+  },
+  {
+   "id": "cd-q013",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "BPS & cảm biến áp suất rail",
+   "number": 13,
+   "question": "Khi động cơ nổ cầm chừng, BPS và cảm biến rail có thể cùng báo 1,5 V. Áp suất tương ứng của hai cảm biến là?",
+   "options": [
+    "BPS khoảng 300 kPa; rail khoảng 100 bar",
+    "BPS khoảng 300 kPa; rail khoảng 2500 bar",
+    "BPS khoảng 100 kPa; rail khoảng 300 bar",
+    "BPS khoảng 100 kPa; rail khoảng 2500 bar"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Cùng 1,5 V nhưng khác thang đo: BPS khoảng 100 kPa, rail khoảng 300 bar. Phải đọc cả cặp giá trị và đơn vị."
+  },
+  {
+   "id": "cd-q014",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "BPS & cảm biến áp suất rail",
+   "number": 14,
+   "question": "Ở full ga, BPS và cảm biến rail cùng báo 4,5 V. Áp suất tương ứng là?",
+   "options": [
+    "BPS khoảng 300 kPa; rail khoảng 2500 bar",
+    "BPS khoảng 2500 kPa; rail khoảng 300 bar",
+    "BPS khoảng 300 kPa; rail khoảng 100 bar",
+    "BPS khoảng 100 kPa; rail khoảng 300 bar"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Cùng 4,5 V nhưng BPS khoảng 300 kPa, rail khoảng 2500 bar. Đừng đọc số mà bỏ qua đơn vị."
+  },
+  {
+   "id": "cd-q015",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "BPS & cảm biến áp suất rail",
+   "number": 15,
+   "question": "Máy chẩn đoán hiển thị một cảm biến có tín hiệu: ON chìa 1,5 V/100 kPa; cầm chừng 1,5 V/100 kPa; full ga 4,5 V/300 kPa. Đó là cảm biến nào?",
+   "options": [
+    "Cảm biến áp suất ống rail",
+    "Cảm biến lưu lượng khí nạp MAF",
+    "Cảm biến vị trí bướm ga TPS",
+    "Cảm biến áp suất tăng áp BPS"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Chuỗi 1,5–1,5–4,5 V và 100–100–300 kPa là BPS."
+  },
+  {
+   "id": "cd-q016",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "BPS & cảm biến áp suất rail",
+   "number": 16,
+   "question": "Một cảm biến báo 0,5 V khi ON chìa, 1,5 V/300 bar khi cầm chừng và 4,5 V/2500 bar khi full ga. Đó là cảm biến nào?",
+   "options": [
+    "Cảm biến nhiệt độ nước làm mát",
+    "Cảm biến áp suất ống rail",
+    "Cảm biến vị trí trục cam",
+    "Cảm biến áp suất tăng áp BPS"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Chuỗi 0,5–1,5–4,5 V và 0–300–2500 bar là cảm biến áp suất ống rail."
+  },
+  {
+   "id": "cd-q017",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kỳ hút & khí nạp",
+   "number": 17,
+   "question": "Ở kỳ hút của động cơ Diesel, xy-lanh hút vào chủ yếu là gì?",
+   "options": [
+    "Khí xả đã qua bầu xúc tác, không có không khí mới",
+    "Hòa khí xăng – không khí từ đường ống nạp",
+    "Không khí, nhiên liệu được phun ở cuối kỳ nén",
+    "Hòa khí dầu – không khí do bộ hòa trộn tạo ra"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Diesel chỉ hút không khí; dầu được phun vào cuối kỳ nén."
+  },
+  {
+   "id": "cd-q018",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kỳ hút & khí nạp",
+   "number": 18,
+   "question": "Ở kỳ hút của động cơ xăng phun ngoài đường ống nạp (MPI), xy-lanh hút vào là gì?",
+   "options": [
+    "Hòa khí không khí – xăng trộn trước đường nạp",
+    "Không khí sạch; xăng phun vào cuối kỳ nén",
+    "Không khí sạch; xăng phun trực tiếp vào buồng đốt",
+    "Khí xả tuần hoàn từ hệ thống EGR, không có xăng"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "MPI phun xăng trên đường nạp nên kỳ hút hút hòa khí; GDI mới hút không khí."
+  },
+  {
+   "id": "cd-q019",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kỳ hút & khí nạp",
+   "number": 19,
+   "question": "Ở kỳ hút của động cơ xăng phun trực tiếp GDI, xy-lanh hút vào là gì?",
+   "options": [
+    "Khí xả tuần hoàn EGR trộn sẵn với hòa khí",
+    "Hòa khí do kim phun gắn trên đường ống nạp tạo ra",
+    "Hòa khí không khí – xăng đã trộn từ trước bướm ga",
+    "Không khí; xăng được phun trực tiếp vào buồng đốt"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "GDI phun trực tiếp vào buồng đốt nên kỳ hút chỉ hút không khí."
+  },
+  {
+   "id": "cd-q020",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kỳ hút & khí nạp",
+   "number": 20,
+   "question": "Trong kỳ hút, cặp động cơ nào chỉ hút không khí (nhiên liệu được phun vào buồng đốt)?",
+   "options": [
+    "MPI và Diesel – nhiên liệu phun trực tiếp vào buồng đốt",
+    "Diesel và GDI – nhiên liệu phun trực tiếp vào buồng đốt",
+    "GDI và MPI – nhiên liệu phun trực tiếp vào buồng đốt",
+    "MPI và động cơ phun ngoài – xăng phun vào buồng đốt"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Diesel và GDI đều hút không khí; MPI hút hòa khí vì phun trên đường nạp."
+  },
+  {
+   "id": "cd-q021",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kỳ hút & khí nạp",
+   "number": 21,
+   "question": "Vì sao kỳ hút của GDI chỉ hút không khí, còn MPI lại hút hòa khí?",
+   "options": [
+    "GDI không dùng bugi đánh lửa; MPI dùng bugi đánh lửa",
+    "GDI hút khí qua bướm ga; MPI hút khí qua van EGR",
+    "GDI phun trực tiếp vào buồng đốt; MPI phun trên đường nạp",
+    "GDI phun trên đường nạp; MPI phun trực tiếp vào buồng đốt"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Khác nhau ở vị trí kim phun: MPI trên đường nạp, GDI trong buồng đốt."
+  },
+  {
+   "id": "cd-q022",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "MAF & EGR",
+   "number": 22,
+   "question": "Trên động cơ Diesel, tín hiệu MAF được ECU dùng chủ yếu để điều khiển hệ thống nào?",
+   "options": [
+    "Hệ thống tuần hoàn khí xả EGR",
+    "Pha trục cam của hệ thống VVT",
+    "Góc mở bướm ga điện tử",
+    "Thời điểm đánh lửa của bugi"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Diesel: MAF điều khiển EGR; xăng: MAF điều khiển lượng phun."
+  },
+  {
+   "id": "cd-q023",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "MAF & EGR",
+   "number": 23,
+   "question": "Trên động cơ xăng, tín hiệu MAF chủ yếu được dùng để điều khiển gì?",
+   "options": [
+    "Tỷ lệ khí xả tuần hoàn EGR",
+    "Thời điểm đánh lửa bugi",
+    "Góc pha của trục cam nạp",
+    "Lượng xăng phun cơ bản"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "Xăng: MAF điều khiển lượng phun; Diesel: MAF điều khiển EGR."
+  },
+  {
+   "id": "cd-q024",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "MAF & EGR",
+   "number": 24,
+   "question": "Phát biểu nào đúng về vai trò của MAF trên xe xăng và xe Diesel?",
+   "options": [
+    "Cả hai dùng để điều khiển thời điểm đánh lửa",
+    "Xăng: điều khiển lượng phun; Dầu: điều khiển EGR",
+    "Xăng: điều khiển EGR; Dầu: điều khiển lượng phun",
+    "Cả hai dùng để điều khiển turbo tăng áp"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Đọc đúng từng vế: xăng dùng MAF cho lượng phun, dầu dùng MAF cho EGR."
+  },
+  {
+   "id": "cd-q025",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "MAF & EGR",
+   "number": 25,
+   "question": "Hệ thống EGR (Exhaust Gas Recirculation) đưa một phần khí thải quay về đường nạp nhằm mục đích chính là gì?",
+   "options": [
+    "Sấy nóng khí nạp khi máy còn lạnh",
+    "Tăng áp suất nạp để tăng công suất",
+    "Giảm nhiệt độ cháy và giảm khí NOx",
+    "Tăng nồng độ oxy để cháy mạnh hơn"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Khí thải quay lại tham gia quá trình cháy, làm giảm nhiệt độ cháy và giảm NOx."
+  },
+  {
+   "id": "cd-q026",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "MAF & EGR",
+   "number": 26,
+   "question": "Trong hệ thống EGR, khí thải được lấy từ đâu và đưa về đâu?",
+   "options": [
+    "Từ ống xả quay về đường nạp",
+    "Từ ống xả quay về bình xăng",
+    "Từ đường nạp quay về ống xả",
+    "Từ bình xăng quay về buồng đốt"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "EGR lấy khí từ đường xả đưa về đường nạp; không đưa về bình xăng."
+  },
+  {
+   "id": "cd-q027",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "MAF & EGR",
+   "number": 27,
+   "question": "Trên xe Diesel, hệ thống EGR cần bộ tín hiệu nào để tính toán lượng khí xả quay lại?",
+   "options": [
+    "MAP, IAT, KNK và ECT",
+    "CKP, TPS, CMP và VVT sensor",
+    "APP, TPS, O2S và VSS",
+    "CKP, APP, MAF và O2S"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "EGR trên xe dầu dùng CKP, APP, MAF, O2S. Chú ý APP không phải TPS."
+  },
+  {
+   "id": "cd-q028",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "MAF & EGR",
+   "number": 28,
+   "question": "Xe Diesel bị rút giắc cảm biến MAF. Hệ thống nào bị ảnh hưởng trực tiếp nhất theo nội dung đã học?",
+   "options": [
+    "Phun xăng vì không còn tín hiệu đo nhiệt độ nhiên liệu",
+    "Điều khiển EGR vì không còn tín hiệu lưu lượng khí nạp",
+    "Đánh lửa vì không còn tín hiệu để tính góc đánh lửa",
+    "VVT vì không còn tín hiệu áp suất dầu bôi trơn"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Xe dầu dùng MAF để điều khiển EGR; mất MAF thì EGR không còn tín hiệu lưu lượng khí nạp."
+  },
+  {
+   "id": "cd-q029",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "VVT & ACIS",
+   "number": 29,
+   "question": "Hệ thống điều khiển cam thông minh VVT trên động cơ xăng điều khiển gì?",
+   "options": [
+    "Lượng nhiên liệu phun của kim phun theo tốc độ",
+    "Thời điểm đánh lửa của bugi theo tải động cơ",
+    "Thời điểm mở và đóng xupap theo điều kiện hoạt động",
+    "Độ nâng tối đa của xupap bằng cơ cấu cam biến thiên"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "VVT thay đổi pha trục cam, tức thời điểm mở/đóng xupap; không phải độ nâng."
+  },
+  {
+   "id": "cd-q030",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "VVT & ACIS",
+   "number": 30,
+   "question": "Trong hệ thống VVT, ECM điều khiển van dầu OCV dựa trên bộ tín hiệu nào?",
+   "options": [
+    "CKP, TPS, CMP và VVT sensor",
+    "CKP, MAF, MAP và tín hiệu O2S",
+    "APP, VSS, ABS và tín hiệu SRS",
+    "TPS, IAT, ECT và tín hiệu KNK"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "OCV nhận CKP, TPS, CMP và VVT sensor."
+  },
+  {
+   "id": "cd-q031",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "VVT & ACIS",
+   "number": 31,
+   "question": "Việc điều khiển thời điểm mở xupap của VVT nhằm mục đích chính nào?",
+   "options": [
+    "Tăng độ nâng xupap để giảm tiêu hao nhiên liệu",
+    "Điều khiển lượng phun để giảm khí CO ở chế độ cầm chừng",
+    "Điều khiển góc mở bướm ga để ổn định tốc độ không tải",
+    "Tối ưu pha phối khí theo tải và tốc độ của động cơ"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "VVT tối ưu pha phối khí theo tải và tốc độ; không điều khiển độ nâng hay bướm ga."
+  },
+  {
+   "id": "cd-q032",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "VVT & ACIS",
+   "number": 32,
+   "question": "Kiểu điều khiển khí nạp thay đổi chiều dài đường ống (kiểu 1) hoạt động thế nào?",
+   "options": [
+    "Tốc độ thấp đi đường ngắn; trên 3 000 v/p đi đường dài và tạo gió xoáy",
+    "Tốc độ thấp đi đường dài; trên 3 000 v/p đi đường ngắn và tạo gió xoáy",
+    "Đường nạp dài ở cả hai vùng tốc độ; van mở để tạo tiếng cộng hưởng",
+    "Đường nạp ngắn ở cả hai vùng tốc độ; van đóng để giảm tiếng ồn"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Kiểu 1: vòng tua thấp đi đường dài và nhỏ để tăng vận tốc khí; trên 3 000 v/p đi đường ngắn và lớn để giảm lực cản, tăng công suất."
+  },
+  {
+   "id": "cd-q033",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "VVT & ACIS",
+   "number": 33,
+   "question": "Kiểu điều khiển khí nạp tạo xoáy trong buồng đốt (kiểu 2) có đặc điểm nào?",
+   "options": [
+    "Tạo xoáy khi động cơ chạy ở tốc độ trên 3 000 v/p",
+    "Tạo xoáy trong buồng đốt ở cả tốc độ thấp và cao",
+    "GDI cao tốc không cần xoáy; thấp tốc tạo xoáy qua gió nạp",
+    "GDI tốc độ cao tạo xoáy mạnh; thấp tốc không cần xoáy nạp"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "Kiểu 2: GDI cao tốc không cần xoáy; thấp tốc tạo xoáy qua gió nạp."
+  },
+  {
+   "id": "cd-q034",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "VVT & ACIS",
+   "number": 34,
+   "question": "Phát biểu nào phân biệt đúng hai kiểu điều khiển khí nạp thông minh?",
+   "options": [
+    "Kiểu 1 đổi chiều dài đường nạp; kiểu 2 tạo xoáy trong buồng đốt",
+    "Kiểu 1 tạo xoáy trong buồng đốt; kiểu 2 đổi chiều dài đường nạp",
+    "Cả hai kiểu đều thay đổi chiều dài đường ống nạp theo tốc độ",
+    "Cả hai kiểu đều tạo xoáy bằng cách đóng mở van bướm ga"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Kiểu 1 thay đổi chiều dài; kiểu 2 tạo xoáy trong buồng đốt."
+  },
+  {
+   "id": "cd-q035",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "ETCS & ISC",
+   "number": 35,
+   "question": "ETCS là hệ thống gì trên ô tô?",
+   "options": [
+    "Hệ thống điều khiển phun điện tử",
+    "Hệ thống điều khiển lực kéo điện tử",
+    "Hệ thống điều khiển khí thải điện tử",
+    "Hệ thống điều khiển bướm ga điện tử"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "ETCS = Electronic Throttle Control System – điều khiển bướm ga điện tử."
+  },
+  {
+   "id": "cd-q036",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "ETCS & ISC",
+   "number": 36,
+   "question": "ETCS điều khiển bộ phận nào để thay đổi lượng khí nạp vào động cơ?",
+   "options": [
+    "Van EGR chân không",
+    "Mô-tơ bướm ga điện tử",
+    "Cánh turbo tăng áp VGT",
+    "Van ISCV đường gió tắt"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "ETCS dùng mô-tơ bướm ga điện tử; ISCV là đường gió tắt của ISC."
+  },
+  {
+   "id": "cd-q037",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "ETCS & ISC",
+   "number": 37,
+   "question": "ISC là hệ thống gì?",
+   "options": [
+    "Điều khiển lượng phun khởi động (Start Injection)",
+    "Điều khiển tốc độ hành trình (Cruise Control)",
+    "Điều khiển tốc độ không tải (Idle Speed Control)",
+    "Điều khiển đánh lửa cầm chừng (Idle Ignition)"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "ISC = Idle Speed Control – điều khiển tốc độ không tải."
+  },
+  {
+   "id": "cd-q038",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "ETCS & ISC",
+   "number": 38,
+   "question": "Hệ thống ISC giữ tốc độ cầm chừng ổn định bằng cách nào?",
+   "options": [
+    "Điều chỉnh lượng gió đi tắt qua bướm ga",
+    "Điều chỉnh lượng xăng phun vào buồng đốt",
+    "Điều chỉnh áp suất dầu trong hệ thống VVT",
+    "Điều chỉnh góc đánh lửa sớm của bugi"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "ISCV điều khiển lượng gió tắt qua bướm ga để giữ cầm chừng."
+  },
+  {
+   "id": "cd-q039",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "ETCS & ISC",
+   "number": 39,
+   "question": "Trong hệ thống ISC, ECU sử dụng nhóm tín hiệu nào để xác định tốc độ cầm chừng?",
+   "options": [
+    "APP, VSS và tín hiệu ABS",
+    "CKP, CMP và tín hiệu KNK",
+    "MAF, MAP và tín hiệu O2S",
+    "TPS, ECT và tín hiệu STA"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "ISC dùng TPS, ECT và STA; các nhóm còn lại là tín hiệu của hệ thống khác."
+  },
+  {
+   "id": "cd-q040",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "ETCS & ISC",
+   "number": 40,
+   "question": "Ngoài TPS, ECT và STA, ISC còn nhận tín hiệu bù phụ tải từ những hệ thống nào?",
+   "options": [
+    "EGR, EVAP, VVT và ACIS",
+    "A/C, ELS, PSP và P/N",
+    "ABS, SRS, TCS và VSC",
+    "MAF, MAP, IAT và O2S"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "Bù phụ tải ISC: A/C, ELS, PSP và P/N."
+  },
+  {
+   "id": "cd-q041",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "ETCS & ISC",
+   "number": 41,
+   "question": "Xe đang nổ cầm chừng, bật điều hòa A/C. Hệ thống nào phải bù tải để giữ tốc độ cầm chừng?",
+   "options": [
+    "VVT, bằng cách xoay trục cam nạp sớm hơn",
+    "ETCS, bằng cách mở lớn bướm ga theo chân ga",
+    "ISC, bằng cách tăng lượng gió đi tắt bướm ga",
+    "EGR, bằng cách tăng khí xả quay về đường nạp"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "A/C là phụ tải; ISC bù gió để giữ idle ổn định."
+  },
+  {
+   "id": "cd-q042",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Đánh lửa & oxy",
+   "number": 42,
+   "question": "Điện áp thứ cấp cần thiết để tạo tia lửa qua khe bugi của động cơ xăng vào khoảng bao nhiêu?",
+   "options": [
+    "30 000 V",
+    "300 V",
+    "3 000 V",
+    "300 000 V"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Đánh lửa cần khoảng 30.000 V (30 kV), tùy khe hở và điều kiện."
+  },
+  {
+   "id": "cd-q043",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Đánh lửa & oxy",
+   "number": 43,
+   "question": "Cảm biến oxy thứ 2 (O2S số 2) trên hệ thống xả được lắp ở đâu?",
+   "options": [
+    "Trên đường ống nạp, sau bướm ga",
+    "Trong ống xả, ngay trước turbo",
+    "Trước bầu xúc tác, sát cửa xả",
+    "Sau bầu xúc tác, trên đường xả"
+   ],
+   "correct": 3,
+   "images": [],
+   "note": "O2 số 2 lắp sau bầu xúc tác; O2 số 1 lắp trước bầu xúc tác."
+  },
+  {
+   "id": "cd-q044",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Đánh lửa & oxy",
+   "number": 44,
+   "question": "Cảm biến oxy thứ 2 (sau bầu xúc tác) chủ yếu được dùng để làm gì?",
+   "options": [
+    "Điều khiển áp suất rail ở chế độ tải cao",
+    "Giám sát hiệu quả của bầu xúc tác",
+    "Đo nhiệt độ khí xả trước tua-bin",
+    "Đo lượng không khí nạp vào động cơ"
+   ],
+   "correct": 1,
+   "images": [],
+   "note": "O2 số 2 giám sát hiệu quả bầu xúc tác; O2 số 1 dùng hiệu chỉnh hỗn hợp."
+  },
+  {
+   "id": "cd-q045",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Đánh lửa & oxy",
+   "number": 45,
+   "question": "Phát biểu nào phân biệt đúng cảm biến oxy số 1 và số 2?",
+   "options": [
+    "Cả hai trước xúc tác; số 2 đo nhiệt độ khí xả",
+    "Cả hai sau xúc tác; số 1 đo lượng oxy nạp",
+    "Số 1 lắp trước xúc tác; số 2 lắp sau xúc tác",
+    "Số 1 lắp sau xúc tác; số 2 lắp trước xúc tác"
+   ],
+   "correct": 2,
+   "images": [],
+   "note": "O2 số 1 trước xúc tác; O2 số 2 sau xúc tác."
   }
  ]
 }
