@@ -80,7 +80,6 @@
       background: #f3f7fb; border-left: 4px solid var(--accent-2);
       border-radius: 8px; color: var(--ink); font-weight: 400; line-height: 1.5;
     }
-    .figures img[src$=".svg"] { background: #fff; }
     .feedback .bookref {
       display: block; margin-top: 8px; padding: 9px 12px;
       background: #fff5e6; border-left: 4px solid #d9822b; border-radius: 8px;
@@ -299,7 +298,8 @@
   <div class="wrap">
     <header>
       <h1>Quiz VATC — Điện thân xe</h1>
-      <p>Điều khiển động cơ: khởi động · nạp · xăng · Diesel · từ viết tắt · chuyên đề đọc kỹ</p>
+      <p>Khởi động · nạp · xăng · Diesel · 10 cảm biến · mobin – đánh lửa · từ viết tắt · đọc kỹ</p>
+      <p style="margin-top:4px;color:#8a4b08;font-size:0.9rem">Câu điện trở màu luôn đứng đầu mỗi lượt — màu thay đổi ngẫu nhiên để luyện tra bảng.</p>
       <p style="margin-top:8px"><a href="admin.html" style="color:#1b4f72;font-size:0.9rem">Admin sửa câu hỏi</a></p>
     </header>
 
@@ -403,6 +403,96 @@
       delete copy.optionLetters;
       delete copy.correctLetter;
       return copy;
+    }
+
+    const RESISTOR_DIGITS = [
+      { name: "Đen", hex: "#111111" },
+      { name: "Nâu", hex: "#6b3e26" },
+      { name: "Đỏ", hex: "#d32f2f" },
+      { name: "Cam", hex: "#f57c00" },
+      { name: "Vàng", hex: "#f2c200" },
+      { name: "Lục", hex: "#2e7d32" },
+      { name: "Lam", hex: "#1565c0" },
+      { name: "Tím", hex: "#7b1fa2" },
+      { name: "Xám", hex: "#9e9e9e" },
+      { name: "Trắng", hex: "#f7f7f7" }
+    ];
+    const RESISTOR_TOLERANCES = [
+      { name: "Nâu", label: "±1%", hex: "#6b3e26" },
+      { name: "Đỏ", label: "±2%", hex: "#d32f2f" },
+      { name: "Lục", label: "±0,5%", hex: "#2e7d32" },
+      { name: "Lam", label: "±0,25%", hex: "#1565c0" },
+      { name: "Tím", label: "±0,1%", hex: "#7b1fa2" },
+      { name: "Xám", label: "±0,05%", hex: "#9e9e9e" },
+      { name: "Vàng kim", label: "±5%", hex: "#c9a227" },
+      { name: "Bạc", label: "±10%", hex: "#bdbdbd" }
+    ];
+
+    function formatOhm(value) {
+      const trim = n => (Math.round(n * 1000) / 1000).toString().replace(".", ",");
+      if (value >= 1e9) return trim(value / 1e9) + " GΩ";
+      if (value >= 1e6) return trim(value / 1e6) + " MΩ";
+      if (value >= 1e3) return trim(value / 1e3) + " kΩ";
+      return trim(value) + " Ω";
+    }
+
+    let lastResistor = null;
+
+    function buildResistorQuestion() {
+      let a, b, c, d;
+      do {
+        a = 1 + Math.floor(Math.random() * 9);
+        b = Math.floor(Math.random() * 10);
+        c = Math.floor(Math.random() * 10);
+        d = Math.floor(Math.random() * RESISTOR_TOLERANCES.length);
+      } while (lastResistor && lastResistor === `${a}${b}${c}${d}`);
+      lastResistor = `${a}${b}${c}${d}`;
+
+      const digitA = RESISTOR_DIGITS[a];
+      const digitB = RESISTOR_DIGITS[b];
+      const digitC = RESISTOR_DIGITS[c];
+      const tol = RESISTOR_TOLERANCES[d];
+      const value = (a * 10 + b) * Math.pow(10, c);
+      const valueText = formatOhm(value);
+      const correctText = `${valueText} ${tol.label}`;
+      const options = [correctText];
+      const addOption = (text) => {
+        if (!options.includes(text) && options.length < 4) options.push(text);
+      };
+
+      const shiftedC = c === 9 ? 8 : c + 1;
+      addOption(`${formatOhm((a * 10 + b) * Math.pow(10, shiftedC))} ${tol.label}`);
+      addOption(`${formatOhm(a === b ? value * 10 : (b * 10 + a) * Math.pow(10, c))} ${tol.label}`);
+      const tol2 = RESISTOR_TOLERANCES[(d + 1) % RESISTOR_TOLERANCES.length];
+      addOption(`${valueText} ${tol2.label}`);
+
+      let guard = 0;
+      while (options.length < 4 && guard++ < 50) {
+        const ra = 1 + Math.floor(Math.random() * 9);
+        const rb = Math.floor(Math.random() * 10);
+        const rc = Math.floor(Math.random() * 10);
+        const rt = RESISTOR_TOLERANCES[Math.floor(Math.random() * RESISTOR_TOLERANCES.length)];
+        addOption(`${formatOhm((ra * 10 + rb) * Math.pow(10, rc))} ${rt.label}`);
+      }
+      shuffle(options);
+
+      return {
+        id: "resistor-color-code",
+        set: "res",
+        setName: "★ Điện trở màu – câu mở đầu",
+        section: "Tra bảng màu điện trở",
+        number: "★",
+        question: `Điện trở 4 vạch có thứ tự màu a–b–c–d: a = ${digitA.name}, b = ${digitB.name}, c = ${digitC.name}, d = ${tol.name}. Tra bảng màu, giá trị danh định và sai số là bao nhiêu?`,
+        options,
+        correct: options.indexOf(correctText),
+        images: [
+          "images/bang_tra_mau_dien_tro.png"
+        ],
+        note: `Nhớ thứ tự 0–9: Đen, Nâu, Đỏ, Cam, Vàng, Lục, Lam, Tím, Xám, Trắng. ` +
+          `a = ${digitA.name} = ${a}; b = ${digitB.name} = ${b} → ${a}${b}; ` +
+          `c = ${digitC.name} = ${c} → ×10^${c}; ${a}${b} × 10^${c} Ω = ${valueText}; ` +
+          `d = ${tol.name} → ${tol.label}.`
+      };
     }
 
     function normalizeText(s) {
@@ -624,7 +714,7 @@
       resetSearchUI();
       const src = filteredBank();
       const list = shuffle(src.map(cloneQ));
-      renderQuiz(list);
+      renderQuiz([buildResistorQuestion(), ...list]);
     }
 
     document.getElementById("btnStart").addEventListener("click", startFresh);
@@ -758,7 +848,7 @@
       backPos.style.display = "none";
     });
 
-    fetch("questions.json?v=20261022a")
+    fetch("questions.json?v=20261025c")
       .then(r => {
         if (!r.ok) throw new Error("Không tải được questions.json");
         return r.json();

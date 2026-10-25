@@ -28,6 +28,14 @@
   {
    "id": "cd",
    "name": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển"
+  },
+  {
+   "id": "cb",
+   "name": "★ 10 cảm biến: nhận diện – dây – tín hiệu"
+  },
+  {
+   "id": "mobin",
+   "name": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP"
   }
  ],
  "questions": [
@@ -3197,7 +3205,7 @@
    "number": 19,
    "question": "Vì sao máy phát điện xoay chiều trên ô tô cần phải có bộ chỉnh lưu (Rectifier)?",
    "options": [
-    "Để tăng tốc độ quay của rotor khi cầm chừng",
+    "Để tăng tốc độ quay của rotor khi idle",
     "Để giảm nhiệt cho cuộn dây stator khi tải lớn",
     "Đổi điện xoay chiều thành một chiều",
     "Để điều chỉnh điện áp ra luôn ổn định ở mức 14 V"
@@ -3219,7 +3227,7 @@
     "Dòng điện tăng tỉ lệ thuận theo tốc độ máy phát",
     "Điện áp tới thiết bị ổn định dù tốc độ thay đổi",
     "Điện áp ra thay đổi theo số thiết bị bật",
-    "Điện áp ra bằng 0 khi động cơ cầm chừng"
+    "Điện áp ra bằng 0 khi động cơ idle"
    ],
    "correct": 1,
    "images": [],
@@ -4420,7 +4428,7 @@
    "options": [
     "Giữ điện áp ổn định khi tốc độ đổi",
     "Để đèn báo nạp luôn sáng khi máy chạy",
-    "Để tăng tốc độ rotor khi động cơ cầm chừng",
+    "Để tăng tốc độ rotor khi động cơ idle",
     "Để giảm kích thước và khối lượng máy phát"
    ],
    "correct": 0,
@@ -4579,7 +4587,7 @@
    "setName": "Hệ thống nạp (máy phát)",
    "section": "Ch.4 Điều chỉnh",
    "number": 95,
-   "question": "Khi động cơ chạy cầm chừng không tải mà người lái bật nhiều thiết bị điện công suất lớn (sưởi ấm, đèn pha…) thì hệ thống điện sẽ ra sao?",
+   "question": "Khi động cơ chạy idle không tải mà người lái bật nhiều thiết bị điện công suất lớn (sưởi ấm, đèn pha…) thì hệ thống điện sẽ ra sao?",
    "options": [
     "Phải dùng thêm điện ắc quy, kéo dài sẽ hết điện",
     "Điện áp tăng lên nhờ tiết chế tăng kích từ tối đa",
@@ -7411,7 +7419,7 @@
     "Thang 200 kΩ; thổi khí vào đầu cảm biến",
     "Thang 20 A; nối tiếp cảm biến khi đề",
     "2,5 DCV, quét kim loại qua đầu",
-    "Thang 1 000 V; đo hai đầu khi cầm chừng"
+    "Thang 1 000 V; đo hai đầu khi idle"
    ],
    "correct": 2,
    "images": [],
@@ -7683,12 +7691,12 @@
    "setName": "Điều khiển động cơ xăng",
    "section": "Ch.2 MAF cánh trượt",
    "number": 115,
-   "question": "Trên bộ đo gió kiểu cánh trượt, vít điều chỉnh hỗn hợp cầm chừng (Idle mixture adjusting screw) dùng để làm gì?",
+   "question": "Trên bộ đo gió kiểu cánh trượt, vít điều chỉnh hỗn hợp idle (Idle mixture adjusting screw) dùng để làm gì?",
    "options": [
     "Chỉnh khe hở bugi theo tốc độ",
     "Chỉnh áp suất bơm xăng",
-    "Chỉnh độ mở bướm ga khi cầm chừng",
-    "Chỉnh lượng khí đi tắt lúc cầm chừng"
+    "Chỉnh độ mở bướm ga khi idle",
+    "Chỉnh lượng khí đi tắt lúc idle"
    ],
    "correct": 3,
    "images": [],
@@ -7701,7 +7709,7 @@
    "setName": "Điều khiển động cơ xăng",
    "section": "Ch.2 MAF cánh trượt",
    "number": 116,
-   "question": "Trên bộ đo gió kiểu cánh trượt, nếu chỉnh sai vít điều chỉnh hỗn hợp cầm chừng thì sẽ gây ra hậu quả gì?",
+   "question": "Trên bộ đo gió kiểu cánh trượt, nếu chỉnh sai vít điều chỉnh hỗn hợp idle thì sẽ gây ra hậu quả gì?",
    "options": [
     "Giảm nồng độ CO trong khí xả",
     "Tăng nồng độ CO trong khí xả",
@@ -8663,7 +8671,7 @@
    "setName": "Điều khiển động cơ xăng",
    "section": "Ch.2 MAP",
    "number": 172,
-   "question": "Khi động cơ nổ máy ở chế độ cầm chừng, điện áp tại chân tín hiệu (Signal) của cảm biến áp suất đường ống nạp (MAP) khoảng bao nhiêu?",
+   "question": "Khi động cơ nổ máy ở chế độ idle, điện áp tại chân tín hiệu (Signal) của cảm biến áp suất đường ống nạp (MAP) khoảng bao nhiêu?",
    "options": [
     "Khoảng 5 V",
     "Khoảng 4,5 – 5,0 V",
@@ -9319,10 +9327,10 @@
    "number": 217,
    "question": "Khi động cơ vừa khởi động lúc còn nguội, dựa vào tín hiệu cảm biến nhiệt độ nước làm mát (ECT), ECU điều khiển tốc độ không tải như thế nào?",
    "options": [
-    "Tăng cầm chừng (~900 – 1 000 v/p) để hâm nóng",
-    "Giảm cầm chừng để tiết kiệm xăng",
+    "Tăng idle (~900 – 1 000 v/p) để hâm nóng",
+    "Giảm idle để tiết kiệm xăng",
     "Tắt máy rồi tự khởi động lại",
-    "Giảm cầm chừng xuống ~500 v/p để đỡ hao xăng"
+    "Giảm idle xuống ~500 v/p để đỡ hao xăng"
    ],
    "correct": 0,
    "images": [],
@@ -9739,7 +9747,7 @@
    "question": "Trong cảm biến vị trí bướm ga (TPS) loại tiếp điểm, ký hiệu IDL dùng để chỉ tiếp điểm nào?",
    "options": [
     "Mass cảm biến",
-    "Tiếp điểm cầm chừng",
+    "Tiếp điểm idle",
     "Tiếp điểm toàn tải",
     "Nguồn 5V"
    ],
@@ -9759,7 +9767,7 @@
    "options": [
     "Nguồn 12V",
     "Mass cảm biến",
-    "Tiếp điểm cầm chừng",
+    "Tiếp điểm idle",
     "Tiếp điểm toàn tải"
    ],
    "correct": 3,
@@ -9778,7 +9786,7 @@
    "options": [
     "Nguồn 5V",
     "Mass của cảm biến",
-    "Tín hiệu cầm chừng",
+    "Tín hiệu idle",
     "Tín hiệu vị trí bướm ga"
    ],
    "correct": 1,
@@ -9814,7 +9822,7 @@
    "options": [
     "Nguồn 5 V",
     "Mass của cảm biến",
-    "Tiếp điểm cầm chừng",
+    "Tiếp điểm idle",
     "Độ mở bướm ga"
    ],
    "correct": 3,
@@ -9867,7 +9875,7 @@
    "setName": "Điều khiển động cơ xăng",
    "section": "Ch.2 TPS",
    "number": 251,
-   "question": "Đối với cảm biến vị trí bướm ga (TPS) loại tiếp điểm, ở chế độ cầm chừng khi cánh bướm ga đóng, tiếp điểm IDL nối với E2 thì điện áp tại cực IDL bằng bao nhiêu?",
+   "question": "Đối với cảm biến vị trí bướm ga (TPS) loại tiếp điểm, ở chế độ idle khi cánh bướm ga đóng, tiếp điểm IDL nối với E2 thì điện áp tại cực IDL bằng bao nhiêu?",
    "options": [
     "5V",
     "2,5V",
@@ -9885,7 +9893,7 @@
    "setName": "Điều khiển động cơ xăng",
    "section": "Ch.2 TPS",
    "number": 252,
-   "question": "Đối với cảm biến vị trí bướm ga (TPS) loại tiếp điểm, khi bướm ga mở khoảng 7° – 8° thì tiếp điểm cầm chừng IDL ở trạng thái nào?",
+   "question": "Đối với cảm biến vị trí bướm ga (TPS) loại tiếp điểm, khi bướm ga mở khoảng 7° – 8° thì tiếp điểm idle IDL ở trạng thái nào?",
    "options": [
     "Đóng, IDL = 0 V",
     "Đóng, IDL = 5 V",
@@ -9908,7 +9916,7 @@
    "options": [
     "Chân VTA",
     "Chân VC",
-    "Tiếp điểm IDL (cầm chừng)",
+    "Tiếp điểm IDL (idle)",
     "Tiếp điểm PSW (tải cao)"
    ],
    "correct": 3,
@@ -10040,7 +10048,7 @@
    ],
    "correct": 1,
    "images": [],
-   "note": "Đáp án đầy đủ: 2: có và không có tiếp điểm cầm chừng",
+   "note": "Đáp án đầy đủ: 2: có và không có tiếp điểm idle",
    "pdfPage": 80,
    "bookPage": 89
   },
@@ -10050,7 +10058,7 @@
    "setName": "Điều khiển động cơ xăng",
    "section": "Ch.2 TPS",
    "number": 261,
-   "question": "Đối với cảm biến vị trí bướm ga (TPS) loại biến trở có tiếp điểm cầm chừng, khi cánh bướm ga đóng hoàn toàn thì điện áp tại cực VTA và IDL như thế nào?",
+   "question": "Đối với cảm biến vị trí bướm ga (TPS) loại biến trở có tiếp điểm idle, khi cánh bướm ga đóng hoàn toàn thì điện áp tại cực VTA và IDL như thế nào?",
    "options": [
     "VTA = 12 V, IDL = 0 V",
     "IDL = 12 V, VTA = 0 V",
@@ -10104,7 +10112,7 @@
    "setName": "Điều khiển động cơ xăng",
    "section": "Ch.2 TPS",
    "number": 264,
-   "question": "Cảm biến vị trí bướm ga (TPS) loại biến trở không có tiếp điểm cầm chừng khác với loại có tiếp điểm cầm chừng ở điểm nào?",
+   "question": "Cảm biến vị trí bướm ga (TPS) loại biến trở không có tiếp điểm idle khác với loại có tiếp điểm idle ở điểm nào?",
    "options": [
     "Thêm cực IDL thứ hai dự phòng",
     "Không có cực VC, tự tạo nguồn",
@@ -10113,7 +10121,7 @@
    ],
    "correct": 2,
    "images": [],
-   "note": "Đáp án đầy đủ: Bỏ cực IDL, dùng VTA xác định cả vị trí cầm chừng",
+   "note": "Đáp án đầy đủ: Bỏ cực IDL, dùng VTA xác định cả vị trí idle",
    "pdfPage": 80,
    "bookPage": 89
   },
@@ -10145,8 +10153,8 @@
    "options": [
     "Dùng biến trở than nên tuyến tính",
     "Tin cậy cao vì không có tiếp xúc cơ khí",
-    "Có tiếp điểm cầm chừng chính xác",
-    "Có tiếp điểm cầm chừng nên báo chính xác vị trí đóng"
+    "Có tiếp điểm idle chính xác",
+    "Có tiếp điểm idle nên báo chính xác vị trí đóng"
    ],
    "correct": 1,
    "images": [],
@@ -10273,11 +10281,11 @@
     "Công suất tăng rõ rệt",
     "Máy chạy êm hơn, nồng độ CO và HC giảm",
     "Máy chạy êm hơn bình thường",
-    "Cầm chừng, tăng tốc kém, hao xăng"
+    "Idle, tăng tốc kém, hao xăng"
    ],
    "correct": 3,
    "images": [],
-   "note": "Đáp án đầy đủ: Cầm chừng không ổn, tăng tốc kém, hao xăng, CO/HC cao",
+   "note": "Đáp án đầy đủ: Idle không ổn, tăng tốc kém, hao xăng, CO/HC cao",
    "pdfPage": 83,
    "bookPage": 92
   },
@@ -11453,7 +11461,7 @@
    "question": "ECU điều khiển phun nhiên liệu ở chế độ vòng hở (Open Loop) trong những trường hợp nào?",
    "options": [
     "Khi đã tắt máy và rút chìa khóa",
-    "Khi cầm chừng ổn định đã nóng máy hoàn toàn",
+    "Khi idle ổn định đã nóng máy hoàn toàn",
     "Khi giảm tốc nhẹ ở tốc độ trung bình",
     "Khởi động, máy lạnh, tăng tốc, lỗi cảm biến oxy"
    ],
@@ -12617,7 +12625,7 @@
     "Phun đậm để tránh chết máy khi nhả ga",
     "Tăng áp suất nhiên liệu",
     "Cắt phun ngắn hạn, phun lại khi tua giảm",
-    "Phun bình thường như cầm chừng"
+    "Phun bình thường như idle"
    ],
    "correct": 2,
    "images": [],
@@ -14616,8 +14624,8 @@
    "options": [
     "Điều khiển rơle bơm xăng",
     "Điều khiển thời gian phun",
-    "Điều khiển thời điểm đánh lửa ở chế độ cầm chừng",
-    "Điều khiển gió đi tắt bướm ga để giữ cầm chừng phù hợp"
+    "Điều khiển thời điểm đánh lửa ở chế độ idle",
+    "Điều khiển gió đi tắt bướm ga để giữ idle phù hợp"
    ],
    "correct": 3,
    "images": [],
@@ -14668,7 +14676,7 @@
    "number": 536,
    "question": "Theo giáo trình, hệ thống điều khiển tốc độ không tải ISC được chia thành tổng cộng bao nhiêu chế độ điều khiển?",
    "options": [
-    "2 chế độ: cầm chừng nóng và lạnh",
+    "2 chế độ: idle nóng và lạnh",
     "5 chế độ",
     "Hâm nóng và làm mát",
     "Chỉ có chế độ khởi động và tắt máy"
@@ -14724,14 +14732,14 @@
    "number": 539,
    "question": "Trong hệ thống điều khiển tốc độ không tải ISC, chế độ hâm nóng (chạy không tải nhanh – Fast idle) được sử dụng khi nào?",
    "options": [
-    "Máy đã nóng – giảm cầm chừng để tiết kiệm xăng",
+    "Máy đã nóng – giảm idle để tiết kiệm xăng",
     "Khi máy nguội",
     "Khi tăng tốc – bù gió cho kịp",
     "Khi tắt máy – mở van cho lần sau"
    ],
    "correct": 1,
    "images": [],
-   "note": "Đáp án đầy đủ: Máy nguội – giữ cầm chừng ổn định, nhanh đạt 80 – 90 °C",
+   "note": "Đáp án đầy đủ: Máy nguội – giữ idle ổn định, nhanh đạt 80 – 90 °C",
    "pdfPage": 132,
    "bookPage": 141
   },
@@ -16302,14 +16310,14 @@
    "number": 627,
    "question": "Trong hệ thống tuần hoàn khí xả EGR, van EGR được điều khiển đóng trong những trường hợp nào?",
    "options": [
-    "Máy nguội, cầm chừng, tăng tốc",
+    "Máy nguội, idle, tăng tốc",
     "Van luôn mở",
     "Khi chạy ổn định ở tải trung bình",
     "Khi chạy ổn định nóng máy"
    ],
    "correct": 0,
    "images": [],
-   "note": "Đáp án đầy đủ: Khi máy nguội, cầm chừng hoặc tăng tốc",
+   "note": "Đáp án đầy đủ: Khi máy nguội, idle hoặc tăng tốc",
    "pdfPage": 148,
    "bookPage": 157
   },
@@ -16323,7 +16331,7 @@
    "options": [
     "Khi máy còn nguội",
     "Chạy ổn định, tải trung bình",
-    "Khi cầm chừng và khi máy nguội",
+    "Khi idle và khi máy nguội",
     "Khi tăng tốc mạnh"
    ],
    "correct": 1,
@@ -16416,7 +16424,7 @@
    "options": [
     "Chạy êm, tiết kiệm xăng",
     "Rung, chết máy, khói đen",
-    "Máy mạnh hơn ở cầm chừng",
+    "Máy mạnh hơn ở idle",
     "Không ảnh hưởng gì"
    ],
    "correct": 1,
@@ -16434,7 +16442,7 @@
    "question": "Khi van tuần hoàn khí xả EGR bị kẹt ở vị trí đóng kín, động cơ sẽ bị ảnh hưởng như thế nào?",
    "options": [
     "Chỉ tăng khí thải",
-    "Chết máy ngay khi cầm chừng",
+    "Chết máy ngay khi idle",
     "Khói đen nhiều",
     "Không nổ được"
    ],
@@ -19190,7 +19198,7 @@
    "question": "Trên động cơ Diesel Common Rail, khi phát hiện lỗi mạch kim phun nghiêm trọng, ECM thường xử lý như thế nào?",
    "options": [
     "Chạy bình thường",
-    "Chạy dự phòng cầm chừng",
+    "Chạy dự phòng idle",
     "Ngắt tất cả kim",
     "Chỉ giảm nhẹ công suất"
    ],
@@ -19776,7 +19784,7 @@
     "Khi tải nhẹ, đường bằng",
     "Khi máy nóng, tải vừa",
     "Lạnh, tải lớn, độ cao lớn",
-    "Khi cầm chừng nóng máy"
+    "Khi idle nóng máy"
    ],
    "correct": 2,
    "images": [],
@@ -20193,7 +20201,7 @@
    ],
    "correct": 0,
    "images": [],
-   "note": "Đáp án đầy đủ: Tăng cầm chừng, phun muộn, giảm gió nạp (ACV đóng bớt)",
+   "note": "Đáp án đầy đủ: Tăng idle, phun muộn, giảm gió nạp (ACV đóng bớt)",
    "pdfPage": 190,
    "bookPage": 202
   },
@@ -20507,7 +20515,7 @@
    "setName": "Điều khiển động cơ Diesel",
    "section": "Ch.2 RPS",
    "number": 216,
-   "question": "Theo đồ thị tín hiệu cảm biến áp suất ống rail, khi áp suất rail tăng từ lúc ổn chìa đến full ga thì điện áp tín hiệu thay đổi thế nào?",
+   "question": "Cảm biến áp suất ống rail (RPS) có điện áp tín hiệu thay đổi thế nào khi áp suất rail tăng từ lúc mới bật khóa (động cơ chưa nổ) đến khi đạp ga hết hành trình?",
    "options": [
     "Giảm dần khi áp suất tăng",
     "Không đổi, luôn bằng 5 V",
@@ -20515,9 +20523,7 @@
     "Tăng dần"
    ],
    "correct": 3,
-   "images": [
-    "images/diesel_img26.jpg"
-   ],
+   "images": [],
    "note": "Đáp án đầy đủ: Tăng dần, nằm giữa hai vùng báo lỗi thấp và cao",
    "pdfPage": 173,
    "bookPage": 185
@@ -20528,7 +20534,7 @@
    "setName": "Điều khiển động cơ Diesel",
    "section": "Ch.2 Kim phun",
    "number": 217,
-   "question": "Quan sát biểu đồ các lần nhấc kim phun trong một chu kỳ cháy. Lần phun có đỉnh cao nhất (số 3) là lần phun nào?",
+   "question": "Trong một chu kỳ phun của kim phun Diesel điện tử (nhiều lần phun), lần phun có khối lượng lớn nhất tạo công suất là lần phun nào?",
    "options": [
     "Phun mồi – giảm tiếng ồn",
     "Phun chính – tạo công suất",
@@ -20536,9 +20542,7 @@
     "Phun muộn – tái sinh DPF"
    ],
    "correct": 1,
-   "images": [
-    "images/diesel_img27.jpg"
-   ],
+   "images": [],
    "pdfPage": 175,
    "bookPage": 187
   },
@@ -23630,7 +23634,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "KĐ · Sơ đồ mạch & đo",
    "number": 1,
-   "question": "Xe số tự động, cần số ở P, vặn khóa sang START: máy đề im lặng hoàn toàn. Đo theo hình: điểm B = 12,2 V, điểm C = 0 V. Lỗi nằm ở đâu?",
+   "question": "Xe số tự động, cần số ở P, vặn khóa sang START: máy đề im lặng hoàn toàn. Đo thấy sau công tắc máy (điểm B) = 12,2 V nhưng tại cuộn relay đề (điểm C) = 0 V. Lỗi nằm ở đâu?",
    "options": [
     "Cầu chì AM2 bị đứt nên mất nguồn",
     "Cuộn dây relay đề bị đứt, relay không hút",
@@ -23638,9 +23642,7 @@
     "Cuộn giữ trong công tắc từ bị đứt"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/kd_mach_do.svg"
-   ],
+   "images": [],
    "note": "Đo áp theo dòng điện: B có 12 V (khóa điện tốt) mà C mất áp → linh kiện nằm giữa B và C (công tắc P/N) bị hở. Cầu chì AM2 nằm TRƯỚC điểm B nên không thể là lỗi. Mẹo: điểm cuối còn điện và điểm đầu mất điện kẹp đúng chỗ hỏng.",
    "level": "hard",
    "pdfPage": 22,
@@ -23652,7 +23654,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "KĐ · Sơ đồ mạch & đo",
    "number": 2,
-   "question": "Theo hình, khi đề: A = 12,4 V, D (cực 50) = 11,6 V, E (cực 30) = 11,8 V nhưng KHÔNG nghe tiếng 'tạch' nào ở máy khởi động. Kết luận hợp lý nhất?",
+   "question": "Khi đề: điện áp ắc quy A = 12,4 V, cực 50 = 11,6 V, cực 30 = 11,8 V nhưng KHÔNG nghe tiếng 'tạch' nào ở máy khởi động. Kết luận hợp lý nhất?",
    "options": [
     "Relay đề không đóng nên cực 50 không có điện",
     "Ắc quy quá yếu, không đủ lực hút pít-tông",
@@ -23660,9 +23662,7 @@
     "Hư bên trong công tắc từ (cuộn dây/mass)"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/kd_mach_do.svg"
-   ],
+   "images": [],
    "note": "Cực 50 đã có 11,6 V nghĩa là toàn bộ mạch điều khiển (khóa, P/N, relay) đều tốt; ắc quy cũng đủ áp. Có điện vào 50 mà không có tiếng tạch → cuộn hút/cuộn giữ hoặc mass của công tắc từ có vấn đề.",
    "level": "hard",
    "pdfPage": 9,
@@ -23682,9 +23682,7 @@
     "Cuộn dây phần ứng bị chạm mass với lõi thép"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/kd_mach_do.svg"
-   ],
+   "images": [],
    "note": "Tiếng 'tạch' = pít-tông đã bị hút. Cực 30 có 11,5 V nhưng cực C = 0 V → dòng không đi qua được tiếp điểm chính. Nếu tiếp điểm tốt, C phải ≈ áp cực 30; khi đó motor không quay mới nghĩ tới chổi than/phần ứng.",
    "level": "hard",
    "pdfPage": 22,
@@ -23704,9 +23702,7 @@
     "Thay relay đề vì tiếp điểm relay bị cháy rỗ"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/kd_mach_do.svg"
-   ],
+   "images": [],
    "note": "C ≈ 30 nghĩa là tiếp điểm chính đã đóng tốt, điện đã tới motor. Motor vẫn không quay → hở mạch bên trong motor (chổi than mòn/kẹt, cổ góp bẩn, phần ứng/cuộn cảm đứt) hoặc kẹt cơ khí.",
    "level": "hard",
    "pdfPage": 7,
@@ -23726,9 +23722,7 @@
     "Lò xo hồi vị bánh răng bendix bị gãy"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/kd_mach_do.svg"
-   ],
+   "images": [],
    "note": "Khi tiếp điểm chính đóng, hai đầu cuộn hút (50 và C) cùng ≈ 12 V nên cuộn hút mất dòng; chỉ còn cuộn giữ giữ pít-tông. Cuộn giữ hở → pít-tông nhả → tiếp điểm mở → cuộn hút lại hút → lặp lại 'tạch tạch'. Nếu ắc quy yếu cũng gây hiện tượng này, nên câu hỏi đã loại trừ ắc quy.",
    "level": "hard",
    "pdfPage": 10,
@@ -23748,9 +23742,7 @@
     "Relay đề tự ngắt cực 50 ngay sau khi đề"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/kd_mach_do.svg"
-   ],
+   "images": [],
    "note": "Cuộn hút nối giữa 50 và C. Tiếp điểm chính đóng → C được nối thẳng cực 30 (≈ áp ắc quy) nên chênh áp trên cuộn hút ≈ 0. Đây là thiết kế cố ý để giảm dòng tiêu thụ và nhiệt; việc giữ pít-tông giao cho cuộn giữ.",
    "level": "hard",
    "pdfPage": 10,
@@ -23762,7 +23754,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "KĐ · Sơ đồ mạch & đo",
    "number": 7,
-   "question": "Khi kiểm tra mạch khởi động, đo sụt áp phía dương như hình trong lúc đang đề, đồng hồ chỉ 1,8 V. Kết luận nào sau đây là đúng?",
+   "question": "Khi kiểm tra mạch khởi động, đo sụt áp phía dương trong lúc đang đề, đồng hồ chỉ 1,8 V. Kết luận nào sau đây là đúng?",
    "options": [
     "Bình thường, vì dòng đề lớn nên sụt áp phải lớn",
     "Công tắc từ hỏng tiếp điểm, cần thay công tắc từ",
@@ -23770,9 +23762,7 @@
     "Cáp dương/đầu cos có điện trở lớn, cần vệ sinh siết lại"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/kd_sut_ap.svg"
-   ],
+   "images": [],
    "note": "Đồng hồ nối song song với chính đoạn cáp dương nên chỉ đọc phần áp mất trên cáp. Tiêu chuẩn thường ≤ 0,5 V. 1,8 V là bị 'ăn' mất điện trên cáp/đầu cos → đề yếu dù ắc quy tốt. Mẹo: đo sụt áp phải đo KHI CÓ TẢI.",
    "level": "hard",
    "pdfPage": 20,
@@ -23884,7 +23874,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "KĐ · Công tắc từ",
    "number": 13,
-   "question": "Trong hình công tắc từ của máy khởi động, cuộn (1) được nối giữa cực 50 và cực C. Cuộn này là cuộn gì và dây quấn có đặc điểm như thế nào?",
+   "question": "Trong công tắc từ của máy khởi động, cuộn hút được nối giữa cực 50 và cực C. Cuộn này có đặc điểm dây quấn như thế nào?",
    "options": [
     "Cuộn giữ – dây nhỏ, nhiều vòng, dòng nhỏ",
     "Cuộn hút – dây nhỏ, nhiều vòng, dòng nhỏ",
@@ -23892,9 +23882,7 @@
     "Cuộn giữ – dây to, ít vòng, dòng lớn"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/kd_cong_tac_tu.svg"
-   ],
+   "images": [],
    "note": "Cuộn hút (pull-in): 50 → C → qua motor xuống mass, cần lực lớn ban đầu nên dây to. Cuộn giữ (hold-in): 50 → thân (mass), chỉ cần giữ nên dây nhỏ. Mẹo: 'Hút nối C, Giữ nối thân'.",
    "level": "hard",
    "pdfPage": 10,
@@ -23906,7 +23894,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "KĐ · Công tắc từ",
    "number": 14,
-   "question": "Trong hình công tắc từ của máy khởi động, nếu cuộn (2) bị đứt nhưng cuộn (1) vẫn còn tốt thì khi đề sẽ xuất hiện hiện tượng gì?",
+   "question": "Trong công tắc từ của máy khởi động, nếu cuộn giữ bị đứt nhưng cuộn hút vẫn còn tốt thì khi đề sẽ xuất hiện hiện tượng gì?",
    "options": [
     "Hoàn toàn im lặng, không có tiếng động nào",
     "Đề bình thường nhưng nhả khóa máy đề vẫn quay",
@@ -23914,9 +23902,7 @@
     "Motor quay tít nhưng bánh răng không bật ra"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/kd_cong_tac_tu.svg"
-   ],
+   "images": [],
    "note": "Cuộn (2) là cuộn giữ (50 ↔ thân). Mất cuộn giữ thì sau khi tiếp điểm đóng không gì giữ được pít-tông → nhả → hút lại → lặp. Nếu cuộn (1) đứt thì pít-tông không được hút đủ mạnh – thường im lặng.",
    "level": "hard",
    "pdfPage": 9,
@@ -23928,7 +23914,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "KĐ · Công tắc từ",
    "number": 15,
-   "question": "Trong hình (1), kỹ thuật viên nối dương ắc quy vào cực 50, nối âm vào thân máy và cực C của công tắc từ. Đây là phép thử gì và đạt yêu cầu khi nào?",
+   "question": "Kỹ thuật viên nối dương ắc quy vào cực 50, nối âm vào thân máy và cực C của công tắc từ. Đây là phép thử gì và đạt yêu cầu khi nào?",
    "options": [
     "Thử giữ – bánh răng ở yên bên ngoài",
     "Thử không tải – motor quay êm",
@@ -23936,9 +23922,7 @@
     "Thử hút – bánh răng bendix bật ra ngoài"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/kd_3_phep_thu.svg"
-   ],
+   "images": [],
    "note": "Nối C xuống (–) để cuộn hút có đường về; cả cuộn hút và cuộn giữ cùng tác dụng → bánh răng phải bật ra.",
    "level": "hard",
    "pdfPage": 19,
@@ -23950,7 +23934,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "KĐ · Công tắc từ",
    "number": 16,
-   "question": "Trong hình (2), giữ nguyên cách nối như phép thử (1) rồi tháo dây ở cực C thì bánh răng bendix thụt vào ngay lập tức. Kết luận nào là đúng?",
+   "question": "Giữ nguyên cách nối của phép thử hút (dương vào cực 50, âm vào thân máy và cực C) rồi tháo dây ở cực C thì bánh răng bendix thụt vào ngay lập tức. Kết luận nào là đúng?",
    "options": [
     "Cuộn giữ bị hở (hoặc mất mass thân)",
     "Cuộn hút bị hở",
@@ -23958,9 +23942,7 @@
     "Lò xo hồi vị quá yếu"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/kd_3_phep_thu.svg"
-   ],
+   "images": [],
    "note": "Tháo C thì cuộn hút mất đường về, chỉ còn cuộn giữ. Đạt khi bánh răng VẪN Ở NGOÀI. Thụt vào ngay = cuộn giữ không làm việc.",
    "level": "hard",
    "pdfPage": 10,
@@ -23972,7 +23954,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "KĐ · Công tắc từ",
    "number": 17,
-   "question": "Hình (3): (+) vào cực C, (–) vào thân, cực 50 để hở; kéo bánh răng ra rồi buông. Vì sao bánh răng PHẢI thụt về nhanh nếu công tắc tốt?",
+   "question": "Phép thử giữ: (+) vào cực C, (–) vào thân, cực 50 để hở; kéo bánh răng ra rồi buông. Vì sao bánh răng PHẢI thụt về nhanh nếu công tắc tốt?",
    "options": [
     "Từ trường hai cuộn ngược chiều, triệt tiêu nhau",
     "Tiếp điểm chính mở nên toàn mạch bị ngắt hoàn toàn",
@@ -23980,9 +23962,7 @@
     "Cuộn hút đảo cực tạo lực đẩy pít-tông về sau"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/kd_3_phep_thu.svg"
-   ],
+   "images": [],
    "note": "C → cuộn hút → 50 → cuộn giữ → thân: hai cuộn nối tiếp, dòng chạy qua cuộn hút theo chiều NGƯỢC lúc bình thường → hai từ trường khử nhau → lò xo đẩy về. Đây cũng là lý do khi nhả khóa, máy đề ngắt ngay.",
    "level": "hard",
    "pdfPage": 10,
@@ -23994,7 +23974,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "KĐ · Kiểm tra chi tiết",
    "number": 18,
-   "question": "Khi kiểm tra phần ứng máy khởi động, đo như hình (một que ở cổ góp, một que ở lõi thép phần ứng) được 0,2 Ω và đồng hồ kêu bíp. Kết luận nào là đúng?",
+   "question": "Khi kiểm tra phần ứng máy khởi động, đo giữa cổ góp và lõi thép phần ứng được 0,2 Ω và đồng hồ kêu bíp. Kết luận nào là đúng?",
    "options": [
     "Chổi than ngắn, cần thay chổi than",
     "Phần ứng bị chạm mass – phải thay",
@@ -24002,9 +23982,7 @@
     "Cổ góp mòn, cần tiện láng lại"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/kd_phan_ung.svg"
-   ],
+   "images": [],
    "note": "Giữa cổ góp và lõi phải CÁCH ĐIỆN (không thông, ≥ cỡ MΩ). Thông mạch = chạm mass. Ngược lại, giữa các lá cổ góp với nhau thì phải THÔNG. Mẹo: 'Cổ góp – cổ góp: thông; Cổ góp – lõi: cách'.",
    "level": "hard",
    "pdfPage": 17,
@@ -24076,7 +24054,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "KĐ · Kiểm tra chi tiết",
    "number": 22,
-   "question": "Trong hình bộ truyền hành tinh, chi tiết số 1 được dẫn động bởi trục phần ứng. Chi tiết số 4 có vai trò gì?",
+   "question": "Trong bộ truyền hành tinh của máy khởi động, chi tiết nhận chuyển động từ các bánh răng hành tinh và nối với trục bendix có vai trò gì?",
    "options": [
     "Bánh răng bao – quay cùng chiều phần ứng",
     "Cần dẫn – nối với trục bendix, là đầu ra mô-men",
@@ -24084,9 +24062,7 @@
     "Bánh răng mặt trời – nhận mô-men từ phần ứng"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/kd_hanh_tinh.svg"
-   ],
+   "images": [],
    "note": "1: bánh răng mặt trời (vào, gắn trục phần ứng); 3: bánh răng hành tinh; 2: bánh răng bao (cố định, có đĩa ly hợp hấp thụ mô-men thừa); 4: cần dẫn (ra). Tỉ số giảm tốc ≈ 1:5.",
    "level": "hard",
    "pdfPage": 14,
@@ -24106,9 +24082,7 @@
     "Bánh răng bao trượt để hấp thụ mô-men thừa"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/kd_hanh_tinh.svg"
-   ],
+   "images": [],
    "note": "Thiết bị hấp thụ mô-men: đĩa ly hợp ăn khớp với bánh răng bao; khi mô-men quá tải, bánh răng bao quay trượt → bảo vệ bánh răng hành tinh.",
    "level": "hard",
    "pdfPage": 14,
@@ -24140,7 +24114,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Nạp · Sơ đồ & chẩn đoán",
    "number": 25,
-   "question": "Theo sơ đồ mạch máy phát trong hình, cực S của bộ tiết chế vi mạch được dùng để làm gì?",
+   "question": "Trên bộ tiết chế vi mạch của máy phát, cực S được dùng để làm gì?",
    "options": [
     "Điều khiển bật/tắt bóng đèn báo nạp",
     "Cảm nhận điện áp ắc quy để điều chỉnh",
@@ -24148,9 +24122,7 @@
     "Nhận điện áp pha từ cuộn stator"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/nap_mach_ic.svg"
-   ],
+   "images": [],
    "note": "Ghi nhớ các cực: B – đầu ra; IG – nguồn từ khóa điện; S – cảm nhận áp ắc quy; L – đèn báo nạp; P – điện áp pha stator (để biết máy phát có phát hay không); F – cuộn rotor; E – mass.",
    "level": "hard",
    "pdfPage": 38,
@@ -24170,9 +24142,7 @@
     "Bình thường – cực P chưa có điện áp"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/nap_mach_ic.svg"
-   ],
+   "images": [],
    "note": "Máy chưa quay → stator không phát → điện áp cực P = 0 → M.IC bật transistor đèn. Đèn sáng khi ON là kiểm tra bóng đèn luôn. Nổ máy mà đèn tắt mới là đúng.",
    "level": "hard",
    "pdfPage": 40,
@@ -24192,9 +24162,7 @@
     "Dây cực B và đầu cos cọc dương ắc quy"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/nap_mach_ic.svg"
-   ],
+   "images": [],
    "note": "Đèn chỉ cần mạch: khóa điện → bóng → cực L → transistor trong M.IC → mass. Stator/diode chỉ ảnh hưởng khi máy đã quay.",
    "level": "hard",
    "pdfPage": 48,
@@ -24214,9 +24182,7 @@
     "Ắc quy bị quá nạp, sôi dung dịch"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/nap_mach_ic.svg"
-   ],
+   "images": [],
    "note": "Rotor hở → không có từ trường → stator không phát → cực P = 0 → M.IC bật đèn; điện áp chỉ còn là áp ắc quy. F chạm mass thì ngược lại: quá nạp (áp cao).",
    "level": "hard",
    "pdfPage": 40,
@@ -24236,9 +24202,7 @@
     "Cực F chạm mass (E), mất điều khiển kích từ"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/nap_mach_ic.svg"
-   ],
+   "images": [],
    "note": "F–E chạm nhau → dòng kích từ đi thẳng xuống mass, bỏ qua Tr1 → tiết chế mất quyền điều chỉnh → điện áp tăng vọt. M.IC phát hiện áp cực S quá cao và bật đèn cảnh báo.",
    "level": "hard",
    "pdfPage": 38,
@@ -24258,9 +24222,7 @@
     "Không phát hiện được, đèn báo tắt bình thường"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/nap_mach_ic.svg"
-   ],
+   "images": [],
    "note": "Mất tín hiệu S, M.IC chuyển sang dùng áp cực B (khoảng 13,3–16,3 V tùy loại) để điều chỉnh, tránh quá nạp, đồng thời bật đèn báo nạp để báo lỗi.",
    "level": "hard",
    "pdfPage": 42,
@@ -24281,7 +24243,7 @@
    ],
    "correct": 3,
    "images": [],
-   "note": "Tr3 làm việc đồng bộ với Tr1; cực M phát xung cho ECU biết máy phát đang tải nặng/nhẹ. ECU dùng để điều khiển bộ sưởi PTC, bù ga cầm chừng…",
+   "note": "Tr3 làm việc đồng bộ với Tr1; cực M phát xung cho ECU biết máy phát đang tải nặng/nhẹ. ECU dùng để điều khiển bộ sưởi PTC, bù ga idle…",
    "level": "hard",
    "pdfPage": 44,
    "bookPage": 52
@@ -24332,7 +24294,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Nạp · Kiểm tra chi tiết",
    "number": 34,
-   "question": "Khi kiểm tra diode chỉnh lưu như hình: lần 1 (que đỏ ở P1, que đen ở B) đo được 0,52 V; lần 2 đảo que đo được OL. Kết luận nào là đúng?",
+   "question": "Khi kiểm tra diode chỉnh lưu: lần 1 (que đỏ ở P1, que đen ở B) đo được 0,52 V; lần 2 đảo que đo được OL. Kết luận nào là đúng?",
    "options": [
     "Diode âm còn tốt",
     "Diode dương bị hở mạch",
@@ -24340,9 +24302,7 @@
     "Diode dương bị chạm (ngắn mạch)"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/nap_diode.svg"
-   ],
+   "images": [],
    "note": "Thang diode: chiều thuận đọc ≈ 0,4–0,7 V, chiều nghịch OL. Diode cho dòng từ P1 (stator) LÊN cực B → là diode dương (cathode nối B). Hai chiều đều ≈ 0 → chạm; hai chiều đều OL → hở.",
    "level": "hard",
    "pdfPage": 28,
@@ -24374,7 +24334,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Nạp · Kiểm tra chi tiết",
    "number": 36,
-   "question": "Hình (a) là dạng gợn sóng bình thường tại cực B của máy phát, hình (b) cho thấy cứ đều đặn một số nhịp bị hụt sâu. Kết luận nào là đúng?",
+   "question": "Dạng gợn sóng bình thường tại cực B của máy phát có các nhịp đều; khi hỏng, cứ đều đặn một số nhịp bị hụt sâu. Kết luận nào là đúng?",
    "options": [
     "Máy phát hoạt động bình thường khi tải lớn",
     "Ắc quy đã sạc đầy nên điện áp dao động",
@@ -24382,9 +24342,7 @@
     "Tiết chế đang điều chỉnh giảm điện áp nạp"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/nap_gon_song.svg"
-   ],
+   "images": [],
    "note": "Chỉnh lưu cầu 3 pha cho chuỗi bướu đều. Mất một diode → mất một phần chu kỳ của một pha → xuất hiện các 'hố' lặp lại có chu kỳ. Máy hiện sóng phát hiện ngay cả khi điện áp trung bình còn gần chuẩn.",
    "level": "hard",
    "pdfPage": 32,
@@ -24396,7 +24354,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Nạp · Kiểm tra chi tiết",
    "number": 37,
-   "question": "Khi đo điện trở giữa hai vòng tiếp điện của rotor máy phát như hình được kết quả OL. Kết luận và hệ quả khi lắp máy phát này lên xe là gì?",
+   "question": "Khi đo điện trở giữa hai vòng tiếp điện của rotor máy phát được kết quả OL. Kết luận và hệ quả khi lắp máy phát này lên xe là gì?",
    "options": [
     "Rotor đứt – máy phát không phát",
     "Rotor chạm mass – ắc quy sẽ bị quá nạp",
@@ -24404,9 +24362,7 @@
     "Vòng tiếp điện mòn – chỉ cần láng lại"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/nap_rotor.svg"
-   ],
+   "images": [],
    "note": "Giữa 2 vòng tiếp điện phải có điện trở nhỏ (vài ohm, cỡ 2–3 Ω). OL = đứt cuộn. Còn giữa vòng tiếp điện và trục thì phải KHÔNG thông (cách điện).",
    "level": "hard",
    "pdfPage": 46,
@@ -24418,7 +24374,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Nạp · Kiểm tra chi tiết",
    "number": 38,
-   "question": "Trong hình, kiểu đấu (X) có điểm trung hòa N. Gọi E là sức điện động và I là dòng điện của mỗi cuộn. Điện áp dây Ud và dòng dây Id của kiểu đấu (X) là bao nhiêu?",
+   "question": "Cuộn stator máy phát đấu hình sao có điểm trung hòa N. Gọi E là sức điện động và I là dòng điện của mỗi cuộn. Điện áp dây Ud và dòng dây Id là bao nhiêu?",
    "options": [
     "Ud = √3·E ; Id = √3·I",
     "Ud = E ; Id = √3·I",
@@ -24426,10 +24382,8 @@
     "Ud = √3·E ; Id = I"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/nap_dau_day.svg"
-   ],
-   "note": "(X) là hình sao: áp dây = √3 áp pha, dòng dây = dòng pha → cho điện áp cao, phổ biến trên ô tô. (Y) là tam giác: Ud = E, Id = √3·I → dòng lớn. Điểm N = điểm trung hòa.",
+   "images": [],
+   "note": "Hình sao: áp dây = √3 áp pha, dòng dây = dòng pha → cho điện áp cao, phổ biến trên ô tô. Tam giác: Ud = E, Id = √3·I → dòng lớn. Điểm N = điểm trung hòa.",
    "level": "hard",
    "pdfPage": 28,
    "bookPage": 35
@@ -24448,9 +24402,7 @@
     "Giảm nhiễu sóng radio do từ trường stator gây ra"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/nap_dau_day.svg"
-   ],
+   "images": [],
    "note": "Ở tốc độ cao (> ~2 000–3 000 v/p) điện áp điểm N dao động vượt áp ra và dưới 0 V; 2 diode trung hòa lấy thêm phần này → tăng công suất khoảng 10–15%.",
    "level": "hard",
    "pdfPage": 34,
@@ -24482,7 +24434,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Nguồn ECM & nguồn 5 V",
    "number": 42,
-   "question": "ECM báo đồng thời lỗi điện áp thấp của cả ba cảm biến TPS, MAP và APP. Theo sơ đồ trong hình, nguyên nhân hợp lý nhất là gì?",
+   "question": "ECM báo đồng thời lỗi điện áp thấp của cả ba cảm biến TPS, MAP và APP (cùng dùng nguồn 5 V). Nguyên nhân hợp lý nhất là gì?",
    "options": [
     "Dây E2 của cảm biến MAP bị đứt",
     "Dây tín hiệu VTA của TPS bị đứt",
@@ -24490,9 +24442,7 @@
     "Cả ba cảm biến cùng hỏng trong một lúc"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/x_vc_chung.svg"
-   ],
+   "images": [],
    "note": "Nhiều mã lỗi cùng lúc ở các cảm biến KHÁC NHAU → tìm điểm CHUNG (VC hoặc E2), không thay từng cảm biến. VC chạm mass thì mọi cảm biến dùng VC đều mất 5 V → tín hiệu thấp.",
    "level": "hard",
    "pdfPage": 67,
@@ -24512,9 +24462,7 @@
     "Dây VC từ ECM tới cảm biến TPS bị đứt"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/x_vc_chung.svg"
-   ],
+   "images": [],
    "note": "Tháo lần lượt từng cảm biến dùng chung VC: tháo cái nào mà VC hồi lại 5 V thì chính cái đó (hoặc dây của nó) đang ngắn mạch. Kỹ thuật 'cô lập nhánh'.",
    "level": "hard",
    "pdfPage": 55,
@@ -24526,7 +24474,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Nguồn ECM & nguồn 5 V",
    "number": 44,
-   "question": "Theo hình, ECM nhận các điện áp: BATT = 12,4 V; IGSW = 12,3 V (khóa ON); +B = 0 V. Xe không nổ, không giao tiếp được máy chẩn đoán. Hư hỏng nằm ở đâu?",
+   "question": "ECM nhận các điện áp: BATT = 12,4 V; IGSW = 12,3 V (khóa ON); +B = 0 V. Xe không nổ, không giao tiếp được máy chẩn đoán. Hư hỏng nằm ở đâu?",
    "options": [
     "Dây nguồn thường trực BATT bị đứt",
     "Dây mass E1 của ECM tiếp xúc kém",
@@ -24534,9 +24482,7 @@
     "Khóa điện hoặc dây IGSW tới ECM"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/x_role_chinh.svg"
-   ],
+   "images": [],
    "note": "IGSW có điện = ECM đã nhận lệnh bật. ECM điều khiển rơle chính qua MREL; tiếp điểm rơle (qua cầu chì EFI) cấp +B. +B = 0 → kiểm tra cầu chì EFI, rơle chính và dây MREL.",
    "level": "hard",
    "pdfPage": 48,
@@ -24556,9 +24502,7 @@
     "Để quạt két nước chạy thêm làm mát ECM"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/x_role_chinh.svg"
-   ],
+   "images": [],
    "note": "Loại rơle chính do ECM điều khiển (chân MREL): ECM giữ rơle sau khi tắt khóa để lưu dữ liệu học, đặt lại van ISC/bướm ga điện tử… rồi mới ngắt.",
    "level": "hard",
    "pdfPage": 48,
@@ -24579,7 +24523,7 @@
    ],
    "correct": 3,
    "images": [],
-   "note": "BATT giữ bộ nhớ (DTC, giá trị học fuel trim, cầm chừng…) khi tắt khóa. Động cơ vẫn nổ được nhờ +B. Tháo cọc ắc quy cũng xóa bộ nhớ vì lý do này.",
+   "note": "BATT giữ bộ nhớ (DTC, giá trị học fuel trim, idle…) khi tắt khóa. Động cơ vẫn nổ được nhờ +B. Tháo cọc ắc quy cũng xóa bộ nhớ vì lý do này.",
    "level": "hard",
    "pdfPage": 48,
    "bookPage": 57
@@ -24610,7 +24554,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · ECT / IAT",
    "number": 48,
-   "question": "Trong mạch cảm biến nhiệt độ nước làm mát (ECT) như hình, khi động cơ nóng lên thì điện áp tại chân THW thay đổi như thế nào?",
+   "question": "Trong mạch cảm biến nhiệt độ nước làm mát (ECT), khi động cơ nóng lên thì điện áp tại chân THW thay đổi như thế nào?",
    "options": [
     "Dao động liên tục 0–5 V",
     "Giảm xuống",
@@ -24618,9 +24562,7 @@
     "Tăng lên"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/x_ect_mach.svg"
-   ],
+   "images": [],
    "note": "NTC: nóng → điện trở cảm biến giảm → chia áp với R chuẩn → điện áp THW giảm. Lạnh ~ 3–4 V, nóng máy ~ 0,5–1 V.",
    "level": "hard",
    "pdfPage": 75,
@@ -24640,9 +24582,7 @@
     "ECM hỏng mạch đọc nhiệt độ"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/x_ect_mach.svg"
-   ],
+   "images": [],
    "note": "−40 °C = ECM thấy mạch hở (THW ≈ 5 V). Nối tắt giắc → 140 °C (THW ≈ 0 V) chứng tỏ dây (1), (2) và ECM đều tốt → lỗi nằm ở chính cảm biến. Mẹo: '−40 hở, 140 chập'.",
    "level": "hard",
    "pdfPage": 92,
@@ -24662,9 +24602,7 @@
     "Xả gió hệ thống làm mát rồi đo lại"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/x_ect_mach.svg"
-   ],
+   "images": [],
    "note": "Nối tắt mà ECM vẫn thấy hở → hở nằm trên dây (1) hoặc (2) hoặc giắc ECM. Chỉ nghĩ tới ECM khi dây đã tốt.",
    "level": "hard",
    "pdfPage": 141,
@@ -24676,7 +24614,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · ECT / IAT",
    "number": 51,
-   "question": "Dựa vào đồ thị đặc tính cảm biến nhiệt độ trong hình, điện trở của cảm biến tại điểm P (20 °C) và điểm Q (80 °C) xấp xỉ bao nhiêu?",
+   "question": "Cảm biến nhiệt độ kiểu NTC có điện trở xấp xỉ bao nhiêu tại 20 °C và 80 °C?",
    "options": [
     "P ≈ 250 Ω ; Q ≈ 30 Ω",
     "P ≈ 25 kΩ ; Q ≈ 3 kΩ",
@@ -24684,9 +24622,7 @@
     "P ≈ 2,5 kΩ ; Q ≈ 0,3 kΩ"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/x_ntc_duong_cong.svg"
-   ],
+   "images": [],
    "note": "Giáo trình: ECT ở 20 °C khoảng 2–3 kΩ; ở 80 °C khoảng 0,3 kΩ. Chú ý trục điện trở là thang log. NTC: nhiệt độ tăng → điện trở giảm.",
    "level": "hard",
    "pdfPage": 88,
@@ -24703,13 +24639,11 @@
     "Khó nổ khi máy lạnh vì ECM tưởng máy đã nóng",
     "Đánh lửa quá sớm gây kích nổ liên tục khi tải",
     "Quạt két nước chạy liên tục ngay cả khi máy lạnh",
-    "Hao xăng, khói đen, cầm chừng cao kéo dài"
+    "Hao xăng, khói đen, idle cao kéo dài"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/x_ntc_duong_cong.svg"
-   ],
-   "note": "2,4 kΩ ứng với ~20 °C. ECM 'tưởng' máy lạnh → làm đậm hâm nóng, tăng cầm chừng → hao xăng, khói đen, bugi muội. Trường hợp ngược lại (báo nóng khi lạnh) mới gây khó nổ lạnh.",
+   "images": [],
+   "note": "2,4 kΩ ứng với ~20 °C. ECM 'tưởng' máy lạnh → làm đậm hâm nóng, tăng idle → hao xăng, khói đen, bugi muội. Trường hợp ngược lại (báo nóng khi lạnh) mới gây khó nổ lạnh.",
    "level": "hard",
    "pdfPage": 152,
    "bookPage": 161
@@ -24760,17 +24694,15 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Oxy & Fuel trim",
    "number": 55,
-   "question": "Trong 4 dạng tín hiệu cảm biến oxy trong hình (đo khi động cơ đã nóng máy), hình nào thể hiện cảm biến và hệ thống đang làm việc bình thường?",
+   "question": "Cảm biến oxy dãy hẹp trên xe đã nóng máy cho tín hiệu dao động đều đặn giữa khoảng 0,1 V và 0,9 V quanh 0,45 V. Trạng thái này cho thấy gì?",
    "options": [
-    "Hình (2)",
-    "Hình (3)",
-    "Hình (4)",
-    "Hình (1)"
+    "Cảm biến và hệ thống điều khiển hỗn hợp đang hoạt động bình thường",
+    "Cảm biến đã chết, tín hiệu đứng yên ở 0,45 V",
+    "Hỗn hợp luôn giàu, tín hiệu kẹt ở mức cao",
+    "Hỗn hợp luôn nghèo, tín hiệu kẹt ở mức thấp"
    ],
-   "correct": 3,
-   "images": [
-    "images/hard/x_o2_4_dang.svg"
-   ],
+   "correct": 0,
+   "images": [],
    "note": "Zirconia bình thường dao động liên tục 0,1–0,9 V quanh 0,45 V (vòng kín). (2) luôn thấp = báo nghèo; (3) luôn cao = báo giàu; (4) đứng yên ~0,45 V = cảm biến chết/chưa nóng.",
    "level": "hard",
    "pdfPage": 88,
@@ -24782,7 +24714,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Oxy & Fuel trim",
    "number": 56,
-   "question": "Tín hiệu cảm biến oxy có dạng như hình (2). Khi phun thêm xăng (hoặc gas) vào họng hút, điện áp lập tức vọt lên 0,9 V. Kết luận nào là đúng?",
+   "question": "Tín hiệu cảm biến oxy dao động nhưng khi phun thêm xăng (hoặc gas) vào họng hút, điện áp lập tức vọt lên 0,9 V. Kết luận nào là đúng?",
    "options": [
     "Hỗn hợp đang giàu do kim phun rò nhỏ giọt",
     "Dây sấy cảm biến bị đứt nên tín hiệu thấp",
@@ -24790,9 +24722,7 @@
     "Cảm biến tốt – hỗn hợp nghèo thật"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/x_o2_4_dang.svg"
-   ],
+   "images": [],
    "note": "Thử làm giàu: cảm biến phản ứng nhanh lên cao → cảm biến còn tốt. Vậy 0,1 V là phản ánh đúng hỗn hợp nghèo (rò chân không, áp xăng thấp, kim phun tắc…).",
    "level": "hard",
    "pdfPage": 92,
@@ -24804,7 +24734,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Oxy & Fuel trim",
    "number": 57,
-   "question": "Tín hiệu cảm biến oxy có dạng như hình (4), đứng yên ở khoảng 0,45 V kể cả khi thử làm giàu hoặc làm nghèo hỗn hợp. Nguyên nhân hợp lý là gì?",
+   "question": "Tín hiệu cảm biến oxy đứng yên ở khoảng 0,45 V kể cả khi thử làm giàu hoặc làm nghèo hỗn hợp. Nguyên nhân hợp lý là gì?",
    "options": [
     "ECM đang ở chế độ vòng kín ổn định nhất",
     "Hỗn hợp đang ở đúng tỉ lệ lý tưởng 14,7:1",
@@ -24812,9 +24742,7 @@
     "Cảm biến không hoạt động / chưa đủ nóng"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/x_o2_4_dang.svg"
-   ],
+   "images": [],
    "note": "Ở vòng kín, tín hiệu PHẢI dao động. Phẳng ở ~0,45 V (điện áp ECM đặt sẵn) nghĩa là cảm biến không phát được tín hiệu: phần tử chết, chưa đủ nhiệt (> 350 °C) hoặc bộ sấy đứt (sấy ~6–13 Ω).",
    "level": "hard",
    "pdfPage": 88,
@@ -24826,7 +24754,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Oxy & Fuel trim",
    "number": 58,
-   "question": "Tín hiệu cảm biến oxy có dạng như hình (3), luôn ở mức khoảng 0,8 V. Nhóm nguyên nhân nào phù hợp với hiện tượng này?",
+   "question": "Tín hiệu cảm biến oxy dãy hẹp luôn ở mức khoảng 0,8 V (báo giàu) kể cả khi động cơ đã nóng. Nhóm nguyên nhân nào phù hợp?",
    "options": [
     "Kim phun rò, áp xăng cao, EVAP kẹt mở",
     "Kim phun bị tắc một phần, phun ít xăng",
@@ -24834,9 +24762,7 @@
     "Rò chân không sau bướm ga, khí lọt vào cổ hút"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/x_o2_4_dang.svg"
-   ],
+   "images": [],
    "note": "Luôn cao = hỗn hợp giàu (thiếu oxy). Rò chân không/áp xăng thấp/kim tắc lại làm NGHÈO. Phân loại đúng nhóm giàu–nghèo là kỹ năng cốt lõi.",
    "level": "hard",
    "pdfPage": 94,
@@ -24848,7 +24774,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Oxy & Fuel trim",
    "number": 59,
-   "question": "So sánh tín hiệu cảm biến oxy trước và sau xúc tác của xe X và xe Y trong hình. Xe nào có bộ xúc tác khí xả bị suy giảm hiệu quả?",
+   "question": "So sánh tín hiệu oxy trước (S1) và sau (S2) xúc tác ở hai xe: xe X có S2 gần như phẳng, ít dao động; xe Y có S2 dao động mạnh gần giống S1. Xe nào có bộ xúc tác khí xả bị suy giảm hiệu quả?",
    "options": [
     "Xe Y",
     "Xe X",
@@ -24856,9 +24782,7 @@
     "Cả hai xe"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/x_o2_xuc_tac.svg"
-   ],
+   "images": [],
    "note": "Xúc tác tốt 'lưu trữ' oxy nên sau xúc tác (S2) ổn định ~0,6–0,7 V. Xúc tác hỏng → khí ra giống khí vào → S2 dao động theo S1. ECM dùng chính phép so sánh này để báo lỗi xúc tác.",
    "level": "hard",
    "pdfPage": 108,
@@ -24890,7 +24814,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Oxy & Fuel trim",
    "number": 61,
-   "question": "Data list cho thấy: ở cầm chừng STFT = +18 %, LTFT = +15 %; ở 2 500 v/p STFT = +2 %, LTFT = +3 %. Kỹ thuật viên nên nghi ngờ nguyên nhân nào đầu tiên?",
+   "question": "Data list cho thấy: ở idle STFT = +18 %, LTFT = +15 %; ở 2 500 v/p STFT = +2 %, LTFT = +3 %. Kỹ thuật viên nên nghi ngờ nguyên nhân nào đầu tiên?",
    "options": [
     "Rò chân không sau cảm biến lưu lượng khí",
     "Áp suất xăng quá cao do bộ điều áp kẹt",
@@ -24899,7 +24823,7 @@
    ],
    "correct": 0,
    "images": [],
-   "note": "Fuel trim dương = ECM đang BÙ THÊM xăng (hỗn hợp nghèo). Nghèo chỉ ở cầm chừng, hết khi tải cao → khí lọt cố định chiếm tỉ lệ lớn lúc ít gió → điển hình rò chân không.",
+   "note": "Fuel trim dương = ECM đang BÙ THÊM xăng (hỗn hợp nghèo). Nghèo chỉ ở idle, hết khi tải cao → khí lọt cố định chiếm tỉ lệ lớn lúc ít gió → điển hình rò chân không.",
    "level": "hard",
    "pdfPage": 94,
    "bookPage": 103
@@ -24932,7 +24856,7 @@
    "number": 63,
    "question": "Trong những trường hợp nào ECM điều khiển phun nhiên liệu ở chế độ vòng hở (Open Loop – không dùng cảm biến oxy để hiệu chỉnh)?",
    "options": [
-    "Cầm chừng khi đã nóng máy và tắt điều hòa",
+    "Idle khi đã nóng máy và tắt điều hòa",
     "Mọi lúc khi xe có bộ xúc tác ba thành phần",
     "Khởi động, máy lạnh, toàn tải, lỗi O2",
     "Chạy đều ở tốc độ ổn định khi đã nóng máy"
@@ -24970,17 +24894,15 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Dạng sóng cảm biến",
    "number": 65,
-   "question": "Hình (A) và (B) là tín hiệu cảm biến vị trí trục khuỷu (CKP) đo khi đề. Đặc điểm phân biệt nào sau đây là đúng?",
+   "question": "Khi đề, tín hiệu CKP loại (A) có dạng xoay chiều hình sin với biên độ tăng theo tốc độ; loại (B) cho xung vuông 0–5 V. Kết luận nào đúng?",
    "options": [
-    "Cả hai đều loại điện từ, chỉ khác tốc độ đề",
-    "(A) Hall, (B) điện từ",
-    "(A) quang cần nguồn 5 V, (B) điện từ",
-    "(A) điện từ, (B) Hall"
+    "(A) là loại điện từ, (B) là loại Hall",
+    "(A) là loại Hall, (B) là loại điện từ",
+    "Cả hai đều là loại quang",
+    "Cả hai đều là loại điện từ"
    ],
-   "correct": 3,
-   "images": [
-    "images/hard/x_ckp_2_dang.svg"
-   ],
+   "correct": 0,
+   "images": [],
    "note": "Điện từ: tự phát xoay chiều, 2 dây, biên độ và tần số tăng theo tốc độ. Hall/quang: cần nguồn (3 dây), ra xung vuông biên độ không đổi.",
    "level": "hard",
    "pdfPage": 53,
@@ -24994,15 +24916,13 @@
    "number": 66,
    "question": "Trên tín hiệu cảm biến vị trí trục khuỷu (CKP), đoạn 'khoảng trống' (vị trí răng khuyết) được ECU dùng để làm gì?",
    "options": [
-    "Đánh dấu thời điểm mở van điều khiển cầm chừng",
+    "Đánh dấu thời điểm mở van điều khiển idle",
     "Xác định vị trí chuẩn trục khuỷu",
     "Đo tốc độ bánh xe để điều khiển hộp số",
     "Báo cho ECM biết động cơ đang kích nổ"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/x_ckp_2_dang.svg"
-   ],
+   "images": [],
    "note": "Vành răng thiếu răng (vd. 36−2): ECM đếm răng từ chỗ khuyết để biết góc trục khuỷu tuyệt đối; kết hợp CMP để biết xy-lanh nào đang ở kỳ nén.",
    "level": "hard",
    "pdfPage": 60,
@@ -25019,7 +24939,7 @@
     "Khoảng 0 Ω; đo điện áp DC 5 V khi bật khóa",
     "Vài trăm Ω; khi đề đo điện áp AC/máy hiện sóng",
     "Khoảng 12 kΩ; đo tần số khi tắt máy",
-    "Hàng MΩ; đo dòng điện khi máy chạy cầm chừng"
+    "Hàng MΩ; đo dòng điện khi máy chạy idle"
    ],
    "correct": 1,
    "images": [],
@@ -25054,7 +24974,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Dạng sóng cảm biến",
    "number": 69,
-   "question": "Khi quét chân ga từ từ và đo tín hiệu cảm biến vị trí bướm ga (TPS) như hình, đoạn tín hiệu nào chứng tỏ cảm biến TPS bị hỏng?",
+   "question": "Khi quét chân ga từ từ, tín hiệu TPS kiểu biến trở phải tăng đều theo hành trình. Hiện tượng nào trên tín hiệu chứng tỏ cảm biến TPS bị hỏng?",
    "options": [
     "Đoạn ~4,5 V lúc đạp ga hết hành trình",
     "Chỗ tụt đột ngột về ~0 V giữa hành trình",
@@ -25062,10 +24982,8 @@
     "Đoạn ~0,6 V lúc nhả ga hoàn toàn"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/x_tps_quet.svg"
-   ],
-   "note": "Tín hiệu phải tăng/giảm trơn tru, không gai. Sụt về ~0 V giữa chừng = 'điểm chết' do mòn rãnh điện trở → giật, hụt ga tại đúng vị trí đó. 0,6 V cầm chừng và 4,5 V hết ga là bình thường.",
+   "images": [],
+   "note": "Tín hiệu phải tăng/giảm trơn tru, không gai. Sụt về ~0 V giữa chừng = 'điểm chết' do mòn rãnh điện trở → giật, hụt ga tại đúng vị trí đó. 0,6 V idle và 4,5 V hết ga là bình thường.",
    "level": "hard",
    "pdfPage": 83,
    "bookPage": 92
@@ -25076,7 +24994,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Dạng sóng cảm biến",
    "number": 70,
-   "question": "Cảm biến vị trí bàn đạp ga (APP) có 2 tín hiệu như hình. Vì sao nhà sản xuất lại thiết kế 2 tín hiệu lệch nhau?",
+   "question": "Cảm biến vị trí bàn đạp ga (APP) có 2 tín hiệu lệch nhau. Vì sao nhà sản xuất lại thiết kế 2 tín hiệu lệch nhau?",
    "options": [
     "Để tăng gấp đôi độ nhạy của bàn đạp ga",
     "Để ECM đối chiếu, phát hiện sai lệch",
@@ -25084,10 +25002,8 @@
     "Một tín hiệu cho phun xăng, một cho đánh lửa"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/x_app_2_tin_hieu.svg"
-   ],
-   "note": "VPA và VPA2 luôn có quan hệ cố định. Lệch quan hệ → ECM báo lỗi tương quan giữa hai tín hiệu. Mất 1 tín hiệu: xe vẫn chạy hạn chế; mất cả 2: chỉ còn cầm chừng nhanh (~1 000–1 200 v/p) – theo giáo trình.",
+   "images": [],
+   "note": "VPA và VPA2 luôn có quan hệ cố định. Lệch quan hệ → ECM báo lỗi tương quan giữa hai tín hiệu. Mất 1 tín hiệu: xe vẫn chạy hạn chế; mất cả 2: chỉ còn idle nhanh (~1 000–1 200 v/p) – theo giáo trình.",
    "level": "hard",
    "pdfPage": 86,
    "bookPage": 95
@@ -25098,7 +25014,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Dạng sóng cảm biến",
    "number": 71,
-   "question": "Theo đặc tính cảm biến MAP trong hình, khi bật khóa ON (máy chưa nổ, xe ở ngang mực nước biển) thì điện áp tín hiệu PIM khoảng bao nhiêu?",
+   "question": "Cảm biến MAP tuyến tính có điện áp tăng theo áp suất đường nạp. Khi bật khóa ON (máy chưa nổ, xe ở ngang mực nước biển, áp suất khoảng 101 kPa) thì điện áp tín hiệu PIM khoảng bao nhiêu?",
    "options": [
     "Khoảng 1,7 V",
     "Đúng 5,0 V",
@@ -25106,10 +25022,8 @@
     "Khoảng 0,5 V"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/x_map_dac_tinh.svg"
-   ],
-   "note": "Máy chưa nổ → áp suất cổ hút = áp suất khí quyển ≈ 101 kPa → điện áp cao (giáo trình: ~2,5–3,8 V). Cầm chừng có chân không (~35 kPa) → ~1,6–1,8 V.",
+   "images": [],
+   "note": "Máy chưa nổ → áp suất cổ hút = áp suất khí quyển ≈ 101 kPa → điện áp cao (giáo trình: ~2,5–3,8 V). Idle có chân không (~35 kPa) → ~1,6–1,8 V.",
    "level": "hard",
    "pdfPage": 69,
    "bookPage": 78
@@ -25120,7 +25034,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Dạng sóng cảm biến",
    "number": 72,
-   "question": "Khi động cơ đang chạy cầm chừng, ống chân không nối với cảm biến áp suất đường ống nạp (MAP) bị tuột ra. Động cơ sẽ bị ảnh hưởng như thế nào?",
+   "question": "Khi động cơ đang chạy idle, ống chân không nối với cảm biến áp suất đường ống nạp (MAP) bị tuột ra. Động cơ sẽ bị ảnh hưởng như thế nào?",
    "options": [
     "Không ảnh hưởng vì ECM dùng TPS thay thế",
     "ECM tăng góc đánh lửa làm máy rú ga",
@@ -25128,9 +25042,7 @@
     "Hỗn hợp nghèo, máy chết vì thiếu xăng"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/x_map_dac_tinh.svg"
-   ],
+   "images": [],
    "note": "Tuột ống → cảm biến đo áp suất khí quyển → giống lúc đạp hết ga. ECM theo MAP mà tính lượng khí nạp nên phun rất đậm.",
    "level": "hard",
    "pdfPage": 70,
@@ -25142,7 +25054,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Dạng sóng cảm biến",
    "number": 73,
-   "question": "Trong hình tín hiệu cảm biến tiếng gõ (KNK), chu kỳ cháy nào có hiện tượng kích nổ và ECM phản ứng như thế nào?",
+   "question": "Tín hiệu cảm biến tiếng gõ (KNK) xuất hiện xung kích nổ ở chu kỳ cháy thứ 2. ECM phản ứng như thế nào?",
    "options": [
     "Chu kỳ 2 – tăng góc đánh lửa sớm hơn",
     "Chu kỳ 2 – làm muộn góc đánh lửa",
@@ -25150,9 +25062,7 @@
     "Chu kỳ 1 và 3 – ECM cắt nhiên liệu"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/x_knk.svg"
-   ],
+   "images": [],
    "note": "Kích nổ → rung tần số cao (≈ 6–13 kHz) → biên độ tín hiệu áp điện vọt lên. ECM làm muộn thời điểm đánh lửa đến khi hết kích nổ rồi tăng dần trở lại.",
    "level": "hard",
    "pdfPage": 96,
@@ -25184,7 +25094,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Nhiên liệu & kim phun",
    "number": 75,
-   "question": "Theo sơ đồ mạch bơm xăng trong hình, trong lúc đang đề thì cuộn dây nào của rơle mở mạch (Circuit opening relay) kéo tiếp điểm đóng lại?",
+   "question": "Trong mạch bơm xăng của hệ thống EFI, trong lúc đang đề thì cuộn dây nào của rơle mở mạch (Circuit opening relay) kéo tiếp điểm đóng lại?",
    "options": [
     "L1 – ECM nối mass theo tín hiệu NE",
     "L2 – ECM nối mass qua chân FC",
@@ -25192,9 +25102,7 @@
     "Không cuộn nào – bơm chạy nhờ rơle EFI"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/x_bom_xang.svg"
-   ],
+   "images": [],
    "note": "Khi đề: ST cấp điện cho L1 → bơm chạy ngay. Khi máy đã nổ (ECM nhận NE): ECM bật transistor nối mass chân FC → L2 giữ tiếp điểm. Khi nhả khóa về ON, L1 mất điện, L2 giữ bơm.",
    "level": "hard",
    "pdfPage": 103,
@@ -25206,7 +25114,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Nhiên liệu & kim phun",
    "number": 76,
-   "question": "Xe nổ được trong lúc đang đề nhưng tắt máy ngay khi nhả khóa từ START về ON. Theo sơ đồ mạch bơm xăng trong hình, lỗi nằm ở đâu?",
+   "question": "Xe nổ được trong lúc đang đề nhưng tắt máy ngay khi nhả khóa từ START về ON. Lỗi nằm ở đâu?",
    "options": [
     "L2, dây FC hoặc transistor bơm",
     "Cuộn L1 hoặc dây từ cực ST của khóa",
@@ -25214,9 +25122,7 @@
     "Bơm xăng bị kẹt cơ khí khi đang chạy"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/x_bom_xang.svg"
-   ],
+   "images": [],
    "note": "Khi đề bơm chạy nhờ L1 → nổ được. Nhả khóa → L1 mất điện, cần L2 giữ. Tắt ngay = L2/FC/transistor (hoặc tín hiệu NE) không giữ được. Cầu chì EFI đứt thì đã không nổ được ngay từ đầu.",
    "level": "hard",
    "pdfPage": 103,
@@ -25236,9 +25142,7 @@
     "Áp suất đủ nên bộ điều áp ra lệnh ngắt bơm"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/x_bom_xang.svg"
-   ],
+   "images": [],
    "note": "Nhiều xe cho bơm chạy mồi ~2 giây để tạo áp (mạch Toyota trong giáo trình thì bơm không chạy khi chỉ bật ON); sau đó ECM chỉ giữ bơm khi thấy NE (động cơ quay). Ý nghĩa an toàn: xe tai nạn, máy chết thì bơm dừng, không bơm xăng ra ngoài.",
    "level": "hard",
    "pdfPage": 103,
@@ -25270,7 +25174,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Nhiên liệu & kim phun",
    "number": 79,
-   "question": "Hình là dạng sóng điện áp đo tại chân kim phun nối về ECM. Đoạn số (2) trên dạng sóng có ý nghĩa gì?",
+   "question": "Dạng sóng điện áp tại chân kim phun nối về ECM: đoạn số (2) là khoảng điện áp thấp (gần 0 V) kéo dài. Đoạn này có ý nghĩa gì?",
    "options": [
     "Điện áp tự cảm sinh ra khi ECM ngắt dòng",
     "Kim phun đang mở (ECM nối mass)",
@@ -25278,9 +25182,7 @@
     "Kim phun đóng, cuộn dây không có dòng điện"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/x_kim_phun_song.svg"
-   ],
+   "images": [],
    "note": "(1) ≈ 12–14 V: ECM chưa nối mass, kim đóng. (2) ≈ 0 V: transistor ECM dẫn, có dòng → kim mở. (3) xung 60–80 V: điện áp tự cảm khi ngắt dòng (chứng tỏ cuộn dây kim còn tốt).",
    "level": "hard",
    "pdfPage": 121,
@@ -25292,7 +25194,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Nhiên liệu & kim phun",
    "number": 80,
-   "question": "Đọc dạng sóng điện áp kim phun trong hình (1 ô ngang = 1 ms). Thời gian phun nhiên liệu xấp xỉ bao nhiêu?",
+   "question": "Trên dạng sóng điện áp kim phun, mỗi ô ngang = 1 ms; xung mở kim chiếm hơn 3 ô một chút. Thời gian phun nhiên liệu xấp xỉ bao nhiêu?",
    "options": [
     "Khoảng 2,0 ms",
     "Khoảng 3,2 ms",
@@ -25300,10 +25202,8 @@
     "Khoảng 6,4 ms"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/x_kim_phun_song.svg"
-   ],
-   "note": "Độ rộng xung = đoạn ở 0 V: từ 2,0 ms tới 5,2 ms ≈ 3,2 ms. Không tính đoạn xung tự cảm. Cầm chừng nóng máy thường ~2–4 ms.",
+   "images": [],
+   "note": "Độ rộng xung = đoạn ở 0 V: từ 2,0 ms tới 5,2 ms ≈ 3,2 ms. Không tính đoạn xung tự cảm. Idle nóng máy thường ~2–4 ms.",
    "level": "hard",
    "pdfPage": 74,
    "bookPage": 83
@@ -25322,9 +25222,7 @@
     "Dây nguồn +B đi tới riêng kim #3 bị đứt"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/x_kim_phun_mach.svg"
-   ],
+   "images": [],
    "note": "Có 12 V tại chân này nghĩa là nguồn đi QUA cuộn kim tới đây → cuộn kim và dây nguồn còn tốt. Không bao giờ xuống 0 V → phía ECM không nối mass được (đứt dây #30 hoặc driver ECM). Nếu cuộn kim đứt thì chân này đọc 0 V.",
    "level": "hard",
    "pdfPage": 121,
@@ -25344,9 +25242,7 @@
     "Cuộn kim #4 hoặc dây nguồn kim #4 đứt"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/x_kim_phun_mach.svg"
-   ],
+   "images": [],
    "note": "Khi chưa phun, chân về ECM phải bằng điện áp nguồn (đi xuyên qua cuộn kim). 0 V = mất nguồn trước điểm D: cuộn kim đứt hoặc dây nguồn đứt. Tắc bẩn là lỗi cơ, không làm mất điện áp.",
    "level": "hard",
    "pdfPage": 86,
@@ -25418,7 +25314,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Đánh lửa",
    "number": 86,
-   "question": "Trong hệ thống đánh lửa điện tử như hình, tín hiệu IGF có vai trò gì?",
+   "question": "Trong hệ thống đánh lửa điện tử, tín hiệu IGF có vai trò gì?",
    "options": [
     "Cảm biến báo vị trí piston xy-lanh số 1",
     "IC đánh lửa báo về ECM là đã có tia lửa",
@@ -25426,9 +25322,7 @@
     "ECM điều khiển thời gian ngậm điện bô bin"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/x_cop.svg"
-   ],
+   "images": [],
    "note": "IGT: ECM → IC (lệnh đánh lửa, xung 0–5 V). IGF: IC → ECM (xác nhận). Mất IGF, nhiều ECM (Toyota) sẽ ngắt phun nhiên liệu để bảo vệ bộ xúc tác.",
    "level": "hard",
    "pdfPage": 129,
@@ -25448,9 +25342,7 @@
     "Bơm xăng mất tín hiệu NE nên ngừng chạy"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/x_cop.svg"
-   ],
+   "images": [],
    "note": "Không có IGF = ECM nghĩ không có lửa → xăng phun vào sẽ không cháy, đổ vào xúc tác gây quá nhiệt → ECM chủ động cắt phun. Kiểm tra dây IGF, nguồn/mass IC đánh lửa.",
    "level": "hard",
    "pdfPage": 60,
@@ -25462,7 +25354,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Đánh lửa",
    "number": 88,
-   "question": "Trên dạng sóng điện áp thứ cấp của hệ thống đánh lửa trong hình, các phần A, B, C, D lần lượt thể hiện giai đoạn nào?",
+   "question": "Trên dạng sóng điện áp thứ cấp: A là đỉnh điện áp cao, B là đoạn nằm ngang sau đỉnh, C là các dao động tắt dần, D là đoạn điện áp thấp trước xung kế tiếp. Các giai đoạn A, B, C, D lần lượt là gì?",
    "options": [
     "A cháy · B đánh lửa · C ngậm điện · D dao động",
     "A ngậm điện · B cháy · C đánh lửa · D dao động",
@@ -25470,9 +25362,7 @@
     "A đánh lửa · B cháy · C dao động · D ngậm điện"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/x_thu_cap.svg"
-   ],
+   "images": [],
    "note": "A: điện áp cao nhất để phá khe hở bugi (kV). B: duy trì tia lửa (~1–2 ms). C: năng lượng còn dư dao động tắt dần. D: khi bắt đầu cấp dòng sơ cấp (ngậm điện) – chuẩn bị lần đánh lửa sau.",
    "level": "hard",
    "pdfPage": 111,
@@ -25484,7 +25374,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · Đánh lửa",
    "number": 89,
-   "question": "Trên dạng sóng thứ cấp, đường đánh lửa (A) của một xy-lanh cao bất thường so với các xy-lanh còn lại. Nguyên nhân nào phù hợp?",
+   "question": "Trên dạng sóng thứ cấp, đường đánh lửa của một xy-lanh cao bất thường so với các xy-lanh còn lại. Nguyên nhân nào phù hợp?",
    "options": [
     "Khe hở bugi rộng / dây cao áp đứt",
     "Khe hở bugi quá hẹp so với tiêu chuẩn",
@@ -25492,9 +25382,7 @@
     "Bugi bị bám muội than dẫn điện"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/x_thu_cap.svg"
-   ],
+   "images": [],
    "note": "Càng khó phóng điện → cần điện áp càng cao: khe hở rộng, đứt dây, hỗn hợp nghèo. Ngược lại muội than, nứt sứ (rò) hoặc khe hở hẹp làm đường đánh lửa THẤP.",
    "level": "hard",
    "pdfPage": 127,
@@ -25606,9 +25494,9 @@
    "id": "nc-q095",
    "set": "nc",
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
-   "section": "Xăng · Cầm chừng (ISC/ETCS)",
+   "section": "Xăng · Idle (ISC/ETCS)",
    "number": 95,
-   "question": "Van ISC kiểu cuộn dây quay 2 cuộn như hình, cuộn B (RSC) bị đứt. Theo giáo trình, hiện tượng thường gặp là gì?",
+   "question": "Van ISC kiểu cuộn dây quay 2 cuộn, cuộn B (RSC) bị đứt. Theo giáo trình, hiện tượng thường gặp là gì?",
    "options": [
     "Van về vị trí mặc định, ~1 000–1 200 v/p",
     "Không ảnh hưởng vì cuộn A làm thay cuộn B",
@@ -25616,10 +25504,8 @@
     "Van mở hết cỡ, máy rú lên khoảng 3 000 v/p"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/x_isc_quay.svg"
-   ],
-   "note": "Hai cuộn kéo ngược chiều nhau theo tỉ lệ làm việc. Mất một cuộn (hoặc hở mạch), nam châm vĩnh cửu đưa van về vị trí mặc định → cầm chừng cố định ~1 000–1 200 v/p, không điều chỉnh được nữa.",
+   "images": [],
+   "note": "Hai cuộn kéo ngược chiều nhau theo tỉ lệ làm việc. Mất một cuộn (hoặc hở mạch), nam châm vĩnh cửu đưa van về vị trí mặc định → idle cố định ~1 000–1 200 v/p, không điều chỉnh được nữa.",
    "level": "hard",
    "pdfPage": 134,
    "bookPage": 143
@@ -25628,7 +25514,7 @@
    "id": "nc-q096",
    "set": "nc",
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
-   "section": "Xăng · Cầm chừng (ISC/ETCS)",
+   "section": "Xăng · Idle (ISC/ETCS)",
    "number": 96,
    "question": "Đối với van ISC loại mô tơ bước (Step motor), khi tắt khóa điện thì van ở trạng thái nào và vì sao?",
    "options": [
@@ -25648,18 +25534,18 @@
    "id": "nc-q097",
    "set": "nc",
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
-   "section": "Xăng · Cầm chừng (ISC/ETCS)",
+   "section": "Xăng · Idle (ISC/ETCS)",
    "number": 97,
-   "question": "Khi bật điều hòa lúc động cơ đang cầm chừng thì vòng tua tụt mạnh, máy rung giật. Hệ thống nào nhiều khả năng đang bị lỗi?",
+   "question": "Khi bật điều hòa lúc động cơ đang idle thì vòng tua tụt mạnh, máy rung giật. Hệ thống nào nhiều khả năng đang bị lỗi?",
    "options": [
-    "Hệ thống điều khiển cầm chừng",
+    "Hệ thống điều khiển idle",
     "Cảm biến tiếng gõ báo sai làm muộn lửa",
     "Cảm biến oxy phía sau bộ xúc tác",
     "Bơm xăng và bộ điều áp nhiên liệu"
    ],
    "correct": 0,
    "images": [],
-   "note": "Khi có tải (A/C, trợ lực lái, đèn…) ECM phải tăng gió cầm chừng (chế độ điều khiển dự tính). Van/bướm ga bám muội hoặc van ISC kẹt → không bù được → tụt vòng tua.",
+   "note": "Khi có tải (A/C, trợ lực lái, đèn…) ECM phải tăng gió idle (chế độ điều khiển dự tính). Van/bướm ga bám muội hoặc van ISC kẹt → không bù được → tụt vòng tua.",
    "level": "hard",
    "pdfPage": 133,
    "bookPage": 142
@@ -25668,9 +25554,9 @@
    "id": "nc-q098",
    "set": "nc",
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
-   "section": "Xăng · Cầm chừng (ISC/ETCS)",
+   "section": "Xăng · Idle (ISC/ETCS)",
    "number": 98,
-   "question": "Trong hình các loại van điều khiển cầm chừng, chi tiết số mấy là van ISC loại mô tơ bước (Step motor)?",
+   "question": "Trong hình các loại van điều khiển idle, chi tiết số mấy là van ISC loại mô tơ bước (Step motor)?",
    "options": [
     "Số 4",
     "Số 2",
@@ -25690,9 +25576,9 @@
    "id": "nc-q099",
    "set": "nc",
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
-   "section": "Xăng · Cầm chừng (ISC/ETCS)",
+   "section": "Xăng · Idle (ISC/ETCS)",
    "number": 99,
-   "question": "Trong hình các loại van điều khiển cầm chừng, ở loại số 4 lượng không khí cầm chừng được điều khiển như thế nào?",
+   "question": "Trong hình các loại van điều khiển idle, ở loại số 4 lượng không khí idle được điều khiển như thế nào?",
    "options": [
     "Dây ga cơ khí nối thẳng bàn đạp ga",
     "Van hằng nhiệt sáp giãn nở theo nhiệt độ",
@@ -25703,7 +25589,7 @@
    "images": [
     "images/hard/p_isc_5loai.jpg"
    ],
-   "note": "Loại 4 là ETCS-i (bướm ga điện tử): bướm ga không đóng hoàn toàn khi cầm chừng mà được mô-tơ điều chỉnh góc mở. Các loại 1, 2, 3, 5 điều khiển gió đi TẮT qua bướm ga.",
+   "note": "Loại 4 là ETCS-i (bướm ga điện tử): bướm ga không đóng hoàn toàn khi idle mà được mô-tơ điều chỉnh góc mở. Các loại 1, 2, 3, 5 điều khiển gió đi TẮT qua bướm ga.",
    "level": "hard",
    "pdfPage": 134,
    "bookPage": 143
@@ -25712,7 +25598,7 @@
    "id": "nc-q100",
    "set": "nc",
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
-   "section": "Xăng · Cầm chừng (ISC/ETCS)",
+   "section": "Xăng · Idle (ISC/ETCS)",
    "number": 100,
    "question": "Khi hệ thống bướm ga điện tử (ETCS) mất điều khiển mô tơ do lỗi nghiêm trọng, theo cơ chế an toàn bướm ga sẽ ở trạng thái nào?",
    "options": [
@@ -25734,16 +25620,16 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · VVT-i / EVAP / EGR",
    "number": 101,
-   "question": "Van điều khiển dầu OCV của hệ thống VVT-i bị kẹt ở vị trí làm sớm cam nạp khi động cơ đang cầm chừng. Triệu chứng hay gặp là gì?",
+   "question": "Van điều khiển dầu OCV của hệ thống VVT-i bị kẹt ở vị trí làm sớm cam nạp khi động cơ đang idle. Triệu chứng hay gặp là gì?",
    "options": [
-    "Không ảnh hưởng gì khi cầm chừng",
-    "Cầm chừng rung, dễ chết máy",
+    "Không ảnh hưởng gì khi idle",
+    "Idle rung, dễ chết máy",
     "Đèn báo áp suất dầu sáng liên tục",
     "Công suất tăng mạnh ở tốc độ thấp"
    ],
    "correct": 1,
    "images": [],
-   "note": "Cầm chừng ECM đặt cam ở vị trí muộn nhất (trùng điệp nhỏ). Kẹt sớm → khí xả hồi lại cửa nạp nhiều → cháy kém, rung, chết máy. Dầu bẩn làm kẹt OCV là nguyên nhân phổ biến.",
+   "note": "Idle ECM đặt cam ở vị trí muộn nhất (trùng điệp nhỏ). Kẹt sớm → khí xả hồi lại cửa nạp nhiều → cháy kém, rung, chết máy. Dầu bẩn làm kẹt OCV là nguyên nhân phổ biến.",
    "level": "hard",
    "pdfPage": 143,
    "bookPage": 152
@@ -25759,11 +25645,11 @@
     "Chỉ khi bật điều hòa và đèn pha cùng lúc",
     "Lúc động cơ còn rất lạnh vào buổi sáng sớm",
     "Lúc tăng tốc hết ga ở tốc độ cao trên cao tốc",
-    "Lúc cầm chừng và ngay sau khi đổ đầy xăng"
+    "Lúc idle và ngay sau khi đổ đầy xăng"
    ],
    "correct": 3,
    "images": [],
-   "note": "Hơi xăng trong than hoạt tính bị hút liên tục vào cổ hút. Lúc lưu lượng khí ít (cầm chừng) hoặc vừa đổ xăng (nhiều hơi) thì phần hơi này làm giàu hỗn hợp đáng kể → fuel trim âm, khó nổ.",
+   "note": "Hơi xăng trong than hoạt tính bị hút liên tục vào cổ hút. Lúc lưu lượng khí ít (idle) hoặc vừa đổ xăng (nhiều hơi) thì phần hơi này làm giàu hỗn hợp đáng kể → fuel trim âm, khó nổ.",
    "level": "hard",
    "pdfPage": 94,
    "bookPage": 103
@@ -25774,16 +25660,16 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Xăng · VVT-i / EVAP / EGR",
    "number": 103,
-   "question": "Khi van tuần hoàn khí xả EGR bị kẹt mở ở chế độ cầm chừng thì động cơ sẽ xuất hiện hiện tượng gì?",
+   "question": "Khi van tuần hoàn khí xả EGR bị kẹt mở ở chế độ idle thì động cơ sẽ xuất hiện hiện tượng gì?",
    "options": [
-    "Tăng công suất rõ rệt khi cầm chừng",
+    "Tăng công suất rõ rệt khi idle",
     "Tăng lượng NOx thải ra môi trường",
     "Giảm nhiệt độ khí xả, máy êm hơn",
-    "Cầm chừng rung, có thể chết máy"
+    "Idle rung, có thể chết máy"
    ],
    "correct": 3,
    "images": [],
-   "note": "EGR đưa khí xả trơ vào buồng đốt để GIẢM NOx ở tải trung bình. Cầm chừng mà vẫn đưa khí xả vào → hỗn hợp loãng khí trơ → cháy không ổn định.",
+   "note": "EGR đưa khí xả trơ vào buồng đốt để GIẢM NOx ở tải trung bình. Idle mà vẫn đưa khí xả vào → hỗn hợp loãng khí trơ → cháy không ổn định.",
    "level": "hard",
    "pdfPage": 148,
    "bookPage": 157
@@ -25794,7 +25680,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Diesel · Common Rail",
    "number": 104,
-   "question": "Trong hình hệ thống phun dầu điện tử CRDI, chi tiết số 2 (lắp trên bơm cao áp) là bộ phận gì?",
+   "question": "Trong hệ thống phun dầu điện tử CRDI, bộ phận lắp trên bơm cao áp để điều khiển lượng dầu cấp vào ống rail là gì?",
    "options": [
     "Cảm biến RPS",
     "Van an toàn cơ khí",
@@ -25802,9 +25688,7 @@
     "Van RPRV"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/d_crdi.svg"
-   ],
+   "images": [],
    "note": "1: bơm cao áp; 2: SCV (Suction Control Valve) trên bơm; 3: ống rail; 4: van điều chỉnh áp suất RPRV ở đầu rail; 5: cảm biến áp suất rail RPS; 6: kim phun. ECM điều khiển áp suất bằng SCV (đầu vào) và/hoặc RPRV (đầu xả).",
    "level": "hard",
    "pdfPage": 170,
@@ -25816,7 +25700,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Diesel · Common Rail",
    "number": 105,
-   "question": "Trong hình hệ thống phun dầu điện tử CRDI, chi tiết số 5 báo cho ECM biết thông tin gì?",
+   "question": "Trong hệ thống CRDI, cảm biến lắp trên ống rail báo cho ECM biết thông tin gì?",
    "options": [
     "Nhiệt độ nhiên liệu bên trong ống rail",
     "Lượng nhiên liệu hồi về thùng chứa",
@@ -25824,9 +25708,7 @@
     "Áp suất thực tế trong ống rail"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/d_crdi.svg"
-   ],
+   "images": [],
    "note": "Số 5 là cảm biến RPS. ECM so sánh áp suất thực tế (RPS) với áp suất mục tiêu (tính từ tốc độ – CKP và tải – APP) rồi điều khiển SCV/RPRV.",
    "level": "hard",
    "pdfPage": 161,
@@ -25847,7 +25729,7 @@
    ],
    "correct": 3,
    "images": [],
-   "note": "Giáo trình: áp suất trong rail có thể > 2 000 bar; cầm chừng ~250–300 bar. Vì vậy TUYỆT ĐỐI không nới đường ống cao áp khi máy đang chạy.",
+   "note": "Giáo trình: áp suất trong rail có thể > 2 000 bar; idle ~250–300 bar. Vì vậy TUYỆT ĐỐI không nới đường ống cao áp khi máy đang chạy.",
    "level": "hard",
    "pdfPage": 170,
    "bookPage": 182
@@ -25858,7 +25740,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Diesel · Common Rail",
    "number": 107,
-   "question": "Mạch cảm biến áp suất ống rail (RPS) 3 dây như hình. ECM phát hiện điện áp tín hiệu luôn cao hơn 4,75 V (lỗi mạch cao). Khả năng hư hỏng nào phù hợp?",
+   "question": "Mạch cảm biến áp suất ống rail (RPS) 3 dây gồm: (a) nguồn VC, (b) tín hiệu PCR, (c) mass. ECM phát hiện điện áp tín hiệu luôn cao hơn 4,75 V (lỗi mạch cao). Khả năng hư hỏng nào phù hợp?",
    "options": [
     "Dây nguồn (a) bị đứt",
     "(b) chạm 5 V hoặc (c) bị đứt",
@@ -25866,9 +25748,7 @@
     "Dây tín hiệu (b) chạm mass"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/d_rps_mach.svg"
-   ],
+   "images": [],
    "note": "Lỗi mạch cao (High): tín hiệu bị kéo lên → chạm VC hoặc mất mass cảm biến (cảm biến đưa thẳng 5 V ra). Lỗi mạch thấp (< 0,25 V): mất nguồn (a), đứt tín hiệu (b) – vì có R kéo xuống – hoặc (b) chạm mass.",
    "level": "hard",
    "pdfPage": 173,
@@ -25880,7 +25760,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Diesel · Common Rail",
    "number": 108,
-   "question": "Cùng mạch cảm biến áp suất ống rail (RPS) như hình, nếu dây (a) cấp nguồn VC bị đứt thì tín hiệu PCR mà ECM nhận được sẽ như thế nào?",
+   "question": "Cùng mạch cảm biến áp suất ống rail (RPS) 3 dây, nếu dây (a) cấp nguồn VC bị đứt thì tín hiệu PCR mà ECM nhận được sẽ như thế nào?",
    "options": [
     "≈ 0 V – ECM báo lỗi mạch thấp",
     "Dao động 0–5 V – ECM báo lỗi tương quan",
@@ -25888,9 +25768,7 @@
     "Không đổi vì cảm biến tự phát điện"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/d_rps_mach.svg"
-   ],
+   "images": [],
    "note": "Không có nguồn, cảm biến không xuất được tín hiệu; điện trở kéo xuống trong ECM kéo PCR về 0 V → 'circuit low'. Cách lý luận này áp dụng cho mọi cảm biến 3 dây 5 V.",
    "level": "hard",
    "pdfPage": 173,
@@ -25902,7 +25780,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Diesel · Common Rail",
    "number": 109,
-   "question": "Theo đặc tính cảm biến áp suất ống rail (RPS) trong hình, khi data list báo áp suất rail khoảng 800 bar thì điện áp tín hiệu RPS khoảng bao nhiêu?",
+   "question": "Cảm biến áp suất ống rail (RPS) có đặc tính tuyến tính: khoảng 0,5 V ở 0 bar và 4,5 V ở 1 800 bar. Khi data list báo áp suất rail khoảng 800 bar thì điện áp tín hiệu RPS khoảng bao nhiêu?",
    "options": [
     "≈ 2,3 V",
     "≈ 1,0 V",
@@ -25910,9 +25788,7 @@
     "≈ 0,5 V"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/d_rps_dac_tinh.svg"
-   ],
+   "images": [],
    "note": "Đường đặc tính tuyến tính 0,5 V (0 bar) → 4,5 V (~1 800 bar). 800 bar ≈ 0,5 + 800/1800 × 4 ≈ 2,3 V. Dưới 0,25 V hoặc trên 4,75 V là vùng báo lỗi mạch.",
    "level": "hard",
    "pdfPage": 173,
@@ -25924,7 +25800,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Diesel · Common Rail",
    "number": 110,
-   "question": "Data list như hình cho thấy khi tăng ga nhanh, áp suất rail thực tế không theo kịp áp suất mục tiêu. Nhóm nguyên nhân nào phù hợp?",
+   "question": "Data list cho thấy khi tăng ga nhanh, áp suất rail thực tế không theo kịp áp suất mục tiêu. Nhóm nguyên nhân nào phù hợp?",
    "options": [
     "Van RPRV đóng quá chặt, không xả được áp",
     "Thiếu nhiên liệu cấp vào hoặc rò áp suất rail",
@@ -25932,9 +25808,7 @@
     "Cảm biến bàn đạp ga báo sai vị trí bàn đạp"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/d_ap_rail.svg"
-   ],
+   "images": [],
    "note": "Mục tiêu tăng nhưng thực tế tụt lại → hệ thống không tạo/giữ được áp: thiếu dầu đầu vào (lọc tắc, có gió, bơm tiếp vận) hoặc rò áp (kim hồi dầu nhiều, RPRV rò). Xe thường yếu, hụt ga, có thể vào chế độ giới hạn.",
    "level": "hard",
    "pdfPage": 161,
@@ -25946,7 +25820,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Diesel · Common Rail",
    "number": 111,
-   "question": "Kỹ thuật viên đo lượng dầu hồi của các kim phun CRDI như hình. Kết luận nào là đúng?",
+   "question": "Kỹ thuật viên đo lượng dầu hồi của các kim phun CRDI: kim #3 có lượng hồi nhiều hơn hẳn 3 kim còn lại. Kết luận nào là đúng?",
    "options": [
     "Kim #1, #2, #4 bị tắc vì hồi quá ít dầu",
     "Kim #3 tốt nhất vì dầu lưu thông nhiều",
@@ -25954,9 +25828,7 @@
     "Tất cả bình thường vì kim nào cũng có dầu hồi"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/d_dau_hoi.svg"
-   ],
+   "images": [],
    "note": "Kim còn tốt hồi dầu ít và đều nhau. Một kim hồi gấp 3 lần → van điều khiển/bi kim mòn → rò áp rail → khó nổ khi nóng, yếu máy, áp rail thấp.",
    "level": "hard",
    "pdfPage": 178,
@@ -25968,17 +25840,15 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Diesel · Common Rail",
    "number": 112,
-   "question": "Hình so sánh 2 loại van định lượng SCV. Nếu rút giắc van SCV loại X khi động cơ đang chạy thì điều gì sẽ xảy ra?",
+   "question": "Nếu rút giắc van định lượng SCV kiểu thường mở khi động cơ đang chạy thì điều gì sẽ xảy ra?",
    "options": [
     "Không thay đổi vì van tự giữ vị trí cũ",
     "Lưu lượng tối đa → áp rail vọt cao",
     "Đóng hoàn toàn → động cơ chết máy ngay",
-    "Đóng một nửa → cầm chừng không đổi"
+    "Đóng một nửa → idle không đổi"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/d_scv.svg"
-   ],
+   "images": [],
    "note": "Loại X: không có dòng = lưu lượng lớn nhất (thường mở – NO); tăng dòng → giảm lưu lượng. Loại Y ngược lại (thường đóng – NC): rút giắc → không có dầu vào bơm → chết máy. Phải biết xe dùng loại nào trước khi thử!",
    "level": "hard",
    "pdfPage": 155,
@@ -26054,17 +25924,15 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Diesel · Bugi sấy & xử lý khí thải",
    "number": 116,
-   "question": "Kỹ thuật viên đo điện trở từng bugi sấy như hình (đã tháo thanh nối). Dựa vào kết quả, xe nhiều khả năng gặp triệu chứng gì?",
+   "question": "Kỹ thuật viên đo điện trở từng bugi sấy (đã tháo thanh nối): một bugi có điện trở OL. Dựa vào kết quả, xe nhiều khả năng gặp triệu chứng gì?",
    "options": [
     "Mất công suất khi máy đã nóng hẳn",
     "Khó nổ lạnh, rung, khói trắng lúc đầu",
-    "Đèn báo áp suất dầu sáng khi cầm chừng",
+    "Đèn báo áp suất dầu sáng khi idle",
     "Khói đen khi tăng tốc ở tốc độ cao"
    ],
    "correct": 1,
-   "images": [
-    "images/hard/d_bugi_say.svg"
-   ],
+   "images": [],
    "note": "Bugi sấy tốt ~0,5–1 Ω (tùy loại); #3 OL = đứt. Ảnh hưởng chủ yếu khi máy lạnh: xy-lanh 3 khó cháy → rung, khói trắng (nhiên liệu chưa cháy) cho tới khi máy ấm.",
    "level": "hard",
    "pdfPage": 160,
@@ -26136,7 +26004,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Kỹ thuật đo – mẹo xưởng",
    "number": 120,
-   "question": "Trong mạch đèn như hình, đo được A, B, C ≈ 12,4 V; D = 11,9 V nhưng đèn không sáng. Hư hỏng nằm ở đâu?",
+   "question": "Trong mạch đèn, đo được A, B, C ≈ 12,4 V; D = 11,9 V nhưng đèn không sáng. Hư hỏng nằm ở đâu?",
    "options": [
     "Hở mạch phía mass sau bóng đèn",
     "Công tắc tiếp xúc kém, có điện trở",
@@ -26144,9 +26012,7 @@
     "Cầu chì 10A bị đứt"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/c_den_do_ap.svg"
-   ],
+   "images": [],
    "note": "Không có dòng thì không có sụt áp trên bóng → điểm sau bóng vẫn gần bằng áp nguồn. Nếu bóng đứt, D phải ≈ 0 V (vì D vẫn nối mass). D còn ~12 V chứng tỏ bóng còn thông nhưng đường về mass bị hở.",
    "level": "hard",
    "pdfPage": 26,
@@ -26158,7 +26024,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Kỹ thuật đo – mẹo xưởng",
    "number": 121,
-   "question": "Quạt két nước không quay; đo điện áp tại X và Y so với mass thân xe như hình đều được 12,5 V. Kết luận nào là đúng?",
+   "question": "Quạt két nước không quay; đo điện áp tại hai chân mô-tơ quạt so với mass thân xe đều được 12,5 V. Kết luận nào là đúng?",
    "options": [
     "Hở mạch mass của quạt",
     "Rơle quạt không đóng tiếp điểm",
@@ -26166,9 +26032,7 @@
     "Mô-tơ quạt bị đứt cuộn dây"
    ],
    "correct": 0,
-   "images": [
-    "images/hard/c_mat_mass.svg"
-   ],
+   "images": [],
    "note": "Y cũng có 12,5 V → điện đi xuyên qua mô-tơ được (mô-tơ không đứt) nhưng không về được mass. Nếu mô-tơ đứt, Y ≈ 0 V. Nếu rơle/cầu chì hỏng, X = 0 V.",
    "level": "hard",
    "pdfPage": 152,
@@ -26180,7 +26044,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Kỹ thuật đo – mẹo xưởng",
    "number": 122,
-   "question": "Với rơle 4 chân như hình, theo ký hiệu ISO quen dùng thì những chân nào là cuộn điều khiển và những chân nào là tiếp điểm tải?",
+   "question": "Theo ký hiệu ISO quen dùng trên rơle 4 chân, cặp chân (1)(2) và cặp chân (3)(4) có chức năng gì?",
    "options": [
     "Cuộn: (2)(4) · Tiếp điểm: (1)(3)",
     "Cuộn: (3)(4) · Tiếp điểm: (1)(2)",
@@ -26188,9 +26052,7 @@
     "Cuộn: (1)(2) · Tiếp điểm: (3)(4)"
    ],
    "correct": 3,
-   "images": [
-    "images/hard/c_role_4_chan.svg"
-   ],
+   "images": [],
    "note": "Ký hiệu cuộn dây (lò xo) giữa (1)–(2): 85/86 (điện trở ~60–100 Ω). Tiếp điểm thường mở giữa (3)–(4): 30 (nguồn) – 87 (ra tải). Mẹo thử nhanh: cầu nối 30–87 bằng dây có cầu chì, tải chạy → lỗi ở phía điều khiển.",
    "level": "hard",
    "pdfPage": 121,
@@ -26302,7 +26164,7 @@
    "setName": "★ Nâng cao: chẩn đoán – sơ đồ – nhận diện",
    "section": "Nhận diện ảnh thật",
    "number": 128,
-   "question": "Chi tiết trong ảnh được bắt vào thân máy ở vị trí đối diện vành răng trên trục khuỷu. Nếu nó hỏng thì hiện tượng điển hình là gì?",
+   "question": "Cảm biến CKP được bắt vào thân máy ở vị trí đối diện vành răng trên trục khuỷu. Nếu nó hỏng thì hiện tượng điển hình là gì?",
    "options": [
     "Máy nổ nhưng không lên ga quá 3 000 v/p",
     "Máy chạy bình thường, chỉ hao xăng nhẹ",
@@ -26310,9 +26172,7 @@
     "Đèn báo nạp sáng nhưng máy chạy bình thường"
    ],
    "correct": 2,
-   "images": [
-    "images/hard/p_ckp.jpg"
-   ],
+   "images": [],
    "note": "Đây là cảm biến vị trí trục khuỷu (CKP). Mất CKP → ECM không có tín hiệu NE → không phun, không đánh lửa. Đây là tín hiệu 'sống còn' của động cơ.",
    "level": "hard",
    "pdfPage": 56,
@@ -26327,7 +26187,7 @@
    "question": "Cảm biến ren đồng như ảnh vặn vào áo nước động cơ. Nếu ECM nhận giá trị sai từ nó, chức năng nào KHÔNG bị ảnh hưởng trực tiếp?",
    "options": [
     "Hiệu chỉnh góc đánh lửa theo nhiệt độ",
-    "Làm đậm khi máy lạnh, cầm chừng nhanh",
+    "Làm đậm khi máy lạnh, idle nhanh",
     "Đo lượng không khí nạp vào động cơ",
     "Điều khiển quạt két nước làm mát"
    ],
@@ -26335,7 +26195,7 @@
    "images": [
     "images/hard/p_ect.jpg"
    ],
-   "note": "Đây là cảm biến nhiệt độ nước làm mát (ECT). ECT dùng cho: làm đậm hâm nóng, cầm chừng nhanh, góc đánh lửa, quạt két, chuyển số hộp AT, EGR/EVAP, vòng kín… Lượng khí nạp do MAF/MAP đo.",
+   "note": "Đây là cảm biến nhiệt độ nước làm mát (ECT). ECT dùng cho: làm đậm hâm nóng, idle nhanh, góc đánh lửa, quạt két, chuyển số hộp AT, EGR/EVAP, vòng kín… Lượng khí nạp do MAF/MAP đo.",
    "level": "hard",
    "pdfPage": 75,
    "bookPage": 84
@@ -26609,7 +26469,7 @@
    "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
    "section": "BPS & cảm biến áp suất rail",
    "number": 10,
-   "question": "Theo bảng giá trị của BPS (Boost Pressure Sensor) trên động cơ Diesel: ON chìa – nổ cầm chừng – full ga lần lượt là?",
+   "question": "Theo bảng giá trị của BPS (Boost Pressure Sensor) trên động cơ Diesel: ON chìa – nổ idle – full ga lần lượt là?",
    "options": [
     "1,5 V/100 kPa – 1,5 V/100 kPa – 4,5 V/300 kPa",
     "0,5 V/0 kPa – 1,5 V/300 kPa – 4,5 V/2500 kPa",
@@ -26618,7 +26478,7 @@
    ],
    "correct": 0,
    "images": [],
-   "note": "BPS: ON chìa và cầm chừng đều 1,5 V/100 kPa; full ga 4,5 V/300 kPa."
+   "note": "BPS: ON chìa và idle đều 1,5 V/100 kPa; full ga 4,5 V/300 kPa."
   },
   {
    "id": "cd-q011",
@@ -26626,7 +26486,7 @@
    "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
    "section": "BPS & cảm biến áp suất rail",
    "number": 11,
-   "question": "Theo bảng giá trị của cảm biến áp suất ống rail: ON chìa – nổ cầm chừng – full ga lần lượt là?",
+   "question": "Theo bảng giá trị của cảm biến áp suất ống rail: ON chìa – nổ idle – full ga lần lượt là?",
    "options": [
     "1,5 V/100 bar – 1,5 V/100 bar – 4,5 V/300 bar",
     "1,5 V/100 bar – 1,5 V/300 bar – 4,5 V/2500 bar",
@@ -26635,7 +26495,7 @@
    ],
    "correct": 3,
    "images": [],
-   "note": "Rail: ON chìa 0,5 V/0 bar; cầm chừng 1,5 V/300 bar; full ga 4,5 V/2500 bar. Đọc kỹ đơn vị: BPS dùng kPa, rail dùng bar."
+   "note": "Rail: ON chìa 0,5 V/0 bar; idle 1,5 V/300 bar; full ga 4,5 V/2500 bar. Đọc kỹ đơn vị: BPS dùng kPa, rail dùng bar."
   },
   {
    "id": "cd-q012",
@@ -26660,7 +26520,7 @@
    "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
    "section": "BPS & cảm biến áp suất rail",
    "number": 13,
-   "question": "Khi động cơ nổ cầm chừng, BPS và cảm biến rail có thể cùng báo 1,5 V. Áp suất tương ứng của hai cảm biến là?",
+   "question": "Khi động cơ nổ idle, BPS và cảm biến rail có thể cùng báo 1,5 V. Áp suất tương ứng của hai cảm biến là?",
    "options": [
     "BPS khoảng 300 kPa; rail khoảng 100 bar",
     "BPS khoảng 300 kPa; rail khoảng 2500 bar",
@@ -26694,7 +26554,7 @@
    "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
    "section": "BPS & cảm biến áp suất rail",
    "number": 15,
-   "question": "Máy chẩn đoán hiển thị một cảm biến có tín hiệu: ON chìa 1,5 V/100 kPa; cầm chừng 1,5 V/100 kPa; full ga 4,5 V/300 kPa. Đó là cảm biến nào?",
+   "question": "Máy chẩn đoán hiển thị một cảm biến có tín hiệu: ON chìa 1,5 V/100 kPa; idle 1,5 V/100 kPa; full ga 4,5 V/300 kPa. Đó là cảm biến nào?",
    "options": [
     "Cảm biến áp suất ống rail",
     "Cảm biến lưu lượng khí nạp MAF",
@@ -26711,7 +26571,7 @@
    "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
    "section": "BPS & cảm biến áp suất rail",
    "number": 16,
-   "question": "Một cảm biến báo 0,5 V khi ON chìa, 1,5 V/300 bar khi cầm chừng và 4,5 V/2500 bar khi full ga. Đó là cảm biến nào?",
+   "question": "Một cảm biến báo 0,5 V khi ON chìa, 1,5 V/300 bar khi idle và 4,5 V/2500 bar khi full ga. Đó là cảm biến nào?",
    "options": [
     "Cảm biến nhiệt độ nước làm mát",
     "Cảm biến áp suất ống rail",
@@ -26969,7 +26829,7 @@
    "question": "Việc điều khiển thời điểm mở xupap của VVT nhằm mục đích chính nào?",
    "options": [
     "Tăng độ nâng xupap để giảm tiêu hao nhiên liệu",
-    "Điều khiển lượng phun để giảm khí CO ở chế độ cầm chừng",
+    "Điều khiển lượng phun để giảm khí CO ở chế độ idle",
     "Điều khiển góc mở bướm ga để ổn định tốc độ không tải",
     "Tối ưu pha phối khí theo tải và tốc độ của động cơ"
    ],
@@ -27073,7 +26933,7 @@
     "Điều khiển lượng phun khởi động (Start Injection)",
     "Điều khiển tốc độ hành trình (Cruise Control)",
     "Điều khiển tốc độ không tải (Idle Speed Control)",
-    "Điều khiển đánh lửa cầm chừng (Idle Ignition)"
+    "Điều khiển đánh lửa idle (Idle Ignition)"
    ],
    "correct": 2,
    "images": [],
@@ -27085,7 +26945,7 @@
    "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
    "section": "ETCS & ISC",
    "number": 38,
-   "question": "Hệ thống ISC giữ tốc độ cầm chừng ổn định bằng cách nào?",
+   "question": "Hệ thống ISC giữ tốc độ idle ổn định bằng cách nào?",
    "options": [
     "Điều chỉnh lượng gió đi tắt qua bướm ga",
     "Điều chỉnh lượng xăng phun vào buồng đốt",
@@ -27094,7 +26954,7 @@
    ],
    "correct": 0,
    "images": [],
-   "note": "ISCV điều khiển lượng gió tắt qua bướm ga để giữ cầm chừng."
+   "note": "ISCV điều khiển lượng gió tắt qua bướm ga để giữ idle."
   },
   {
    "id": "cd-q039",
@@ -27102,7 +26962,7 @@
    "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
    "section": "ETCS & ISC",
    "number": 39,
-   "question": "Trong hệ thống ISC, ECU sử dụng nhóm tín hiệu nào để xác định tốc độ cầm chừng?",
+   "question": "Trong hệ thống ISC, ECU sử dụng nhóm tín hiệu nào để xác định tốc độ idle?",
    "options": [
     "APP, VSS và tín hiệu ABS",
     "CKP, CMP và tín hiệu KNK",
@@ -27136,7 +26996,7 @@
    "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
    "section": "ETCS & ISC",
    "number": 41,
-   "question": "Xe đang nổ cầm chừng, bật điều hòa A/C. Hệ thống nào phải bù tải để giữ tốc độ cầm chừng?",
+   "question": "Xe đang nổ idle, bật điều hòa A/C. Hệ thống nào phải bù tải để giữ tốc độ idle?",
    "options": [
     "VVT, bằng cách xoay trục cam nạp sớm hơn",
     "ETCS, bằng cách mở lớn bướm ga theo chân ga",
@@ -27214,6 +27074,3324 @@
    "correct": 2,
    "images": [],
    "note": "O2 số 1 trước xúc tác; O2 số 2 sau xúc tác."
+  },
+  {
+   "id": "cb-q001",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 1,
+   "question": "Cảm biến CKP loại điện từ (magnetic pickup) có đặc điểm nào?",
+   "options": [
+    "2 dây NE+ và NE−, tự sinh điện áp xoay chiều, không cần nguồn nuôi",
+    "3 dây +5V, mass và tín hiệu xung vuông 0–5V",
+    "1 dây dương, 1 dây mass và 1 dây tín hiệu NE",
+    "6 dây: 2 dương, 2 mass và 2 tín hiệu"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img15.jpg"
+   ],
+   "note": "Loại điện từ chỉ có 2 dây NE+/NE−; cuộn dây tự sinh điện áp xoay chiều hình sin, biên độ tăng theo tốc độ động cơ."
+  },
+  {
+   "id": "cb-q002",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 2,
+   "question": "Cảm biến CKP loại Hall có bộ dây và dạng tín hiệu nào?",
+   "options": [
+    "3 dây: nguồn +5V, mass và tín hiệu xung vuông 0–5V",
+    "2 dây NE+ và NE−, tín hiệu xoay chiều hình sin",
+    "3 dây: dương, mass và tín hiệu quang NE",
+    "4 dây: 2 dương, 1 mass, 1 tín hiệu tương tự"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img15.jpg"
+   ],
+   "note": "CKP Hall: +5V, mass, signal. Khi ON chìa phải đo đủ 5V nguồn và 0V mass; tín hiệu là xung vuông 0–5V, tần số tăng theo tốc độ."
+  },
+  {
+   "id": "cb-q003",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 3,
+   "question": "Cảm biến CKP loại quang (optical) thường có cách đấu dây nào?",
+   "options": [
+    "1 dây dương, 1 dây mass và 1 dây tín hiệu NE",
+    "2 dây NE+ và NE−",
+    "3 dây +5V, mass và VTA",
+    "6 dây: 2 dương, 2 mass, VPA và VPA2"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Loại quang dùng LED + photo transistor qua đĩa có rãnh: 1 dương, 1 mass, 1 tín hiệu NE. Bẩn dầu/bụi dễ làm tín hiệu sai."
+  },
+  {
+   "id": "cb-q004",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 4,
+   "question": "Hai dạng tín hiệu CKP thường gặp: một dạng xoay chiều hình sin, một dạng xung vuông 0–5 V. Hai dạng này lần lượt thuộc loại cảm biến nào?",
+   "options": [
+    "Điện từ: xoay chiều hình sin; Hall: xung vuông 0–5 V",
+    "Hall: xoay chiều hình sin; điện từ: xung vuông 0–5 V",
+    "Cả hai đều cho xung vuông 0–5 V",
+    "Cả hai đều cho xoay chiều hình sin"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img15.jpg"
+   ],
+   "note": "Điện từ cho sóng xoay chiều hình sin, biên độ tăng theo tốc độ; Hall cho xung vuông 0–5V, sườn xung ứng với rãnh/vấu trên đĩa."
+  },
+  {
+   "id": "cb-q005",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 5,
+   "question": "Ba loại CKP (điện từ, Hall, quang) được phân biệt chủ yếu dựa vào đâu?",
+   "options": [
+    "Số dây, nguồn nuôi và dạng tín hiệu ra (sin, xung vuông, quang)",
+    "Màu vỏ cảm biến và chiều dài dây",
+    "Vị trí lắp trên nắp máy",
+    "Kích thước đầu cảm biến"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Điện từ: 2 dây, không nguồn, sóng sin. Hall: 3 dây có +5V, xung vuông. Quang: 1 dương, 1 mass, 1 NE."
+  },
+  {
+   "id": "cb-q006",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 6,
+   "question": "Cảm biến CMP (vị trí trục cam) chủ yếu cung cấp thông tin gì cho ECM?",
+   "options": [
+    "Pha của trục cam, để xác định xy-lanh ở kỳ nén và phun/đánh lửa tuần tự",
+    "Áp suất đường nạp",
+    "Nhiệt độ nước làm mát",
+    "Lượng khí nạp thực tế"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img14.jpg"
+   ],
+   "note": "CKP cho tốc độ và góc trục khuỷu; CMP cho pha trục cam. Kết hợp hai tín hiệu mới xác định đúng xy-lanh ở kỳ nén để phun/đánh lửa tuần tự."
+  },
+  {
+   "id": "cb-q007",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 7,
+   "question": "Cảm biến CMP loại Hall có cách đấu dây giống cảm biến nào dưới đây?",
+   "options": [
+    "CKP loại Hall: +5V, mass, tín hiệu xung vuông",
+    "CKP loại điện từ: 2 dây NE+/NE−",
+    "IAT: 2 dây tín hiệu THA",
+    "APP: 6 dây"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "CMP Hall cũng 3 dây: nguồn +5V, mass và tín hiệu xung vuông, tương tự CKP Hall."
+  },
+  {
+   "id": "cb-q008",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 8,
+   "question": "Động cơ không nổ vì mất hoàn toàn tín hiệu CKP. Nguyên nhân trực tiếp là gì?",
+   "options": [
+    "ECM không biết tốc độ và góc trục khuỷu nên không tính được thời điểm phun và đánh lửa",
+    "ECM không biết nhiệt độ nước nên không mở quạt",
+    "ECM không biết vị trí bàn đạp ga nên không mở bướm ga",
+    "ECM không biết áp suất rail nên không mở kim phun"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "CKP là tín hiệu gốc cho vòng quay: mất CKP thì ECM không có số vòng quay, thường không phun – không đánh lửa, động cơ không nổ."
+  },
+  {
+   "id": "cb-q009",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 9,
+   "question": "Khi đo điện trở cuộn dây CKP loại điện từ, giá trị thường nằm trong khoảng nào?",
+   "options": [
+    "Khoảng vài trăm Ω đến 1–2 kΩ",
+    "0 Ω (thông hoàn toàn)",
+    "Khoảng 5–10 Ω",
+    "Lớn hơn 1 MΩ"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Cuộn CKP điện từ thường vài trăm Ω đến 1–2 kΩ tùy loại. Vô cực (hở) hoặc 0 Ω (chập) đều là hỏng."
+  },
+  {
+   "id": "cb-q010",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 10,
+   "question": "Khe hở giữa đầu CKP điện từ và vấu/rãnh trên đĩa quá lớn sẽ gây hiện tượng gì?",
+   "options": [
+    "Xung yếu, dễ mất tín hiệu, động cơ khó nổ hoặc rung giật",
+    "Điện áp xung luôn đạt 5V",
+    "Điện trở cuộn dây về 0 Ω",
+    "Tín hiệu chuyển thành xung vuông"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Khe hở lớn làm từ thông qua cuộn yếu, biên độ xung giảm, đặc biệt khi đề chậm nên dễ mất tín hiệu."
+  },
+  {
+   "id": "cb-q011",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 11,
+   "question": "Hai dây NE+ và NE− của CKP điện từ có đặc điểm nào?",
+   "options": [
+    "Là hai đầu cuộn dây, tín hiệu xoay chiều đối pha nhau",
+    "Một dây là nguồn +5V, một dây là mass",
+    "Một dây là tín hiệu, một dây là mass cố định",
+    "Hai dây đều cấp +12V cho cảm biến"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "NE+ và NE− là hai đầu cuộn; điện áp xoay chiều giữa hai dây tăng theo tốc độ. Không có dây nguồn nuôi."
+  },
+  {
+   "id": "cb-q012",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 12,
+   "question": "Vì sao hệ thống phun/đánh lửa tuần tự cần cả CKP và CMP?",
+   "options": [
+    "CKP cho góc trục khuỷu, CMP cho pha trục cam để phân biệt kỳ nén với kỳ xả",
+    "CKP đo áp suất, CMP đo nhiệt độ",
+    "CKP cấp nguồn cho CMP",
+    "CMP thay thế hoàn toàn CKP khi động cơ nổ"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Chỉ có CKP thì ECM biết góc quay nhưng không biết xy-lanh nào đang ở kỳ nén; CMP giải quyết điều đó."
+  },
+  {
+   "id": "cb-q013",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "CKP & CMP – vị trí trục khuỷu/trục cam",
+   "number": 13,
+   "question": "Cảm biến CKP loại Hall khi ON chìa nhưng chưa nổ, phép đo nào là đúng?",
+   "options": [
+    "Đủ +5V nguồn, 0V mass; tín hiệu chỉ có xung khi trục quay",
+    "Đủ +12V nguồn, 5V mass",
+    "0V ở cả ba dây",
+    "Tín hiệu luôn là 5V cố định"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "ON chìa kiểm tra nguồn 5V và mass 0V. Muốn có xung phải quay trục (đề máy) và đo bằng máy hiện sóng hoặc đồng hồ có chức năng tần số."
+  },
+  {
+   "id": "cb-q014",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 14,
+   "question": "Cảm biến MAF đo đại lượng nào của động cơ?",
+   "options": [
+    "Khối lượng không khí nạp thực tế (g/s)",
+    "Áp suất tuyệt đối đường nạp",
+    "Nhiệt độ khí nạp",
+    "Vị trí bướm ga"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img16.jpg"
+   ],
+   "note": "MAF = Mass Air Flow, đo khối lượng khí nạp; ECM dùng để tính lượng nhiên liệu và điều khiển EGR, turbo…"
+  },
+  {
+   "id": "cb-q015",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 15,
+   "question": "Cảm biến MAF loại hot film có đặc điểm nhận dạng nào?",
+   "options": [
+    "Giắc cắm thẳng, tín hiệu điện áp, phần tử sấy là màng sấy",
+    "Giắc cắm ngang, tín hiệu xung 5V, phần tử sấy là dây sấy",
+    "Giắc thẳng, tín hiệu xung tần số, phần tử sấy là dây sấy",
+    "Không có phần tử sấy, chỉ có điện trở nhiệt"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img16.jpg"
+   ],
+   "note": "Hot film = giắc thẳng + điện áp + màng sấy. Lưu lượng khí tăng thì điện áp tăng."
+  },
+  {
+   "id": "cb-q016",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 16,
+   "question": "Cảm biến MAF loại hot wire có đặc điểm nhận dạng nào?",
+   "options": [
+    "Giắc cắm ngang, tín hiệu xung tần số 5V, phần tử sấy là dây sấy",
+    "Giắc cắm thẳng, tín hiệu điện áp, phần tử sấy là màng sấy",
+    "Giắc thẳng, 2 dây NE+/NE−",
+    "3 dây +5V, mass, VTA"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img16.jpg"
+   ],
+   "note": "Hot wire = giắc ngang + xung 5V + dây sấy. Lưu lượng khí tăng thì tần số xung tăng."
+  },
+  {
+   "id": "cb-q017",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 17,
+   "question": "Hai loại MAF thường gặp là hot film và hot wire. Cách nhận diện nào đúng?",
+   "options": [
+    "Hot film: giắc thẳng, tín hiệu điện áp; hot wire: giắc ngang, tín hiệu xung 5 V",
+    "Hot film: giắc ngang, tín hiệu xung; hot wire: giắc thẳng, tín hiệu điện áp",
+    "Cả hai đều là hot wire, chỉ khác màu giắc",
+    "Cả hai đều cho tín hiệu xung vuông 5 V"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Nhớ nhanh: HOT FILM = giắc THẲNG + điện áp; HOT WIRE = giắc NGANG + xung 5V."
+  },
+  {
+   "id": "cb-q018",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 18,
+   "question": "Xe dùng MAF hot film, bật chìa ON nhưng chưa nổ. Máy chẩn đoán thường đọc giá trị nào?",
+   "options": [
+    "0 g/s",
+    "Khoảng 1,5 g/s",
+    "Khoảng 5 g/s",
+    "Khoảng 50 g/s"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Hot film: ON chìa 0 g/s; nổ máy idle từ 1,5 g/s trở lên."
+  },
+  {
+   "id": "cb-q019",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 19,
+   "question": "Xe dùng MAF hot film, động cơ nổ idle. Giá trị khối lượng khí nạp thường đạt mức nào?",
+   "options": [
+    "Từ 1,5 g/s trở lên",
+    "Đúng 0 g/s",
+    "Bé hơn 0,5 g/s",
+    "Luôn lớn hơn 50 g/s"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Hot film idle ≥ 1,5 g/s; ON chìa 0 g/s."
+  },
+  {
+   "id": "cb-q020",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 20,
+   "question": "Xe dùng MAF hot wire, ON chìa chưa nổ. Giá trị thường bé hơn mức nào?",
+   "options": [
+    "0,5 g/s",
+    "1,5 g/s",
+    "5 g/s",
+    "50 g/s"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Hot wire: ON chìa < 0,5 g/s; nổ máy idle < 5 g/s."
+  },
+  {
+   "id": "cb-q021",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 21,
+   "question": "Xe dùng MAF hot wire, động cơ nổ idle. Giá trị thường bé hơn mức nào?",
+   "options": [
+    "5 g/s",
+    "0,5 g/s",
+    "1,0 g/s",
+    "50 g/s"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Hot wire idle < 5 g/s, ON chìa < 0,5 g/s."
+  },
+  {
+   "id": "cb-q022",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 22,
+   "question": "Phần tử sấy của MAF hot film và hot wire khác nhau thế nào?",
+   "options": [
+    "Hot film dùng màng sấy; hot wire dùng dây sấy",
+    "Hot film dùng dây sấy; hot wire dùng màng sấy",
+    "Cả hai đều dùng dây sấy giống nhau",
+    "Cả hai đều không có phần tử sấy"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Hot film = màng sấy (film), hot wire = dây sấy (wire)."
+  },
+  {
+   "id": "cb-q023",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 23,
+   "question": "Cảm biến MAP đo gì và có bao nhiêu dây?",
+   "options": [
+    "Áp suất tuyệt đối đường nạp; 3 dây +5V, mass, tín hiệu điện áp",
+    "Khối lượng khí nạp; 2 dây NE+/NE−",
+    "Nhiệt độ khí nạp; 2 dây THA",
+    "Vị trí bướm ga; 3 dây VTA"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img17.jpg"
+   ],
+   "note": "MAP = Manifold Absolute Pressure. 3 dây: +5V, mass, tín hiệu điện áp 0–5V."
+  },
+  {
+   "id": "cb-q024",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 24,
+   "question": "Trên xe xăng không turbo, ON chìa và nổ idle, MAP thường báo khoảng bao nhiêu?",
+   "options": [
+    "ON chìa ≈ 100 kPa; idle ≈ 50 kPa",
+    "ON chìa ≈ 50 kPa; idle ≈ 100 kPa",
+    "ON chìa ≈ 0 kPa; idle ≈ 300 kPa",
+    "ON chìa ≈ 300 kPa; idle ≈ 100 kPa"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Xe xăng: ON chìa ≈ 100 kPa (áp khí quyển); idle ≈ 50 kPa do chân không đường nạp."
+  },
+  {
+   "id": "cb-q025",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 25,
+   "question": "Xe xăng tăng áp turbo, áp suất đường nạp có thể lên tới khoảng bao nhiêu?",
+   "options": [
+    "Khoảng 200 kPa",
+    "Khoảng 50 kPa",
+    "Khoảng 300 bar",
+    "Khoảng 2500 bar"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Xe xăng turbo: MAP có thể lên khoảng 200 kPa khi tăng áp mạnh."
+  },
+  {
+   "id": "cb-q026",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 26,
+   "question": "Trên động cơ Diesel, cảm biến BPS (Boost Pressure Sensor) có giá trị thường gặp nào?",
+   "options": [
+    "ON chìa ≈ 100 kPa; idle tương tự; lên ga có thể tới ≈ 300 kPa",
+    "ON chìa 0 kPa; idle 50 kPa; full ga 200 kPa",
+    "ON chìa 0,5V; idle 300 bar; full ga 2500 bar",
+    "ON chìa 100 bar; idle 50 bar; full ga 5 bar"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Diesel BPS: ON chìa ≈ 100 kPa, idle tương tự, lên ga tăng áp có thể lên khoảng 300 kPa."
+  },
+  {
+   "id": "cb-q027",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 27,
+   "question": "Vì sao trên động cơ xăng gọi là MAP còn trên động cơ Diesel lại gọi là BPS?",
+   "options": [
+    "Cùng đo áp suất đường nạp: MAP là áp tuyệt đối, BPS là cảm biến áp tăng áp",
+    "MAP đo nhiệt độ, BPS đo khối lượng khí",
+    "MAP dùng cho xe xăng, BPS dùng cho hệ thống phanh",
+    "Hai cảm biến đo hai đại lượng hoàn toàn khác nhau"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Bản chất cùng là cảm biến áp suất đường nạp: xe xăng quen gọi MAP, xe Diesel quen gọi BPS (Boost Pressure Sensor)."
+  },
+  {
+   "id": "cb-q028",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 28,
+   "question": "Mã lỗi Low của cảm biến MAP/BPS thường có nghĩa gì?",
+   "options": [
+    "Tín hiệu thấp hơn dải bình thường: áp thấp, đứt tín hiệu hoặc chập mass",
+    "Tín hiệu cao hơn dải bình thường",
+    "Tín hiệu nằm trong dải nhưng không hợp lý với cảm biến khác",
+    "Cảm biến báo nhiệt độ quá cao"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Low = tín hiệu/áp suất thấp hơn ngưỡng. High = cao hơn ngưỡng. Performance = tín hiệu trong dải nhưng không khớp các tín hiệu khác."
+  },
+  {
+   "id": "cb-q029",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 29,
+   "question": "Mã lỗi High của cảm biến MAP/BPS thường có nghĩa gì?",
+   "options": [
+    "Tín hiệu cao hơn dải bình thường: áp cao, ngắn mạch tín hiệu lên nguồn",
+    "Tín hiệu thấp hơn dải bình thường",
+    "Cảm biến bị ngắt mass",
+    "Tín hiệu không đổi khi tăng tốc"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "High = vượt ngưỡng trên, có thể do áp thực tế cao hoặc chập tín hiệu lên nguồn 5V."
+  },
+  {
+   "id": "cb-q030",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 30,
+   "question": "Mã lỗi Performance (hiệu suất) của MAP/BPS thường có nghĩa gì?",
+   "options": [
+    "Tín hiệu nằm trong dải nhưng không hợp lý khi so với MAF, TPS hoặc áp suất thực tế",
+    "Cảm biến bị đứt hoàn toàn dây tín hiệu",
+    "Cảm biến báo áp suất bằng 0",
+    "Cảm biến báo quá nhiệt"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Performance = tín hiệu vẫn trong dải điện áp nhưng sai logic, ví dụ bướm ga mở mà áp suất không tăng như mong đợi."
+  },
+  {
+   "id": "cb-q031",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 31,
+   "question": "Đặc tính điện áp – áp suất của cảm biến MAP tuyến tính có dạng nào?",
+   "options": [
+    "Tuyến tính: áp suất tăng thì điện áp tín hiệu tăng",
+    "Nghịch đảo: áp suất tăng thì điện áp giảm",
+    "Xung vuông 0–5V",
+    "Không thay đổi theo áp suất"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img17.jpg"
+   ],
+   "note": "MAP cho điện áp tương tự tăng gần tuyến tính theo áp suất tuyệt đối đường nạp."
+  },
+  {
+   "id": "cb-q032",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "MAF & MAP/BPS – khí nạp",
+   "number": 32,
+   "question": "ECM dùng tín hiệu MAF/MAP để làm gì?",
+   "options": [
+    "Tính lượng nhiên liệu, góc đánh lửa và điều khiển tăng áp/EGR",
+    "Chỉ để bật quạt làm mát",
+    "Chỉ để mở khóa cửa",
+    "Chỉ để điều khiển đèn báo"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Lượng khí nạp là đầu vào chính để tính phun cơ bản; còn dùng cho đánh lửa, EGR, turbo."
+  },
+  {
+   "id": "cb-q033",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 33,
+   "question": "Cảm biến IAT đo gì và tín hiệu về ECM tên là gì?",
+   "options": [
+    "Nhiệt độ khí nạp; tín hiệu THA",
+    "Nhiệt độ nước làm mát; tín hiệu THW",
+    "Vị trí bướm ga; tín hiệu VTA",
+    "Áp suất đường nạp; tín hiệu PIM"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "IAT = Intake Air Temperature, 2 dây, tín hiệu THA. ECT là nhiệt độ nước, tín hiệu THW."
+  },
+  {
+   "id": "cb-q034",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 34,
+   "question": "Cảm biến IAT thuộc loại nào?",
+   "options": [
+    "Nhiệt điện trở, có loại hệ số dương hoặc hệ số âm",
+    "Biến trở con trượt",
+    "Cảm biến Hall",
+    "Cảm biến áp suất áp điện"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "IAT là nhiệt điện trở: loại dương (PTC) nhiệt tăng trở tăng; loại âm (NTC) nhiệt tăng trở giảm."
+  },
+  {
+   "id": "cb-q035",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 35,
+   "question": "Nhiệt điện trở hệ số dương (PTC) có quy luật nào?",
+   "options": [
+    "Nhiệt độ tăng thì điện trở tăng",
+    "Nhiệt độ tăng thì điện trở giảm",
+    "Nhiệt độ tăng thì điện trở không đổi",
+    "Nhiệt độ giảm thì điện trở giảm"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "PTC = Positive Temperature Coefficient: nhiệt↑ → trở↑."
+  },
+  {
+   "id": "cb-q036",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 36,
+   "question": "Nhiệt điện trở hệ số âm (NTC) có quy luật nào?",
+   "options": [
+    "Nhiệt độ tăng thì điện trở giảm",
+    "Nhiệt độ tăng thì điện trở tăng",
+    "Nhiệt độ tăng thì điện trở không đổi",
+    "Nhiệt độ giảm thì điện trở giảm"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "NTC = Negative Temperature Coefficient: nhiệt↑ → trở↓. IAT/ECT thông dụng là NTC."
+  },
+  {
+   "id": "cb-q037",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 37,
+   "question": "Cảm biến IAT có bao nhiêu dây và tín hiệu về hộp là gì?",
+   "options": [
+    "2 dây, tín hiệu THA",
+    "3 dây, tín hiệu VTA",
+    "3 dây, tín hiệu xung 5V",
+    "6 dây, VPA và VPA2"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "IAT: 2 dây, một dây tín hiệu THA về ECM và một dây mass (E2)."
+  },
+  {
+   "id": "cb-q038",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 38,
+   "question": "Cảm biến ECT có quy luật điện trở nào?",
+   "options": [
+    "NTC: nhiệt độ tăng thì điện trở giảm",
+    "PTC: nhiệt độ tăng thì điện trở tăng",
+    "Điện trở không đổi theo nhiệt độ",
+    "Điện trở tăng theo áp suất"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_ect.jpg",
+    "images/xang_img18.jpg"
+   ],
+   "note": "ECT là nhiệt điện trở NTC: nhiệt↑ → trở↓ → điện áp tín hiệu THW giảm."
+  },
+  {
+   "id": "cb-q039",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 39,
+   "question": "Máy chẩn đoán báo nhiệt độ nước −40°C. Theo bài học, đây thường là lỗi gì?",
+   "options": [
+    "Hở mạch cảm biến ECT",
+    "Ngắn mạch cảm biến ECT",
+    "Cảm biến báo đúng nhiệt độ môi trường",
+    "Dây tín hiệu chập mass"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img18.jpg"
+   ],
+   "note": "−40°C trên máy chẩn đoán là giá trị mặc định khi hở mạch (ECM thấy điện áp tín hiệu cao)."
+  },
+  {
+   "id": "cb-q040",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 40,
+   "question": "Máy chẩn đoán báo nhiệt độ nước 140°C hoặc tín hiệu 0V. Đây thường là lỗi gì?",
+   "options": [
+    "Ngắn mạch cảm biến ECT",
+    "Hở mạch cảm biến ECT",
+    "Cảm biến báo đúng nhiệt độ sôi",
+    "Đứt dây mass"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img18.jpg"
+   ],
+   "note": "140°C / 0V là dấu hiệu ngắn mạch (tín hiệu bị kéo về mass), không phải nhiệt độ thật."
+  },
+  {
+   "id": "cb-q041",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 41,
+   "question": "Ngoài việc tính lượng phun, tín hiệu ECT còn được ECM dùng cho chức năng nào?",
+   "options": [
+    "Điều khiển quạt làm mát, bù idle, góc đánh lửa khi máy nguội",
+    "Đo áp suất lốp",
+    "Điều khiển khóa cửa",
+    "Đo vị trí ghế lái"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_ect.jpg",
+    "images/xang_img18.jpg"
+   ],
+   "note": "ECT còn dùng cho quạt làm mát, bù nhiên liệu/idle khi nguội, hiệu chỉnh đánh lửa và chẩn đoán."
+  },
+  {
+   "id": "cb-q042",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 42,
+   "question": "Khi nhiệt độ nước tăng, điện trở ECT giảm. Điện áp tín hiệu THW trên mạch phân áp thường thay đổi thế nào?",
+   "options": [
+    "Giảm xuống",
+    "Tăng lên",
+    "Không đổi",
+    "Nhảy lên 12V"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img18.jpg"
+   ],
+   "note": "ECM thường kéo tín hiệu lên 5V qua điện trở chuẩn; ECT giảm trở làm điện áp THW giảm."
+  },
+  {
+   "id": "cb-q043",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 43,
+   "question": "Cảm biến IAT có thể được bố trí ở đâu?",
+   "options": [
+    "Trên đường nạp hoặc tích hợp trong MAF/MAP",
+    "Trong bình nhiên liệu",
+    "Trên bánh xe",
+    "Trong hộp số"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Nhiều xe tích hợp IAT trong MAF hoặc MAP để giảm dây và tăng độ chính xác."
+  },
+  {
+   "id": "cb-q044",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 44,
+   "question": "Hai cảm biến nhiệt độ thường gặp trên động cơ là?",
+   "options": [
+    "IAT (khí nạp) và ECT (nước làm mát)",
+    "MAP và MAF",
+    "CKP và CMP",
+    "TPS và APP"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "IAT đo nhiệt khí nạp; ECT đo nhiệt nước làm mát. Cả hai đều là nhiệt điện trở."
+  },
+  {
+   "id": "cb-q045",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "IAT & ECT – nhiệt độ",
+   "number": 45,
+   "question": "Đo điện trở IAT/ECT ở hai nhiệt độ khác nhau nhằm mục đích gì?",
+   "options": [
+    "Kiểm tra cảm biến có thay đổi trở theo nhiệt độ đúng quy luật hay không",
+    "Đo áp suất đường nạp",
+    "Kiểm tra khe hở bugi",
+    "Đo dòng bơm xăng"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_ect.jpg"
+   ],
+   "note": "Sấy nóng hoặc làm lạnh cảm biến rồi đo lại: NTC phải giảm trở khi nóng, PTC phải tăng."
+  },
+  {
+   "id": "cb-q046",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 46,
+   "question": "Cảm biến TPS đo gì và tín hiệu về ECM là gì?",
+   "options": [
+    "Vị trí bướm ga; tín hiệu VTA",
+    "Vị trí bàn đạp ga; tín hiệu VPA",
+    "Nhiệt độ khí nạp; tín hiệu THA",
+    "Áp suất đường nạp; tín hiệu PIM"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img14.jpg"
+   ],
+   "note": "TPS = Throttle Position Sensor, tín hiệu VTA. APP là bàn đạp, tín hiệu VPA/VPA2."
+  },
+  {
+   "id": "cb-q047",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 47,
+   "question": "TPS loại biến trở có cấu tạo và đấu dây thế nào?",
+   "options": [
+    "Điện trở than + con trượt; mỗi kênh 3 dây VCC 5V, mass, VTA",
+    "IC Hall; 2 dây NE+/NE−",
+    "Nhiệt điện trở; 2 dây THA",
+    "6 dây: 2 dương, 2 mass, VPA, VPA2"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "TPS biến trở dùng con trượt cơ khí trên điện trở than; ECM cấp 5V và đọc VTA."
+  },
+  {
+   "id": "cb-q048",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 48,
+   "question": "TPS loại Hall có ưu điểm gì so với loại biến trở?",
+   "options": [
+    "Không dùng con trượt cơ khí nên ít mòn, tín hiệu ổn định hơn",
+    "Không cần nguồn nuôi",
+    "Chỉ có 2 dây",
+    "Đo được nhiệt độ bướm ga"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "TPS Hall dùng IC Hall cảm biến từ trường, không có vết mòn than như biến trở."
+  },
+  {
+   "id": "cb-q049",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 49,
+   "question": "Hai loại TPS thường gặp là loại biến trở và loại Hall. Cách phân biệt tín hiệu nào đúng?",
+   "options": [
+    "Biến trở: điện áp thay đổi liên tục; Hall: xung vuông",
+    "Biến trở: xung vuông; Hall: điện áp thay đổi liên tục",
+    "Cả hai đều là cảm biến áp suất",
+    "Cả hai đều là hot film/hot wire"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Biến trở có điện trở than + con trượt; Hall có IC và không có con trượt cơ khí."
+  },
+  {
+   "id": "cb-q050",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 50,
+   "question": "Có mấy kiểu tín hiệu bướm ga thường gặp trên xe dùng hai tín hiệu VTA?",
+   "options": [
+    "Hai tín hiệu cùng tăng, hoặc một tín hiệu tăng và một tín hiệu giảm",
+    "Hai tín hiệu luôn cùng giảm",
+    "Hai tín hiệu luôn bằng 0V",
+    "Hai tín hiệu xung vuông 12V"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Kiểu 1: VTA1 và VTA2 cùng tăng theo tỷ lệ. Kiểu 2: một tăng, một giảm, tổng gần như không đổi. ECM kiểm tra chéo."
+  },
+  {
+   "id": "cb-q051",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 51,
+   "question": "Với bướm ga hai tín hiệu cùng tăng, ECM kiểm tra chéo bằng cách nào?",
+   "options": [
+    "So sánh tỷ lệ giữa hai tín hiệu; hai tín hiệu phải cùng tăng theo tỷ lệ định trước",
+    "Yêu cầu hai tín hiệu luôn bằng nhau hoàn toàn",
+    "Yêu cầu một tín hiệu luôn bằng 0V",
+    "Bỏ qua một tín hiệu nếu tín hiệu kia còn tốt"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Hai kênh dự phòng: ECM so sánh tỷ lệ. Lệch bất thường → báo lỗi TPS và giới hạn công suất."
+  },
+  {
+   "id": "cb-q052",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 52,
+   "question": "Với bướm ga một tín hiệu tăng – một tín hiệu giảm, đặc điểm kiểm tra là gì?",
+   "options": [
+    "Tổng hai tín hiệu gần như không đổi khi bướm ga mở",
+    "Hai tín hiệu luôn cùng tăng",
+    "Một tín hiệu luôn giữ 5V",
+    "Hai tín hiệu đều giảm về 0V"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Kiểu một tăng một giảm: VTA1↑, VTA2↓, tổng gần như không đổi; ECM dùng để phát hiện kẹt/đứt dây."
+  },
+  {
+   "id": "cb-q053",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 53,
+   "question": "Điện áp VTA thường nằm trong khoảng nào khi bướm ga đóng hoàn toàn và mở hết?",
+   "options": [
+    "Đóng ≈ 0,5V; mở hết ≈ 4,5V",
+    "Đóng ≈ 4,5V; mở hết ≈ 0,5V",
+    "Đóng 0V; mở hết 5V",
+    "Đóng 12V; mở hết 14V"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "VTA tăng theo góc mở bướm ga: khoảng 0,5V khi đóng và 4,5V khi mở hết."
+  },
+  {
+   "id": "cb-q054",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 54,
+   "question": "TPS loại biến trở bị mòn than sẽ gây hiện tượng gì?",
+   "options": [
+    "VTA nhảy bậc, giật ga, động cơ không ổn định",
+    "Tín hiệu luôn tuyến tính hoàn hảo",
+    "Điện áp VTA luôn đúng 0,5V",
+    "Cảm biến tự chuyển sang chế độ Hall"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Mòn than tạo điểm tiếp xúc kém, VTA nhảy bậc khi đạp ga → ECM tính sai tải → giật ga."
+  },
+  {
+   "id": "cb-q055",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 55,
+   "question": "Cảm biến APP đo gì?",
+   "options": [
+    "Vị trí bàn đạp chân ga do người lái tác động",
+    "Vị trí bướm ga thực tế",
+    "Áp suất đường nạp",
+    "Nhiệt độ khí nạp"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img14.jpg"
+   ],
+   "note": "APP = Accelerator Pedal Position, báo ý định người lái; TPS báo vị trí bướm ga thực tế."
+  },
+  {
+   "id": "cb-q056",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 56,
+   "question": "Cảm biến APP thường có bao nhiêu dây và chức năng từng nhóm?",
+   "options": [
+    "6 dây: 2 dương, 2 mass, 2 tín hiệu VPA và VPA2",
+    "3 dây: +5V, mass, VTA",
+    "2 dây: NE+ và NE−",
+    "4 dây: 2 dương, 1 mass, 1 tín hiệu"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img14.jpg"
+   ],
+   "note": "APP 6 dây: VCC1/VCC2, GND1/GND2, VPA1/VPA2. Hai kênh độc lập để kiểm tra chéo."
+  },
+  {
+   "id": "cb-q057",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 57,
+   "question": "Hai tín hiệu VPA và VPA2 của APP thường có quy luật nào?",
+   "options": [
+    "Cùng tăng khi đạp ga sâu hơn, lệch nhau theo tỷ lệ định trước",
+    "Một tăng một giảm với tổng không đổi",
+    "Luôn bằng 0V",
+    "Luôn bằng 5V"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "APP thường hai tín hiệu cùng tăng; ECM kiểm tra tỷ lệ. Lệch bất thường → báo lỗi, giảm công suất."
+  },
+  {
+   "id": "cb-q058",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 58,
+   "question": "APP khác TPS ở điểm cơ bản nào?",
+   "options": [
+    "APP đo bàn đạp chân ga; TPS đo vị trí bướm ga thực tế",
+    "APP đo áp suất; TPS đo nhiệt độ",
+    "APP chỉ dùng trên xe số sàn; TPS chỉ dùng trên xe số tự động",
+    "APP có 2 dây; TPS có 6 dây"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "APP = ý định người lái; TPS = vị trí bướm ga. ETCS so sánh hai tín hiệu để điều khiển mô-tơ bướm ga."
+  },
+  {
+   "id": "cb-q059",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 59,
+   "question": "Một kênh tín hiệu APP bị đứt. Hệ thống thường phản ứng thế nào?",
+   "options": [
+    "Vẫn chạy nhưng giới hạn công suất (chế độ limp), báo lỗi",
+    "Động cơ tắt ngay lập tức",
+    "Bướm ga mở hết cỡ",
+    "Không ảnh hưởng gì"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Hai kênh dự phòng: đứt một kênh xe có thể vẫn chạy nhưng bị giới hạn công suất và bật đèn báo lỗi."
+  },
+  {
+   "id": "cb-q060",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 60,
+   "question": "Trong hệ thống ETCS, APP và TPS phối hợp thế nào?",
+   "options": [
+    "APP báo ý định người lái, TPS phản hồi vị trí bướm ga thực tế để ECM điều khiển mô-tơ",
+    "Cả hai cùng đo áp suất đường nạp",
+    "APP điều khiển kim phun, TPS điều khiển bugi",
+    "APP thay thế hoàn toàn TPS"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "ETCS dùng APP làm yêu cầu, TPS làm phản hồi vòng kín cho mô-tơ bướm ga."
+  },
+  {
+   "id": "cb-q061",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "TPS & APP – bướm ga & bàn đạp",
+   "number": 61,
+   "question": "Điện áp VTA khi bướm ga mở dần từ từ sẽ thay đổi thế nào?",
+   "options": [
+    "Tăng dần từ khoảng 0,5V lên khoảng 4,5V",
+    "Giảm dần từ 4,5V về 0,5V",
+    "Giữ nguyên 5V",
+    "Nhảy giữa 0V và 12V"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Trên máy hiện sóng, VTA là đường dốc tăng dần khi đạp ga và giảm dần khi nhả ga."
+  },
+  {
+   "id": "cb-q062",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 62,
+   "question": "Cảm biến oxy dãy hẹp có dải điện áp tín hiệu khoảng bao nhiêu?",
+   "options": [
+    "0,1–0,9V",
+    "0–5V",
+    "0–12V",
+    "0,5–4,5V"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img19.jpg"
+   ],
+   "note": "Dãy hẹp (narrowband) xuất điện áp khoảng 0,1–0,9V tùy hỗn hợp giàu/nghèo."
+  },
+  {
+   "id": "cb-q063",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 63,
+   "question": "Với cảm biến O2 dãy hẹp, hỗn hợp giàu cho điện áp thế nào?",
+   "options": [
+    "Điện áp cao, gần 0,8–0,9V",
+    "Điện áp thấp, gần 0,1–0,2V",
+    "Điện áp âm",
+    "Xung vuông 5V"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img19.jpg"
+   ],
+   "note": "Giàu (nhiều xăng) → O2 báo điện áp cao; nghèo → điện áp thấp."
+  },
+  {
+   "id": "cb-q064",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 64,
+   "question": "Với cảm biến O2 dãy hẹp, hỗn hợp nghèo cho điện áp thế nào?",
+   "options": [
+    "Điện áp thấp, gần 0,1–0,2V",
+    "Điện áp cao, gần 0,8–0,9V",
+    "Đúng 5V",
+    "Đúng 12V"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img19.jpg"
+   ],
+   "note": "Nghèo (ít xăng, nhiều oxy) → điện áp thấp. ECM điều chỉnh phun để giữ quanh 14,7:1."
+  },
+  {
+   "id": "cb-q065",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 65,
+   "question": "Điện trở dây sấy của cảm biến oxy dãy hẹp thường trong khoảng nào?",
+   "options": [
+    "6–13 Ω",
+    "1–4 Ω",
+    "0,5–3 Ω",
+    "5–30 kΩ"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Sấy dãy hẹp: 6–13 Ω. Sấy dãy rộng: 1–4 Ω. Cuộn sơ cấp mobin: 0,5–3 Ω; thứ cấp: 5–30 kΩ."
+  },
+  {
+   "id": "cb-q066",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 66,
+   "question": "Điện trở dây sấy của cảm biến A/F dãy rộng thường trong khoảng nào?",
+   "options": [
+    "1–4 Ω",
+    "6–13 Ω",
+    "0,5–3 Ω",
+    "5–30 kΩ"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Dãy rộng (A/F) có sấy khoảng 1–4 Ω, thấp hơn dãy hẹp 6–13 Ω."
+  },
+  {
+   "id": "cb-q067",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 67,
+   "question": "Cảm biến oxy dãy hẹp chỉ hoạt động chính xác khi đạt nhiệt độ nào?",
+   "options": [
+    "Khoảng 350°C trở lên",
+    "Khoảng 50°C",
+    "Khoảng 100°C",
+    "Khoảng 1000°C"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Dãy hẹp cần ≥ 350°C mới cho tín hiệu tin cậy; dây sấy giúp nhanh đạt nhiệt độ."
+  },
+  {
+   "id": "cb-q068",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 68,
+   "question": "Cảm biến A/F dãy rộng gửi tín hiệu gì về ECM?",
+   "options": [
+    "Tín hiệu O2S",
+    "Tín hiệu VTA",
+    "Tín hiệu THA",
+    "Tín hiệu VPA"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Cảm biến A/F gửi tín hiệu O2S về ECM; bên trong dùng bơm oxy và dòng bơm để đo tỷ lệ hòa khí."
+  },
+  {
+   "id": "cb-q069",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 69,
+   "question": "Cảm biến A/F dãy rộng khác dãy hẹp ở nguyên lý nào?",
+   "options": [
+    "Dùng bơm oxy và dòng bơm (Ip) để đo tỷ lệ hòa khí, không chỉ xuất 0,1–0,9V",
+    "Dùng con trượt cơ khí",
+    "Dùng 2 dây NE+/NE−",
+    "Chỉ dùng để đo nhiệt độ khí xả"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Dãy rộng thường 5 dây, dùng bơm oxy và dòng bơm để đo A/F trong dải rộng cả giàu lẫn nghèo."
+  },
+  {
+   "id": "cb-q070",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 70,
+   "question": "So sánh cảm biến oxy dãy hẹp và dãy rộng (A/F). Đặc điểm nào đúng?",
+   "options": [
+    "Dãy hẹp: 0,1–0,9 V; dãy rộng A/F: dùng bơm dòng",
+    "Dãy rộng: 0,1–0,9 V; dãy hẹp: dùng bơm dòng",
+    "Cả hai đều là cảm biến nhiệt độ",
+    "Cả hai đều là hot film/hot wire"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Dãy hẹp: 0,1–0,9V, sấy 6–13 Ω. Dãy rộng: 5 dây, bơm dòng, sấy 1–4 Ω, tín hiệu O2S."
+  },
+  {
+   "id": "cb-q071",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 71,
+   "question": "Cảm biến áp suất ống rail (RPS) có bộ dây và dải tín hiệu nào?",
+   "options": [
+    "3 dây: +5V, mass, tín hiệu 0–5V",
+    "2 dây NE+/NE−",
+    "6 dây: 2 dương, 2 mass, VPA, VPA2",
+    "3 dây: +12V, mass, xung 5V"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_rps.jpg"
+   ],
+   "note": "RPS 3 dây: nguồn 5V, mass, tín hiệu điện áp 0–5V tương ứng áp suất rail."
+  },
+  {
+   "id": "cb-q072",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 72,
+   "question": "ECM dùng tín hiệu cảm biến áp suất rail để làm gì?",
+   "options": [
+    "Điều khiển lượng dầu phun và áp suất rail theo tải động cơ",
+    "Điều khiển quạt làm mát",
+    "Đo nhiệt độ khí nạp",
+    "Điều khiển khóa cửa"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "RPS là tín hiệu phản hồi vòng kín cho hệ thống phun Diesel: ECM so sánh áp thực tế với áp mục tiêu."
+  },
+  {
+   "id": "cb-q073",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 73,
+   "question": "Cảm biến O2 nằm trong hệ thống điều khiển nào?",
+   "options": [
+    "Vòng kín điều khiển tỷ lệ hòa khí (closed-loop)",
+    "Hệ thống khởi động",
+    "Hệ thống phanh ABS",
+    "Hệ thống túi khí"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "O2 phản hồi lượng oxy trong khí xả để ECM hiệu chỉnh thời gian phun, giữ hòa khí gần 14,7:1."
+  },
+  {
+   "id": "cb-q074",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "O2/A/F & áp suất rail",
+   "number": 74,
+   "question": "Trên máy hiện sóng, tín hiệu O2 dãy hẹp của động cơ khỏe thường dao động thế nào?",
+   "options": [
+    "Dao động liên tục trong khoảng 0,1–0,9V khi ECM điều khiển vòng kín",
+    "Nằm phẳng ở 5V",
+    "Nằm phẳng ở 12V",
+    "Luôn bằng 0V"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img19.jpg"
+   ],
+   "note": "Dao động đều 0,1–0,9V cho thấy vòng kín đang hiệu chỉnh; tín hiệu phẳng là dấu hiệu bất thường."
+  },
+  {
+   "id": "cb-q075",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 75,
+   "question": "Cảm biến vị trí trục khuỷu đứng đầu trong bộ 10 cảm biến. Tên tiếng Anh của nó là gì?",
+   "options": [
+    "CKP – vị trí trục khuỷu (Crankshaft Position)",
+    "CMP – vị trí trục cam (Camshaft Position)",
+    "MAP – áp suất đường nạp (Manifold Absolute Pressure)",
+    "IAT – nhiệt độ khí nạp (Intake Air Temperature)"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img14.jpg"
+   ],
+   "note": "Thứ tự 10 cảm biến: 1 CKP, 2 CMP, 3 MAF, 4 MAP/BPS, 5 IAT, 6 ECT, 7 TPS, 8 APP, 9 O2/A-F, 10 RPS."
+  },
+  {
+   "id": "cb-q076",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 76,
+   "question": "Cảm biến áp suất đường nạp dùng chung khái niệm MAP ở xe xăng và BPS ở xe Diesel có tên gọi nào?",
+   "options": [
+    "MAP/BPS – áp suất đường nạp",
+    "MAF – lưu lượng khí nạp",
+    "RPS – áp suất ống rail",
+    "TPS – vị trí bướm ga"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img14.jpg"
+   ],
+   "note": "Số 4 là MAP/BPS: xe xăng gọi MAP, xe Diesel gọi BPS, cùng đo áp suất đường nạp."
+  },
+  {
+   "id": "cb-q077",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 77,
+   "question": "Tên tiếng Anh của cảm biến CKP là gì?",
+   "options": [
+    "Crankshaft Position Sensor",
+    "Camshaft Position Sensor",
+    "Manifold Absolute Pressure Sensor",
+    "Mass Air Flow Sensor"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "CKP = Crankshaft Position Sensor (vị trí trục khuỷu). CMP = Camshaft Position Sensor."
+  },
+  {
+   "id": "cb-q078",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 78,
+   "question": "Tên tiếng Anh của cảm biến CMP là gì?",
+   "options": [
+    "Camshaft Position Sensor",
+    "Crankshaft Position Sensor",
+    "Engine Coolant Temperature Sensor",
+    "Throttle Position Sensor"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "CMP = Camshaft Position Sensor (vị trí trục cam)."
+  },
+  {
+   "id": "cb-q079",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 79,
+   "question": "MAF là viết tắt của cụm từ tiếng Anh nào?",
+   "options": [
+    "Mass Air Flow",
+    "Manifold Air Fuel",
+    "Motor Air Filter",
+    "Mass Air Filter"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "MAF = Mass Air Flow Sensor – cảm biến lưu lượng (khối lượng) khí nạp."
+  },
+  {
+   "id": "cb-q080",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 80,
+   "question": "MAP là viết tắt của cụm từ tiếng Anh nào?",
+   "options": [
+    "Manifold Absolute Pressure",
+    "Mass Air Pressure",
+    "Motor Air Position",
+    "Manifold Air Flow"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "MAP = Manifold Absolute Pressure Sensor – cảm biến áp suất tuyệt đối đường nạp."
+  },
+  {
+   "id": "cb-q081",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 81,
+   "question": "BPS là viết tắt của cụm từ tiếng Anh nào?",
+   "options": [
+    "Boost Pressure Sensor",
+    "Brake Pressure Sensor",
+    "Boost Position Sensor",
+    "Barometric Pressure Switch"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "BPS = Boost Pressure Sensor – cảm biến áp tăng áp trên động cơ Diesel."
+  },
+  {
+   "id": "cb-q082",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 82,
+   "question": "IAT là viết tắt của cụm từ tiếng Anh nào?",
+   "options": [
+    "Intake Air Temperature",
+    "Internal Air Temperature",
+    "Intake Air Throttle",
+    "Ignition Air Timing"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "IAT = Intake Air Temperature Sensor – cảm biến nhiệt độ khí nạp."
+  },
+  {
+   "id": "cb-q083",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 83,
+   "question": "ECT là viết tắt của cụm từ tiếng Anh nào?",
+   "options": [
+    "Engine Coolant Temperature",
+    "Electric Coolant Throttle",
+    "Engine Control Temperature",
+    "Exhaust Coolant Temperature"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_ect.jpg"
+   ],
+   "note": "ECT = Engine Coolant Temperature Sensor – cảm biến nhiệt độ nước làm mát."
+  },
+  {
+   "id": "cb-q084",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 84,
+   "question": "TPS là viết tắt của cụm từ tiếng Anh nào?",
+   "options": [
+    "Throttle Position Sensor",
+    "Turbo Pressure Sensor",
+    "Throttle Pressure Switch",
+    "Timing Position Sensor"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "TPS = Throttle Position Sensor – cảm biến vị trí bướm ga."
+  },
+  {
+   "id": "cb-q085",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 85,
+   "question": "APP là viết tắt của cụm từ tiếng Anh nào?",
+   "options": [
+    "Accelerator Pedal Position",
+    "Air Pressure Position",
+    "Accelerator Pressure Sensor",
+    "Air Pump Position"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "APP = Accelerator Pedal Position Sensor – cảm biến vị trí bàn đạp chân ga."
+  },
+  {
+   "id": "cb-q086",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 86,
+   "question": "O2 và A/F lần lượt là tên tiếng Anh của cảm biến nào?",
+   "options": [
+    "Oxygen Sensor và Air-Fuel Ratio Sensor",
+    "Output Sensor và Air Flow Sensor",
+    "Oxygen Switch và Air Filter Sensor",
+    "Oil Sensor và Air-Fuel Pump"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "O2 = Oxygen Sensor; A/F = Air-Fuel Ratio Sensor (cảm biến tỷ lệ hòa khí dãy rộng)."
+  },
+  {
+   "id": "cb-q087",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 87,
+   "question": "RPS là viết tắt của cụm từ tiếng Anh nào?",
+   "options": [
+    "Rail Pressure Sensor",
+    "Rotor Position Sensor",
+    "Rail Pump Switch",
+    "Return Pressure Sensor"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "RPS = Rail Pressure Sensor – cảm biến áp suất ống rail (common rail)."
+  },
+  {
+   "id": "cb-q088",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 88,
+   "question": "Tín hiệu THA thuộc cảm biến nào?",
+   "options": [
+    "IAT – nhiệt độ khí nạp",
+    "ECT – nhiệt độ nước làm mát",
+    "TPS – vị trí bướm ga",
+    "APP – bàn đạp ga"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "THA = tín hiệu IAT. ECT dùng THW; TPS dùng VTA; APP dùng VPA/VPA2; A/F dùng O2S."
+  },
+  {
+   "id": "cb-q089",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 89,
+   "question": "Tín hiệu VTA thuộc cảm biến nào?",
+   "options": [
+    "TPS – vị trí bướm ga",
+    "IAT – nhiệt độ khí nạp",
+    "RPS – áp suất rail",
+    "CKP – vị trí trục khuỷu"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "VTA là tín hiệu vị trí bướm ga của TPS. VPA/VPA2 là APP; THA là IAT."
+  },
+  {
+   "id": "cb-q090",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 90,
+   "question": "Tín hiệu VPA và VPA2 thuộc cảm biến nào?",
+   "options": [
+    "APP – bàn đạp chân ga",
+    "TPS – bướm ga",
+    "MAF – khí nạp",
+    "O2 – oxy"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "APP có 2 tín hiệu VPA và VPA2. TPS có VTA; MAF có tín hiệu điện áp hoặc xung; O2/A-F có O2S."
+  },
+  {
+   "id": "cb-q091",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 91,
+   "question": "Tín hiệu O2S thuộc cảm biến nào?",
+   "options": [
+    "Cảm biến A/F dãy rộng (và cả O2)",
+    "Cảm biến CKP",
+    "Cảm biến MAP",
+    "Cảm biến TPS"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Cảm biến A/F gửi tín hiệu O2S về ECM; cảm biến O2 cũng dùng tín hiệu này."
+  },
+  {
+   "id": "cb-q092",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 92,
+   "question": "Hai cảm biến nào là nhiệt điện trở trong nhóm 10 cảm biến?",
+   "options": [
+    "IAT và ECT",
+    "CKP và CMP",
+    "MAP và MAF",
+    "TPS và APP"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img14.jpg"
+   ],
+   "note": "IAT (khí nạp) và ECT (nước làm mát) đều là nhiệt điện trở; ECT thường NTC."
+  },
+  {
+   "id": "cb-q093",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 93,
+   "question": "Cảm biến nào dùng 2 dây NE+ và NE−?",
+   "options": [
+    "CKP loại điện từ",
+    "CKP loại Hall",
+    "CMP loại Hall",
+    "MAP"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img15.jpg"
+   ],
+   "note": "Chỉ CKP điện từ dùng 2 dây NE+/NE−. Hall dùng 3 dây; MAP dùng 3 dây; APP dùng 6 dây."
+  },
+  {
+   "id": "cb-q094",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 94,
+   "question": "Cảm biến nào đo khối lượng không khí nạp?",
+   "options": [
+    "MAF",
+    "MAP",
+    "IAT",
+    "TPS"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img16.jpg"
+   ],
+   "note": "MAF đo khối lượng khí nạp (g/s); MAP đo áp suất; IAT đo nhiệt độ; TPS đo bướm ga."
+  },
+  {
+   "id": "cb-q095",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 95,
+   "question": "Cặp cảm biến nào cung cấp thông tin cho đánh lửa và phun tuần tự?",
+   "options": [
+    "CKP và CMP",
+    "IAT và ECT",
+    "TPS và APP",
+    "O2 và RPS"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img14.jpg"
+   ],
+   "note": "CKP cho góc trục khuỷu, CMP cho pha trục cam; thiếu một trong hai thì không phun/đánh lửa tuần tự chính xác."
+  },
+  {
+   "id": "cb-q096",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 96,
+   "question": "Cảm biến nào có 6 dây với 2 nguồn, 2 mass và 2 tín hiệu?",
+   "options": [
+    "APP",
+    "TPS loại biến trở",
+    "MAP",
+    "CKP loại Hall"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img14.jpg"
+   ],
+   "note": "APP thường 6 dây: VCC1/VCC2, GND1/GND2, VPA1/VPA2."
+  },
+  {
+   "id": "cb-q097",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 97,
+   "question": "Cảm biến nào báo áp suất dầu trong ống rail của động cơ Diesel?",
+   "options": [
+    "RPS",
+    "BPS",
+    "MAP",
+    "MAF"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_rps.jpg"
+   ],
+   "note": "RPS = Rail Pressure Sensor đo áp suất ống rail; BPS đo áp tăng áp đường nạp."
+  },
+  {
+   "id": "cb-q098",
+   "set": "cb",
+   "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
+   "section": "Tổng hợp 10 cảm biến – tên Anh, dây, tín hiệu",
+   "number": 98,
+   "question": "Thứ tự đúng của 10 cảm biến trong bộ tổng hợp, bắt đầu từ CKP và kết thúc ở RPS, là?",
+   "options": [
+    "CKP – CMP – MAF – MAP/BPS – IAT – ECT – TPS – APP – O2/A-F – RPS",
+    "CMP – CKP – MAP – MAF – ECT – IAT – APP – TPS – RPS – O2/A-F",
+    "MAF – MAP – CKP – CMP – TPS – APP – IAT – ECT – RPS – O2/A-F",
+    "CKP – MAF – CMP – IAT – MAP – ECT – APP – TPS – RPS – O2/A-F"
+   ],
+   "correct": 0,
+   "images": [
+    "images/xang_img14.jpg"
+   ],
+   "note": "Thứ tự trong bộ tổng hợp: 1 CKP, 2 CMP, 3 MAF, 4 MAP/BPS, 5 IAT, 6 ECT, 7 TPS, 8 APP, 9 O2/A-F, 10 RPS."
+  },
+  {
+   "id": "mobin-q001",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 1,
+   "question": "Ba hệ thống đánh lửa DI, DIS và COP được nhận diện lần lượt như thế nào?",
+   "options": [
+    "DI (có bộ chia điện) – DIS (không chia điện) – COP (mobin trên bugi)",
+    "COP – DI – DIS",
+    "DIS – COP – DI",
+    "DI – COP – DIS"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "DI = Distributor Ignition System; DIS = Distributorless Ignition System; COP = Coil on Plug."
+  },
+  {
+   "id": "mobin-q002",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 2,
+   "question": "DI là viết tắt của hệ thống đánh lửa nào?",
+   "options": [
+    "Distributor Ignition System",
+    "Direct Ignition System",
+    "Dual Ignition System",
+    "Distributorless Ignition System"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "DI = Distributor Ignition System – hệ thống đánh lửa có bộ chia điện."
+  },
+  {
+   "id": "mobin-q003",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 3,
+   "question": "DIS là viết tắt của hệ thống đánh lửa nào?",
+   "options": [
+    "Distributorless Ignition System",
+    "Distributor Ignition System",
+    "Direct Injection System",
+    "Dual Ignition System"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "DIS = Distributorless Ignition System – hệ thống đánh lửa không có bộ chia điện."
+  },
+  {
+   "id": "mobin-q004",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 4,
+   "question": "COP là viết tắt của hệ thống đánh lửa nào?",
+   "options": [
+    "Coil on Plug",
+    "Coil on Point",
+    "Control of Plug",
+    "Coil Over Primary"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "COP = Coil on Plug – mỗi bugi có một mobin gắn trực tiếp, không dùng dây cao áp."
+  },
+  {
+   "id": "mobin-q005",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 5,
+   "question": "Hệ thống đánh lửa DI có đặc điểm nhận dạng nào?",
+   "options": [
+    "Một mobin đơn + bộ chia điện + dây cao áp tới các bugi",
+    "Hai mobin đôi, không có bộ chia điện",
+    "Mỗi bugi một mobin, không có dây cao áp",
+    "Chỉ có bugi sấy, không có mobin"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "DI dùng 1 mobin đơn, cao áp qua bộ chia điện (rotor + nắp chia điện) rồi tới từng bugi bằng dây cao áp."
+  },
+  {
+   "id": "mobin-q006",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 6,
+   "question": "Hệ thống đánh lửa DIS trên động cơ 4 xy-lanh thường dùng bố trí nào?",
+   "options": [
+    "2 mobin đôi, mỗi mobin có 2 đầu ra cao áp, đánh lửa theo cặp",
+    "1 mobin đơn + bộ chia điện",
+    "4 mobin riêng trên 4 bugi",
+    "1 mobin đôi cho cả 4 bugi"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "DIS 4 xy-lanh: 2 mobin đôi → 4 bugi, đánh lửa theo cặp 1–4 và 2–3 (một bugi hữu ích, một bugi lãng phí)."
+  },
+  {
+   "id": "mobin-q007",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 7,
+   "question": "Đánh lửa theo cặp của DIS còn gọi là gì?",
+   "options": [
+    "Đánh lửa lãng phí (waste spark)",
+    "Đánh lửa trực tiếp",
+    "Đánh lửa bằng bộ chia điện",
+    "Đánh lửa bằng bugi sấy"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Mỗi lần đánh 2 bugi cùng lúc: một bugi ở kỳ nén (hữu ích), một bugi ở kỳ xả (lãng phí)."
+  },
+  {
+   "id": "mobin-q008",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 8,
+   "question": "Hệ thống COP có đặc điểm nào?",
+   "options": [
+    "Mỗi bugi có một mobin riêng gắn trực tiếp, không có dây cao áp",
+    "Một mobin đơn chia lửa qua rotor",
+    "Hai mobin đôi đánh lửa lãng phí",
+    "Dùng vòi phun thay cho bugi"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "COP: 1 mobin/bugi, mobin cắm trực tiếp trên bugi; chính xác, ít nhiễu, gọn."
+  },
+  {
+   "id": "mobin-q009",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 9,
+   "question": "Hệ thống đánh lửa nào có bộ chia điện?",
+   "options": [
+    "DI – Distributor Ignition System",
+    "DIS – Distributorless Ignition System",
+    "COP – Coil on Plug",
+    "Cả ba hệ thống đều có"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Chỉ DI có bộ chia điện. DIS và COP đều không có bộ chia điện."
+  },
+  {
+   "id": "mobin-q010",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 10,
+   "question": "Hệ thống đánh lửa nào thường dùng 4 mobin riêng cho 4 xy-lanh?",
+   "options": [
+    "COP",
+    "DI",
+    "DIS",
+    "Hệ thống dùng bugi sấy"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "COP dùng 1 mobin cho mỗi bugi; động cơ 4 xy-lanh có 4 mobin."
+  },
+  {
+   "id": "mobin-q011",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 11,
+   "question": "Hệ thống đánh lửa nào cho độ chính xác và ít nhiễu nhất?",
+   "options": [
+    "COP – mỗi bugi một mobin, không dây cao áp",
+    "DI – một mobin qua bộ chia điện",
+    "DIS – hai mobin đôi",
+    "Cả ba như nhau"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "COP điều khiển riêng từng xy-lanh, không có dây cao áp dài nên ít nhiễu và chính xác hơn."
+  },
+  {
+   "id": "mobin-q012",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 12,
+   "question": "Trong hệ thống DI, mobin đơn có bao nhiêu đầu ra cao áp?",
+   "options": [
+    "1 đầu ra, sau đó bộ chia điện phân phối tới các bugi",
+    "2 đầu ra tới 2 bugi",
+    "4 đầu ra tới 4 bugi",
+    "Không có đầu ra cao áp"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Mobin đơn chỉ có 1 đầu ra cao áp; bộ chia điện chia lửa theo thứ tự nổ."
+  },
+  {
+   "id": "mobin-q013",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 13,
+   "question": "Hệ thống DIS không có bộ phận nào dưới đây?",
+   "options": [
+    "Bộ chia điện (distributor)",
+    "Mobin",
+    "Bugi",
+    "ECM"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "DIS = Distributorless, tức không dùng bộ chia điện; cao áp đi trực tiếp từ mobin đôi tới bugi."
+  },
+  {
+   "id": "mobin-q014",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 14,
+   "question": "Động cơ 4 xy-lanh dùng COP có bao nhiêu mobin?",
+   "options": [
+    "4 mobin",
+    "1 mobin",
+    "2 mobin",
+    "8 mobin"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_cop.jpg"
+   ],
+   "note": "COP: 1 mobin cho mỗi bugi → 4 xy-lanh cần 4 mobin."
+  },
+  {
+   "id": "mobin-q015",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Ba hệ thống đánh lửa",
+   "number": 15,
+   "question": "Cụm bô bin trên bugi trong hình thuộc hệ thống đánh lửa nào?",
+   "options": [
+    "COP – Coil on Plug",
+    "DI – có bộ chia điện",
+    "DIS – hai mobin đôi",
+    "Hệ thống bugi sấy Diesel"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_cop.jpg"
+   ],
+   "note": "Mobin cắm trực tiếp trên bugi, mỗi bugi một mobin, không dây cao áp → COP."
+  },
+  {
+   "id": "mobin-q016",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Bộ chia điện & mobin DLI",
+   "number": 16,
+   "question": "Mobin của hệ thống có bộ chia điện (DLI) loại 2 dây có cách đấu dây nào?",
+   "options": [
+    "+12V và IGC từ hộp điều khiển",
+    "+5V, mass và tín hiệu xung 5V",
+    "+12V, mass và IGT",
+    "2 dây NE+ và NE−"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Loại 2 dây: dây +12V nuôi sơ cấp và dây IGC từ hộp ra để điều khiển đánh lửa."
+  },
+  {
+   "id": "mobin-q017",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Bộ chia điện & mobin DLI",
+   "number": 17,
+   "question": "Mobin của hệ thống có bộ chia điện loại 3 dây (có IC) có cách đấu dây nào?",
+   "options": [
+    "+12V, mass và IGT",
+    "+12V và IGC",
+    "+5V, mass và VTA",
+    "2 dây NE+ và NE−"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Loại 3 dây có IC đánh lửa tích hợp: +12V, mass, IGT (tín hiệu điều khiển từ ECM)."
+  },
+  {
+   "id": "mobin-q018",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Bộ chia điện & mobin DLI",
+   "number": 18,
+   "question": "Tín hiệu IGT từ ECM tới mobin có chức năng gì?",
+   "options": [
+    "Điều khiển thời điểm đánh lửa (xung đánh lửa)",
+    "Báo áp suất đường nạp",
+    "Cấp nguồn 12V cho mobin",
+    "Đo nhiệt độ mobin"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "IGT là xung điều khiển từ ECM; sườn xung quyết định thời điểm ngắt dòng sơ cấp để tạo cao áp."
+  },
+  {
+   "id": "mobin-q019",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Bộ chia điện & mobin DLI",
+   "number": 19,
+   "question": "Tín hiệu IGC trong hệ thống đánh lửa có vai trò gì?",
+   "options": [
+    "Là tín hiệu điều khiển đánh lửa từ hộp ra mobin",
+    "Là tín hiệu báo tốc độ bánh xe",
+    "Là nguồn 5V nuôi cảm biến trục khuỷu",
+    "Là tín hiệu mở kim phun"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "IGC được đưa từ hộp tới mobin để điều khiển đánh lửa ở loại mobin 2 dây; loại có IC dùng IGT."
+  },
+  {
+   "id": "mobin-q020",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Bộ chia điện & mobin DLI",
+   "number": 20,
+   "question": "Bộ chia điện gồm những bộ phận chính nào?",
+   "options": [
+    "Nắp chia điện, rotor, dây cao áp",
+    "Mobin, bugi, kim phun",
+    "Bơm xăng, lọc xăng, ống rail",
+    "Cảm biến CKP, CMP, MAP"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Bộ chia điện có nắp chia điện, rotor và các dây cao áp tới bugi theo thứ tự nổ."
+  },
+  {
+   "id": "mobin-q021",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Bộ chia điện & mobin DLI",
+   "number": 21,
+   "question": "Bộ chia điện làm nhiệm vụ gì?",
+   "options": [
+    "Phân phối cao áp từ mobin tới từng bugi theo thứ tự nổ",
+    "Tạo áp suất nhiên liệu",
+    "Đo lưu lượng khí nạp",
+    "Điều khiển mô-tơ bướm ga"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Rotor quay bên trong nắp chia điện, nối đầu cao áp từ mobin lần lượt tới từng bugi."
+  },
+  {
+   "id": "mobin-q022",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Bộ chia điện & mobin DLI",
+   "number": 22,
+   "question": "Mobin đơn, mobin đôi và bộ chia điện khác nhau ở đặc điểm nào?",
+   "options": [
+    "Mobin đơn: 1 đầu ra cao áp · mobin đôi: 2 đầu ra · bộ chia điện: 1 mobin chung + rotor phân phối",
+    "Mobin đơn: 2 đầu ra · mobin đôi: 1 đầu ra · bộ chia điện: 4 mobin",
+    "Cả ba đều có 4 đầu ra cao áp",
+    "Cả ba đều gắn trực tiếp trên bugi"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Mobin đơn: 1 đầu ra cao áp. Mobin đôi: 2 đầu ra. Bộ chia điện: hình tròn, nhiều dây cao áp tỏa ra."
+  },
+  {
+   "id": "mobin-q023",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Bộ chia điện & mobin DLI",
+   "number": 23,
+   "question": "Vì sao mobin loại 3 dây có IC tích hợp lại được dùng phổ biến?",
+   "options": [
+    "ECM chỉ cần gửi xung IGT mức thấp, IC trong mobin tự đóng ngắt dòng sơ cấp",
+    "Vì IC làm mobin không cần nguồn 12V",
+    "Vì IC thay thế bugi",
+    "Vì IC đo được áp suất rail"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "IC đánh lửa tích hợp giúp giảm dòng điều khiển trên ECM, giảm nhiễu và đơn giản dây dẫn."
+  },
+  {
+   "id": "mobin-q024",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Bộ chia điện & mobin DLI",
+   "number": 24,
+   "question": "Đường đi của cao áp trong hệ thống DI là?",
+   "options": [
+    "Mobin → dây cao áp → nắp chia điện → rotor → dây cao áp → bugi",
+    "ECM → kim phun → bugi",
+    "Mobin → bugi trực tiếp, không qua dây",
+    "Ắc quy → bugi → mobin"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "DI: mobin đơn tạo cao áp, qua dây cao áp vào nắp chia điện, rotor phân phối tới từng dây bugi."
+  },
+  {
+   "id": "mobin-q025",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Bộ chia điện & mobin DLI",
+   "number": 25,
+   "question": "Mobin đơn dùng với bộ chia điện thường được nhận diện nhờ đâu?",
+   "options": [
+    "Chỉ có 1 đầu ra cao áp và đi kèm bộ chia điện",
+    "Có 4 đầu ra cao áp",
+    "Cắm trực tiếp trên bugi",
+    "Có 6 dây tín hiệu"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Mobin đơn: 1 đầu ra cao áp; mobin đôi: 2 đầu ra; COP: gắn trực tiếp trên bugi."
+  },
+  {
+   "id": "mobin-q026",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Bộ chia điện & mobin DLI",
+   "number": 26,
+   "question": "Nắp chia điện bị nứt hoặc ẩm thường gây hiện tượng gì?",
+   "options": [
+    "Mất lửa, máy rung giật, khó nổ khi trời ẩm",
+    "Tăng áp suất nhiên liệu",
+    "Kim phun phun nhiều hơn",
+    "Cảm biến MAP báo sai"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Nứt/ẩm nắp chia điện làm cao áp phóng ra ngoài hoặc sai máy → mất lửa, rung giật."
+  },
+  {
+   "id": "mobin-q027",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Bộ chia điện & mobin DLI",
+   "number": 27,
+   "question": "Loại mobin 2 dây (+12V và IGC) khác loại 3 dây (+12V, mass, IGT) ở điểm chính nào?",
+   "options": [
+    "Loại 3 dây có IC đánh lửa tích hợp trong mobin",
+    "Loại 2 dây có IC tích hợp",
+    "Loại 3 dây không cần ECM điều khiển",
+    "Loại 2 dây dùng 5V thay cho 12V"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "3 dây = có IC: +12V, mass, IGT. 2 dây = +12V, IGC từ hộp."
+  },
+  {
+   "id": "mobin-q028",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Mobin đơn – đôi – COP",
+   "number": 28,
+   "question": "Mobin đơn (single ignition coil) có cấu tạo nào?",
+   "options": [
+    "1 cuộn sơ cấp – 1 cuộn thứ cấp và 1 đầu ra cao áp",
+    "1 cuộn sơ cấp – 2 cuộn thứ cấp và 2 đầu ra",
+    "4 cuộn sơ cấp – 4 đầu ra",
+    "Không có cuộn thứ cấp"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Mobin đơn: một sơ cấp, một thứ cấp, một đầu ra cao áp; dùng với bộ chia điện."
+  },
+  {
+   "id": "mobin-q029",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Mobin đơn – đôi – COP",
+   "number": 29,
+   "question": "Mobin đôi (dual coil) có đặc điểm nào?",
+   "options": [
+    "1 cuộn sơ cấp – 2 đầu ra thứ cấp, mỗi lần đánh 2 bugi",
+    "1 cuộn sơ cấp – 1 đầu ra cao áp",
+    "4 cuộn sơ cấp – 4 đầu ra",
+    "Chỉ dùng với bộ chia điện"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Mobin đôi: một sơ cấp, hai đầu ra thứ cấp; đánh lửa đồng thời 2 bugi (waste spark)."
+  },
+  {
+   "id": "mobin-q030",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Mobin đơn – đôi – COP",
+   "number": 30,
+   "question": "Trên động cơ 4 xy-lanh, hai mobin đôi của DIS đánh lửa theo cặp nào?",
+   "options": [
+    "Cặp 1–4 và 2–3",
+    "Cặp 1–2 và 3–4",
+    "Cặp 1–3 và 2–4",
+    "Cả 4 bugi cùng lúc"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "DIS 4 xy-lanh: mobin 1 đánh 1–4, mobin 2 đánh 2–3; mỗi cặp có một bugi đánh lửa lãng phí."
+  },
+  {
+   "id": "mobin-q031",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Mobin đơn – đôi – COP",
+   "number": 31,
+   "question": "COP (Coil on Plug) có đặc điểm cấu tạo nào?",
+   "options": [
+    "Mỗi bugi có một mobin riêng, gắn trực tiếp trên bugi",
+    "Một mobin đơn cấp cao áp cho tất cả bugi",
+    "Hai mobin đôi cho 4 bugi",
+    "Một mobin đôi cho 4 bugi"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_cop.jpg"
+   ],
+   "note": "COP: 1 mobin/bugi, không dây cao áp; ECM điều khiển riêng từng mobin."
+  },
+  {
+   "id": "mobin-q032",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Mobin đơn – đôi – COP",
+   "number": 32,
+   "question": "Ưu điểm chính của COP so với DI là gì?",
+   "options": [
+    "Điều khiển đánh lửa riêng từng xy-lanh, không dây cao áp, ít nhiễu và tổn thất",
+    "Rẻ hơn và ít mobin hơn",
+    "Không cần tín hiệu CKP",
+    "Không cần bugi"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "COP loại bỏ dây cao áp dài và bộ chia điện, điều khiển từng xy-lanh chính xác, giảm nhiễu."
+  },
+  {
+   "id": "mobin-q033",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Mobin đơn – đôi – COP",
+   "number": 33,
+   "question": "Cách nhận diện nhanh mobin đơn, mobin đôi và COP là gì?",
+   "options": [
+    "Đếm số đầu ra cao áp và xem vị trí lắp (bộ chia điện hay trên bugi)",
+    "Đếm số chân giắc tín hiệu",
+    "Xem màu vỏ mobin",
+    "Đo kích thước bugi"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "1 đầu ra = mobin đơn (dùng bộ chia điện); 2 đầu ra = mobin đôi (DIS); gắn trên bugi = COP."
+  },
+  {
+   "id": "mobin-q034",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Mobin đơn – đôi – COP",
+   "number": 34,
+   "question": "Động cơ 4 xy-lanh dùng DIS cần bao nhiêu mobin đôi?",
+   "options": [
+    "2 mobin đôi",
+    "1 mobin đôi",
+    "4 mobin đôi",
+    "8 mobin đôi"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Mỗi mobin đôi phục vụ 2 bugi → 4 xy-lanh cần 2 mobin đôi."
+  },
+  {
+   "id": "mobin-q035",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Mobin đơn – đôi – COP",
+   "number": 35,
+   "question": "Trong hệ thống COP, ECM gửi tín hiệu gì tới từng mobin?",
+   "options": [
+    "IGT1–IGT4, mỗi mobin một tín hiệu điều khiển riêng",
+    "Một tín hiệu IGC chung cho cả 4 mobin",
+    "Tín hiệu VTA",
+    "Tín hiệu THA"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_cop.jpg"
+   ],
+   "note": "COP điều khiển riêng từng mobin bằng IGT1…IGT4; nhờ đó đánh lửa chính xác từng xy-lanh."
+  },
+  {
+   "id": "mobin-q036",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Mobin đơn – đôi – COP",
+   "number": 36,
+   "question": "Mobin đôi đánh lửa 2 bugi cùng lúc. Tại sao một bugi được gọi là đánh lửa lãng phí?",
+   "options": [
+    "Bugi đó đang ở kỳ xả, tia lửa không tạo công có ích",
+    "Bugi đó bị hỏng",
+    "Bugi đó không có cao áp",
+    "Bugi đó dùng để sấy"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Trong cặp, một xy-lanh đang kỳ nén (hữu ích), xy-lanh còn lại đang kỳ xả nên tia lửa không sinh công."
+  },
+  {
+   "id": "mobin-q037",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Mobin đơn – đôi – COP",
+   "number": 37,
+   "question": "Mobin nào dùng với bộ chia điện?",
+   "options": [
+    "Mobin đơn",
+    "Mobin đôi",
+    "COP",
+    "Cả mobin đôi và COP"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Mobin đơn có 1 đầu ra cao áp, đưa vào bộ chia điện để phân phối tới các bugi."
+  },
+  {
+   "id": "mobin-q038",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Mobin đơn – đôi – COP",
+   "number": 38,
+   "question": "Một mobin có 2 đầu ra cao áp được gọi là gì?",
+   "options": [
+    "Mobin đôi (dual coil)",
+    "Mobin đơn",
+    "COP",
+    "Bộ chia điện"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Mobin đôi có 1 sơ cấp và 2 đầu ra thứ cấp, dùng trong DIS."
+  },
+  {
+   "id": "mobin-q039",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Điện trở, dây & kiểm tra",
+   "number": 39,
+   "question": "Điện trở cuộn sơ cấp của mobin đánh lửa thường trong khoảng nào?",
+   "options": [
+    "0,5–3 Ω",
+    "5–30 Ω",
+    "5–30 kΩ",
+    "1–4 Ω"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Sơ cấp mobin: 0,5–3 Ω. Thứ cấp: 5–30 kΩ (5.000–30.000 Ω)."
+  },
+  {
+   "id": "mobin-q040",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Điện trở, dây & kiểm tra",
+   "number": 40,
+   "question": "Điện trở cuộn thứ cấp của mobin đánh lửa thường trong khoảng nào?",
+   "options": [
+    "5–30 kΩ (5.000–30.000 Ω)",
+    "0,5–3 Ω",
+    "6–13 Ω",
+    "1–4 Ω"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Thứ cấp mobin: 5–30 kΩ. Sơ cấp: 0,5–3 Ω. Sấy O2 hẹp: 6–13 Ω; sấy O2 rộng: 1–4 Ω."
+  },
+  {
+   "id": "mobin-q041",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Điện trở, dây & kiểm tra",
+   "number": 41,
+   "question": "Muốn đo điện trở cuộn sơ cấp mobin, ta đặt đồng hồ vào đâu?",
+   "options": [
+    "Giữa chân +12V và chân điều khiển (IGT/IGC) của sơ cấp",
+    "Giữa đầu cao áp và bugi",
+    "Giữa hai đầu dây sấy O2",
+    "Giữa chân VTA và mass"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Sơ cấp nằm giữa +12V và chân điều khiển; đo ở đây phải được 0,5–3 Ω."
+  },
+  {
+   "id": "mobin-q042",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Điện trở, dây & kiểm tra",
+   "number": 42,
+   "question": "Đo điện trở cuộn thứ cấp mobin thường đo giữa hai điểm nào?",
+   "options": [
+    "Đầu ra cao áp và một chân sơ cấp (tùy loại)",
+    "Hai chân của giắc tín hiệu cảm biến",
+    "Hai đầu dây sấy bugi",
+    "Chân VTA và mass"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Tùy loại mobin, đo thứ cấp giữa đầu cao áp với chân +12V hoặc chân điều khiển; giá trị 5–30 kΩ."
+  },
+  {
+   "id": "mobin-q043",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Điện trở, dây & kiểm tra",
+   "number": 43,
+   "question": "Mobin đánh lửa bị hỏng thường gây ra hiện tượng gì?",
+   "options": [
+    "Mất lửa một hoặc nhiều xy-lanh, máy rung giật, báo lỗi misfire",
+    "Tăng áp suất lốp",
+    "Đèn pha không sáng",
+    "Khóa cửa không hoạt động"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Mobin yếu/hỏng → không có tia lửa hoặc lửa yếu → xy-lanh mất lửa, động cơ rung, báo lỗi đánh lửa."
+  },
+  {
+   "id": "mobin-q044",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Điện trở, dây & kiểm tra",
+   "number": 44,
+   "question": "Ban đêm thấy tia lửa phóng ra ngoài dây cao áp hoặc nắp chia điện. Kết luận nào hợp lý?",
+   "options": [
+    "Cách điện bị rò, cần thay dây/nắp chia điện",
+    "Cao áp quá thấp",
+    "Bugi đánh lửa quá sớm",
+    "Kim phun bị bẩn"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Tia lửa phóng ra ngoài là rò cao áp do nứt/ẩm cách điện, gây mất lửa và nhiễu."
+  },
+  {
+   "id": "mobin-q045",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Điện trở, dây & kiểm tra",
+   "number": 45,
+   "question": "Khi kiểm tra mobin, ngoài điện trở còn cần kiểm tra gì?",
+   "options": [
+    "Cách điện, dây cao áp, giắc nối và tình trạng bugi",
+    "Chỉ cần đo điện trở là đủ",
+    "Chỉ cần nghe tiếng nổ",
+    "Chỉ cần đo áp suất lốp"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Điện trở đúng chưa chắc mobin tốt khi nóng; cần kiểm tra cách điện, giắc, dây cao áp và bugi."
+  },
+  {
+   "id": "mobin-q046",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Điện trở, dây & kiểm tra",
+   "number": 46,
+   "question": "Cặp giá trị nào ghép đúng điện trở sơ cấp và thứ cấp của mobin?",
+   "options": [
+    "Sơ cấp 0,5–3 Ω; thứ cấp 5–30 kΩ",
+    "Sơ cấp 5–30 kΩ; thứ cấp 0,5–3 Ω",
+    "Sơ cấp 6–13 Ω; thứ cấp 1–4 Ω",
+    "Sơ cấp 1–4 Ω; thứ cấp 6–13 Ω"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Sơ cấp ít vòng, dây to → trở nhỏ 0,5–3 Ω. Thứ cấp nhiều vòng, dây nhỏ → trở lớn 5–30 kΩ."
+  },
+  {
+   "id": "mobin-q047",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Điện trở, dây & kiểm tra",
+   "number": 47,
+   "question": "Mobin đôi có 2 đầu ra cao áp. Khi đo thứ cấp, phép đo thường thực hiện thế nào?",
+   "options": [
+    "Đo giữa hai đầu ra cao áp (hoặc từng đầu ra với chân sơ cấp tùy loại)",
+    "Đo giữa hai chân cảm biến CKP",
+    "Đo giữa hai dây sấy O2",
+    "Đo giữa VTA và mass"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Mobin đôi có 2 đầu ra thứ cấp; tùy cấu tạo có thể đo giữa hai đầu ra hoặc từng đầu ra với chân sơ cấp."
+  },
+  {
+   "id": "mobin-q048",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Điện trở, dây & kiểm tra",
+   "number": 48,
+   "question": "Bugi hoặc bộ tiếp điểm mobin bị ẩm sau khi rửa xe thường gây hiện tượng gì?",
+   "options": [
+    "Khó nổ, rung giật, mất lửa tạm thời",
+    "Tăng áp suất rail",
+    "Tăng lưu lượng MAF",
+    "Bướm ga mở hết"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_cop.jpg"
+   ],
+   "note": "Nước làm rò cao áp qua bề mặt cách điện ẩm → mất lửa tạm thời cho đến khi khô."
+  },
+  {
+   "id": "mobin-q049",
+   "set": "mobin",
+   "setName": "★ Mobin & hệ thống đánh lửa: DI – DIS – COP",
+   "section": "Điện trở, dây & kiểm tra",
+   "number": 49,
+   "question": "Điện trở cuộn sơ cấp mobin quá cao (hở mạch) dẫn tới hậu quả nào?",
+   "options": [
+    "Dòng sơ cấp không chạy được, mobin không tạo cao áp",
+    "Cao áp tăng gấp đôi",
+    "Bugi đánh lửa sớm hơn",
+    "Kim phun phun nhiều hơn"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Sơ cấp hở → không có dòng từ hóa → không có cao áp ở thứ cấp → mất lửa."
+  },
+  {
+   "id": "cd-q046",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 46,
+   "question": "Cặp mô tả nào đúng cho CKP loại điện từ và CKP loại Hall?",
+   "options": [
+    "Điện từ: 2 dây NE+/NE−, sóng sin; Hall: +5V, mass, xung vuông 0–5V",
+    "Điện từ: 3 dây +5V, mass, xung; Hall: 2 dây NE+/NE−",
+    "Cả hai đều 2 dây NE+/NE−",
+    "Cả hai đều 3 dây và tín hiệu 0–5V"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Điện từ tự sinh sóng sin trên 2 dây NE+/NE−; Hall cần nguồn 5V và cho xung vuông."
+  },
+  {
+   "id": "cd-q047",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 47,
+   "question": "CKP loại quang có tín hiệu chập chờn khi động cơ nóng hoặc bẩn. Nguyên nhân thường gặp là gì?",
+   "options": [
+    "Đĩa có rãnh hoặc mắt cảm biến bị dầu/bụi làm che, tín hiệu quang sai",
+    "Cuộn dây sơ cấp mobin yếu",
+    "Áp suất rail quá cao",
+    "Kim phun bị đứt cuộn"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Loại quang dùng LED + photo transistor; dầu/bụi che đĩa làm xung NE sai, động cơ rung hoặc khó nổ."
+  },
+  {
+   "id": "cd-q048",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 48,
+   "question": "Để phun và đánh lửa tuần tự đúng xy-lanh, ECM cần cặp tín hiệu nào?",
+   "options": [
+    "CKP và CMP",
+    "IAT và ECT",
+    "MAP và MAF",
+    "TPS và APP"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "CKP cho góc trục khuỷu, CMP cho pha trục cam; thiếu CMP thì không xác định đúng kỳ nén để phun tuần tự."
+  },
+  {
+   "id": "cd-q049",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 49,
+   "question": "So sánh MAF hot film và hot wire, cặp giá trị nào đúng?",
+   "options": [
+    "Hot film: ON 0 g/s, idle ≥ 1,5 g/s; hot wire: ON < 0,5 g/s, idle < 5 g/s",
+    "Hot film: ON < 0,5 g/s, idle < 5 g/s; hot wire: ON 0 g/s, idle ≥ 1,5 g/s",
+    "Cả hai: ON 0 g/s, idle < 5 g/s",
+    "Cả hai: ON ≥ 1,5 g/s, idle 0 g/s"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Hot film (màng sấy, giắc thẳng, điện áp): ON 0 g/s, idle ≥ 1,5 g/s. Hot wire (dây sấy, giắc ngang, xung 5V): ON < 0,5 g/s, idle < 5 g/s."
+  },
+  {
+   "id": "cd-q050",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 50,
+   "question": "Xe dùng MAF hot film, động cơ nổ idle nhưng máy chẩn đoán đọc 0 g/s. Kết luận hợp lý nhất là gì?",
+   "options": [
+    "Tín hiệu MAF không về ECM: đứt dây, hỏng cảm biến hoặc giắc lỏng",
+    "Động cơ đang chạy rất tiết kiệm nhiên liệu",
+    "Cảm biến MAF báo đúng vì chưa đạp ga",
+    "ECM đang ở chế độ ngắt bơm xăng"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Hot film phải ≥ 1,5 g/s khi nổ idle. Đọc 0 g/s là mất tín hiệu, không phải giá trị bình thường."
+  },
+  {
+   "id": "cd-q051",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 51,
+   "question": "Cặp giá trị MAP/BPS nào đúng theo bài học?",
+   "options": [
+    "Xăng: ON ≈ 100 kPa, idle ≈ 50 kPa; Diesel: ON ≈ 100 kPa, idle tương tự, lên ga ≈ 300 kPa",
+    "Xăng: ON ≈ 50 kPa, idle ≈ 100 kPa; Diesel: idle ≈ 50 kPa, lên ga ≈ 100 kPa",
+    "Xăng: ON ≈ 300 kPa, idle ≈ 200 kPa; Diesel: ON ≈ 300 kPa",
+    "Cả hai: ON 0 kPa, idle 300 kPa"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Xe xăng không turbo: ON 100 kPa, idle 50 kPa; turbo xăng có thể tới ~200 kPa. Diesel BPS: ON 100 kPa, idle tương tự, lên ga ~300 kPa."
+  },
+  {
+   "id": "cd-q052",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 52,
+   "question": "Ba mã lỗi Low, High, Performance của MAP/BPS được hiểu đúng là gì?",
+   "options": [
+    "Low: tín hiệu thấp hơn dải; High: cao hơn dải; Performance: trong dải nhưng không hợp lý",
+    "Low: áp cao; High: áp thấp; Performance: cảm biến mới",
+    "Low: hở mạch; High: ngắn mạch; Performance: báo nhiệt độ",
+    "Cả ba đều là lỗi cơ khí bơm xăng"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Low/High là vượt ngưỡng dưới/trên; Performance là tín hiệu vẫn trong dải nhưng sai logic so với MAF, TPS hoặc áp thực tế."
+  },
+  {
+   "id": "cd-q053",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 53,
+   "question": "Cảm biến IAT loại dương và loại âm khác nhau thế nào?",
+   "options": [
+    "Loại dương: nhiệt tăng trở tăng; loại âm: nhiệt tăng trở giảm; tín hiệu THA",
+    "Loại dương: nhiệt tăng trở giảm; loại âm: nhiệt tăng trở tăng; tín hiệu VTA",
+    "Cả hai đều nhiệt tăng trở tăng; tín hiệu O2S",
+    "Cả hai đều không thay đổi điện trở"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "IAT là nhiệt điện trở, 2 dây, tín hiệu THA. PTC: nhiệt↑ trở↑; NTC: nhiệt↑ trở↓."
+  },
+  {
+   "id": "cd-q054",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 54,
+   "question": "Máy chẩn đoán báo ECT −40°C và 140°C/0V. Hai hiện tượng này thường ứng với lỗi gì?",
+   "options": [
+    "−40°C là hở mạch; 140°C/0V là ngắn mạch",
+    "−40°C là ngắn mạch; 140°C/0V là hở mạch",
+    "Cả hai đều là hở mạch",
+    "Cả hai đều là cảm biến báo đúng"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "ECT là NTC: hở mạch → máy chẩn đoán hiểu nhiệt độ thấp nhất (−40°C); ngắn mạch/0V → hiểu nhiệt độ cao nhất (140°C)."
+  },
+  {
+   "id": "cd-q055",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 55,
+   "question": "TPS dùng tín hiệu VTA. Hai kiểu bố trí tín hiệu bướm ga thường gặp là gì?",
+   "options": [
+    "Hai tín hiệu cùng tăng; hoặc một tăng một giảm",
+    "Hai tín hiệu cùng giảm; hoặc cùng bằng 0V",
+    "Một tín hiệu xung 5V; một tín hiệu 12V",
+    "Hai tín hiệu luôn bằng nhau"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Kiểu cùng tăng: ECM kiểm tra tỷ lệ. Kiểu một tăng một giảm: tổng gần như không đổi. Cả hai dùng để kiểm tra chéo."
+  },
+  {
+   "id": "cd-q056",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 56,
+   "question": "Cảm biến APP thường có 6 dây. Cách chia chức năng nào đúng?",
+   "options": [
+    "2 dương, 2 mass, 2 tín hiệu VPA và VPA2; hai tín hiệu thường cùng tăng",
+    "2 dương, 1 mass, 3 tín hiệu VTA",
+    "1 dương, 1 mass, 4 tín hiệu xung",
+    "3 dương, 3 mass, không có tín hiệu"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "APP 6 dây: VCC1/VCC2, GND1/GND2, VPA1/VPA2. Hai kênh dự phòng, ECM kiểm tra chéo."
+  },
+  {
+   "id": "cd-q057",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 57,
+   "question": "Cặp thông số nào đúng cho cảm biến O2 dãy hẹp và A/F dãy rộng?",
+   "options": [
+    "Dãy hẹp: 0,1–0,9V, sấy 6–13 Ω, hoạt động ≥ 350°C; dãy rộng: 5 dây, sấy 1–4 Ω, tín hiệu O2S",
+    "Dãy hẹp: 5 dây, sấy 1–4 Ω; dãy rộng: 0,1–0,9V, sấy 6–13 Ω",
+    "Cả hai đều 0,1–0,9V và sấy 6–13 Ω",
+    "Cả hai đều dùng 2 dây NE+/NE−"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Dãy hẹp 0,1–0,9V, sấy 6–13 Ω, cần ≥ 350°C. Dãy rộng (A/F) 5 dây, bơm dòng, sấy 1–4 Ω, gửi O2S."
+  },
+  {
+   "id": "cd-q058",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 58,
+   "question": "Cảm biến áp suất ống rail có 3 dây. Cách đấu và dải tín hiệu nào đúng?",
+   "options": [
+    "+5V, mass và tín hiệu 0–5V",
+    "+12V, mass và xung 5V",
+    "2 dây NE+/NE−",
+    "6 dây: 2 dương, 2 mass, VPA, VPA2"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "RPS: nguồn 5V, mass, tín hiệu điện áp 0–5V tương ứng áp suất rail."
+  },
+  {
+   "id": "cd-q059",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 59,
+   "question": "Trên động cơ Diesel, MAP của xe xăng được thay bằng cảm biến nào?",
+   "options": [
+    "BPS – Boost Pressure Sensor",
+    "RPS – Rail Pressure Sensor",
+    "APP – Accelerator Pedal Position",
+    "CMP – Camshaft Position"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Bản chất cùng đo áp suất đường nạp: xe xăng gọi MAP, xe Diesel gọi BPS."
+  },
+  {
+   "id": "cd-q060",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Cảm biến: dây – tín hiệu – giá trị",
+   "number": 60,
+   "question": "Cảm biến nào dùng tín hiệu xung tần số 5V để báo lưu lượng khí nạp?",
+   "options": [
+    "MAF hot wire",
+    "MAF hot film",
+    "MAP",
+    "IAT"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Hot wire cho xung 5V, tần số tăng theo lưu lượng khí. Hot film cho điện áp tương tự."
+  },
+  {
+   "id": "cd-q061",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 61,
+   "question": "Bơm tiếp vận loại cơ khí thường được nhận biết nhờ đâu trên nắp lọc nhiên liệu?",
+   "options": [
+    "Có bơm tay (bơm mồi) trên nắp lọc",
+    "Không có bơm tay và có giắc điện",
+    "Có cảm biến áp suất rail",
+    "Có van EGR"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Nắp lọc có bơm tay → bơm tiếp vận cơ khí. Không có bơm tay → bơm tiếp vận điện."
+  },
+  {
+   "id": "cd-q062",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 62,
+   "question": "Bơm tiếp vận loại điện thường được nhận biết nhờ đâu?",
+   "options": [
+    "Không có bơm tay trên nắp lọc, có giắc điện và nghe bơm chạy khi ON chìa",
+    "Có bơm tay trên nắp lọc",
+    "Có bộ chia điện",
+    "Có mobin đôi"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Bơm điện thường đặt trong bình hoặc trên đường ống, chạy vài giây khi ON chìa; nắp lọc không có bơm tay."
+  },
+  {
+   "id": "cd-q063",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 63,
+   "question": "Bơm cao áp của hệ thống Diesel common rail tạo áp suất trong khoảng nào?",
+   "options": [
+    "Khoảng 200–2500 bar",
+    "Khoảng 3–5 bar",
+    "Khoảng 0,5–3 Ω",
+    "Khoảng 100–300 kPa"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Bơm cao áp common rail tạo áp 200–2500 bar tùy tải; áp suất được điều khiển bằng SCV/van xả."
+  },
+  {
+   "id": "cd-q064",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 64,
+   "question": "Van định lượng SCV có tác dụng chính nào?",
+   "options": [
+    "Đóng mở/định lượng dầu cấp vào lõi bơm cao áp để điều khiển áp suất rail",
+    "Đóng mở kim phun",
+    "Điều khiển bướm ga",
+    "Điều khiển van EGR"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "SCV (Suction Control Valve) định lượng dầu vào buồng bơm cao áp; ECM điều khiển độ mở để đạt áp mục tiêu."
+  },
+  {
+   "id": "cd-q065",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 65,
+   "question": "Kiểm tra nhanh van SCV bằng đồng hồ đo điện trở, giá trị thường phải thỏa điều kiện nào?",
+   "options": [
+    "Bé hơn 10 Ω",
+    "Lớn hơn 1 MΩ",
+    "Khoảng 6–13 Ω",
+    "Khoảng 5–30 kΩ"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "SCV là cuộn dây điều khiển; đo trở phải bé hơn 10 Ω. Hở mạch hoặc trở quá lớn là hỏng."
+  },
+  {
+   "id": "cd-q066",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 66,
+   "question": "Van SCV và hệ thống cấp dầu common rail cần những tín hiệu nào để điều khiển?",
+   "options": [
+    "CKP, APP và cảm biến áp suất rail",
+    "IAT, ECT và TPS",
+    "CMP, O2 và MAF",
+    "CKP, IAT và ECT"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "ECM dùng CKP (tốc độ), APP (tải yêu cầu) và RPS (áp thực tế) để điều khiển SCV."
+  },
+  {
+   "id": "cd-q067",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 67,
+   "question": "Van xả áp rail loại điện hoạt động khi nào?",
+   "options": [
+    "Khi áp suất thực tế cao hơn áp mục tiêu",
+    "Khi áp suất thực tế thấp hơn áp mục tiêu",
+    "Khi động cơ mới ON chìa",
+    "Khi nhiệt độ nước thấp"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_rprv.jpg"
+   ],
+   "note": "Van xả điện do ECM điều khiển: áp thực tế > áp mục tiêu thì mở để xả bớt dầu về đường hồi."
+  },
+  {
+   "id": "cd-q068",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 68,
+   "question": "Van xả áp rail loại cơ khí ở áp suất thấp có trạng thái nào?",
+   "options": [
+    "Lò xo thắng, van đóng đường hồi",
+    "Lò xo yếu, van luôn mở đường hồi",
+    "Van mở hoàn toàn",
+    "Van bị ECM ngắt điện"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_rprv.jpg"
+   ],
+   "note": "Loại cơ: áp thấp thì lò xo giữ van đóng; áp cao đủ thắng lò xo mới mở đường hồi."
+  },
+  {
+   "id": "cd-q069",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 69,
+   "question": "Van xả áp rail loại cơ khí mở đường hồi khi nào?",
+   "options": [
+    "Khi áp suất rail đủ lớn nén lò xo, van mở cho dầu về đường hồi",
+    "Khi áp suất rail bằng 0",
+    "Khi ECM cấp xung 5V",
+    "Khi nhiệt độ dầu giảm"
+   ],
+   "correct": 0,
+   "images": [
+    "images/hard/p_rprv.jpg"
+   ],
+   "note": "Áp cao nén lò xo, mở đường hồi để giới hạn áp suất tối đa, bảo vệ hệ thống."
+  },
+  {
+   "id": "cd-q070",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 70,
+   "question": "Cảm biến áp suất ống rail gửi tín hiệu về ECM như thế nào?",
+   "options": [
+    "Tín hiệu điện áp 0–5V thay đổi theo áp suất rail",
+    "Xung vuông 5V có tần số thay đổi",
+    "Tín hiệu 0,1–0,9V",
+    "Tín hiệu 2 dây NE+/NE−"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "RPS dùng nguồn 5V, mass và tín hiệu 0–5V; ECM so sánh với áp mục tiêu để điều khiển SCV/van xả."
+  },
+  {
+   "id": "cd-q071",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 71,
+   "question": "DPF (Diesel Particulate Filter) có chức năng chính nào?",
+   "options": [
+    "Giữ muội (soot) trong khí xả Diesel, cho khí đi qua",
+    "Tăng áp suất rail",
+    "Làm mát khí nạp",
+    "Đo lưu lượng khí nạp"
+   ],
+   "correct": 0,
+   "images": [
+    "images/diesel_img32.jpg"
+   ],
+   "note": "DPF là bầu lọc vách, giữ muội than và cho khí thải đi qua; muội được đốt định kỳ bằng tái sinh."
+  },
+  {
+   "id": "cd-q072",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 72,
+   "question": "Cảm biến chênh áp ΔP của DPF đo gì?",
+   "options": [
+    "Chênh lệch áp suất trước và sau bầu DPF",
+    "Nhiệt độ khí nạp",
+    "Áp suất ống rail",
+    "Vị trí bướm ga"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "ΔP tăng khi DPF bị bít; ECM dùng ΔP cùng nhiệt độ khí xả, MAF, CKP để tính tải muội và điều khiển tái sinh."
+  },
+  {
+   "id": "cd-q073",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 73,
+   "question": "Tái sinh DPF thụ động (passive regeneration) xảy ra khi nào?",
+   "options": [
+    "Nhiệt độ khí xả tự nhiên đủ cao để đốt muội",
+    "ECM phun thêm dầu ở kỳ muộn",
+    "ECM tắt bơm cao áp",
+    "Xe dừng động cơ"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Tái sinh thụ động dựa vào nhiệt khí xả bình thường (chạy tải lớn, đường dài); không cần phun thêm."
+  },
+  {
+   "id": "cd-q074",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 74,
+   "question": "Tái sinh DPF chủ động thường dùng cách nào và đạt nhiệt độ bao nhiêu?",
+   "options": [
+    "ECM phun bổ sung/phun muộn để nâng nhiệt khí xả khoảng 550–650°C",
+    "ECM phun nước vào bầu lọc",
+    "ECM giảm nhiệt độ khí xả xuống 200°C",
+    "ECM ngắt quạt làm mát"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Tái sinh chủ động: phun thêm dầu (post-injection) làm nhiệt khí xả tăng ~550–650°C để đốt muội."
+  },
+  {
+   "id": "cd-q075",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 75,
+   "question": "Thành phần nào trong DPF KHÔNG thể đốt cháy trong quá trình tái sinh?",
+   "options": [
+    "Tro (ash)",
+    "Muội (soot)",
+    "Hơi nước",
+    "CO₂"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Muội (soot) cháy thành CO₂; tro (ash) không cháy, tích tụ lâu ngày phải tháo vệ sinh hoặc thay bầu."
+  },
+  {
+   "id": "cd-q076",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 76,
+   "question": "DPF bị bít nặng thường gây ra hiện tượng gì?",
+   "options": [
+    "Tăng áp ngược, mất công suất, khói đen, có thể vào chế độ limp",
+    "Tăng công suất động cơ",
+    "Giảm nhiệt độ khí xả",
+    "Tự động tái sinh liên tục không cần điều kiện"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "DPF bít làm áp ngược tăng, động cơ mất công suất, khói đen; ECM có thể giới hạn công suất (limp)."
+  },
+  {
+   "id": "cd-q077",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 77,
+   "question": "Hệ thống turbo tăng áp điều khiển VGT dựa trên bộ tín hiệu nào?",
+   "options": [
+    "CKP, APP và BPS",
+    "IAT, ECT và TPS",
+    "O2, MAF và CMP",
+    "RPS, SCV và EGR"
+   ],
+   "correct": 0,
+   "images": [
+    "images/diesel_img29.jpg"
+   ],
+   "note": "ECM dùng CKP (tốc độ), APP (tải yêu cầu) và BPS (áp tăng áp thực tế) để điều khiển cánh VGT."
+  },
+  {
+   "id": "cd-q078",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 78,
+   "question": "Vì sao có thể nói MAP trên xe xăng tương đương BPS trên xe Diesel?",
+   "options": [
+    "Cả hai đều đo áp suất đường nạp; tên gọi khác nhau theo hệ thống",
+    "Cả hai đều đo áp suất ống rail",
+    "Cả hai đều đo nhiệt độ khí nạp",
+    "Cả hai đều đo vị trí bàn đạp"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "MAP (Manifold Absolute Pressure) và BPS (Boost Pressure Sensor) cùng đo áp đường nạp, khác tên gọi/ứng dụng."
+  },
+  {
+   "id": "cd-q079",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 79,
+   "question": "Tro tích tụ lâu ngày trong DPF cần xử lý thế nào?",
+   "options": [
+    "Tháo bầu vệ sinh hoặc thay bầu lọc",
+    "Chạy tái sinh chủ động là hết hoàn toàn",
+    "Chỉ cần xóa mã lỗi",
+    "Thay cảm biến ΔP"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Tro không cháy được nên tái sinh không loại bỏ; phải tháo vệ sinh hoặc thay bầu khi tải tro quá lớn."
+  },
+  {
+   "id": "cd-q080",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Diesel: SCV – van xả áp – DPF",
+   "number": 80,
+   "question": "ECM cần những tín hiệu nào để tính tải muội và điều khiển tái sinh DPF?",
+   "options": [
+    "CKP, MAF, ΔP và nhiệt độ khí xả",
+    "IAT, ECT và TPS",
+    "APP, VPA và VTA",
+    "O2, CMP và RPS"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "ECM dùng CKP (vòng quay), MAF (lưu lượng khí), ΔP và nhiệt độ khí xả để tính muội và quyết định tái sinh."
+  },
+  {
+   "id": "cd-q081",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kim phun & bơm nhiên liệu",
+   "number": 81,
+   "question": "Để kim phun phun đúng thời điểm và đúng xy-lanh, ECM cần tín hiệu của cảm biến nào?",
+   "options": [
+    "CMP và CKP",
+    "IAT và ECT",
+    "MAF và MAP",
+    "O2 và RPS"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "CKP cho góc trục khuỷu, CMP cho pha trục cam; kết hợp hai tín hiệu mới xác định đúng xy-lanh và thời điểm phun."
+  },
+  {
+   "id": "cd-q082",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kim phun & bơm nhiên liệu",
+   "number": 82,
+   "question": "Nếu mất tín hiệu CMP, hệ thống phun tuần tự bị ảnh hưởng thế nào?",
+   "options": [
+    "ECM không xác định đúng kỳ nén của từng xy-lanh, không phun tuần tự chính xác",
+    "Kim phun phun liên tục không ngừng",
+    "Bơm xăng ngừng chạy hoàn toàn",
+    "Bugi tự đánh lửa theo thứ tự"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Thiếu CMP, ECM không phân biệt được kỳ nén/kỳ xả; một số xe chuyển sang phun theo nhóm hoặc không nổ."
+  },
+  {
+   "id": "cd-q083",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kỳ hút & khí nạp",
+   "number": 83,
+   "question": "Tỷ lệ hòa khí lý thuyết (stoichiometric) của xăng là bao nhiêu?",
+   "options": [
+    "14,7 : 1 (không khí : xăng)",
+    "1 : 14,7 (không khí : xăng)",
+    "10 : 1",
+    "25 : 1"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Tỷ lệ hòa khí lý thuyết của xăng là 14,7 phần không khí : 1 phần xăng theo khối lượng."
+  },
+  {
+   "id": "cd-q084",
+   "set": "cd",
+   "setName": "★ Bộ đề đọc kỹ: kim phun – cảm biến – điều khiển",
+   "section": "Kỳ hút & khí nạp",
+   "number": 84,
+   "question": "Khi hỗn hợp đạt 14,7 : 1, ECM điều chỉnh bằng tín hiệu nào để giữ tỷ lệ này?",
+   "options": [
+    "Tín hiệu O2/A-F phản hồi để hiệu chỉnh thời gian phun (vòng kín)",
+    "Tín hiệu CKP để điều chỉnh góc đánh lửa",
+    "Tín hiệu IAT để mở quạt",
+    "Tín hiệu APP để mở bướm ga"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Cảm biến O2/A-F báo thành phần khí xả; ECM hiệu chỉnh lượng phun để giữ hòa khí quanh 14,7:1."
+  },
+  {
+   "id": "kd-q159",
+   "set": "kd",
+   "setName": "Hệ thống khởi động",
+   "section": "Ch.4 Máy khởi động khác",
+   "number": 159,
+   "question": "Trong ba loại máy khởi động (đồng trục, giảm tốc, hành tinh), loại đồng trục (Conventional) được nhận diện thế nào?",
+   "options": [
+    "Motor và bánh răng dẫn động gần như nằm trên một đường trục, không có hộp giảm tốc riêng",
+    "Có cặp bánh răng nhỏ–lớn lệch trục motor",
+    "Có bánh răng mặt trời và các bánh răng hành tinh",
+    "Không có motor điện"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Đồng trục: bendix cùng trục motor, không có bộ giảm tốc riêng; dùng cần đẩy đưa bendix."
+  },
+  {
+   "id": "kd-q160",
+   "set": "kd",
+   "setName": "Hệ thống khởi động",
+   "section": "Ch.4 Máy khởi động khác",
+   "number": 160,
+   "question": "Trong ba loại máy khởi động, loại giảm tốc (Reduction) được nhận diện nhờ đâu?",
+   "options": [
+    "Có cặp bánh răng nhỏ–lớn nằm lệch trục motor để giảm tốc, tăng moment",
+    "Không có bánh răng nào",
+    "Chỉ có bánh răng mặt trời và bánh răng hành tinh",
+    "Có bộ chia điện"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Giảm tốc: motor quay nhanh qua cặp bánh răng nhỏ–lớn, giảm tốc và tăng moment; không có bộ hành tinh."
+  },
+  {
+   "id": "kd-q161",
+   "set": "kd",
+   "setName": "Hệ thống khởi động",
+   "section": "Ch.4 Hành tinh",
+   "number": 161,
+   "question": "Trong ba loại máy khởi động, loại hành tinh (Planetary) có chi tiết đặc trưng nào?",
+   "options": [
+    "Bánh răng mặt trời do motor dẫn động, các bánh răng hành tinh ăn khớp bánh răng bao",
+    "Chỉ có một cặp bánh răng thẳng nhỏ–lớn",
+    "Không có bánh răng, chỉ có cần đẩy",
+    "Có bộ chia điện và dây cao áp"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "Hành tinh: sun gear + 3–6 planet gear + ring gear; cần dẫn truyền moment ra bendix, tỷ số giảm lớn, gọn và khỏe."
+  },
+  {
+   "id": "kd-q162",
+   "set": "kd",
+   "setName": "Hệ thống khởi động",
+   "section": "Ch.4 Hành tinh",
+   "number": 162,
+   "question": "Ký hiệu PS trong tên máy khởi động loại hành tinh (PS starter) nghĩa là gì?",
+   "options": [
+    "Planetary – Segment conductor",
+    "Power Steering",
+    "Primary Starter",
+    "Permanent Series"
+   ],
+   "correct": 0,
+   "images": [],
+   "note": "PS = Planetary – Segment conductor: dùng bộ truyền hành tinh và nam châm kiểu đoạn dẫn."
   }
  ]
 }
