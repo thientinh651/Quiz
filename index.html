@@ -482,16 +482,16 @@
         setName: "★ Điện trở màu – câu mở đầu",
         section: "Tra bảng màu điện trở",
         number: "★",
-        question: `Điện trở 4 vạch có thứ tự màu a–b–c–d: a = ${digitA.name}, b = ${digitB.name}, c = ${digitC.name}, d = ${tol.name}. Tra bảng màu, giá trị danh định và sai số là bao nhiêu?`,
+        question: `Điện trở 4 vạch, màu theo thứ tự từ trái sang phải: ${digitA.name} – ${digitB.name} – ${digitC.name} – ${tol.name}. Tra bảng màu, giá trị danh định và sai số là bao nhiêu?`,
         options,
         correct: options.indexOf(correctText),
         images: [
           "images/bang_tra_mau_dien_tro.png"
         ],
         note: `Nhớ thứ tự 0–9: Đen, Nâu, Đỏ, Cam, Vàng, Lục, Lam, Tím, Xám, Trắng. ` +
-          `a = ${digitA.name} = ${a}; b = ${digitB.name} = ${b} → ${a}${b}; ` +
-          `c = ${digitC.name} = ${c} → ×10^${c}; ${a}${b} × 10^${c} Ω = ${valueText}; ` +
-          `d = ${tol.name} → ${tol.label}.`
+          `Vạch 1 ${digitA.name} = ${a}; vạch 2 ${digitB.name} = ${b} → ${a}${b}; ` +
+          `vạch 3 ${digitC.name} = ${c} → ×10^${c}; ${a}${b} × 10^${c} Ω = ${valueText}; ` +
+          `vạch 4 ${tol.name} → ${tol.label}.`
       };
     }
 
