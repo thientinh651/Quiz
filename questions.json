@@ -2032,7 +2032,7 @@
     "Máy chẩn đoán OBD đọc mã lỗi motor",
     "Máy kiểm tra chạm mạch (growler) với lưỡi cưa",
     "Đồng hồ vạn năng ở thang đo điện áp xoay chiều",
-    "Máy hiện sóng đo dạng sóng phần ứng"
+    "Máy đo xung đo dạng sóng phần ứng"
    ],
    "correct": 1,
    "images": [],
@@ -2175,7 +2175,7 @@
    "options": [
     "Thước kẹp đo đường kính ngoài",
     "Đồng hồ vạn năng ở thang điện trở",
-    "Máy hiện sóng đo tín hiệu cổ góp",
+    "Máy đo xung đo tín hiệu cổ góp",
     "Đồng hồ so, rotor đặt trên khối chữ V"
    ],
    "correct": 3,
@@ -2228,7 +2228,7 @@
    "question": "Khi bảo dưỡng máy khởi động, kỹ thuật viên kiểm tra tình trạng ổ bi (Bearing) bằng cách nào?",
    "options": [
     "Đo điện áp rơi trên ổ bi khi đề",
-    "Dùng máy hiện sóng đo độ rung",
+    "Dùng máy đo xung đo độ rung",
     "Quay bằng tay, nghe tiếng kêu và cảm nhận độ rơ",
     "Đo điện trở giữa vòng trong và vòng ngoài"
    ],
@@ -5595,7 +5595,7 @@
     "Ampe kế kẹp, thang DC",
     "Panme đo ngoài",
     "VOM số, thang đo diode",
-    "Máy hiện sóng, thang AC"
+    "Máy đo xung, thang AC"
    ],
    "correct": 2,
    "images": [],
@@ -6805,7 +6805,7 @@
    "setName": "Điều khiển động cơ xăng",
    "section": "Ch.2 CKP",
    "number": 60,
-   "question": "Khi kiểm tra bằng máy hiện sóng, biên độ xung tín hiệu của cảm biến vị trí trục khuỷu (CKP) loại điện từ nằm trong khoảng bao nhiêu?",
+   "question": "Khi kiểm tra bằng máy đo xung, biên độ xung tín hiệu của cảm biến vị trí trục khuỷu (CKP) loại điện từ nằm trong khoảng bao nhiêu?",
    "options": [
     "0,5 - 4,5 V",
     "100 mV cố định",
@@ -6955,7 +6955,7 @@
    "question": "Để kiểm tra chính xác tín hiệu cảm biến vị trí trục khuỷu (CKP) ngay trên xe, kỹ thuật viên nên dùng dụng cụ nào?",
    "options": [
     "Chỉ cần ampe kìm đo dòng",
-    "Máy hiện sóng đo khi đề hoặc khi máy nổ",
+    "Máy đo xung đo khi đề hoặc khi máy nổ",
     "Nhiệt kế hồng ngoại đo đầu cảm biến",
     "Chỉ cần VOM ở thang điện trở"
    ],
@@ -13757,7 +13757,7 @@
    "number": 486,
    "question": "Khi bảo dưỡng hệ thống đánh lửa có bộ chia điện, dụng cụ nào được dùng để kiểm tra và hiệu chỉnh góc đánh lửa chính xác?",
    "options": [
-    "Máy hiện sóng",
+    "Máy đo xung",
     "Cờ lê lực",
     "Đồng hồ vạn năng",
     "Đèn đặt lửa"
@@ -15674,7 +15674,7 @@
    "number": 592,
    "question": "Để kiểm tra xung điều khiển từ ECU ra mô tơ bướm ga điện tử, kỹ thuật viên dùng dụng cụ nào?",
    "options": [
-    "Máy hiện sóng",
+    "Máy đo xung",
     "Đồng hồ VOM",
     "Ampe kế",
     "Đèn thử LED"
@@ -24343,7 +24343,7 @@
    ],
    "correct": 2,
    "images": [],
-   "note": "Chỉnh lưu cầu 3 pha cho chuỗi bướu đều. Mất một diode → mất một phần chu kỳ của một pha → xuất hiện các 'hố' lặp lại có chu kỳ. Máy hiện sóng phát hiện ngay cả khi điện áp trung bình còn gần chuẩn.",
+   "note": "Chỉnh lưu cầu 3 pha cho chuỗi bướu đều. Mất một diode → mất một phần chu kỳ của một pha → xuất hiện các 'hố' lặp lại có chu kỳ. Máy đo xung phát hiện ngay cả khi điện áp trung bình còn gần chuẩn.",
    "level": "hard",
    "pdfPage": 32,
    "bookPage": 39
@@ -24937,7 +24937,7 @@
    "question": "Đối với cảm biến vị trí trục khuỷu (CKP) loại điện từ 2 dây, điện trở cuộn dây khoảng bao nhiêu và kiểm tra động bằng cách nào?",
    "options": [
     "Khoảng 0 Ω; đo điện áp DC 5 V khi bật khóa",
-    "Vài trăm Ω; khi đề đo điện áp AC/máy hiện sóng",
+    "Vài trăm Ω; khi đề đo điện áp AC/máy đo xung",
     "Khoảng 12 kΩ; đo tần số khi tắt máy",
     "Hàng MΩ; đo dòng điện khi máy chạy idle"
    ],
@@ -27302,7 +27302,7 @@
    ],
    "correct": 0,
    "images": [],
-   "note": "ON chìa kiểm tra nguồn 5V và mass 0V. Muốn có xung phải quay trục (đề máy) và đo bằng máy hiện sóng hoặc đồng hồ có chức năng tần số."
+   "note": "ON chìa kiểm tra nguồn 5V và mass 0V. Muốn có xung phải quay trục (đề máy) và đo bằng máy đo xung hoặc đồng hồ có chức năng tần số."
   },
   {
    "id": "cb-q014",
@@ -28148,7 +28148,7 @@
    ],
    "correct": 0,
    "images": [],
-   "note": "Trên máy hiện sóng, VTA là đường dốc tăng dần khi đạp ga và giảm dần khi nhả ga."
+   "note": "Trên máy đo xung, VTA là đường dốc tăng dần khi đạp ga và giảm dần khi nhả ga."
   },
   {
    "id": "cb-q062",
@@ -28368,7 +28368,7 @@
    "setName": "★ 10 cảm biến: nhận diện – dây – tín hiệu",
    "section": "O2/A/F & áp suất rail",
    "number": 74,
-   "question": "Trên máy hiện sóng, tín hiệu O2 dãy hẹp của động cơ khỏe thường dao động thế nào?",
+   "question": "Trên máy đo xung, tín hiệu O2 dãy hẹp của động cơ khỏe thường dao động thế nào?",
    "options": [
     "Dao động liên tục trong khoảng 0,1–0,9V khi ECM điều khiển vòng kín",
     "Nằm phẳng ở 5V",
