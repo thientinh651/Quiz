@@ -452,7 +452,7 @@
       do {
         a = 1 + Math.floor(Math.random() * 9);
         b = Math.floor(Math.random() * 10);
-        c = Math.floor(Math.random() * 10);
+        c = Math.floor(Math.random() * 8);
         d = Math.floor(Math.random() * RESISTOR_TOLERANCES.length);
       } while (lastResistor && lastResistor === `${a}${b}${c}${d}`);
       lastResistor = `${a}${b}${c}${d}`;
@@ -469,9 +469,10 @@
         if (!options.includes(text) && options.length < 4) options.push(text);
       };
 
-      const shiftedC = c === 9 ? 8 : c + 1;
+      const shiftedC = c === 7 ? 6 : c + 1;
       addOption(`${formatOhm((a * 10 + b) * Math.pow(10, shiftedC))} ${tol.label}`);
-      addOption(`${formatOhm(a === b ? value * 10 : (b * 10 + a) * Math.pow(10, c))} ${tol.label}`);
+      const swappedValue = a === b ? (c === 0 ? value * 10 : value / 10) : (b * 10 + a) * Math.pow(10, c);
+      addOption(`${formatOhm(swappedValue)} ${tol.label}`);
       const tol2 = RESISTOR_TOLERANCES[(d + 1) % RESISTOR_TOLERANCES.length];
       addOption(`${valueText} ${tol2.label}`);
 
@@ -479,7 +480,7 @@
       while (options.length < 4 && guard++ < 50) {
         const ra = 1 + Math.floor(Math.random() * 9);
         const rb = Math.floor(Math.random() * 10);
-        const rc = Math.floor(Math.random() * 10);
+        const rc = Math.floor(Math.random() * 8);
         const rt = RESISTOR_TOLERANCES[Math.floor(Math.random() * RESISTOR_TOLERANCES.length)];
         addOption(`${formatOhm((ra * 10 + rb) * Math.pow(10, rc))} ${rt.label}`);
       }
