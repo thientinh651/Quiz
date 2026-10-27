@@ -27474,7 +27474,7 @@
     "Áp suất tuyệt đối đường nạp; 3 dây +5V, mass, tín hiệu điện áp",
     "Khối lượng khí nạp; 2 dây NE+/NE−",
     "Nhiệt độ khí nạp; 2 dây THA",
-    "Vị trí bướm ga; 3 dây VTA"
+    "Vị trí bướm ga; 2 dây VTA"
    ],
    "correct": 0,
    "images": [
@@ -27899,7 +27899,7 @@
    "number": 47,
    "question": "TPS loại biến trở có cấu tạo và đấu dây thế nào?",
    "options": [
-    "Điện trở than + con trượt; mỗi kênh 3 dây VCC 5V, mass, VTA",
+    "Điện trở than + con trượt; 2 dương VCC 5V, 2 mass, 2 tín hiệu VTA",
     "IC Hall; 2 dây NE+/NE−",
     "Nhiệt điện trở; 2 dây THA",
     "6 dây: 2 dương, 2 mass, VPA, VPA2"
